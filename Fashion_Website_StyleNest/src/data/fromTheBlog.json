@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "title": "Nullam ullamcorper ornare molestie",
+      "link": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/en/blog/nullam-ullamcorper-nisl-quis-ornare-molestie-b9.html",
+      "imageSrc": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/9/1105_813/b-blog-7.jpg",
+      "category": "Shopping",
+      "categoryLink": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/en/blog/shopping-c4.html",
+      "day": "5",
+      "month": "April",
+      "year": "2023",
+      "shortInfo": "Suspendisse posuere, diam in bibendum lobortis, turpis ipsum aliquam..."
+    },
+    {
+      "id": 2,
+      "title": "Mauris non tempor quam",
+      "link": "https://example.com/blog/mauris-non-tempor",
+      "imageSrc": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/6/1105_813/b-blog-4.jpg",
+      "category": "Fashion",
+      "categoryLink": "#",
+      "day": "15",
+      "month": "March",
+      "year": "2023",
+      "shortInfo": "Mauris non tempor quam, et lacinia sapien..."
+    },
+    {
+      "id": 3,
+      "title": "Donec sollicitudin molestie",
+      "link": "#",
+      "imageSrc": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/5/1105_813/b-blog-3.jpg",
+      "category": "News",
+      "categoryLink": "#",
+      "day": "10",
+      "month": "February",
+      "year": "2023",
+      "shortInfo": "Aliquam erat volutpat. Donec sollicitudin molestie malesuada..."
+    },
+    {
+      "id": 4,
+      "title": "Donec sollicitudin molestie",
+      "link": "#",
+      "imageSrc": "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/5/1105_813/b-blog-3.jpg",
+      "category": "News",
+      "categoryLink": "#",
+      "day": "10",
+      "month": "February",
+      "year": "2023",
+      "shortInfo": "Aliquam erat volutpat. Donec sollicitudin molestie malesuada..."
+    }
+  ]

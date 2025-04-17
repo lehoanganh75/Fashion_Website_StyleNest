@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import Header from "./components/Header"
+import { useState } from 'react';
+import Header from "./Components/Header";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Footer from './Components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <Header />
-    </>
+    <BrowserRouter>
+       <Header />
+       <Routes>
+          <Route path = {"/"} element={<Home />} />
+       </Routes>
+       <Footer />
+    </BrowserRouter>
   )
 }
 
