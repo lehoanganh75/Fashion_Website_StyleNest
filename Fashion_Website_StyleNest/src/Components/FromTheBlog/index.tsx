@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
 import blogPosts from "../../data/fromTheBlog.json";
+import {Link} from 'react-router-dom'
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -9,7 +10,7 @@ import "swiper/css/pagination";
 
 export default function Blog() {
   return (
-    <div className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-100">
+    <div className="px-20 sm:px-6 lg:px-8 py-16 bg-gray-100">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900 text-center tracking-tight">
         Bài Viết Nổi Bật
       </h2>
@@ -27,18 +28,22 @@ export default function Blog() {
       >
         {blogPosts.map((post) => (
           <SwiperSlide key={post.id}>
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-[28rem] max-h-[28rem] transform hover:-translate-y-1 transition-transform duration-300">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-[28rem] max-h-[28rem] transform hover:-translate-y-1 mb-12">
               <div className="relative group overflow-hidden">
-                <a href={post.link} className="block">
+                <Link to={`/blog/${post.id}`} className="block">
+                  {" "}
+                  {/* Thay đổi <a> thành <Link> */}
                   <img
                     src={post.imageSrc}
                     alt={post.title}
                     className="w-full h-56 object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                </a>
+                </Link>{" "}
+                {/* Đóng thẻ <Link> */}
                 <div className="absolute top-4 left-4 bg-amber-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
-                  <a href={post.categoryLink}>{post.category}</a>
+                  <Link to={post.categoryLink}>{post.category}</Link>{" "}
+                  {/* Tương tự cho category link nếu cần */}
                 </div>
               </div>
 
@@ -48,7 +53,8 @@ export default function Blog() {
                     {post.day} {post.month}, {post.year}
                   </p>
                   <h3 className="text-xl font-bold text-gray-900 hover:text-amber-600 transition-colors duration-300">
-                    <a href={post.link}>{post.title}</a>
+                    <Link to={`/blog/${post.id}`}>{post.title}</Link>{" "}
+                    {/* Thay đổi <a> thành <Link> */}
                   </h3>
                   <p className="text-sm text-gray-600 mt-3 line-clamp-2 leading-relaxed">
                     {post.shortInfo}
@@ -56,12 +62,12 @@ export default function Blog() {
                 </div>
 
                 <div className="mt-auto pt-4">
-                  <a
-                    href={post.link}
+                  <Link
+                    to={`/blog/${post.id}`}
                     className="inline-block text-sm font-semibold text-white bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full uppercase tracking-wide transition-all duration-300 transform hover:scale-105"
                   >
                     Đọc Thêm
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

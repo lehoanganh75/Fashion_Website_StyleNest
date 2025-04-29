@@ -105,11 +105,13 @@ const Header = () => {
                 </li>
                 <li>
                   <Tooltip title="Giỏ hàng">
-                    <IconButton aria-label="cart">
-                      <StyledBadge badgeContent={4} color="secondary">
-                        <MdOutlineShoppingCart />
-                      </StyledBadge>
-                    </IconButton>
+                    <Link to="/cart" aria-label="cart" className="cursor-pointer"> {/* Thêm Link ở đây */}
+                      <IconButton aria-label="cart">
+                        <StyledBadge badgeContent={4} color="secondary">
+                          <MdOutlineShoppingCart />
+                        </StyledBadge>
+                      </IconButton>
+                    </Link>
                   </Tooltip>
                 </li>
               </ul>

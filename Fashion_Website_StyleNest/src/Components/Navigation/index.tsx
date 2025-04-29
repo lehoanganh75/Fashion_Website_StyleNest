@@ -53,16 +53,9 @@ const Navigation = () => {
                 </Link>
               </li>
               <li className="list-none">
-                <Link to="/" className="link transition text-[15px] font-[500]">
+                <Link to="/blog" className="link transition text-[15px] font-[500]">
                   <Button className="link transaction !font-[500]">
                     Tin tức
-                  </Button>
-                </Link>
-              </li>
-              <li className="list-none">
-                <Link to="/" className="link transition text-[15px] font-[500]">
-                  <Button className="link transaction !font-[500]">
-                    Sự kiện
                   </Button>
                 </Link>
               </li>
