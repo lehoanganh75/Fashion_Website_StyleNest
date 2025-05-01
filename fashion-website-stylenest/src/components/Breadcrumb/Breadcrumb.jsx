@@ -3,8 +3,8 @@ import { ChevronRight } from "lucide-react"
 
 const Breadcrumb = ({ items }) => {
     return (
-      <nav className="bg-gray-100 py-5 px-2 md:px-6">
-        <ol className="flex flex-wrap items-center text-sm">
+      <nav className="bg-gray-100 py-4 px-12 font-['Roboto']">
+        <ol className="flex flex-wrap items-center text-base">
           {items.map((item, index) => {
             const isLast = index === items.length - 1
   

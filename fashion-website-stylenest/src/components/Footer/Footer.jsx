@@ -1,10 +1,11 @@
 import { Facebook, Twitter, Youtube, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-gray-800 via-gray-900 to-black text-white mt-auto">
+    <footer className="bg-gradient-to-t from-gray-800 via-gray-900 to-black text-white mt-auto font-['Roboto']">
       {/* Nội dung chính của Footer */}
-      <div className="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto px-16 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Liên hệ */}
         <div>
           <h3 className="text-3xl font-semibold mb-4">Liên Hệ</h3>
@@ -46,12 +47,12 @@ const Footer = () => {
               "Cửa Hàng",
             ].map((item) => (
               <li key={item}>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="hover:text-orange-500 transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -104,7 +105,7 @@ const Footer = () => {
 
       {/* Footer dưới */}
       <div className="border-t border-gray-700 py-6">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container mx-auto px-16 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Mạng xã hội */}
           <div className="flex space-x-6">
             {[Facebook, Twitter, Youtube, Instagram].map((Icon, index) => (

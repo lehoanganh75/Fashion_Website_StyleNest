@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom';
 
 const EcommerceShowcase = () => {
   return (
-    <div className="container mx-auto px-6 md:px-20 py-10 font-['Roboto']">
+    <div className="container mx-auto font-['Roboto']">
       {/* Two Column Layout */}
       <div className="flex flex-col md:flex-row gap-8">
         {/* Left Column - New Products */}
         <div className="w-full md:w-1/3 space-y-8">
           {/* New Products */}
-          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm bg-white">
+          <div className="border border-gray-300 rounded-sm overflow-hidden shadow-sm bg-white">
             <div className="border-b border-gray-200 px-6 py-4 bg-gray-100">
-                <h2 className="text-lg font-semibold text-gray-800">Blog Categories</h2>
+                <h2 className="text-lg font-semibold text-gray-800">Sản phẩm mới</h2>
             </div>
             <div className="divide-y divide-gray-300">
               {/* Product 1 */}
@@ -95,10 +95,10 @@ const EcommerceShowcase = () => {
           </div>
 
             {/* Blog Categories */}
-            <div className="border border-gray-300 rounded-2xl bg-white shadow-md overflow-hidden">
+            <div className="border border-gray-300 rounded-sm bg-white shadow-md overflow-hidden">
                 {/* Header */}
                 <div className="border-b border-gray-200 px-6 py-4 bg-gray-100">
-                    <h2 className="text-lg font-semibold text-gray-800">Blog Categories</h2>
+                    <h2 className="text-lg font-semibold text-gray-800">Danh mục blog</h2>
                 </div>
 
                 {/* Body */}
@@ -114,7 +114,7 @@ const EcommerceShowcase = () => {
 
         {/* Right Column - Brands */}
         <div className="w-full md:w-2/3 space-y-6">
-          <h2 className="text-2xl font-bold text-gray-800">Brands</h2>
+          <h2 className="text-2xl font-bold text-gray-800">Thương hiệu</h2>
 
           {[1, 2, 3, 4].map((brand, i) => {
             const titles = ['Gadget Zone', 'Initech Space', 'Looney Tunes', 'Massive Dynamic'];
@@ -126,11 +126,11 @@ const EcommerceShowcase = () => {
             ];
 
             return (
-                <div key={i} className="border border-gray-300 rounded-2xl bg-white shadow-sm p-4">
+                <div key={i} className="border border-gray-300 rounded-sm bg-white shadow-sm p-4">
                 <div className="flex flex-col md:flex-row gap-4">
                   {/* Logo */}
                   <div className="w-full md:w-1/4 flex justify-center items-center">
-                    <div className="border border-gray-300 rounded-xl p-4 w-40 h-28 min-h-[112px] flex items-center justify-center bg-gray-50">
+                    <div className="border border-gray-300 rounded-sm p-4 w-40 h-28 min-h-[112px] flex items-center justify-center bg-gray-50">
                       <img
                         src="/placeholder.svg?height=60&width=120"
                         alt={titles[i]}
@@ -146,15 +146,14 @@ const EcommerceShowcase = () => {
                   </div>
               
                   {/* Nút bấm và số sản phẩm */}
-                  <div className="w-full md:w-1/4 flex flex-col justify-center items-center text-center">
-                    <div className="text-gray-500 mb-2 text-sm">2 products</div>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white py-2.5 px-4 rounded-lg w-8/12 transition-all">
+                  <div className="w-full md:w-1/4 flex flex-col justify-around items-center text-center">
+                    <div className="text-gray-500 mb-2 text-base">2 products</div>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-1 rounded-lg w-8/12 transition-all">
                       Xem sản phẩm
                     </button>
                   </div>
                 </div>
               </div>
-              
             );
           })}
         </div>

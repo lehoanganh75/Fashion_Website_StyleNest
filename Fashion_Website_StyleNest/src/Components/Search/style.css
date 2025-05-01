@@ -1,5 +1,0 @@
-.searchBox input::placeholder,
-.searchBox input::-moz-placeholder,
-.searchBox input::-webkit-input-placeholder {
-  color: #000 !important;
-}

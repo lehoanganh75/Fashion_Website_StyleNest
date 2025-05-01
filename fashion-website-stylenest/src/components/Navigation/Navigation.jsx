@@ -12,24 +12,23 @@ const Navigation = () => {
 
   return (
     <div>
-       <nav className="bg-white shadow-lg">
+       <nav className="bg-white shadow-lg max-w-full">
         <div
-          className="max-w-7xl mx-auto flex items-center justify-between py-4 px-8 font-semibold text-sm"
+          className="max-w-full px-8 flex items-center justify-between font-semibold text-sm py-1"
           style={{ fontFamily: "Roboto, sans-serif" }}
         >
           {/* Category button */}
           <button
             onClick={openCategoryPanel}
-            variant="ghost"
-            className="text-gray-800 hover:text-orange-500 flex items-center gap-2 transition-all duration-300 hover:scale-105 whitespace-nowrap font-semibold"
+            className="w-3xs text-gray-800 hover:text-orange-500 flex items-center gap-3 px-4 py-2 transition-all duration-300 hover:scale-105 font-semibold"
           >
-            <Menu className="h-5 w-5" />
-            Danh mục
-            <ChevronDown className="h-4 w-4 ml-1" />
+            <Menu className="h-8 w-8" />
+            <span className="text-left w-full">Danh mục</span>
+            <ChevronDown className="h-6 w-6" />
           </button>
 
           {/* Navigation Links */}
-          <div className="flex justify-center flex-1 mx-4">
+          <div className="flex justify-start flex-1 mx-4">
             <ul className="flex w-full justify-between">
               {[
                 { label: "Trang chủ", link: "/" },
@@ -42,8 +41,7 @@ const Navigation = () => {
                 <li key={index} className="flex-1 text-center">
                   <Link to={item.link} className="block w-full">
                     <button
-                      variant="ghost"
-                      className="text-gray-800 hover:text-orange-500 text-sm font-semibold transition-all duration-300 w-full py-2"
+                      className="text-gray-800 hover:text-orange-500 font-semibold transition-all duration-300 w-full py-2"
                     >
                       {item.label}
                     </button>
@@ -55,7 +53,7 @@ const Navigation = () => {
 
           {/* International Shipping */}
           <div className="flex justify-end">
-            <p className="text-gray-700 flex items-center gap-2 text-sm font-semibold whitespace-nowrap">
+            <p className="text-gray-700 flex items-center gap-2 font-semibold whitespace-nowrap">
               <Rocket className="h-5 w-5 text-orange-500" />
               Giao hàng quốc tế miễn phí
             </p>

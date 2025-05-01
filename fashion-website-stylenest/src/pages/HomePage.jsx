@@ -9,7 +9,7 @@ import Banner from '../components/Banner/Banner';
 
 const HomePage = () => {
   return (
-    <div className="p-6 bg-[rgba(244,244,244,255)]">
+    <div className="px-10 py-6 bg-[rgba(244,244,244,255)]">
       <HomeSlider />
       <ProductSlider />
       <ProductGridHome />
