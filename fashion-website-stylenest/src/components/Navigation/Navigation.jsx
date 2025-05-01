@@ -29,7 +29,7 @@ const Navigation = () => {
 
           {/* Navigation Links */}
           <div className="flex justify-start flex-1 mx-4">
-            <ul className="flex w-full justify-between">
+            <ul className="flex justify-start gap-6">
               {[
                 { label: "Trang chủ", link: "/" },
                 { label: "Thời trang", link: "/product" },
@@ -38,11 +38,9 @@ const Navigation = () => {
                 { label: "Ưu đãi tốt", link: "/deals" },
                 { label: "Blog", link: "/blog" },
               ].map((item, index) => (
-                <li key={index} className="flex-1 text-center">
-                  <Link to={item.link} className="block w-full">
-                    <button
-                      className="text-gray-800 hover:text-orange-500 font-semibold transition-all duration-300 w-full py-2"
-                    >
+                <li key={index}>
+                  <Link to={item.link}>
+                    <button className="text-gray-800 hover:text-orange-500 font-semibold transition-all duration-300 py-2">
                       {item.label}
                     </button>
                   </Link>
@@ -52,7 +50,7 @@ const Navigation = () => {
           </div>
 
           {/* International Shipping */}
-          <div className="flex justify-end">
+          <div className="flex justify-end px-3">
             <p className="text-gray-700 flex items-center gap-2 font-semibold whitespace-nowrap">
               <Rocket className="h-5 w-5 text-orange-500" />
               Giao hàng quốc tế miễn phí

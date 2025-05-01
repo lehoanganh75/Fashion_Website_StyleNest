@@ -49,7 +49,7 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className="container mx-auto px-8 py-8 cursor-pointer font-['Roboto']"> 
+        <div className="container mx-auto px-10 py-6 cursor-pointer font-['Roboto']"> 
             <div className="flex flex-col md:flex-row gap-6">
                 {/* Left Column - Thumbnails */}
                 <div className="w-full md:w-20 flex flex-row md:flex-col gap-4 order-2 md:order-1">
@@ -66,7 +66,7 @@ const ProductDetail = () => {
                         <img
                             src={thumb || "/placeholder.svg"}
                             alt={`Thumbnail ${index + 1}`}
-                            className="w-full h-auto rounded-lg"
+                            className="w-full h-auto     rounded-lg"
                         />
                         </div>
                     ))}
@@ -74,7 +74,7 @@ const ProductDetail = () => {
 
                 {/* Center Column - Main Image */}
                 <div className="w-full md:w-1/2 order-1 md:order-2">
-                    <div className="p-4 bg-white shadow-lg rounded-lg border-gray-800">
+                    <div className="p-4 bg-white border border-gray-200 shadow-lg rounded-lg">
                         <img
                             src={product.thumbnails[activeImage] || "/placeholder.svg?height=500&width=500"}
                             alt="Apple AirPods Max"
@@ -85,7 +85,7 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Right Column - Product Info */}
-                <div className="w-full md:w-1/2 order-3 p-4 bg-white shadow-lg rounded-lg">
+                <div className="w-full md:w-1/2 order-3 px-6 py-4 border border-gray-200 bg-white shadow-md rounded-lg">
                     <div className="flex items-center mb-2">
                         {renderStars(product.rating || 0)}
                         <span className="ml-2 text-sm text-gray-600">{product.review} Review(s)</span>
@@ -108,12 +108,12 @@ const ProductDetail = () => {
 
                         <div className="flex items-center">
                             <span className="w-40 font-semibold text-gray-700">Có sẵn trong kho:</span>
-                            <span className="text-green-500">{product.inStock} sản phẩm</span>
+                            <span className="text-green-500">{product.instock} sản phẩm</span>
                         </div>
 
                         <div>
                             <p className="text-gray-700">
-                                Nhanh lên! chỉ <span className="text-red-500">{product.inStock}</span> sản phẩm còn hàng trong kho!
+                                Nhanh lên! chỉ <span className="text-red-500">{product.instock}</span> sản phẩm còn hàng trong kho!
                             </p>
                             <div className="w-full bg-gray-200 h-2 rounded-full mt-2">
                                 <div className="bg-green-500 h-2 rounded-full w-2/3"></div>
@@ -150,11 +150,11 @@ const ProductDetail = () => {
                         <div className="mt-6 space-y-4">
                             <div className="flex items-center">
                                 <span className="text-gray-500 line-through text-lg">{formatCurrency(product.price)}</span>
-                                <span className="text-2xl font-bold text-red-500 ml-2">{formatCurrency(product.price * (1 - product.discount))}</span>
+                                <span className="text-2xl font-bold text-red-500 ml-2">{formatCurrency(product.price * (1 - product.discount / 100))}</span>
                                 <span className="ml-2 bg-red-100 text-red-500 px-2 py-1 text-xs rounded">{product.discount} %</span>
                             </div>
 
-                            <p className="text-sm text-gray-500">Miễn phí vận chuyển (Thời gian giao hàng dự kiến ​​2-3 ngày)</p>
+                            <p className="text-sm text-gray-500">Miễn phí vận chuyển (thời gian từ 2 - 3 ngày)</p>
 
                             {/* Quantity and Add to Cart */}
                             <div className="flex space-x-4">
@@ -189,7 +189,7 @@ const ProductDetail = () => {
 
                             {/* Security and Delivery Policy */}
                             <div className="space-y-4 mt-6">
-                                <div className="border border-gray-100 bg-gray-50 p-4 rounded flex">
+                                <div className="border border-gray-200 bg-gray-50 p-4 rounded flex">
                                     <div className="mr-4 text-orange-400 text-2xl">🔒</div>
                                     <div>
                                         <h3 className="font-semibold text-gray-700">Chính sách bảo mật</h3>
@@ -197,7 +197,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <div className="border border-gray-100 bg-gray-50 p-4 rounded flex">
+                                <div className="border border-gray-200 bg-gray-50 p-4 rounded flex">
                                     <div className="mr-4 text-orange-400 text-2xl">🚚</div>
                                     <div>
                                         <h3 className="font-semibold text-gray-700">Chính sách giao hàng</h3>
@@ -239,16 +239,16 @@ const ProductDetail = () => {
 
                 <div className="py-6">
                 {activeTab === "description" && (
-                    <div className="prose max-w-none border border-gray-200 px-10 py-6 rounded font-sans bg-white">
+                    <div className="prose max-w-none border border-gray-200 px-10 py-6 rounded bg-white font-['Roboto']">
                         {product.descriptions.map((desc, index) => {
                         return (
                             <div key={index}>
-                            <p className="font-semibold mt-4 mb-2">
-                                {desc.title || "Mô tả sản phẩm"}
-                            </p>
-                            <p className="text-[16px] leading-relaxed">
-                                {desc.content || "Không có mô tả cho sản phẩm này."}
-                            </p>
+                                <p className="font-semibold text-base text-gray-900 mb-2">
+                                    {desc.title || "Mô tả sản phẩm"}
+                                </p>
+                                <p className="text-base leading-[1.5] text-justify mb-2">
+                                    {desc.content || "Không có mô tả cho sản phẩm này."}
+                                </p>
                             </div>
                         );
                         })}

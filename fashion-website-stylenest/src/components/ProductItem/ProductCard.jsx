@@ -79,7 +79,7 @@ const ProductCard = ({ product, listView = false }) => {
 
         <Link to={productLink} className="relative h-48 w-48 flex-shrink-0 flex items-center justify-center overflow-hidden group mr-4">
           <img
-            src={product.image || "/placeholder.svg"}
+            src={product.thumbnails[0] || "/placeholder.svg"}
             alt={product.name}
             className="h-full object-contain transition-transform duration-500 group-hover:scale-110"
           />
@@ -97,10 +97,10 @@ const ProductCard = ({ product, listView = false }) => {
 
           <div className="mb-4">
             <div className="flex items-center gap-2">
-              {product.discountedPrice ? (
+              {product.discount ? (
                 <>
                   <span className="text-gray-400 line-through">{formatCurrency(product.price)}</span>
-                  <span className="text-red-500 font-medium">{formatCurrency(product.discountedPrice)}</span>
+                  <span className="text-red-500 font-medium">{formatCurrency(product.price * (1 - product.discount / 100))}</span>
                 </>
               ) : (
                 <span className="font-medium">{formatCurrency(product.price)}</span>
@@ -111,7 +111,7 @@ const ProductCard = ({ product, listView = false }) => {
           <p className="text-gray-600 mb-4 line-1.5">{product.description[0].content || "Không có mô tả cho sản phẩm này."}</p>
 
           <div className="flex gap-2">
-          {product.inStock > 0 ? (
+          {product.instock > 0 ? (
               <div className="text-green-500 border border-green-500 px-3 py-2 text-sm rounded">Còn hàng</div>
             ) : (
               <div className="text-red-500 border border-red-500 px-3 py-2 text-sm rounded">Hết hàng</div>
@@ -132,7 +132,7 @@ const ProductCard = ({ product, listView = false }) => {
   return (
     <Link
       to={productLink}
-      className="relative bg-white border border-gray-200 p-5 rounded-lg shadow-md hover:shadow-2xl text-center flex flex-col items-center justify-between h-full transition-all duration-300 transform hover:scale-105"
+      className="relative bg-white border border-gray-200 p-3 rounded-sm shadow-md hover:shadow-2xl text-center flex flex-col items-center justify-between h-full transition-all duration-300 transform hover:scale-105"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -185,21 +185,25 @@ const ProductCard = ({ product, listView = false }) => {
 
       <div className="relative mb-4 flex-1 flex items-center justify-center overflow-hidden group w-full">
         <img
-          src={product.image || "/placeholder.svg"}
+          src={(product.thumbnails && product.thumbnails[0]) || "/placeholder.svg"}
           alt={product.name}
-          className="h-48 object-contain transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
 
       <div className="w-full mt-auto">
-        <p className="text-sm text-gray-500 mb-1">{product.brand || "Không rõ thương hiệu"}</p>
-        <h3 className="font-semibold text-gray-800 text-sm mb-2 line-clamp-2 h-12">{product.name}</h3>
+        <p className="text-left text-sm text-gray-500 mb-1">
+          {product.brand || "Không rõ thương hiệu"}
+        </p>
+        <h3 className="text-left font-semibold text-gray-800 text-base mb-2 leading-[1.5] h-min-12">
+          {product.name}
+        </h3>
         <RatingStars rating={product.rating || 0} />
         <div className="mt-2 flex items-center gap-2">
-          {product.discountedPrice ? (
+          {product.discount ? (
             <>
               <span className="text-gray-400 line-through text-sm">{formatCurrency(product.price)}</span>
-              <span className="text-red-600 font-semibold">{formatCurrency(product.discountedPrice)}</span>
+              <span className="text-red-600 font-semibold">{formatCurrency(product.price * (1 - product.discount / 100))}</span>
             </>
           ) : (
             <span className="text-gray-900 font-semibold">{formatCurrency(product.price)}</span>
