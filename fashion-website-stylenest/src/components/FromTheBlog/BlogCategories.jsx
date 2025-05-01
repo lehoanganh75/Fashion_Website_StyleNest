@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "boxicons/css/boxicons.min.css"; 
 
 const categories = [
   {
@@ -22,23 +23,28 @@ const categories = [
 
 const BlogCategories = () => {
   return (
-    <div className="border border-gray-200 p-6 rounded-xl shadow-lg bg-white">
-      <h2 className="text-3xl font-extrabold text-gray-800 mb-6">Danh mục bài viết</h2>
-      <div>
+    <div className="border border-gray-200 p-6 rounded-2xl shadow-lg bg-white">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-5 flex items-center gap-2">
+        <i className='bx bx-book text-3xl'></i>
+        <span>Danh mục bài viết</span>
+      </h2>
+
+      <div className="space-y-6">
         {categories.map((category) => (
-          <div key={category.id} className="mb-6">
+          <div key={category.id}>
             <Link
               to={`/category/${category.id}`}
-              className="text-xl font-semibold text-gray-800 hover:text-red-600 transition-all duration-300 ease-in-out"
+              className="text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-600 transition-colors duration-300"
             >
               {category.name}
             </Link>
-            <ul className="mt-4 ml-6 list-inside list-disc text-sm text-gray-600 space-y-2">
+
+            <ul className="mt-3 ml-5 list-disc space-y-2 text-sm text-gray-600">
               {category.subcategories.map((subcategory) => (
                 <li key={subcategory.id}>
                   <Link
                     to={`/category/${category.id}/${subcategory.id}`}
-                    className="text-gray-700 hover:text-red-500 hover:underline transition-colors duration-150"
+                    className="hover:text-orange-500 hover:underline transition-colors duration-150"
                   >
                     {subcategory.name}
                   </Link>

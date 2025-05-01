@@ -1,176 +1,36 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FaFacebookF, FaTwitter, FaPinterestP, FaHeart, FaExchangeAlt } from "react-icons/fa"
 import { FiMinus, FiPlus } from "react-icons/fi";
-import ProductCard from "../ProductItem/ProductCard";
 import CountdownTimer from "../CountdownTimer/CountdownTimer";
 import ProductCarousel from "../ProductCarousel/ProductCarousel"
 import ProductDataSheet from "../ProductDataSheet/ProductDataSheet";
+import { useParams } from "react-router-dom";
+import data from "../../data/data.json";
+import { useCart } from "../../contexts/CartContext";
 
 const ProductDetail = () => {
     const [activeTab, setActiveTab] = useState("description")
     const [quantity, setQuantity] = useState(1)
     const [selectedColor, setSelectedColor] = useState("grey")
     const [activeImage, setActiveImage] = useState(0)
+    const [products, setProducts] = useState([])  
+    const { id } = useParams();
+    const { addToCart } = useCart();
+    const formatCurrency = (value) => {
+        const formatted = new Intl.NumberFormat("vi-VN", {
+          style: "decimal",
+          minimumFractionDigits: 0,
+        }).format(value || 0);
+        return `${formatted} VNĐ`;
+    };
 
-    const thumbnails = [
-        "/placeholder.svg?height=100&width=100",
-        "/placeholder.svg?height=100&width=100",
-        "/placeholder.svg?height=100&width=100",
-        "/placeholder.svg?height=100&width=100",
-        "/placeholder.svg?height=100&width=100",
-    ]
+    useEffect(() => {
+        setProducts(data);
+    }, [])
 
-    const colors = [
-        { name: "grey", class: "bg-gray-400" },
-        { name: "green", class: "bg-green-400" },
-        { name: "yellow", class: "bg-yellow-400" },
-    ]
+    const product = products.find((p) => p.id === id);
 
-    const products = [
-        {
-          id: "1",
-          name: "Apple AirPods Max Over-Ear Wireless Headphone",
-          brand: "Gadget Zone",
-          price: 47.0,
-          discountedPrice: 42.0,
-          discount: 5,
-          isNew: true,
-          rating: 5,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["grey", "green", "yellow"],
-          size: "medium",
-          availability: "inStock",
-          condition: "new",
-          dimension: "60x90cm",
-          description:
-            "We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire that they cannot.",
-        },
-        {
-          id: "2",
-          name: "Apple Smart Watch / Midnight Aluminum",
-          brand: "Initech space",
-          price: 58.0,
-          discountedPrice: 51.04,
-          discount: 12,
-          isNew: true,
-          rating: 4,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["black", "blue", "yellow"],
-          size: "small",
-          availability: "inStock",
-          condition: "new",
-          dimension: "70x40cm",
-        },
-        {
-          id: "3",
-          name: "Eames Fiberglass Plastic Arm Chairs",
-          brand: "Looney Tunes",
-          price: 76.0,
-          rating: 0,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["blue", "red"],
-          size: "large",
-          availability: "available",
-          condition: "used",
-          dimension: "60x90cm",
-        },
-        {
-          id: "4",
-          name: "BoAt Lite Smartwatch 1.69 Inches HD Display",
-          brand: "Massive Dynamic",
-          price: 69.0,
-          discountedPrice: 64.17,
-          discount: 7,
-          rating: 5,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["black", "orange"],
-          size: "medium",
-          availability: "inStock",
-          condition: "refurbished",
-          dimension: "70x40cm",
-        },
-        {
-          id: "5",
-          name: "Cropped Satin Bomber Jacket",
-          brand: "Pro Tech Gear",
-          price: 94.0,
-          rating: 0,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["pink", "red"],
-          size: "large",
-          availability: "notAvailable",
-          condition: "used",
-          dimension: "60x90cm",
-        },
-        {
-          id: "6",
-          name: "Organic Cotton T-Shirt",
-          brand: "Soylent Green",
-          price: 39.0,
-          rating: 4,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["green", "blue", "grey"],
-          size: "small",
-          availability: "inStock",
-          condition: "new",
-        },
-        {
-          id: "7",
-          name: "Vintage Denim Jacket",
-          brand: "The Simpsons",
-          price: 85.0,
-          rating: 5,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["blue"],
-          size: "xl",
-          availability: "inStock",
-          condition: "used",
-        },
-        {
-          id: "8",
-          name: "Leather Messenger Bag",
-          brand: "Weeds Capital",
-          price: 79.0,
-          discountedPrice: 69.0,
-          discount: 10,
-          rating: 4,
-          image: "/placeholder.svg?height=200&width=200",
-          colors: ["black", "orange"],
-          size: "large",
-          availability: "inStock",
-          condition: "new",
-        },
-    ]
-
-    const productSpecifications = {
-        logo: "/placeholder.svg?height=100&width=200",
-        reference: "Product1",
-        condition: "New",
-        stock: 244,
-        details: {
-          Composition: "Cotton",
-          Property: "Long sleeves",
-          Style: "Classic",
-        },
-    }
-
-    const [currentPage, setCurrentPage] = useState(0)
-    const productsPerPage = 5
-    const totalPages = Math.ceil(products.length / productsPerPage)
-
-    const nextPage = () => {
-        if (currentPage < totalPages - 1) {
-            setCurrentPage(currentPage + 1)
-        }
-      }
-    
-    const prevPage = () => {
-        if (currentPage > 0) {
-            setCurrentPage(currentPage - 1)
-        }
-    }
-
-    const currentProducts = products.slice(currentPage * productsPerPage, (currentPage + 1) * productsPerPage)
+    if (!product) return <p>Product not found</p>;
 
     const incrementQuantity = () => setQuantity(quantity + 1)
 
@@ -189,11 +49,11 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className="container mx-auto px-4 py-8 cursor-pointer font-sans"> 
-            <div className="flex flex-col md:flex-row gap-8">
+        <div className="container mx-auto px-8 py-8 cursor-pointer font-['Roboto']"> 
+            <div className="flex flex-col md:flex-row gap-6">
                 {/* Left Column - Thumbnails */}
                 <div className="w-full md:w-20 flex flex-row md:flex-col gap-4 order-2 md:order-1">
-                    {thumbnails.map((thumb, index) => (
+                    {product.thumbnails.map((thumb, index) => (
                         <div
                         key={index}
                         className={`relative border p-2 cursor-pointer transition-transform bg-white transform duration-200 ease-in-out rounded-lg ${
@@ -213,12 +73,13 @@ const ProductDetail = () => {
                 </div>
 
                 {/* Center Column - Main Image */}
-                <div className="w-full md:w-1/2 order-1 md:order-2 border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                    <div className="p-4">
+                <div className="w-full md:w-1/2 order-1 md:order-2">
+                    <div className="p-4 bg-white shadow-lg rounded-lg border-gray-800">
                         <img
-                        src={thumbnails[activeImage] || "/placeholder.svg?height=500&width=500"}
-                        alt="Apple AirPods Max"
-                        className="w-full h-auto object-cover rounded-lg"
+                            src={product.thumbnails[activeImage] || "/placeholder.svg?height=500&width=500"}
+                            alt="Apple AirPods Max"
+                            className="w-full h-auto object-cover rounded-lg"
+                            style={{ aspectRatio: '1 / 1' }} // Hoặc bạn có thể điều chỉnh tỉ lệ theo nhu cầu
                         />
                     </div>
                 </div>
@@ -226,40 +87,33 @@ const ProductDetail = () => {
                 {/* Right Column - Product Info */}
                 <div className="w-full md:w-1/2 order-3 p-4 bg-white shadow-lg rounded-lg">
                     <div className="flex items-center mb-2">
-                        {renderStars(5)}
-                        <span className="ml-2 text-sm text-gray-600">1 Review(s)</span>
+                        {renderStars(product.rating || 0)}
+                        <span className="ml-2 text-sm text-gray-600">{product.review} Review(s)</span>
                     </div>
 
-                    <h1 className="text-2xl font-bold mb-4 text-gray-900">Apple AirPods Max Over-Ear Wireless Headphone</h1>
+                    <h1 className="text-2xl font-bold mb-4 text-gray-900">{product.name}</h1>
 
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                        We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire that they cannot foresee.
-                    </p>
+                    <p className="text-gray-600 mb-4 leading-relaxed">{product.slogan || "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất."}</p>
 
                     <div className="space-y-4 border-t border-b border-gray-200 py-4">
                         <div className="flex items-center">
-                            <span className="w-40 font-semibold text-gray-700">Brand:</span>
-                            <span className="text-gray-600">Gadget Zone</span>
+                            <span className="w-40 font-semibold text-gray-700">Thương hiệu:</span>
+                            <span className="text-gray-600">{product.brand}</span>
                         </div>
 
                         <div className="flex items-center">
-                            <span className="w-40 font-semibold text-gray-700">Condition:</span>
-                            <span className="text-gray-600">New</span>
+                            <span className="w-40 font-semibold text-gray-700">Tình trạng:</span>
+                            <span className="text-gray-600">{product.condition ? "New" : ""}</span>
                         </div>
 
                         <div className="flex items-center">
-                            <span className="w-40 font-semibold text-gray-700">Reference:</span>
-                            <span className="text-gray-600">Product1</span>
-                        </div>
-
-                        <div className="flex items-center">
-                            <span className="w-40 font-semibold text-gray-700">Available In Stock:</span>
-                            <span className="text-green-500">244 items</span>
+                            <span className="w-40 font-semibold text-gray-700">Có sẵn trong kho:</span>
+                            <span className="text-green-500">{product.inStock} sản phẩm</span>
                         </div>
 
                         <div>
                             <p className="text-gray-700">
-                                Hurry up! only <span className="text-red-500">244</span> items left in stock!
+                                Nhanh lên! chỉ <span className="text-red-500">{product.inStock}</span> sản phẩm còn hàng trong kho!
                             </p>
                             <div className="w-full bg-gray-200 h-2 rounded-full mt-2">
                                 <div className="bg-green-500 h-2 rounded-full w-2/3"></div>
@@ -272,49 +126,35 @@ const ProductDetail = () => {
                         {/* Color Selection */}
                         <div>
                             <div className="flex items-center mb-2">
-                                <span className="w-24 font-semibold text-gray-700">Color:</span>
-                                <span className="text-gray-600">{selectedColor}</span>
+                                <span className="w-20 text-[18px] font-semibold text-gray-700">Màu sắc:</span>
+                                <span className="text-gray-600 text-[18px]">{selectedColor}</span>
                             </div>
                             <div className="flex space-x-2">
-                                {colors.map((color) => (
+                                {product.colors.map((color, index) => (
                                     <button
-                                        key={color.name}
-                                        className={`w-8 h-8 rounded-full ${color.class} ${selectedColor === color.name ? "ring-2 ring-offset-2 ring-gray-400" : ""}`}
-                                        onClick={() => setSelectedColor(color.name)}
-                                        aria-label={`Select ${color.name} color`}
+                                        key={index}
+                                        className={`w-8 h-8 rounded-full border ${
+                                        selectedColor === color
+                                            ? "ring-2 ring-offset-2 ring-gray-400"
+                                            : "border-gray-300"
+                                        }`}
+                                        style={{ backgroundColor: color }}
+                                        onClick={() => setSelectedColor(color)}
+                                        aria-label={`Select ${color} color`}
                                     />
                                 ))}
-                            </div>
-                        </div>
-
-                        {/* Dimension */}
-                        <div className="flex items-center">
-                            <span className="w-24 font-semibold text-gray-700">Dimension:</span>
-                            <span className="text-gray-600">60x90cm</span>
-                        </div>
-
-                        <div className="relative w-40">
-                            <select className="w-full p-2 border border-gray-300 rounded appearance-none">
-                                <option>60x90cm</option>
-                                <option>70x100cm</option>
-                                <option>80x120cm</option>
-                            </select>
-                            <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                                <svg className="w-4 h-4 fill-current text-gray-500" viewBox="0 0 20 20">
-                                    <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                                </svg>
                             </div>
                         </div>
 
                         {/* Price Section */}
                         <div className="mt-6 space-y-4">
                             <div className="flex items-center">
-                                <span className="text-gray-500 line-through text-lg">$47.00</span>
-                                <span className="text-2xl font-bold text-red-500 ml-2">$42.00</span>
-                                <span className="ml-2 bg-red-100 text-red-500 px-2 py-1 text-xs rounded">SAVE $5.00</span>
+                                <span className="text-gray-500 line-through text-lg">{formatCurrency(product.price)}</span>
+                                <span className="text-2xl font-bold text-red-500 ml-2">{formatCurrency(product.price * (1 - product.discount))}</span>
+                                <span className="ml-2 bg-red-100 text-red-500 px-2 py-1 text-xs rounded">{product.discount} %</span>
                             </div>
 
-                            <p className="text-sm text-gray-500">Free Shipping (Est. Delivery Time 2-3 Days)</p>
+                            <p className="text-sm text-gray-500">Miễn phí vận chuyển (Thời gian giao hàng dự kiến ​​2-3 ngày)</p>
 
                             {/* Quantity and Add to Cart */}
                             <div className="flex space-x-4">
@@ -328,7 +168,7 @@ const ProductDetail = () => {
                                     </button>
                                 </div>
 
-                                <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition duration-200">Thêm vào giỏ hàng</button>
+                                <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition duration-200" onClick={() => addToCart({ ...product, quantity })}>Thêm vào giỏ hàng</button>
                             </div>
 
                             {/* In Stock Badge */}
@@ -352,16 +192,16 @@ const ProductDetail = () => {
                                 <div className="border border-gray-100 bg-gray-50 p-4 rounded flex">
                                     <div className="mr-4 text-orange-400 text-2xl">🔒</div>
                                     <div>
-                                        <h3 className="font-semibold text-gray-700">Security policy</h3>
-                                        <p className="text-sm text-gray-600">(edit with the Customer Reassurance module)</p>
+                                        <h3 className="font-semibold text-gray-700">Chính sách bảo mật</h3>
+                                        <p className="text-sm text-gray-600">(chỉnh sửa bằng mô-đun Đảm bảo cho khách hàng)</p>
                                     </div>
                                 </div>
 
                                 <div className="border border-gray-100 bg-gray-50 p-4 rounded flex">
                                     <div className="mr-4 text-orange-400 text-2xl">🚚</div>
                                     <div>
-                                        <h3 className="font-semibold text-gray-700">Delivery policy</h3>
-                                        <p className="text-sm text-gray-600">(edit with the Customer Reassurance module)</p>
+                                        <h3 className="font-semibold text-gray-700">Chính sách giao hàng</h3>
+                                        <p className="text-sm text-gray-600">(chỉnh sửa bằng mô-đun Đảm bảo cho khách hàng)</p>
                                     </div>
                                 </div>
                             </div>
@@ -373,64 +213,52 @@ const ProductDetail = () => {
             {/* Tabs Section */}
             <div className="mt-12">
                 <div className="border-b border-gray-200">
-                <nav className="flex space-x-8">
-                    <button
-                    className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer text-[16px] ${
-                        activeTab === "description"
-                        ? "border-orange-600 text-orange-600"
-                        : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                    }`}
-                    onClick={() => setActiveTab("description")}
-                    >
-                        Miêu tả sản phẩm
-                    </button>
-                    <button
-                    className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer text-[16px] ${
-                        activeTab === "details"
-                        ? "border-orange-600 text-orange-600"
-                        : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                    }`}
-                    onClick={() => setActiveTab("details")}
-                    >
-                        Chi tiết sản phẩm
-                    </button>
-                </nav>
+                    <nav className="flex space-x-8">
+                        <button
+                        className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer text-[16px] ${
+                            activeTab === "description"
+                            ? "border-orange-600 text-orange-600"
+                            : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        }`}
+                        onClick={() => setActiveTab("description")}
+                        >
+                            Miêu tả sản phẩm
+                        </button>
+                        <button
+                        className={`py-4 px-1 border-b-2 font-medium text-sm cursor-pointer text-[16px] ${
+                            activeTab === "details"
+                            ? "border-orange-600 text-orange-600"
+                            : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                        }`}
+                        onClick={() => setActiveTab("details")}
+                        >
+                            Chi tiết sản phẩm
+                        </button>
+                    </nav>
                 </div>
 
                 <div className="py-6">
                 {activeTab === "description" && (
                     <div className="prose max-w-none border border-gray-200 px-10 py-6 rounded font-sans bg-white">
-                        <p className="text-[16px] leading-relaxed"> 
-                            Biểu tượng của sự nhẹ nhàng và tinh tế, chim ruồi gợi lên sự tò mò và niềm vui. Bộ sưu tập PolyFaune của Studio 
-                            Design bao gồm các sản phẩm kinh điển với họa tiết đầy màu sắc, lấy cảm hứng từ nghệ thuật origami truyền thống 
-                            của Nhật Bản. Thích hợp để phối cùng quần chino hoặc jeans. Quy trình in vải thăng hoa mang lại chất lượng màu 
-                            sắc tuyệt vời và độ bền màu theo thời gian. 
-                        </p> 
-                        <p className="font-semibold mt-4 mb-2"> 
-                            Đoạn Lorem Ipsum tiêu chuẩn, được sử dụng từ những năm 1500 
-                        </p> 
-                        <p className="text-[16px] leading-relaxed"> 
-                            Thời trang đã sáng tạo ra các bộ sưu tập thiết kế đẹp từ năm 2010. Thương hiệu mang đến những thiết kế nữ 
-                            tính với các món đồ thời trang riêng biệt và những chiếc đầm nổi bật, kể từ đó đã phát triển thành một bộ sưu 
-                            tập thời trang đầy đủ trong đó mỗi món đều là phần thiết yếu trong tủ đồ của phụ nữ. Kết quả? Những bộ 
-                            trang phục mát mẻ, dễ mặc, thời thượng với nét thanh lịch trẻ trung. 
-                        </p> 
-                        <p className="font-semibold mt-4 mb-2"> 
-                            Trái với suy nghĩ phổ biến, Lorem Ipsum không chỉ là một đoạn văn ngẫu nhiên. 
-                        </p>
-                        <p className="text-[16px] leading-relaxed"> 
-                            Nhiều phần mềm xuất bản trên máy tính để bàn và các trình chỉnh sửa trang web hiện nay sử dụng Lorem 
-                            Ipsum như một văn bản mẫu mặc định, và khi tìm kiếm "lorem ipsum", bạn sẽ thấy rất nhiều trang web vẫn 
-                            còn trong giai đoạn sơ khai. Nhiều phiên bản đã phát triển theo thời gian, đôi khi do vô tình, đôi khi có chủ ý 
-                            (chèn thêm sự hài hước và những yếu tố tương tự). 
-                        </p>
+                        {product.descriptions.map((desc, index) => {
+                        return (
+                            <div key={index}>
+                            <p className="font-semibold mt-4 mb-2">
+                                {desc.title || "Mô tả sản phẩm"}
+                            </p>
+                            <p className="text-[16px] leading-relaxed">
+                                {desc.content || "Không có mô tả cho sản phẩm này."}
+                            </p>
+                            </div>
+                        );
+                        })}
                     </div>
                 )}
 
                 {activeTab === "details" && (
                     <div>
                         {/* Data Sheet Section */}
-                        <ProductDataSheet specifications={productSpecifications} />
+                        <ProductDataSheet product={product} />
                     </div>
                 )}
                 </div>

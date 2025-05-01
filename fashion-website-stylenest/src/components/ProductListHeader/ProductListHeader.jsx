@@ -18,11 +18,11 @@ const ProductListHeader = ({ totalProducts, onViewChange, onSortChange }) => {
     }
 
     const sortOptions = [
-        { value: "relevance", label: "Relevance" },
-        { value: "price-low", label: "Price: Low to High" },
-        { value: "price-high", label: "Price: High to Low" },
-        { value: "newest", label: "Newest First" },
-        { value: "rating", label: "Highest Rated" }
+        { value: "relevance", label: "Có liên quan" },
+        { value: "price-low", label: "Giá: Từ thấp đến cao" },
+        { value: "price-high", label: "Giá: Từ cao đến thấp" },
+        { value: "newest", label: "Sản phẩm mới" },
+        { value: "rating", label: "Đánh giá cao nhất" }
     ]
 
 return (
@@ -42,12 +42,12 @@ return (
         >
             <List size={20} className="text-gray-600" />
         </button>
-        <span className="ml-4 text-gray-700">There are {totalProducts} products.</span>
+        <span className="ml-4 text-gray-700">Có {totalProducts} sản phẩm.</span>
         </div>
 
         <div className="relative">
         <div className="flex items-center gap-2">
-            <span className="text-gray-700">Sort By:</span>
+            <span className="text-gray-700">Sắp xếp theo:</span>
             <button
             className="px-3 py-2 border border-gray-300 rounded-md flex items-center gap-2 min-w-[160px] justify-between hover:border-gray-400 transition-colors"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}

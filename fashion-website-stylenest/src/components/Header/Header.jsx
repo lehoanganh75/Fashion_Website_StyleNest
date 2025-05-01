@@ -11,6 +11,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Navigation from "../Navigation/Navigation";
 import LoginForm from "../Login/LoginForm";
 import RegisterForm from "../Login/RegisterForm";
+import { useCart } from "../../contexts/CartContext"
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -18,6 +19,8 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: 13,
     border: `2px solid ${(theme.vars ?? theme).palette.background.paper}`,
     padding: "0 4px",
+    backgroundColor: "oklch(70.5% 0.213 47.604)", // màu cam
+    color: "white", // màu chữ trên nền cam
   },
 }));
 
@@ -25,6 +28,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [authFormView, setAuthFormView] = useState("login") // "login" or "register"
+  const { cart } = useCart();
 
   // Function to track scroll event
   const handleScroll = () => {
@@ -54,6 +58,10 @@ const Header = () => {
   const handleCloseAuthForm = () => {
     setIsLoginOpen(false)
   }
+
+  const selectedCount = cart
+    .filter((item) => item.selected)
+    .reduce((sum, item) => sum + item.quantity, 0);
 
   // Use useEffect to add and remove scroll event
   useEffect(() => {
@@ -150,7 +158,7 @@ const Header = () => {
                   <Tooltip title="Giỏ hàng">
                     <Link to="/cart" aria-label="cart">
                       <IconButton aria-label="cart">
-                        <StyledBadge badgeContent={0} color="secondary">
+                        <StyledBadge badgeContent={selectedCount} color="secondary">
                           <MdOutlineShoppingCart className="text-xl text-gray-800 hover:text-orange-500" />
                         </StyledBadge>
                       </IconButton>

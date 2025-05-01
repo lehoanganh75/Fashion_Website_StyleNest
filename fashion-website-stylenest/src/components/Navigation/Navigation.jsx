@@ -34,7 +34,7 @@ const Navigation = () => {
               {[
                 { label: "Trang chủ", link: "/" },
                 { label: "Thời trang", link: "/product" },
-                { label: "Hàng mới về", link: "/new-arrivals" },
+                { label: "Hàng mới về", link: "/newProduct" },
                 { label: "Tất cả thương hiệu", link: "/brands" },
                 { label: "Ưu đãi tốt", link: "/deals" },
                 { label: "Blog", link: "/blog" },

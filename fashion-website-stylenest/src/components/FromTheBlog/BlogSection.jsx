@@ -21,7 +21,7 @@ const BlogSection = () => {
   return (
     <div className="px-4 lg:px-0">
       <h2 className="text-3xl font-medium text-gray-800 mb-8 flex items-center gap-3">
-        <i className='bx bxs-news text-red-600 text-4xl'></i> Tin tức mới nhất
+        <i className='bx bxs-news text-orange-600 text-4xl'></i> Tin tức mới nhất
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -38,7 +38,7 @@ const BlogSection = () => {
               />
             </a>
             <div className="p-5">
-              <div className="text-red-600 text-xs mb-3 flex items-center">
+              <div className="text-orange-600 text-xs mb-3 flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4 mr-1"
@@ -55,14 +55,14 @@ const BlogSection = () => {
                 </svg>
                 {`${post.date}`}
               </div>
-              <h3 className="font-semibold text-lg mb-2 line-clamp-2 text-gray-800 hover:text-red-600 transition-colors">
+              <h3 className="font-semibold text-lg mb-2 line-clamp-2 text-gray-800 hover:text-orange-600 transition-colors">
                 {post.title}
               </h3>
               <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                 {post.shortInfo}
               </p>
               {/* Thay thế <a> thành <Link> với to */}
-              <Link to={`/blog/${post.id}`} className="text-red-500 text-sm font-semibold hover:underline">
+              <Link to={`/blog/${post.id}`} className="text-orange-500 text-sm font-semibold hover:underline">
                 Đọc thêm <i class='bx bx-right-arrow-alt' ></i>
               </Link>
             </div>
@@ -85,7 +85,7 @@ const BlogSection = () => {
             onClick={() => goToPage(i + 1)}
             className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out ${
               currentPage === i + 1
-                ? "bg-red-500 text-white font-bold"
+                ? "bg-orange-500 text-white font-bold"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300"
             }`}
           >

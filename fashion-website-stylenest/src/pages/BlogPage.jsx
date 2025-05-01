@@ -5,7 +5,7 @@ import BlogCategories from "../Components/FromTheBlog/BlogCategories";
 
 const BlogPage = () => {
   return (
-    <main className="container mx-auto px-6 py-8 bg-gray-100">
+    <main className="container mx-auto px-6 py-8 bg-gray-100 font-['Roboto']">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Main content section */}
         <div className="md:col-span-3">

@@ -1,80 +1,62 @@
-import { useState } from "react"
-import 'boxicons/css/boxicons.min.css'
+import { useState } from "react";
+import 'boxicons/css/boxicons.min.css';
+import { useCart } from "../../contexts/CartContext";
 
 const ShoppingCart = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      name: "AlRism Áo Hoodie Chống UV Kéo Khóa",
-      color: "10 PINK",
-      size: "Nữ S",
-      description: "Chất liệu tái chế",
-      price: 588000,
-      quantity: 1,
-      selected: true,
-      image: "/placeholder.svg?height=80&width=80",
-    },
-    {
-      id: 2,
-      name: "Quần Jean Ống Suông Cao Cấp",
-      color: "32 BEIGE",
-      size: "Nữ M",
-      description: "",
-      price: 799000,
-      quantity: 1,
-      selected: true,
-      image: "/placeholder.svg?height=80&width=80",
-    },
-  ])
+  const { cart, setCart } = useCart(); 
 
-  const [allSelected, setAllSelected] = useState(true)
+  const [allSelected, setAllSelected] = useState(true);
 
   const toggleSelectAll = () => {
-    const newSelected = !allSelected
-    setAllSelected(newSelected)
-    setItems(items.map((item) => ({ ...item, selected: newSelected })))
-  }
+    const newSelected = !allSelected;
+    setAllSelected(newSelected);
+    setCart(cart.map((item) => ({ ...item, selected: newSelected })));
+  };
 
   const toggleSelectItem = (id) => {
-    const newItems = items.map((item) =>
+    const newItems = cart.map((item) =>
       item.id === id ? { ...item, selected: !item.selected } : item
-    )
-    setItems(newItems)
-    setAllSelected(newItems.every((item) => item.selected))
-  }
+    );
+    setCart(newItems);
+    setAllSelected(newItems.every((item) => item.selected));
+  };
 
   const incrementQuantity = (id) => {
-    setItems(items.map((item) => (item.id === id ? { ...item, quantity: item.quantity + 1 } : item)))
-  }
+    setCart(cart.map((item) => (item.id === id ? { ...item, quantity: item.quantity + 1 } : item)));
+  };
 
   const decrementQuantity = (id) => {
-    setItems(items.map((item) =>
+    setCart(cart.map((item) =>
       item.id === id && item.quantity > 1
         ? { ...item, quantity: item.quantity - 1 }
         : item
-    ))
-  }
+    ));
+  };
 
   const removeItem = (id) => {
-    setItems(items.filter((item) => item.id !== id))
-  }
+    setCart(cart.filter((item) => String(item.id) !== String(id)));
+  };
 
   const calculateSubtotal = () =>
-    items.filter((item) => item.selected).reduce((total, item) => total + item.price * item.quantity, 0)
+    cart.filter((item) => item.selected).reduce((total, item) => total + item.price * item.quantity, 0);
 
-  const calculateTax = () => calculateSubtotal() * 0.08
+  const calculateTax = () => calculateSubtotal() * 0.08;
 
-  const calculateTotal = () => calculateSubtotal() + calculateTax()
+  const calculateTotal = () => calculateSubtotal() + calculateTax();
 
-  const selectedCount = items.filter((item) => item.selected).length
+  const selectedCount = cart
+    .filter((item) => item.selected)
+    .reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="container mx-auto p-4 max-w-5xl">
+    <div className="container mx-auto p-4 max-w-5xl font-['Roboto']">
       <div className="flex flex-col gap-8 w-[90%]">
         <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Giỏ hàng</h1>
-
-          {items.length === 0 ? (
+          <h1 className="flex items-center text-3xl text-gray-700 font-semibold mb-6 gap-2">
+            <i className="bx bx-cart text-gray-700 text-4xl"></i>
+            <span>Giỏ hàng</span>
+          </h1>
+          {cart.length === 0 ? (
             <p className="text-center text-lg text-gray-500">Giỏ hàng của bạn hiện tại trống.</p>
           ) : (
             <>
@@ -91,7 +73,7 @@ const ShoppingCart = () => {
               </div>
 
               <div className="space-y-6">
-                {items.map((item) => (
+                {cart.map((item) => (
                   <div key={item.id} className="flex gap-5 border border-gray-300 rounded-xl p-4 hover:shadow-md transition">
                     <input
                       type="checkbox"
@@ -100,7 +82,7 @@ const ShoppingCart = () => {
                       className="h-4 w-4 text-gray-800 border-gray-300 rounded"
                       aria-label={`Chọn ${item.name}`}
                     />
-                    <img src={item.image} alt={item.name} className="w-40 h-40 object-cover rounded-lg border" />
+                    <img src={item.thumbnails[0]} alt={item.name} className="w-40 h-40 object-cover rounded-lg border-gray-400" />
                     <div className="flex-grow">
                       <div className="flex justify-between">
                         <h3 className="text-xl font-semibold text-gray-800 pb-2 truncate w-4/5">{item.name}</h3>
@@ -114,25 +96,25 @@ const ShoppingCart = () => {
                         {item.description && <p className="text-sm text-gray-500">Mô tả: {item.description}</p>}
                       </div>
                       <div className="flex justify-between items-center mt-4">
-                      <div className="flex items-center justify-center border border-gray-300 rounded-md overflow-hidden shadow-sm">
-                        <button
-                          onClick={() => decrementQuantity(item.id)}
-                          className="px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 transition duration-200 ease-in-out"
-                          disabled={item.quantity <= 1}
-                        >
-                          −
-                        </button>
-                        <span className="px-3 text-sm font-semibold text-gray-800">{item.quantity}</span>
-                        <button
-                          onClick={() => incrementQuantity(item.id)}
-                          className="px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 transition duration-200 ease-in-out"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <div className="text-[18px] font-semibold text-gray-600 mt-1 text-center">
-                        {(item.price * item.quantity).toLocaleString("vi-VN")} VND
-                      </div>
+                        <div className="flex items-center justify-center border border-gray-300 rounded-md overflow-hidden shadow-sm">
+                          <button
+                            onClick={() => decrementQuantity(item.id)}
+                            className="px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 transition duration-200 ease-in-out"
+                            disabled={item.quantity <= 1}
+                          >
+                            −
+                          </button>
+                          <span className="px-3 text-sm font-semibold text-gray-800">{item.quantity}</span>
+                          <button
+                            onClick={() => incrementQuantity(item.id)}
+                            className="px-2 py-1 text-sm text-gray-700 hover:bg-gray-200 transition duration-200 ease-in-out"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <div className="text-[18px] font-semibold text-gray-600 mt-1 text-center">
+                          {(item.price * item.quantity).toLocaleString("vi-VN")} VND
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -154,7 +136,7 @@ const ShoppingCart = () => {
               </div>
 
               <div className="border-t mt-4 pt-4">
-                <div className="flex justify-between text-xl font-semibold text-gray-900">
+                <div className="flex justify-between text-xl font-semibold text-gray-600">
                   <span className="text-lg">Tổng thanh toán</span>
                   <span className="text-lg text-gray-600 font-bold">{calculateTotal().toLocaleString("vi-VN")} VND</span>
                 </div>
@@ -171,7 +153,7 @@ const ShoppingCart = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ShoppingCart
+export default ShoppingCart;

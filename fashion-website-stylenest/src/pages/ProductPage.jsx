@@ -5,10 +5,8 @@ import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
 const ProductPage = () => {
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Fashion", href: "/fashion" },
-    { label: "Apparel", href: "/fashion/apparel" },
-    { label: "Smart Tablet", href: "#" },
+    { label: "Trang chủ", href: "/" },
+    { label: "Thời trang", href: "/product" }
   ];
 
   return (

@@ -17,7 +17,7 @@ const Breadcrumb = ({ items }) => {
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-gray-700 hover:text-[#F44B87FF] transition-colors"
+                    className="text-gray-700 hover:text-orange-600 transition-colors"
                   >
                     {item.label}
                   </Link>

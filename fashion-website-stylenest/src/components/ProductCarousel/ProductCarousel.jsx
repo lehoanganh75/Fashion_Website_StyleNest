@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ProductCard from "../ProductItem/ProductCard"; // Đảm bảo đường dẫn đúng
+import ProductCard from "../ProductItem/ProductCard"; 
 import "boxicons/css/boxicons.min.css";
 
 const ProductCarousel = ({ products, itemsPerPage = 5 }) => {
@@ -11,7 +11,6 @@ const ProductCarousel = ({ products, itemsPerPage = 5 }) => {
         (currentPage + 1) * itemsPerPage
     );
 
-    // Tự động chuyển trang mỗi 3 giây
     useEffect(() => {
         const autoSlide = setInterval(() => {
             setCurrentPage(prev =>
@@ -45,7 +44,7 @@ const ProductCarousel = ({ products, itemsPerPage = 5 }) => {
                         onClick={prevPage}
                         disabled={currentPage === 0}
                     >
-                        <i class='bx bx-left-arrow-alt' ></i>
+                        <i className='bx bx-left-arrow-alt' ></i>
                     </button>
                     <button
                         className={`w-10 h-10 rounded-full flex items-center justify-center shadow ${
@@ -56,7 +55,7 @@ const ProductCarousel = ({ products, itemsPerPage = 5 }) => {
                         onClick={nextPage}
                         disabled={currentPage === totalPages - 1}
                     >
-                        <i class='bx bx-right-arrow-alt' ></i>
+                        <i className='bx bx-right-arrow-alt' ></i>
                     </button>
                 </div>
             </div>
