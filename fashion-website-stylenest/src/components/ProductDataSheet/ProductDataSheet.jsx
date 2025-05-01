@@ -1,7 +1,7 @@
 const ProductDataSheet = ({ product }) => {
   const keyTranslations = {
-    fabric: "Chất liệu",
-    composition: "Thành phần",
+    material: "Chất liệu",
+    fabric: "Thành phần",
     origin: "Xuất xứ",
     careInstructions: "Hướng dẫn bảo quản"
   };
@@ -26,10 +26,10 @@ const ProductDataSheet = ({ product }) => {
             </div>
           )}
 
-          {product.inStock && (
+          {product.instock && (
             <div className="flex py-2">
               <span className="font-medium w-30">Trong cửa hàng</span>
-              <span className="text-green-500">{product.inStock} sản phẩm</span>
+              <span className="text-green-500">{product.instock} sản phẩm</span>
             </div>
           )}
         </div>

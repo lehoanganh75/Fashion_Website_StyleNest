@@ -28,8 +28,8 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
   }
 
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/30 backdrop-blur-md">
-      <div className="relative w-full max-w-lg mx-4 p-6 bg-white rounded-2xl shadow-2xl animate-in fade-in-50 zoom-in-95 duration-300">
+    <div className="fixed inset-0 z-40 flex items-center justify-center bg-white/30 backdrop-blur-md border">
+      <div className="relative w-full max-w-lg mx-4 p-6 bg-white border border-gray-300 rounded-2xl shadow-2xl animate-in fade-in-50 zoom-in-95 duration-300">
         {/* Close Button */}
         <button
           onClick={onClose}

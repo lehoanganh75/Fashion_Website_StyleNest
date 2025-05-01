@@ -5,11 +5,11 @@
     "type": "Áo Thun",
     "price": 199000,
     "discount": 5,
-    "color": ["Đen"],
+    "colors": ["Đen"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATID0598-02",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Trải nghiệm sự thoải mái tuyệt đối với chiếc áo thun nam trơn basic Just Tee đến từ thương hiệu ICON DENIM. Sản phẩm được chế tác từ chất liệu cotton tự nhiên, nổi tiếng với khả năng thoáng khí vượt trội và khả năng thấm hút mồ hôi hiệu quả, giúp bạn luôn cảm thấy khô ráo và dễ chịu trong mọi hoạt động hàng ngày. Với cấu trúc sợi vải mềm mại, chiếc áo mang đến cảm giác êm ái trên làn da, không gây kích ứng hay khó chịu ngay cả khi mặc trong thời gian dài. Đây chắc chắn là một lựa chọn lý tưởng cho những ai ưu tiên sự thoải mái và chất lượng trong trang phục thường ngày của mình."
@@ -23,20 +23,20 @@
         "content": "Áo thun nam trơn basic Just Tee được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát cơ thể nhưng vẫn đảm bảo sự chỉn chu và gọn gàng. Form áo này phù hợp với đa dạng vóc dáng người mặc, giúp tôn lên những đường nét tự nhiên mà vẫn mang lại sự thoải mái tối đa trong mọi cử động. Bạn có thể dễ dàng vận động, làm việc hay tham gia các hoạt động thể thao nhẹ nhàng mà không cảm thấy bị gò bó. Đây là sự lựa chọn hoàn hảo cho những ai yêu thích sự thoải mái, không muốn cảm giác bó sát nhưng vẫn muốn duy trì một vẻ ngoài lịch sự và thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton mềm mại",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam trơn basic Just Tee luôn bền đẹp, bạn nên giặt tay hoặc máy ở chế độ nhẹ với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm phai màu hoặc hư hại sợi vải. Sau khi giặt, nên phơi áo ở nơi thoáng mát, tránh ánh nắng trực tiếp gắt để bảo vệ màu sắc và độ bền của chất liệu cotton. Việc chăm sóc đúng cách sẽ giúp chiếc áo của bạn luôn như mới và đồng hành cùng bạn trong thời gian dài."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunamtronbasicjusttee1.jpg",
       "/imgs/aothunamtronbasicjusttee2.jpg",
       "/imgs/aothunamtronbasicjusttee3.jpg"
     ],
-    "id": 1,
+    "id": "1",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -49,11 +49,11 @@
     "type": "Áo Thun",
     "price": 350000,
     "discount": 10,
-    "color": ["Xanh Đen", "Xanh Nhạt"],
+    "colors": ["Xanh Đen", "Xanh Nhạt"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "ATMN1234-05",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN CAO CẤP",
         "content": "Khám phá sự kết hợp hoàn hảo giữa phong cách và sự thoải mái với chiếc áo thun nam slim fit basic đến từ thương hiệu MAVERICK. Sản phẩm được chế tác từ chất liệu thun cao cấp, nổi tiếng với độ bền vượt trội và khả năng chịu đựng tốt qua thời gian. Đặc biệt, áo còn được pha thêm một lượng nhỏ sợi spandex, mang lại độ co giãn nhẹ nhàng, giúp bạn dễ dàng vận động và di chuyển mà không cảm thấy bị gò bó. Chất liệu thun này không chỉ bền mà còn mang đến vẻ ngoài nam tính, mạnh mẽ, là một lựa chọn không thể thiếu trong tủ đồ của mọi quý ông hiện đại."
@@ -67,21 +67,21 @@
         "content": "Với màu sắc basic và kiểu dáng timeless, chiếc áo thun nam slim fit basic của MAVERICK mang đến khả năng phối đồ linh hoạt đáng kinh ngạc. Bạn có thể dễ dàng tạo ra nhiều phong cách khác nhau chỉ với một chiếc áo thun này. Để có một diện mạo casual và thoải mái, hãy kết hợp áo với quần jeans và giày thể thao. Nếu bạn muốn một vẻ ngoài lịch sự và chỉn chu hơn, hãy thử phối cùng quần âu và giày tây. Thậm chí, bạn có thể khoác thêm một chiếc áo blazer để tạo nên phong cách smart-casual ấn tượng. Áo thun basic này thực sự là một item đa năng, giúp bạn tự tin thể hiện phong cách riêng trong mọi hoàn cảnh."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Thun",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam slim fit basic luôn bền màu và giữ được form dáng, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến chất liệu và màu sắc của thun. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ sợi vải và màu sắc. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều năm tới."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamslimfitbasic1.jpg",
       "/imgs/aothunnamslimfitbasic2.jpg",
       "/imgs/aothunnamslimfitbasic3.jpg",
       "/imgs/aothunnamslimfitbasic4.jpg"
     ],
-    "id": 2,
+    "id": "2",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -94,11 +94,11 @@
     "type": "Áo Thun",
     "price": 280000,
     "discount": 15,
-    "color": ["Trắng", "Xanh Dương", "Hồng"],
+    "colors": ["Trắng", "Xanh Dương", "Hồng"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDT001-01",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU OXFORD CAO CẤP",
         "content": "Trải nghiệm sự lịch lãm và thoải mái với chiếc áo thun nam Oxford dài tay đến từ thương hiệu VIET TAILOR. Sản phẩm được may từ chất liệu vải Oxford cao cấp, nổi tiếng với độ bền, khả năng thoáng mát và đặc biệt là ít nhăn, giúp bạn luôn giữ được vẻ ngoài chỉn chu suốt cả ngày dài. Cấu trúc dệt đặc trưng của vải Oxford tạo nên bề mặt vải có độ sần nhẹ, mang lại cảm giác mềm mại và dễ chịu khi tiếp xúc với da. Đây là sự lựa chọn hoàn hảo cho những quý ông ценящие sự kết hợp giữa phong cách cổ điển và chất lượng vượt trội."
@@ -112,20 +112,20 @@
         "content": "Áo thun nam Oxford dài tay của VIET TAILOR được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát cơ thể nhưng vẫn đảm bảo sự gọn gàng và chỉn chu. Form áo này phù hợp với nhiều dáng người khác nhau, mang lại sự thoải mái tối đa trong mọi hoạt động. Bạn có thể dễ dàng kết hợp áo với quần âu, quần kaki hay thậm chí là quần jeans để tạo nên nhiều phong cách khác nhau tùy theo sở thích và hoàn cảnh. Sự thoải mái và tính ứng dụng cao của form regular fit khiến chiếc áo thun này trở thành một lựa chọn lý tưởng cho гардероб hàng ngày của bạn."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Oxford",
         "fabric": "Oxford",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam Oxford dài tay luôn bền đẹp và giữ được form dáng, bạn nên giặt máy ở chế độ nhẹ với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến màu sắc và chất liệu vải. Sau khi giặt, nên phơi áo ở nơi thoáng gió và có thể ủi ở nhiệt độ vừa phải để loại bỏ nếp nhăn và giữ cho áo luôn phẳng phiu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều dịp khác nhau."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamoxford1.jpg",
       "/imgs/aothunnamoxford2.jpg",
       "/imgs/aothunnamoxford3.jpg"
     ],
-    "id": 3,
+    "id": "3",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -138,11 +138,11 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 20,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATPBC022-03",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON THOÁNG MÁT",
         "content": "Cảm nhận sự thoải mái và phong cách với chiếc áo thun polo nam basic cotton đến từ thương hiệu POLO HOUSE. Sản phẩm được chế tác từ chất liệu cotton tự nhiên, nổi tiếng với khả năng thoáng khí tuyệt vời và khả năng thấm hút mồ hôi hiệu quả, giúp bạn luôn cảm thấy khô ráo và dễ chịu trong mọi điều kiện thời tiết. Chất liệu cotton mềm mại còn mang lại cảm giác êm ái trên làn da, không gây kích ứng hay khó chịu khi mặc trong thời gian dài. Đây là sự lựa chọn lý tưởng cho những ai ưu tiên sự thoải mái và tính ứng dụng cao trong trang phục hàng ngày của mình."
@@ -156,22 +156,22 @@
         "content": "Áo thun polo nam basic cotton được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát cơ thể nhưng vẫn đảm bảo sự chỉn chu và lịch sự. Form áo này phù hợp với nhiều dáng người khác nhau, mang lại sự thoải mái tối đa trong mọi cử động. Bạn có thể dễ dàng vận động, làm việc hay tham gia các hoạt động thể thao nhẹ nhàng mà không cảm thấy bị gò bó. Sự thoải mái và tính ứng dụng cao của form regular fit khiến chiếc áo thun polo này trở thành một lựa chọn không thể thiếu trong tủ đồ của những người đàn ông hiện đại và năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun polo nam basic cotton luôn bền đẹp và giữ được form dáng, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến màu sắc và chất liệu vải thun cá sấu. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ màu sắc và độ bền của chất liệu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun polo của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều dịp khác nhau."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunpolonambasic1.jpg",
       "/imgs/aothunpolonambasic2.jpg",
       "/imgs/aothunpolonambasic3.jpg",
       "/imgs/aothunpolonambasic4.jpg",
       "/imgs/aothunpolonambasic5.jpg"
     ],
-    "id": 4,
+    "id": "4",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -184,11 +184,11 @@
     "type": "Áo Thun",
     "price": 180000,
     "discount": 25,
-    "color": ["Be", "Xám", "Nâu"],
+    "colors": ["Be", "Xám", "Nâu"],
     "size": ["29", "31", "33"],
     "condition": true,
     "SKU": "ATSKNB007-06",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU KAKI MỀM MẠI",
         "content": "Chào đón mùa hè năng động với chiếc áo thun short kaki nam basic đến từ thương hiệu SUMMER VIBES. Sản phẩm được may từ chất liệu kaki mềm mại, mang lại cảm giác thoải mái và dễ chịu ngay cả trong những ngày hè nóng bức nhất. Chất liệu kaki không chỉ thoáng mát mà còn có độ bền cao, giúp chiếc áo của bạn luôn giữ được form dáng và màu sắc sau nhiều lần giặt. Đây là một item không thể thiếu trong tủ đồ mùa hè của mọi chàng trai, mang đến sự thoải mái và phong cách trong mọi hoạt động."
@@ -202,20 +202,20 @@
         "content": "Áo thun short kaki nam basic được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát nhưng vẫn đảm bảo sự gọn gàng và lịch sự. Form áo này phù hợp với nhiều dáng người khác nhau, mang lại sự tự do trong mọi cử động. Bạn có thể dễ dàng tham gia các hoạt động ngoài trời, vui chơi cùng bạn bè mà không cảm thấy bị gò bó. Sự thoải mái và tính ứng dụng cao của form regular fit khiến chiếc áo thun kaki này trở thành một lựa chọn lý tưởng cho những ngày hè năng động và thoải mái của bạn."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Kaki",
         "fabric": "Kaki",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun short kaki nam basic luôn bền đẹp và giữ được form dáng, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến màu sắc và chất liệu vải kaki. Sau khi giặt, nên phơi áo ở nơi thoáng gió và có thể ủi ở nhiệt độ vừa phải để loại bỏ nếp nhăn và giữ cho áo luôn phẳng phiu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều mùa hè tới."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunshortkakinam1.jpg",
       "/imgs/aothunshortkakinam2.jpg",
       "/imgs/aothunshortkakinam3.jpg"
     ],
-    "id": 5,
+    "id": "5",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -228,11 +228,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNGT015-04",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON THOÁNG MÁT",
         "content": "Thể hiện phong cách cá nhân một cách độc đáo với chiếc áo thun nam graphic tee cool đến từ thương hiệu TRENDY TEES. Sản phẩm được làm từ chất liệu cotton mềm mại và thoáng mát, mang lại cảm giác thoải mái tối đa trong suốt cả ngày dài. Chất liệu cotton tự nhiên không chỉ thấm hút mồ hôi tốt mà còn rất thân thiện với làn da, giúp bạn luôn cảm thấy dễ chịu dù trong thời tiết nóng bức. Đây là sự lựa chọn hoàn hảo cho những ai yêu thích sự thoải mái và muốn thể hiện cá tính riêng thông qua trang phục."
@@ -246,21 +246,21 @@
         "content": "Áo thun nam graphic tee cool được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát cơ thể nhưng vẫn đảm bảo sự gọn gàng và thoải mái. Form áo này phù hợp với nhiều dáng người khác nhau, mang lại sự tự do trong mọi cử động. Bạn có thể dễ dàng kết hợp áo với quần jeans, quần short hay quần jogger để tạo nên những phong cách năng động và trẻ trung. Sự thoải mái và tính thời trang của form regular fit khiến chiếc áo thun graphic tee này trở thành một item không thể thiếu trong tủ đồ của những người đàn ông hiện đại và cá tính."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam graphic tee cool luôn bền đẹp và hình in không bị phai màu hay bong tróc, bạn nên giặt máy ở chế độ nhẹ với nước lạnh hoặc ấm. Tránh vò mạnh hoặc sử dụng bàn chải chà trực tiếp lên hình in. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ màu sắc và độ bền của hình in. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun graphic tee của bạn luôn trông như mới và thể hiện được phong cách riêng của bạn trong thời gian dài."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamgraphic1.jpg",
       "/imgs/aothunnamgraphic2.jpg",
       "/imgs/aothunnamgraphic3.jpg",
       "/imgs/aothunnamgraphic4.jpg"
     ],
-    "id": 6,
+    "id": "6",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -273,11 +273,11 @@
     "type": "Áo Thun",
     "price": 290000,
     "discount": 15,
-    "color": ["Đen", "Xám Đậm"],
+    "colors": ["Đen", "Xám Đậm"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATJNTT003-07",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN DA CÁ",
         "content": "Nâng cao hiệu suất tập luyện và tận hưởng sự thoải mái tối đa với chiếc áo thun jogger nam thể thao đến từ thương hiệu SPORT ACTIVE. Sản phẩm được chế tác từ chất liệu thun da cá mềm mại, có độ co giãn tuyệt vời, giúp bạn dễ dàng thực hiện mọi động tác mà không cảm thấy bị gò bó. Chất liệu này còn có khả năng thấm hút mồ hôi tốt, giữ cho bạn luôn khô ráo và thoải mái trong suốt quá trình tập luyện. Đây là sự lựa chọn lý tưởng cho những ai đam mê thể thao và ценящие sự thoải mái trong trang phục tập luyện."
@@ -291,20 +291,20 @@
         "content": "Áo thun jogger nam thể thao của SPORT ACTIVE được thiết kế với sự tiện lợi tối đa cho người sử dụng. Sản phẩm có thể được trang bị các túi nhỏ ở tay hoặc thân áo, giúp bạn dễ dàng mang theo điện thoại, ví tiền hay chìa khóa trong quá trình tập luyện hoặc di chuyển. Các chi tiết như đường may chắc chắn, khóa kéo bền bỉ (nếu có) cũng được chú trọng để đảm bảo độ bền và tính thẩm mỹ của sản phẩm. Với sự kết hợp hoàn hảo giữa chất liệu cao cấp, kiểu dáng thời trang và tính tiện dụng, chiếc áo thun jogger này chắc chắn sẽ là người bạn đồng hành lý tưởng của bạn trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "95% Cotton, 5% Spandex",
         "fabric": "Thun da cá",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun jogger nam thể thao luôn bền đẹp và giữ được form dáng, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng thuốc tẩy mạnh có thể làm ảnh hưởng đến màu sắc và độ co giãn của chất liệu thun da cá. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ chất liệu và màu sắc. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun jogger của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều buổi tập luyện."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunjoggernam1.jpg",
       "/imgs/aothunjoggernam2.jpg",
       "/imgs/aothunjoggernam3.jpg"
     ],
-    "id": 7,
+    "id": "7",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -317,11 +317,11 @@
     "type": "Áo Thun",
     "price": 380000,
     "discount": 10,
-    "color": ["Xanh Navy", "Đen", "Xám"],
+    "colors": ["Xanh Navy", "Đen", "Xám"],
     "size": ["M", "L", "XL", "XXL"],
     "condition": true,
     "SKU": "ATKGNB009-08",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU GIÓ NHẸ",
         "content": "Đối phó với những cơn gió nhẹ và thời tiết se lạnh một cách phong cách với chiếc áo thun khoác gió nam basic đến từ thương hiệu WIND BREAKER. Sản phẩm được làm từ chất liệu gió nhẹ, có khả năng cản gió hiệu quả và chống thấm nước nhẹ, giúp bạn luôn cảm thấy thoải mái và khô ráo trong những điều kiện thời tiết không thuận lợi. Chất liệu này còn rất nhẹ và dễ dàng gấp gọn, tiện lợi để bạn mang theo bên mình trong mọi chuyến đi. Đây là một item không thể thiếu trong tủ đồ của những người yêu thích sự tiện lợi và phong cách năng động."
@@ -335,21 +335,21 @@
         "content": "Áo thun khoác gió nam basic của WIND BREAKER được thiết kế với sự tiện lợi tối đa cho người sử dụng. Áo được trang bị các túi khóa kéo an toàn ở hai bên hông và có thể có thêm túi bên trong, giúp bạn dễ dàng mang theo các vật dụng cá nhân như điện thoại, ví tiền hay chìa khóa mà không lo bị rơi rớt. Phần khóa kéo trung tâm chắc chắn và bền bỉ, giúp bạn dễ dàng mặc và cởi áo. Với sự kết hợp hoàn hảo giữa chất liệu chống gió, kiểu dáng практичный và các chi tiết tiện lợi, chiếc áo thun khoác gió này chắc chắn sẽ là người bạn đồng hành đáng tin cậy của bạn trong mọi hoàn cảnh thời tiết."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Polyester",
         "fabric": "Vải gió",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun khoác gió nam basic luôn bền đẹp và giữ được khả năng chống gió, bạn nên giặt tay nhẹ nhàng với nước lạnh hoặc ấm. Tránh giặt máy và sử dụng các chất tẩy mạnh có thể làm hư hại lớp phủ chống thấm nước của vải gió. Sau khi giặt, nên phơi áo ở nơi thoáng gió, tránh ánh nắng trực tiếp gắt để bảo vệ chất liệu và màu sắc. Không nên ủi áo ở nhiệt độ cao vì có thể làm chảy hoặc biến dạng vải. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun khoác gió của bạn luôn như mới và đồng hành cùng bạn trong nhiều chuyến đi."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunkhoacgionam1.jpg",
       "/imgs/aothunkhoacgionam2.jpg",
       "/imgs/aothunkhoacgionam3.jpg",
       "/imgs/aothunkhoacgionam4.jpg"
     ],
-    "id": 8,
+    "id": "8",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -362,11 +362,11 @@
     "type": "Áo Thun",
     "price": 150000,
     "discount": 5,
-    "color": ["Trắng", "Đen", "Xanh Lá"],
+    "colors": ["Trắng", "Đen", "Xanh Lá"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCTT030-09",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM",
         "content": "Trải nghiệm sự thoải mái tối đa trong những ngày hè nóng bức với chiếc áo thun nam cổ tròn tay ngắn đến từ thương hiệu SIMPLE TEE. Sản phẩm được làm từ chất liệu cotton 100%, nổi tiếng với độ mềm mại và khả năng thoáng mát tuyệt vời. Chất liệu tự nhiên này không chỉ thấm hút mồ hôi hiệu quả mà còn rất dịu nhẹ với làn da, mang lại cảm giác dễ chịu suốt cả ngày dài. Đây là một item cơ bản nhưng không thể thiếu trong tủ đồ của mọi chàng trai, mang đến sự thoải mái và phong cách đơn giản."
@@ -380,20 +380,20 @@
         "content": "Áo thun nam cổ tròn tay ngắn của SIMPLE TEE được thiết kế với form slim fit, một dáng áo ôm nhẹ cơ thể, giúp tôn lên những đường nét nam tính mà vẫn đảm bảo sự thoải mái vừa phải. Form áo này không quá bó sát, mang lại sự tự tin và vẻ ngoài gọn gàng cho người mặc. Bạn có thể dễ dàng kết hợp áo với áo khoác ngoài, sơ mi khoác ngoài hay mặc đơn lẻ đều phù hợp. Sự vừa vặn và стильный của form slim fit khiến chiếc áo thun này trở thành một lựa chọn lý tưởng cho những ai yêu thích vẻ ngoài trẻ trung và năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam cổ tròn tay ngắn luôn bền đẹp và giữ được form dáng, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến màu sắc và chất liệu vải cotton. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ màu sắc và độ bền của chất liệu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều mùa hè tới."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamcotron1.jpg",
       "/imgs/aothunnamcotron2.jpg",
       "/imgs/aothunnamcotron3.jpg"
     ],
-    "id": 9,
+    "id": "9",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -406,11 +406,11 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 15,
-    "color": ["Đen", "Xám", "Nâu"],
+    "colors": ["Đen", "Xám", "Nâu"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCB027-13",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN MỀM MẠI",
         "content": "Giữ ấm cơ thể một cách стильный và thoải mái với chiếc áo thun nam cổ lọ basic đến từ thương hiệu KNITWEAR CO. Sản phẩm được làm từ chất liệu thun mềm mại, mang lại cảm giác ấm áp và dễ chịu trong những ngày se lạnh. Chất liệu thun cao cấp không chỉ giữ nhiệt tốt mà còn rất nhẹ và thoáng khí, không gây cảm giác bí bách khi mặc. Đây là một item không thể thiếu trong tủ đồ mùa đông của mọi quý ông, mang đến sự ấm áp và phong cách lịch lãm."
@@ -424,20 +424,20 @@
         "content": "Áo thun nam cổ lọ basic của KNITWEAR CO. được thiết kế với form slim fit, một dáng áo ôm nhẹ cơ thể, giúp tôn lên những đường nét nam tính mà vẫn đảm bảo sự thoải mái vừa phải. Form áo này không quá bó sát, mang lại vẻ ngoài gọn gàng và стильный cho người mặc. Bạn có thể dễ dàng kết hợp áo với áo khoác ngoài như áo vest, áo blazer hay áo da để tạo nên những outfit ấm áp và thời trang trong mùa đông. Sự vừa vặn và стильный của form slim fit khiến chiếc áo thun này trở thành một lựa chọn lý tưởng cho những ai yêu thích vẻ ngoài thanh lịch và hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Acrylic, Wool",
         "fabric": "Thun len",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam cổ lọ basic luôn bền đẹp và giữ được độ mềm mại của chất liệu thun len, bạn nên giặt tay nhẹ nhàng với nước lạnh hoặc ấm. Tránh giặt máy và sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến chất liệu len. Sau khi giặt, nên vắt nhẹ và phơi áo ngang trên mặt phẳng để tránh bị растяжение. Không nên ủi áo thun ở nhiệt độ cao. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn ấm áp và стильный trong nhiều mùa đông tới."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamcolo1.jpg",
       "/imgs/aothunnamcolo2.jpg",
       "/imgs/aothunnamcolo3.jpg"
     ],
-    "id": 10,
+    "id": "10",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -450,11 +450,11 @@
     "type": "Áo Thun",
     "price": 390000,
     "discount": 20,
-    "color": ["Đen", "Xanh Than"],
+    "colors": ["Đen", "Xanh Than"],
     "size": ["30", "32", "34", "36", "38"],
     "condition": true,
     "SKU": "ATANDS021-14",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU VẢI CAO CẤP",
         "content": "Xây dựng phong cách lịch lãm và chuyên nghiệp với chiếc áo thun âu nam dáng suông classic đến từ thương hiệu CLASSIC TAILOR. Sản phẩm được may từ chất liệu vải cao cấp, mang lại cảm giác mềm mại, thoáng khí và đặc biệt là ít nhăn, giúp bạn luôn tự tin với vẻ ngoài chỉn chu suốt cả ngày dài. Chất liệu này không chỉ tạo cảm giác thoải mái khi mặc mà còn giữ được form dáng tốt, mang đến vẻ ngoài lịch sự và tinh tế. Đây là sự lựa chọn hoàn hảo cho những quý ông ценящие sự thoải mái và phong cách cổ điển."
@@ -468,15 +468,15 @@
         "content": "Với màu sắc basic và kiểu dáng classic, chiếc áo thun âu nam dáng suông của CLASSIC TAILOR là một item không thể thiếu trong гардероб của những người đàn ông theo đuổi phong cách lịch lãm. Bạn có thể dễ dàng tạo ra vẻ ngoài chuyên nghiệp khi kết hợp áo với quần âu, áo vest và giày tây. Sự đơn giản và tinh tế trong thiết kế giúp bạn luôn tự tin và nổi bật trong mọi tình huống. Đây thực sự là một sự đầu tư thông minh cho phong cách cá nhân của bạn, giúp bạn xây dựng hình ảnh một quý ông lịch lãm và thành đạt."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Polyester, Rayon",
         "fabric": "Vải tây",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun âu nam dáng suông classic luôn bền đẹp và giữ được form dáng, bạn nên giặt khô hoặc giặt tay nhẹ nhàng với nước lạnh. Tránh giặt máy và sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến chất liệu và màu sắc của vải tây. Sau khi giặt, nên phơi áo ở nơi thoáng gió và ủi ở nhiệt độ thấp hoặc trung bình để loại bỏ nếp nhăn và giữ cho áo luôn phẳng phiu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều dịp quan trọng."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunaundangsuong1.jpg",
       "/imgs/aothunaundangsuong2.jpg",
       "/imgs/aothunaundangsuong3.jpg",
@@ -495,11 +495,11 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 25,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNTDB055-15",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON 100%",
         "content": "Trải nghiệm sự thoải mái và dễ chịu suốt cả ngày dài với chiếc áo thun nam tay dài basic đến từ thương hiệu LONG SLEEVE. Sản phẩm được làm hoàn toàn từ chất liệu cotton tự nhiên, nổi tiếng với độ mềm mại, thoáng mát và khả năng thấm hút mồ hôi tuyệt vời. Chất liệu này không chỉ mang lại cảm giác êm ái trên làn da mà còn giúp bạn luôn khô ráo và thoải mái trong mọi hoạt động. Đây là một item cơ bản nhưng vô cùng cần thiết trong tủ đồ của mọi chàng trai, phù hợp cho nhiều mục đích sử dụng khác nhau."
@@ -513,20 +513,20 @@
         "content": "Áo thun nam tay dài basic của LONG SLEEVE được thiết kế với form regular fit, một dáng áo suông vừa vặn, không quá ôm sát cơ thể nhưng vẫn đảm bảo sự gọn gàng và thoải mái. Form áo này phù hợp với nhiều dáng người khác nhau, mang lại sự tự do trong mọi cử động. Bạn có thể dễ dàng vận động, làm việc hay tham gia các hoạt động thể thao nhẹ nhàng mà không cảm thấy bị gò bó. Sự thoải mái và tính ứng dụng cao của form regular fit khiến chiếc áo thun tay dài này trở thành một lựa chọn lý tưởng cho гардероб hàng ngày của bạn."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun nam tay dài basic luôn bền đẹp và giữ được độ mềm mại của chất liệu cotton, bạn nên giặt máy ở chế độ thường với nước lạnh hoặc ấm. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến màu sắc và chất liệu vải. Nên lộn trái áo khi giặt và phơi ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ màu sắc và độ bền của chất liệu. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun của bạn luôn trông như mới và đồng hành cùng bạn trong nhiều mùa."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamtaydai1.jpg",
       "/imgs/aothunnamtaydai2.jpg",
       "/imgs/aothunnamtaydai3.jpg"
     ],
-    "id": 12,
+    "id": "12",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -539,11 +539,11 @@
     "type": "Áo Thun",
     "price": 160000,
     "discount": 30,
-    "color": ["Đen", "Xám"],
+    "colors": ["Đen", "Xám"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATSTTN002-16",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN LẠNH",
         "content": "Tối ưu hóa hiệu suất tập luyện và tận hưởng sự thoải mái tuyệt đối với chiếc áo thun short thể thao nam đến từ thương hiệu FITNESS GEAR. Sản phẩm được làm từ chất liệu thun lạnh cao cấp, nổi tiếng với khả năng thoáng mát vượt trội và khả năng khô nhanh chóng, giúp bạn luôn cảm thấy khô ráo và dễ chịu trong suốt quá trình vận động. Chất liệu này còn rất nhẹ và mềm mại, mang lại cảm giác thoải mái tối đa khi mặc. Đây là một item không thể thiếu cho những ai đam mê thể thao và ценящие sự thoải mái trong trang phục tập luyện."
@@ -557,21 +557,21 @@
         "content": "Áo thun short thể thao nam của FITNESS GEAR được thiết kế với sự tiện dụng tối đa cho người sử dụng. Áo thường được trang bị các túi bên hông, giúp bạn dễ dàng mang theo các vật dụng cá nhân nhỏ như điện thoại, chìa khóa hay tai nghe trong quá trình tập luyện. Các chi tiết như đường may chắc chắn và chất liệu bền bỉ đảm bảo độ bền của sản phẩm ngay cả khi sử dụng thường xuyên. Với sự kết hợp hoàn hảo giữa chất liệu thoáng mát, kiểu dáng năng động và tính tiện dụng, chiếc áo thun short thể thao này chắc chắn sẽ là người bạn đồng hành lý tưởng của bạn trong mọi buổi tập luyện."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Polyester",
         "fabric": "Thun lạnh",
         "origin": "Việt Nam",
         "careInstructions": "Để giữ cho chiếc áo thun short thể thao nam luôn bền đẹp và giữ được tính năng của chất liệu thun lạnh, bạn nên giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng các chất tẩy mạnh có thể làm ảnh hưởng đến chất liệu và màu sắc của vải. Nên phơi áo ở nơi thoáng gió, tránh ánh nắng trực tiếp để bảo vệ chất liệu và màu sắc. Chất liệu thun lạnh thường khô rất nhanh, vì vậy bạn không cần phải lo lắng về thời gian phơi. Việc chăm sóc đúng cách sẽ giúp chiếc áo thun thể thao của bạn luôn như mới và đồng hành cùng bạn trong nhiều buổi tập luyện."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunshortthethao1.jpg",
       "/imgs/aothunshortthethao2.jpg",
       "/imgs/aothunshortthethao3.jpg",
       "/imgs/aothunshortthethao4.jpg"
     ],
-    "id": 13,
+    "id": "13",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -584,11 +584,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 25,
-    "color": ["Trắng", "Xanh Lá", "Đen"],
+    "colors": ["Trắng", "Xanh Lá", "Đen"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNHR006-14",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON MỀM MẠI",
         "content": "Thể hiện phong cách hoài cổ với chiếc áo thun nam in họa tiết retro từ thương hiệu VINTAGE VIBES. Sản phẩm được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại, thoáng mát và thấm hút mồ hôi tốt. Chất liệu này không chỉ thoải mái mà còn thân thiện với làn da, phù hợp cho mọi hoạt động hàng ngày."
@@ -602,15 +602,15 @@
         "content": "Áo thun được thiết kế với form regular fit, vừa vặn, không ôm sát, mang lại sự thoải mái tối đa cho người mặc. Form dáng này phù hợp với nhiều vóc dáng, giúp bạn tự tin trong mọi hoạt động, từ đi chơi, dạo phố đến các buổi gặp gỡ bạn bè."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh sử dụng chất tẩy mạnh và phơi dưới ánh nắng trực tiếp để giữ màu sắc bền lâu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunngantayhoatiet1.jpg",
       "/imgs/aothunngantayhoatiet2.jpg",
       "/imgs/aothunngantayhoatiet3.jpg",
@@ -618,7 +618,7 @@
       "/imgs/aothunngantayhoatiet5.jpg",
       "/imgs/aothunngantayhoatiet6.jpg"
     ],
-    "id": 14,
+    "id": "14",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -631,11 +631,11 @@
     "type": "Áo Thun",
     "price": 190000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Xám"],
+    "colors": ["Đen", "Trắng", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT007-15",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON CO GIÃN",
         "content": "Chiếc áo thun nam cổ tim slim fit từ MODERN TEE được làm từ cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này giúp áo ôm vừa vặn cơ thể, tôn dáng mà không gây bí bách, phù hợp cho các hoạt động năng động."
@@ -649,20 +649,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng, nam tính. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang hiện đại, năng động nhưng vẫn muốn giữ được sự thoải mái."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "95% Cotton, 5% Spandex",
         "fabric": "Thun co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát và lộn trái áo khi giặt để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunslimfit1.jpg",
       "/imgs/aothunslimfit2.jpg",
       "/imgs/aothunslimfit3.jpg"
     ],
-    "id": 15,
+    "id": "15",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -675,11 +675,11 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 5,
-    "color": ["Xám/Đen", "Trắng/Xanh Navy"],
+    "colors": ["Xám/Đen", "Trắng/Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDR008-16",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON MỀM MẠI",
         "content": "Áo thun nam dài tay raglan từ CASUAL CO. được làm từ chất liệu cotton cao cấp, mang lại sự thoải mái và thoáng khí. Chất liệu này giúp thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày hoặc thời tiết se lạnh."
@@ -693,20 +693,20 @@
         "content": "Form regular fit rộng rãi, phù hợp với nhiều dáng người, mang lại sự thoải mái và dễ chịu. Áo dễ dàng phối với quần jeans hoặc quần jogger để tạo phong cách casual, năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh phơi dưới ánh nắng trực tiếp để bảo vệ màu sắc. Ủi ở nhiệt độ thấp nếu cần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamtronbasic1.jpg",
       "/imgs/aopolonamtronbasic2.jpg",
       "/imgs/aopolonamtronbasic3.jpg"
     ],
-    "id": 16,
+    "id": "16",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -719,11 +719,11 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 15,
-    "color": ["Đen", "Trắng", "Be"],
+    "colors": ["Đen", "Trắng", "Be"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNOB009-17",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON DÀY DẶN",
         "content": "Áo thun nam oversize basic từ LOOSE FIT được làm từ chất liệu cotton dày dặn, mang lại cảm giác chắc chắn và thoải mái. Chất liệu này vẫn đảm bảo độ thoáng khí, phù hợp cho phong cách đường phố năng động."
@@ -737,21 +737,21 @@
         "content": "Áo thun oversize là item không thể thiếu cho những ai yêu thích phong cách đường phố. Sự thoải mái và tính linh hoạt trong phối đồ khiến chiếc áo này trở thành lựa chọn hàng đầu cho các bạn trẻ."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunpolocaocap1.jpg",
       "/imgs/aothunpolocaocap2.jpg",
       "/imgs/aothunpolocaocap3.jpg",
       "/imgs/aothunpolocaocap4.jpg"
     ],
-    "id": 17,
+    "id": "17",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -764,11 +764,11 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 15,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNTL010-18",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON MỀM MẠI",
         "content": "Áo thun nam thêu logo nhỏ từ MINIMAL TEE được làm từ chất liệu cotton tự nhiên, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho mọi thời tiết."
@@ -782,20 +782,20 @@
         "content": "Form regular fit vừa vặn, không quá bó, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích sự đơn giản nhưng vẫn muốn giữ được phong cách."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh chà mạnh phần thêu logo. Phơi ở nơi thoáng mát để bảo vệ chất liệu và màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolothethaonam1.jpg",
       "/imgs/aopolothethaonam2.jpg",
       "/imgs/aopolothethaonam3.jpg"
     ],
-    "id": 18,
+    "id": "18",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -808,11 +808,11 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 15,
-    "color": ["Đen", "Trắng", "Xanh Đậm"],
+    "colors": ["Đen", "Trắng", "Xanh Đậm"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPC011-19",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun polo nam cao cấp từ ELITE POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
@@ -826,20 +826,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại sự gọn gàng. Đây là lựa chọn hoàn hảo cho những ai muốn kết hợp giữa sự thoải mái và phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamdaitay1.jpg",
       "/imgs/aopolonamdaitay2.jpg",
       "/imgs/aopolonamdaitay3.jpg"
     ],
-    "id": 19,
+    "id": "19",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -852,11 +852,11 @@
     "type": "Áo Thun",
     "price": 280000,
     "discount": 20,
-    "color": ["Xanh Navy", "Xám", "Đen"],
+    "colors": ["Xanh Navy", "Xám", "Đen"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCN012-20",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU CHỐNG NẮNG UPF 50+",
         "content": "Áo thun nam chống nắng từ SUNSHIELD được làm từ chất liệu polyester đặc biệt với khả năng chống tia UV UPF 50+, bảo vệ da khỏi tác hại của ánh nắng mặt trời. Chất liệu này còn thoáng khí và khô nhanh, phù hợp cho các hoạt động ngoài trời."
@@ -870,20 +870,20 @@
         "content": "Form regular fit rộng rãi, không bó sát, mang lại sự thoải mái tối đa khi vận động. Áo dễ dàng phối với quần short hoặc quần jogger để tạo phong cách thể thao."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Polyester",
         "fabric": "Vải chống nắng",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi khô tự nhiên để bảo vệ lớp chống nắng."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamslimfit1.jpg",
       "/imgs/aopolonamslimfit2.jpg",
       "/imgs/aopolonamslimfit3.jpg"
     ],
-    "id": 20,
+    "id": "20",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -896,11 +896,11 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNIS013-21",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in slogan từ QUOTE TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -914,20 +914,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunhenleynamsngantay1.jpg",
       "/imgs/aothunhenleynamsngantay2.jpg",
       "/imgs/aothunhenleynamsngantay3.jpg"
     ],
-    "id": 21,
+    "id": "21",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -940,11 +940,11 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 10,
-    "color": ["Đen", "Xám", "Nâu"],
+    "colors": ["Đen", "Xám", "Nâu"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDK014-22",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DỆT KIM CAO CẤP",
         "content": "Áo thun nam dệt kim từ KNIT TEE được làm từ chất liệu dệt kim cao cấp, mang lại cảm giác mềm mại, nhẹ nhàng và thoáng khí. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
@@ -958,20 +958,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Acrylic, Cotton",
         "fabric": "Dệt kim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt tay nhẹ nhàng với nước lạnh. Tránh giặt máy để bảo vệ chất liệu dệt kim. Phơi ngang trên mặt phẳng để tránh giãn."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamcotru1.jpg",
       "/imgs/aopolonamcotru2.jpg",
       "/imgs/aopolonamcotru3.jpg"
     ],
-    "id": 22,
+    "id": "22",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -984,11 +984,11 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 15,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT015-23",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON DÀY DẶN",
         "content": "Áo thun nam cổ tròn dày từ HEAVY TEE được làm từ chất liệu cotton dày dặn, mang lại cảm giác chắc chắn và bền bỉ. Chất liệu này vẫn đảm bảo độ thoáng khí, phù hợp cho thời tiết mát mẻ."
@@ -1002,20 +1002,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và bền bỉ."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonammau-sactuoisang1.jpg",
       "/imgs/aopolonammau-sactuoisang2.jpg",
       "/imgs/aopolonammau-sactuoisang3.jpg"
     ],
-    "id": 23,
+    "id": "23",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1028,11 +1028,11 @@
     "type": "Áo Thun",
     "price": 290000,
     "discount": 20,
-    "color": ["Đen", "Xanh Navy", "Trắng"],
+    "colors": ["Đen", "Xanh Navy", "Trắng"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCB016-24",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN LẠNH",
         "content": "Áo thun nam cổ bẻ thể thao từ SPORT POLO được làm từ chất liệu thun lạnh cao cấp, mang lại cảm giác mát mẻ và khô nhanh. Chất liệu này phù hợp cho các hoạt động thể thao hoặc thời tiết nóng bức."
@@ -1046,20 +1046,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại sự thoải mái khi vận động. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thể thao hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Polyester",
         "fabric": "Thun lạnh",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi khô tự nhiên để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamkengang1.jpg",
       "/imgs/aopolonamkengang2.jpg",
       "/imgs/aopolonamkengang3.jpg"
     ],
-    "id": 24,
+    "id": "24",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1072,11 +1072,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 10,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI017-25",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cộc tay in hình từ PRINT TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1090,20 +1090,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamchatlieulinen1.jpg",
       "/imgs/aopolonamchatlieulinen2.jpg",
       "/imgs/aopolonamchatlieulinen3.jpg"
     ],
-    "id": 25,
+    "id": "25",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1116,11 +1116,11 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHB018-26",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam henley basic từ HENLEY TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1134,20 +1134,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamtuinguc1.jpg",
       "/imgs/aopolonamtuinguc2.jpg",
       "/imgs/aopolonamtuinguc3.jpg"
     ],
-    "id": 26,
+    "id": "26",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1160,11 +1160,11 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Xám"],
+    "colors": ["Đen", "Trắng", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT019-27",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn dài tay từ LONG TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho thời tiết se lạnh."
@@ -1178,20 +1178,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tiện dụng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamkengang1.jpg",
       "/imgs/aopolonamkengang2.jpg",
       "/imgs/aopolonamkengang3.jpg"
     ],
-    "id": 27,
+    "id": "27",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1204,11 +1204,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNIA020-28",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in hình anime từ ANIME TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1222,20 +1222,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamdaitay1.jpg",
       "/imgs/aopolonamdaitay2.jpg",
       "/imgs/aopolonamdaitay3.jpg"
     ],
-    "id": 28,
+    "id": "28",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1248,11 +1248,11 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 20,
-    "color": ["Đen", "Xám", "Nâu"],
+    "colors": ["Đen", "Xám", "Nâu"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCL021-29",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN LEN MỀM MẠI",
         "content": "Áo thun nam cổ lọ dài tay từ TURTLENECK TEE được làm từ chất liệu thun len cao cấp, mang lại cảm giác ấm áp và mềm mại. Chất liệu này phù hợp cho thời tiết lạnh, giúp giữ nhiệt tốt."
@@ -1266,20 +1266,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Acrylic, Wool",
         "fabric": "Thun len",
         "origin": "Việt Nam",
         "careInstructions": "Giặt tay nhẹ nhàng với nước lạnh. Tránh giặt máy để bảo vệ chất liệu len. Phơi ngang trên mặt phẳng để tránh giãn."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonammaupastel1.jpg",
       "/imgs/aopolonammaupastel2.jpg",
       "/imgs/aopolonammaupastel3.jpg"
     ],
-    "id": 29,
+    "id": "29",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1292,11 +1292,11 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHD022-30",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in họa tiết động vật từ WILD TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1310,20 +1310,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aothunnamhoatiet1.jpg",
       "/imgs/aothunnamhoatiet2.jpg",
       "/imgs/aothunnamhoatiet3.jpg"
     ],
-    "id": 30,
+    "id": "30",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1336,11 +1336,11 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 15,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCL023-31",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn in logo từ LOGO TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại, thoáng mát và thấm hút mồ hôi tốt. Chất liệu này phù hợp cho mọi hoạt động hàng ngày, từ đi chơi đến làm việc."
@@ -1354,20 +1354,20 @@
         "content": "Form regular fit vừa vặn, không quá bó, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích sự đơn giản và tính ứng dụng cao trong trang phục."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ logo in. Tránh sử dụng chất tẩy mạnh và phơi dưới ánh nắng trực tiếp để giữ màu sắc bền lâu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamcodien1.jpg",
       "/imgs/aopolonamcodien2.jpg",
       "/imgs/aopolonamcodien3.jpg"
     ],
-    "id": 31,
+    "id": "31",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1380,11 +1380,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "color": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNTP024-32",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON PHA",
         "content": "Áo thun nam tay ngắn phối màu từ COLOR BLOCK được làm từ cotton pha polyester, mang lại độ bền cao và cảm giác thoáng mát. Chất liệu này giúp áo giữ form tốt và phù hợp cho các hoạt động năng động."
@@ -1398,20 +1398,20 @@
         "content": "Form regular fit rộng rãi, mang lại sự thoải mái và linh hoạt trong mọi cử động. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "80% Cotton, 20% Polyester",
         "fabric": "Thun cotton pha",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolothethaonamcaocap2.jpg",
       "/imgs/aopolothethaonamcaocap3.jpg",
       "/imgs/aopolothethaonamcaocap1.jpg"
     ],
-    "id": 32,
+    "id": "32",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1424,11 +1424,11 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 20,
-    "color": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["Đen", "Xám", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDP025-33",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON MỀM MẠI",
         "content": "Áo thun nam dài tay phối bo từ RIBBED TEE được làm từ chất liệu cotton cao cấp, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho thời tiết se lạnh hoặc các hoạt động hàng ngày."
@@ -1442,20 +1442,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế và năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh phơi dưới ánh nắng trực tiếp để bảo vệ màu sắc. Ủi ở nhiệt độ thấp nếu cần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamphoimau1.jpg",
       "/imgs/aopolonamphoimau2.jpg",
       "/imgs/aopolonamphoimau3.jpg"
     ],
-    "id": 33,
+    "id": "33",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1468,11 +1468,11 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Be"],
+    "colors": ["Đen", "Trắng", "Be"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCO026-34",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON DÀY DẶN",
         "content": "Áo thun nam cổ tròn oversize từ BIG TEE được làm từ chất liệu cotton dày dặn, mang lại cảm giác chắc chắn và thoải mái. Chất liệu này vẫn đảm bảo độ thoáng khí, phù hợp cho phong cách đường phố."
@@ -1486,20 +1486,20 @@
         "content": "Áo thun oversize là item không thể thiếu cho những ai yêu thích phong cách đường phố. Sự thoải mái và tính linh hoạt trong phối đồ khiến chiếc áo này trở thành lựa chọn hàng đầu."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamkengang1.jpg",
       "/imgs/aopolonamkengang2.jpg",
       "/imgs/aopolonamkengang3.jpg"
     ],
-    "id": 34,
+    "id": "34",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1512,11 +1512,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 15,
-    "color": ["Đen", "Trắng", "Xám"],
+    "colors": ["Đen", "Trắng", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT027-35",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON CO GIÃN",
         "content": "Áo thun nam cổ tim dài tay từ V-NECK TEE được làm từ cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này giúp áo ôm vừa vặn cơ thể, phù hợp cho thời tiết se lạnh."
@@ -1530,20 +1530,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng, nam tính. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "95% Cotton, 5% Spandex",
         "fabric": "Thun co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát và lộn trái áo khi giặt để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonaminlogonho1.jpg",
       "/imgs/aopolonaminlogonho2.jpg",
       "/imgs/aopolonaminlogonho3.jpg"
     ],
-    "id": 35,
+    "id": "35",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1556,11 +1556,11 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHF028-36",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in họa tiết hoa từ FLORAL TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1574,20 +1574,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamcov1.jpg",
       "/imgs/aopolonamcov2.jpg",
       "/imgs/aopolonamcov3.jpg"
     ],
-    "id": 36,
+    "id": "36",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1600,11 +1600,11 @@
     "type": "Áo Thun",
     "price": 330000,
     "discount": 25,
-    "color": ["Đen", "Xám", "Nâu"],
+    "colors": ["Đen", "Xám", "Nâu"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPD029-37",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DỆT KIM CAO CẤP",
         "content": "Áo thun polo dệt kim từ KNIT POLO được làm từ chất liệu dệt kim cao cấp, mang lại cảm giác mềm mại, nhẹ nhàng và thoáng khí. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
@@ -1618,20 +1618,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Acrylic, Cotton",
         "fabric": "Dệt kim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt tay nhẹ nhàng với nước lạnh. Tránh giặt máy để bảo vệ chất liệu dệt kim. Phơi ngang trên mặt phẳng để tránh giãn."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamchatlieubamboo1.jpg",
       "/imgs/aopolonamchatlieubamboo2.jpg",
       "/imgs/aopolonamchatlieubamboo3.jpg"
     ],
-    "id": 37,
+    "id": "37",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1644,11 +1644,11 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 30,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT030-38",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn thêu họa tiết từ EMBROIDERED TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1662,20 +1662,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh chà mạnh phần thêu họa tiết. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamdangrong1.jpg",
       "/imgs/aopolonamdangrong2.jpg",
       "/imgs/aopolonamdangrong3.jpg"
     ],
-    "id": 38,
+    "id": "38",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1688,11 +1688,11 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 35,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCD031-39",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun nam cổ bẻ dài tay từ LONG POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
@@ -1706,20 +1706,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonaminhinh1.jpg",
       "/imgs/aopolonaminhinh2.jpg",
       "/imgs/aopolonaminhinh3.jpg"
     ],
-    "id": 39,
+    "id": "39",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1732,11 +1732,11 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 10,
-    "color": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["Đen", "Xám", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCT032-40",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU THUN LẠNH",
         "content": "Áo thun nam cộc tay thể thao từ ACTIVE TEE được làm từ chất liệu thun lạnh cao cấp, mang lại cảm giác mát mẻ và khô nhanh. Chất liệu này phù hợp cho các hoạt động thể thao hoặc thời tiết nóng bức."
@@ -1750,20 +1750,20 @@
         "content": "Form regular fit rộng rãi, mang lại sự thoải mái tối đa khi vận động. Áo dễ dàng phối với quần short hoặc quần jogger để tạo phong cách thể thao."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "Polyester",
         "fabric": "Thun lạnh",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi khô tự nhiên để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aopolonamcaocap1.jpg",
       "/imgs/aopolonamcaocap2.jpg",
       "/imgs/aopolonamcaocap3.jpg"
     ],
-    "id": 40,
+    "id": "40",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1776,11 +1776,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 30,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHG033-41",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in họa tiết graffiti từ STREET TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1794,20 +1794,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosominamtronbasicdaitay1.jpg",
       "/imgs/aosominamtronbasicdaitay2.jpg",
       "/imgs/aosominamtronbasicdaitay3.jpg"
     ],
-    "id": 41,
+    "id": "41",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1820,11 +1820,11 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 15,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP034-42",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn phối túi từ POCKET TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -1838,20 +1838,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tiện dụng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomicarongantay1.jpg",
       "/imgs/aosomicarongantay2.jpg",
       "/imgs/aosomicarongantay3.jpg"
     ],
-    "id": 42,
+    "id": "42",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1864,11 +1864,11 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 30,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDI035-43",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam dài tay in slogan từ QUOTE LONG TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho thời tiết se lạnh."
@@ -1882,20 +1882,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomidenimdaitaynam1.jpg",
       "/imgs/aosomidenimdaitaynam2.jpg",
       "/imgs/aosomidenimdaitaynam3.jpg"
     ],
-    "id": 43,
+    "id": "43",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1908,11 +1908,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": null,
-    "color": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCS036-44",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON PHA",
         "content": "Áo thun nam cổ tròn phối sọc từ STRIPED TEE được làm từ cotton pha polyester, mang lại độ bền cao và cảm giác thoáng mát. Chất liệu này giúp áo giữ form tốt và phù hợp cho các hoạt động hàng ngày."
@@ -1926,20 +1926,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "80% Cotton, 20% Polyester",
         "fabric": "Thun cotton pha",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomioxforddaitaynam1.jpg",
       "/imgs/aosomioxforddaitaynam2.jpg",
       "/imgs/aosomioxforddaitaynam3.jpg"
     ],
-    "id": 44,
+    "id": "44",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1952,11 +1952,11 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 10,
-    "color": ["Xanh Navy", "Xám", "Đen"],
+    "colors": ["Xanh Navy", "Xám", "Đen"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDC037-45",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU CHỐNG NẮNG UPF 50+",
         "content": "Áo thun nam dài tay chống nắng từ SUNSHIELD LONG được làm từ chất liệu polyester đặc biệt với khả năng chống tia UV UPF 50+, bảo vệ da khỏi tác hại của ánh nắng mặt trời. Chất liệu này còn thoáng khí và khô nhanh, phù hợp cho các hoạt động ngoài trời."
@@ -1970,20 +1970,20 @@
         "content": "Form regular fit rộng rãi, không bó sát, mang lại sự thoải mái tối đa khi vận động. Áo dễ dàng phối với quần short hoặc quần jogger để tạo phong cách thể thao."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Polyester",
         "fabric": "Vải chống nắng",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi khô tự nhiên để bảo vệ lớp chống nắng."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomilennamngantay1.jpg",
       "/imgs/aosomilennamngantay2.jpg",
       "/imgs/aosomilennamngantay3.jpg"
     ],
-    "id": 45,
+    "id": "45",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -1996,11 +1996,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI038-46",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn in hình game từ GAMER TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2014,20 +2014,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomihoatietnhodaitaynam1.jpg",
       "/imgs/aosomihoatietnhodaitaynam2.jpg",
       "/imgs/aosomihoatietnhodaitaynam3.jpg"
     ],
-    "id": 46,
+    "id": "46",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2040,11 +2040,11 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 30,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPP039-47",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun polo phối bo từ RIBBED POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
@@ -2058,20 +2058,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomislimfitdaitaynam1.jpg",
       "/imgs/aosomislimfitdaitaynam2.jpg",
       "/imgs/aosomislimfitdaitaynam3.jpg"
     ],
-    "id": 47,
+    "id": "47",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2084,11 +2084,11 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": null,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT040-48",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON DÀY DẶN",
         "content": "Áo thun nam cổ tròn dày dặn từ THICK TEE được làm từ chất liệu cotton dày dặn, mang lại cảm giác chắc chắn và bền bỉ. Chất liệu này vẫn đảm bảo độ thoáng khí, phù hợp cho thời tiết mát mẻ."
@@ -2102,20 +2102,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và bền bỉ."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomikesocdaitaynam1.jpg",
       "/imgs/aosomikesocdaitaynam2.jpg",
       "/imgs/aosomikesocdaitaynam3.jpg"
     ],
-    "id": 48,
+    "id": "48",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2128,11 +2128,11 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCT041-49",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun nam cổ bẻ thêu logo từ LOGO POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
@@ -2146,20 +2146,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh chà mạnh phần thêu logo. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomicocubangantaynam1.jpg",
       "/imgs/aosomicocubangantaynam2.jpg",
       "/imgs/aosomicocubangantaynam3.jpg"
     ],
-    "id": 49,
+    "id": "49",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2172,11 +2172,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 30,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP042-50",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cộc tay phối bo từ RIBBED SHORT TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2190,20 +2190,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tiện dụng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomivaiduidaitaynam1.jpg",
       "/imgs/aosomivaiduidaitaynam2.jpg",
       "/imgs/aosomivaiduidaitaynam3.jpg"
     ],
-    "id": 50,
+    "id": "50",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2216,11 +2216,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHR043-51",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam in họa tiết retro từ RETRO TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2234,20 +2234,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomihoatietlonngantaynam1.jpg",
       "/imgs/aosomihoatietlonngantaynam2.jpg",
       "/imgs/aosomihoatietlonngantaynam3.jpg"
     ],
-    "id": 51,
+    "id": "51",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2260,11 +2260,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 15,
-    "color": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["Trắng", "Đen", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP044-52",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn phối logo từ LOGO PATCH TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2278,20 +2278,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tiện dụng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomitaynganformrongnam1.jpg",
       "/imgs/aosomitaynganformrongnam2.jpg",
       "/imgs/aosomitaynganformrongnam3.jpg"
     ],
-    "id": 52,
+    "id": "52",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2304,11 +2304,11 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 10,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDS045-53",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam dài tay thêu slogan từ SLOGAN LONG TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho thời tiết se lạnh."
@@ -2322,20 +2322,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh chà mạnh phần thêu slogan. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomimau-sactuoisangdaitaynam1.jpg",
       "/imgs/aosomimau-sactuoisangdaitaynam2.jpg",
       "/imgs/aosomimau-sactuoisangdaitaynam3.jpg"
     ],
-    "id": 53,
+    "id": "53",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2348,11 +2348,11 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "color": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP046-54",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON PHA",
         "content": "Áo thun nam cổ tròn phối màu từ COLOR TEE được làm từ cotton pha polyester, mang lại độ bền cao và cảm giác thoáng mát. Chất liệu này giúp áo giữ form tốt và phù hợp cho các hoạt động hàng ngày."
@@ -2366,20 +2366,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "80% Cotton, 20% Polyester",
         "fabric": "Thun cotton pha",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomidenimngantaynam1.jpg",
       "/imgs/aosomidenimngantaynam2.jpg",
       "/imgs/aosomidenimngantaynam3.jpg"
     ],
-    "id": 54,
+    "id": "54",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2392,11 +2392,11 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 20,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDP047-55",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam dài tay phối túi từ POCKET LONG TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho thời tiết se lạnh."
@@ -2410,20 +2410,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách đơn giản và tiện dụng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ chất liệu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomioxfordngantaynam1.jpg",
       "/imgs/aosomioxfordngantaynam2.jpg",
       "/imgs/aosomioxfordngantaynam3.jpg"
     ],
-    "id": 55,
+    "id": "55",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2436,11 +2436,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI048-56",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn in hình phim từ MOVIE TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2454,20 +2454,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomilendaitaynam1.jpg",
       "/imgs/aosomilendaitaynam2.jpg",
       "/imgs/aosomilendaitaynam3.jpg"
     ],
-    "id": 56,
+    "id": "56",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2480,11 +2480,11 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 15,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPD049-57",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun polo dài tay từ LONG SLEEVE POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
@@ -2498,20 +2498,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomihoatietlondaitaynam1.jpg",
       "/imgs/aosomihoatietlondaitaynam2.jpg",
       "/imgs/aosomihoatietlondaitaynam3.jpg"
     ],
-    "id": 57,
+    "id": "57",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2524,11 +2524,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI050-58",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn in hình nhạc từ MUSIC TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2542,20 +2542,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomitayloformrongnam1.jpg",
       "/imgs/aosomitayloformrongnam2.jpg",
       "/imgs/aosomitayloformrongnam3.jpg"
     ],
-    "id": 58,
+    "id": "58",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2568,11 +2568,11 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 30,
-    "color": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCP051-59",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun nam cổ bẻ phối sọc từ STRIPED POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
@@ -2586,20 +2586,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh sử dụng chất tẩy mạnh. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomimaupasteldaitaynam1.jpg",
       "/imgs/aosomimaupasteldaitaynam2.jpg",
       "/imgs/aosomimaupasteldaitaynam3.jpg"
     ],
-    "id": 59,
+    "id": "59",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2612,11 +2612,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI052-60",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cộc tay in hình thiên nhiên từ NATURE TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày."
@@ -2630,20 +2630,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/aosomicaocapdaitaynam1.jpg",
       "/imgs/aosomicaocapdaitaynam2.jpg",
       "/imgs/aosomicaocapdaitaynam3.jpg"
     ],
-    "id": 60,
+    "id": "60",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2656,11 +2656,11 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI053-61",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI COTTON MỀM MẠI",
         "content": "Áo thun nam cổ tròn in hình du lịch từ TRAVEL TEE được làm từ chất liệu cotton 100%, mang lại cảm giác mềm mại và thoáng mát. Chất liệu này thấm hút mồ hôi tốt, phù hợp cho các hoạt động hàng ngày hoặc khi đi du lịch."
@@ -2674,20 +2674,20 @@
         "content": "Form regular fit vừa vặn, mang lại sự thoải mái và dễ chịu. Áo phù hợp với nhiều dáng người, giúp bạn tự tin trong mọi hoạt động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp để giữ màu sắc bền lâu."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansongsuongbasic1.jpg",
       "/imgs/quanjeansongsuongbasic2.jpg",
       "/imgs/quanjeansongsuongbasic3.jpg"
     ],
-    "id": 61,
+    "id": "61",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2700,11 +2700,11 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 10,
-    "color": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["Đen", "Trắng", "Xanh Navy"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPE054-62",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU COTTON PIQUE",
         "content": "Áo thun polo thêu hình từ EMBROIDERED POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
@@ -2718,20 +2718,20 @@
         "content": "Form slim fit ôm nhẹ cơ thể, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách thời trang tinh tế."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton Pique",
         "fabric": "Thun cá sấu",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Tránh chà mạnh phần thêu hình. Ủi ở nhiệt độ trung bình để giữ form áo."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansslimfitnam1.jpg",
       "/imgs/quanjeansslimfitnam2.jpg",
       "/imgs/quanjeansslimfitnam3.jpg"
     ],
-    "id": 62,
+    "id": "62",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2744,11 +2744,11 @@
     "type": "Quần Jeans",
     "price": 240000,
     "discount": 15,
-    "color": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["Đen", "Xám", "Xanh Navy"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP055-63",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM BỤI BẶM",
         "content": "Quần jeans rách gối từ TRENDY JEANS được làm từ chất liệu denim стильный với các chi tiết rách gối cá tính, phù hợp cho phong cách streetwear."
@@ -2762,20 +2762,20 @@
         "content": "Quần jeans rách gối là item không thể thiếu cho những ai theo đuổi phong cách streetwear năng động."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "80% Cotton, 20% Polyester",
         "fabric": "Thun cotton pha",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ thường với nước lạnh. Tránh sử dụng chất tẩy mạnh. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansrachgoinam1.jpg",
       "/imgs/quanjeansrachgoinam2.jpg",
       "/imgs/quanjeansrachgoinam3.jpg"
     ],
-    "id": 63,
+    "id": "63",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2788,11 +2788,11 @@
     "type": "Quần Jeans",
     "price": 260000,
     "discount": 20,
-    "color": ["Trắng", "Đen", "Xám"],
+    "colors": ["Trắng", "Đen", "Xám"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDI056-64",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM MỀM MẠI",
         "content": "Quần jeans ống côn từ CONICAL JEANS được làm từ chất liệu denim mềm mại và thoải mái, mang lại vẻ ngoài hiện đại và стильный."
@@ -2806,20 +2806,20 @@
         "content": "Quần jeans ống côn dễ dàng kết hợp với nhiều loại giày và áo khác nhau."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Thun cotton",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái áo khi giặt để bảo vệ họa tiết in. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansongconnambasic1.jpg",
       "/imgs/quanjeansongconnambasic2.jpg",
       "/imgs/quanjeansongconnambasic3.jpg"
     ],
-    "id": 64,
+    "id": "64",
     "rating": 4,
     "review": 120,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2832,11 +2832,11 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 5,
-    "color": ["Xanh Đậm", "Xanh Nhạt", "Đen"],
+    "colors": ["Xanh Đậm", "Xanh Nhạt", "Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSR001-65",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CAO CẤP",
         "content": "Quần jeans nam slim fit rách gối từ URBAN DENIM được làm từ vải denim cotton pha spandex, mang lại độ co giãn nhẹ, thoải mái và bền bỉ. Chất liệu này giữ form tốt, phù hợp cho phong cách năng động."
@@ -2850,20 +2850,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Phù hợp cho nhiều dáng người và các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc và chi tiết rách. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeanscapcaonam1.jpg",
       "/imgs/quanjeanscapcaonam2.jpg",
       "/imgs/quanjeanscapcaonam3.jpg"
     ],
-    "id": 65,
+    "id": "65",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2876,11 +2876,11 @@
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 3,
-    "color": ["Xanh Vintage", "Xanh Đậm"],
+    "colors": ["Xanh Vintage", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNSV002-66",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit xanh vintage từ CLASSIC DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này tạo hiệu ứng mài tự nhiên, phù hợp cho phong cách cổ điển."
@@ -2894,20 +2894,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Đây là lựa chọn lý tưởng cho những ai yêu thích phong cách truyền thống."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansbaggynam1.jpg",
       "/imgs/quanjeansbaggynam2.jpg",
       "/imgs/quanjeansbaggynam3.jpg"
     ],
-    "id": 66,
+    "id": "66",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2920,11 +2920,11 @@
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 4,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSR003-67",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit đen rách từ STREET DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác thoải mái. Chất liệu này ôm sát cơ thể, tôn dáng hiệu quả."
@@ -2938,20 +2938,20 @@
         "content": "Form skinny fit ôm sát từ đùi đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho những ai yêu thích phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansongloenam1.jpg",
       "/imgs/quanjeansongloenam2.jpg",
       "/imgs/quanjeansongloenam3.jpg"
     ],
-    "id": 67,
+    "id": "67",
     "rating": 4,
     "review": 160,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -2964,11 +2964,11 @@
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 2,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF004-68",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit xanh nhạt từ COMFORT DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -2982,20 +2982,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeanstrangnam1.jpg",
       "/imgs/quanjeanstrangnam2.jpg",
       "/imgs/quanjeanstrangnam3.jpg"
     ],
-    "id": 68,
+    "id": "68",
     "rating": 4,
     "review": 130,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3008,11 +3008,11 @@
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 5,
-    "color": ["Xanh Đá", "Xanh Đậm"],
+    "colors": ["Xanh Đá", "Xanh Đậm"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSX005-69",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CAO CẤP",
         "content": "Quần jeans nam slim fit xanh đá từ STONE DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ màu tốt."
@@ -3026,20 +3026,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Phù hợp cho nhiều dịp từ casual đến bán trang trọng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansmauxamnam1.jpg",
       "/imgs/quanjeansmauxamnam2.jpg",
       "/imgs/quanjeansmauxamnam3.jpg"
     ],
-    "id": 69,
+    "id": "69",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3052,11 +3052,11 @@
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 3,
-    "color": ["Xám Đen", "Đen"],
+    "colors": ["Xám Đen", "Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSX006-70",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xám đen từ DARK DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3070,20 +3070,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời trang và năng động. Lựa chọn lý tưởng cho những ai yêu thích phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansongsuongdungnam1.jpg",
       "/imgs/quanjeansongsuongdungnam2.jpg",
       "/imgs/quanjeansongsuongdungnam3.jpg"
     ],
-    "id": 70,
+    "id": "70",
     "rating": 4,
     "review": 155,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3096,11 +3096,11 @@
     "type": "Quần Jeans",
     "price": 410000,
     "discount": 2,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNST007-71",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit đen trơn từ MINIMAL DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
@@ -3114,20 +3114,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Đây là lựa chọn lý tưởng cho phong cách cổ điển."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansvagonam1.jpg",
       "/imgs/quanjeansvagonam2.jpg",
       "/imgs/quanjeansvagonam3.jpg"
     ],
-    "id": 71,
+    "id": "71",
     "rating": 4,
     "review": 135,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3140,11 +3140,11 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "color": ["Xanh Đậm", "Xanh Nhạt"],
+    "colors": ["Xanh Đậm", "Xanh Nhạt"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSM008-72",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit mài đùi từ TRENDY DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3158,20 +3158,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Phù hợp cho nhiều dịp từ casual đến bán trang trọng."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansongsuongrongnam1.jpg",
       "/imgs/quanjeansongsuongrongnam2.jpg",
       "/imgs/quanjeansongsuongrongnam3.jpg"
     ],
-    "id": 72,
+    "id": "72",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3184,11 +3184,11 @@
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 3,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF009-73",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit đen mài từ EASY DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -3202,20 +3202,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansmaukemnam1.jpg",
       "/imgs/quanjeansmaukemnam2.jpg",
       "/imgs/quanjeansmaukemnam3.jpg"
     ],
-    "id": 73,
+    "id": "73",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3228,11 +3228,11 @@
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "color": ["Xanh Navy", "Xanh Đậm"],
+    "colors": ["Xanh Navy", "Xanh Đậm"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSX010-74",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xanh navy từ NAVY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3246,20 +3246,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời trang và năng động. Lựa chọn lý tưởng cho những ai yêu thích phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeansonglungnam1.jpg",
       "/imgs/quanjeansonglungnam2.jpg",
       "/imgs/quanjeansonglungnam3.jpg"
     ],
-    "id": 74,
+    "id": "74",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3272,11 +3272,11 @@
     "type": "Quần Jeans",
     "price": 455000,
     "discount": 4,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSR011-75",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xanh nhạt rách từ LIGHT DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3290,20 +3290,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanjeanspremiumnam1.jpg",
       "/imgs/quanjeanspremiumnam2.jpg",
       "/imgs/quanjeanspremiumnam3.jpg"
     ],
-    "id": 75,
+    "id": "75",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3316,11 +3316,11 @@
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNSM012-76",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit đen mài nhẹ từ URBAN CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
@@ -3334,20 +3334,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Lựa chọn lý tưởng cho phong cách truyền thống."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortnambasiccotton1.jpg",
       "/imgs/quanshortnambasiccotton2.jpg",
       "/imgs/quanshortnambasiccotton3.jpg"
     ],
-    "id": 76,
+    "id": "76",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3360,11 +3360,11 @@
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "color": ["Xanh Đậm", "Xanh Navy"],
+    "colors": ["Xanh Đậm", "Xanh Navy"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNST013-77",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xanh đậm trơn từ MODERN DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3378,20 +3378,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortjeansngan1.jpg",
       "/imgs/quanshortjeansngan2.jpg",
       "/imgs/quanshortjeansngan3.jpg"
     ],
-    "id": 77,
+    "id": "77",
     "rating": 4,
     "review": 155,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3404,11 +3404,11 @@
     "type": "Quần Jeans",
     "price": 435000,
     "discount": 2,
-    "color": ["Xanh Vintage", "Xanh Nhạt"],
+    "colors": ["Xanh Vintage", "Xanh Nhạt"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF014-78",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit xanh vintage từ RETRO DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -3422,20 +3422,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortkakituihopnam1.jpg",
       "/imgs/quanshortkakituihopnam2.jpg",
       "/imgs/quanshortkakituihopnam3.jpg"
     ],
-    "id": 78,
+    "id": "78",
     "rating": 4,
     "review": 130,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3448,11 +3448,11 @@
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSR015-79",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CAO CẤP",
         "content": "Quần jeans nam slim fit đen rách gối từ STREET VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3466,20 +3466,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortthethaongan1.jpg",
       "/imgs/quanshortthethaongan2.jpg",
       "/imgs/quanshortthethaongan3.jpg"
     ],
-    "id": 79,
+    "id": "79",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3492,11 +3492,11 @@
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "color": ["Xanh Đá", "Xanh Đậm"],
+    "colors": ["Xanh Đá", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNSX016-80",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit xanh đá từ STONE CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
@@ -3510,20 +3510,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Lựa chọn lý tưởng cho phong cách truyền thống."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortlinenthoangmat1.jpg",
       "/imgs/quanshortlinenthoangmat2.jpg",
       "/imgs/quanshortlinenthoangmat3.jpg"
     ],
-    "id": 80,
+    "id": "80",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3536,11 +3536,11 @@
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 4,
-    "color": ["Xám", "Xám Đen"],
+    "colors": ["Xám", "Xám Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNST017-81",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xám trơn từ GRAY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3554,20 +3554,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortjoggerthunnam1.jpg",
       "/imgs/quanshortjoggerthunnam2.jpg",
       "/imgs/quanshortjoggerthunnam3.jpg"
     ],
-    "id": 81,
+    "id": "81",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3580,11 +3580,11 @@
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 2,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF018-82",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit đen trơn từ COMFORT CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -3598,20 +3598,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortkakingannam1.jpg",
       "/imgs/quanshortkakingannam2.jpg",
       "/imgs/quanshortkakingannam3.jpg"
     ],
-    "id": 82,
+    "id": "82",
     "rating": 4,
     "review": 135,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3624,11 +3624,11 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "color": ["Xanh Navy", "Xanh Đậm"],
+    "colors": ["Xanh Navy", "Xanh Đậm"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSM019-83",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xanh navy mài từ NAVY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3642,20 +3642,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortjeansrachnhenam1.jpg",
       "/imgs/quanshortjeansrachnhenam2.jpg",
       "/imgs/quanshortjeansrachnhenam3.jpg"
     ],
-    "id": 83,
+    "id": "83",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3668,11 +3668,11 @@
     "type": "Quần Jeans",
     "price": 475000,
     "discount": 5,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSM020-84",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit đen mài đùi từ DARK VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3686,20 +3686,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortthethaodai1.jpg",
       "/imgs/quanshortthethaodai2.jpg",
       "/imgs/quanshortthethaodai3.jpg"
     ],
-    "id": 84,
+    "id": "84",
     "rating": 4,
     "review": 160,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3712,11 +3712,11 @@
     "type": "Quần Jeans",
     "price": 415000,
     "discount": 3,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNST021-85",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit xanh nhạt trơn từ CLEAN DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
@@ -3730,20 +3730,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Lựa chọn lý tưởng cho phong cách cổ điển."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortlinenkecsoc1.jpg",
       "/imgs/quanshortlinenkecsoc2.jpg",
       "/imgs/quanshortlinenkecsoc3.jpg"
     ],
-    "id": 85,
+    "id": "85",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3756,11 +3756,11 @@
     "type": "Quần Jeans",
     "price": 445000,
     "discount": 4,
-    "color": ["Xám", "Xám Đen"],
+    "colors": ["Xám", "Xám Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSM022-86",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xám mài nhẹ từ GRAY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3774,20 +3774,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortjoggerkakinam1.jpg",
       "/imgs/quanshortjoggerkakinam2.jpg",
       "/imgs/quanshortjoggerkakinam3.jpg"
     ],
-    "id": 86,
+    "id": "86",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3800,11 +3800,11 @@
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "color": ["Xanh Đậm", "Xanh Navy"],
+    "colors": ["Xanh Đậm", "Xanh Navy"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF023-87",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit xanh đậm mài từ EASY VIBE được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -3818,20 +3818,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortjeansongrongnam1.jpg",
       "/imgs/quanshortjeansongrongnam2.jpg",
       "/imgs/quanshortjeansongrongnam3.jpg"
     ],
-    "id": 87,
+    "id": "87",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3844,11 +3844,11 @@
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSR024-88",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xanh nhạt rách từ LIGHT VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3862,20 +3862,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortthethaoinlogonam1.jpg",
       "/imgs/quanshortthethaoinlogonam2.jpg",
       "/imgs/quanshortthethaoinlogonam3.jpg"
     ],
-    "id": 88,
+    "id": "88",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3888,11 +3888,11 @@
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNSM025-89",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit đen mài đùi từ URBAN VIBE được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
@@ -3906,20 +3906,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Lựa chọn lý tưởng cho phong cách truyền thống."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortkakidangngannam1.jpg",
       "/imgs/quanshortkakidangngannam2.jpg",
       "/imgs/quanshortkakidangngannam3.jpg"
     ],
-    "id": 89,
+    "id": "89",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3932,11 +3932,11 @@
     "type": "Quần Jeans",
     "price": 455000,
     "discount": 4,
-    "color": ["Xanh Đậm", "Xanh Navy"],
+    "colors": ["Xanh Đậm", "Xanh Navy"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSR026-90",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xanh đậm rách từ DARK DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -3950,20 +3950,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quanshortpremiumchatluongcaonam1.jpg",
       "/imgs/quanshortpremiumchatluongcaonam2.jpg",
       "/imgs/quanshortpremiumchatluongcaonam3.jpg"
     ],
-    "id": 90,
+    "id": "90",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -3976,11 +3976,11 @@
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNST027-91",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit đen trơn từ MINIMAL VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -3994,20 +3994,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamongsuongbasic1.jpg",
       "/imgs/quantaynamongsuongbasic2.jpg",
       "/imgs/quantaynamongsuongbasic3.jpg"
     ],
-    "id": 91,
+    "id": "91",
     "rating": 4,
     "review": 155,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4020,11 +4020,11 @@
     "type": "Quần Jeans",
     "price": 435000,
     "discount": 3,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF028-92",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit xanh nhạt mài từ CASUAL DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -4038,20 +4038,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamslimfit1.jpg",
       "/imgs/quantaynamslimfit2.jpg",
       "/imgs/quantaynamslimfit3.jpg"
     ],
-    "id": 92,
+    "id": "92",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4064,11 +4064,11 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "color": ["Xám Đen", "Đen"],
+    "colors": ["Xám Đen", "Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSR029-93",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xám đen rách từ STREET DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -4082,20 +4082,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ chi tiết rách. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamongcon1.jpg",
       "/imgs/quantaynamongcon2.jpg",
       "/imgs/quantaynamongcon3.jpg"
     ],
-    "id": 93,
+    "id": "93",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4108,11 +4108,11 @@
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 3,
-    "color": ["Xanh Navy", "Xanh Đậm"],
+    "colors": ["Xanh Navy", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNST030-94",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
         "content": "Quần jeans nam straight fit xanh navy trơn từ NAVY CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
@@ -4126,20 +4126,20 @@
         "content": "Form straight fit rộng rãi từ đùi đến gấu, mang lại sự thoải mái và phù hợp cho nhiều dáng người. Lựa chọn lý tưởng cho phong cách cổ điển."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Ủi ở nhiệt độ trung bình để giữ form quần."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamcapcao1.jpg",
       "/imgs/quantaynamcapcao2.jpg",
       "/imgs/quantaynamcapcao3.jpg"
     ],
-    "id": 94,
+    "id": "94",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4152,11 +4152,11 @@
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 5,
-    "color": ["Xanh Đá", "Xanh Đậm"],
+    "colors": ["Xanh Đá", "Xanh Đậm"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSM031-95",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xanh đá mài từ STONE VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -4170,20 +4170,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamongrong1.jpg",
       "/imgs/quantaynamongrong2.jpg",
       "/imgs/quantaynamongrong3.jpg"
     ],
-    "id": 95,
+    "id": "95",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4196,11 +4196,11 @@
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNRF032-96",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit đen mài nhẹ từ EASY CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -4214,20 +4214,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynammaube1.jpg",
       "/imgs/quantaynammaube2.jpg",
       "/imgs/quantaynammaube3.jpg"
     ],
-    "id": 96,
+    "id": "96",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4240,11 +4240,11 @@
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 4,
-    "color": ["Xanh Nhạt", "Xanh Đậm"],
+    "colors": ["Xanh Nhạt", "Xanh Đậm"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNST033-97",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit xanh nhạt trơn từ LIGHT CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -4258,20 +4258,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamkesoc1.jpg",
       "/imgs/quantaynamkesoc2.jpg",
       "/imgs/quantaynamkesoc3.jpg"
     ],
-    "id": 97,
+    "id": "97",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4284,11 +4284,11 @@
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "color": ["Xám", "Xám Đen"],
+    "colors": ["Xám", "Xám Đen"],
     "size": ["28", "30", "32"],
     "condition": true,
     "SKU": "QJNSM034-98",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam skinny fit xám mài đùi từ GRAY VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
@@ -4302,20 +4302,20 @@
         "content": "Form skinny fit ôm sát từ hông đến mắt cá, tạo cảm giác thời thượng và năng động. Lựa chọn hoàn hảo cho phong cách hiện đại."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "97% Cotton, 3% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh sử dụng chất tẩy mạnh."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamongsuonglung1.jpg",
       "/imgs/quantaynamongsuonglung2.jpg",
       "/imgs/quantaynamongsuonglung3.jpg"
     ],
-    "id": 98,
+    "id": "98",
     "rating": 4,
     "review": 150,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4328,11 +4328,11 @@
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "color": ["Xanh Đá", "Xanh Đậm"],
+    "colors": ["Xanh Đá", "Xanh Đậm"],
     "size": ["28", "30", "32", "34", "36"],
     "condition": true,
     "SKU": "QJNST035-99",
-    "description": [
+    "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
         "content": "Quần jeans nam relaxed fit xanh đá trơn từ STONE CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
@@ -4346,20 +4346,20 @@
         "content": "Form relaxed fit rộng rãi từ hông đến gấu, mang lại sự thoải mái tối đa. Phù hợp cho những ai ưu tiên sự dễ chịu trong phong cách thời trang."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "100% Cotton",
         "fabric": "Denim",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Giặt riêng để tránh phai màu. Phơi ở nơi thoáng mát để bảo vệ màu sắc."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynamxanhnavy1.jpg",
       "/imgs/quantaynamxanhnavy2.jpg",
       "/imgs/quantaynamxanhnavy3.jpg"
     ],
-    "id": 99,
+    "id": "99",
     "rating": 4,
     "review": 140,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",
@@ -4372,11 +4372,11 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "color": ["Đen", "Xám Đen"],
+    "colors": ["Đen", "Xám Đen"],
     "size": ["28", "30", "32", "34"],
     "condition": true,
     "SKU": "QJNSM036-100",
-    "description": [
+    "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
         "content": "Quần jeans nam slim fit đen mài nhẹ từ DARK CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
@@ -4390,20 +4390,20 @@
         "content": "Form slim fit ôm vừa vặn từ đùi đến mắt cá, giúp tôn dáng và mang lại vẻ ngoài gọn gàng. Lý tưởng cho các dịp casual."
       }
     ],
-    "details": [
+    "details": 
       {
         "material": "98% Cotton, 2% Spandex",
         "fabric": "Denim co giãn",
         "origin": "Việt Nam",
         "careInstructions": "Giặt máy ở chế độ nhẹ với nước lạnh. Lộn trái quần khi giặt để bảo vệ màu sắc. Tránh phơi dưới ánh nắng trực tiếp."
       }
-    ],
-    "image": [
+    ,
+    "thumbnails": [
       "/imgs/quantaynampremiumcaocap1.jpg",
       "/imgs/quantaynampremiumcaocap2.jpg",
       "/imgs/quantaynampremiumcaocap3.jpg"
     ],
-    "id": 100,
+    "id": "100",
     "rating": 4,
     "review": 145,
     "slogan": "Thời trang không chỉ để mặc – đó là cách bạn kể câu chuyện của mình bằng từng đường nét, từng chất liệu, và từng nhịp bước đầy khí chất.",

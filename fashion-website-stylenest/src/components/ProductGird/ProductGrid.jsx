@@ -25,7 +25,7 @@ const ProductGrid = ({ filters }) => {
     if (filters?.priceRange) {
       const [min, max] = filters.priceRange
       result = result.filter(product => {
-        const price = product.discountedPrice || product.price
+        const price = product.price * (1 - product.discount / 100) || product.price
         return price >= min && price <= max
       })
     }
@@ -34,9 +34,9 @@ const ProductGrid = ({ filters }) => {
     result.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return (a.discountedPrice || a.price) - (b.discountedPrice || b.price)
+          return (a.price * (1 - a.discount / 100) || a.price) - (b.price * (1 - b.discount / 100) || b.price)
         case 'price-high':
-          return (b.discountedPrice || b.price) - (a.discountedPrice || a.price)
+          return (b.price * (1 - b.discount / 100) || b.price) - (a.price * (1 - a.discount / 100) || a.price)
         case 'rating':
           return b.rating - a.rating
         default:
@@ -49,13 +49,6 @@ const ProductGrid = ({ filters }) => {
 
   return (
     <div className="font-['Roboto']">
-      <div className="pb-4 border-b border-gray-200 mb-2 font-sans">
-        <h1 className="font-medium text-3xl text-gray-900 mb-2">Sản phẩm</h1>
-        <p className="text-gray-500 text-sm mb-2">
-          Nhiều gói xuất bản trên máy tính để bàn và trình chỉnh sửa trang web hiện sử dụng Lorem Ipsum làm văn bản mẫu mặc định và tìm kiếm 'lorem ipsum' sẽ phát hiện ra nhiều trang web vẫn còn trong đó.
-        </p>
-      </div>
-
       <ProductListHeader
         totalProducts={filteredProducts.length}
         onViewChange={setViewMode}

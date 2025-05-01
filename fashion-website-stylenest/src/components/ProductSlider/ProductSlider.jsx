@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation, Autoplay } from "swiper/modules"
+import data from "../../data/data.json"
+import { Link } from "react-router-dom"
 
 // Import Swiper styles
 import "swiper/css"
@@ -9,9 +11,15 @@ import "swiper/css/navigation"
 
 export default function ProductSlider() {
   const [slidesPerView, setSlidesPerView] = useState(5)
+  const [products, setProducts] = useState([])
 
   // Update slides per view based on screen size
   useEffect(() => {
+    // Shuffle and slice 20 products
+    const shuffled = [...data].sort(() => 0.5 - Math.random())
+    const selected = shuffled.slice(0, 20)
+    setProducts(selected)
+  
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setSlidesPerView(1)
@@ -25,28 +33,11 @@ export default function ProductSlider() {
         setSlidesPerView(5)
       }
     }
-
-    // Set initial value
+  
     handleResize()
-
-    // Add event listener
     window.addEventListener("resize", handleResize)
-
-    // Clean up
     return () => window.removeEventListener("resize", handleResize)
   }, [])
-
-  const products = [
-    { id: 1, name: "Áo PoLo Nam Dáng Rộng", image: "/imgs/aopolonamdangrong2.jpg" },
-    { id: 2, name: "Áo PoLo Nam Cổ V1", image: "/imgs/aopolonamcov1.jpg" },
-    { id: 3, name: "Áo PoLo Nam Dáng Rộng", image: "/imgs/aopolonamdangrong2.jpg" },
-    { id: 4, name: "Áo PoLo Nam Kẻ Ngang", image: "/imgs/aopolonamkengang1.jpg" },
-    { id: 5, name: "Quần short thể thao dài", image: "/imgs/quanshortthethaodai3.jpg" },
-    { id: 6, name: "Áo PoLo Nam SlimFit", image: "/imgs/aopolonamslimfit2.jpg" },
-    { id: 7, name: "Áo Thun Jogger Nam", image: "/imgs/aothunjoggernam2.jpg" },
-    { id: 8, name: "Áo Thun Khoác Gió Nam", image: "/imgs/aothunkhoacgionam2.jpg" },
-    { id: 9, name: "Áo Thun Nam Oxford", image: "/imgs/aothunnamoxford3.jpg" },
-  ]
 
   return (
     <div className="w-full pt-4">
@@ -122,16 +113,18 @@ export default function ProductSlider() {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="item p-4 pt-6 bg-white rounded-lg shadow-xl text-center flex flex-col items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-              <div className="relative w-full h-[200px] mb-4 overflow-hidden rounded-lg"> {/* Increased height here */}
-                <img
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  className="object-cover w-full h-full transition-transform duration-300 rounded-lg"
-                />
+            <Link to={`/product/${product.id}`} key={product.id}>
+              <div className="item h-[320px] p-4 pt-6 bg-white rounded-lg shadow-xl text-center flex flex-col items-center justify-between transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                <div className="relative w-full h-56 mb-4 overflow-hidden rounded-lg"> {/* Increased height here */}
+                  <img
+                    src={product.thumbnails[0] || "/placeholder.svg"}
+                    alt={product.name}
+                    className="object-cover w-full h-full transition-transform duration-300 rounded-lg"
+                  />
+                </div>
+                <h3 className="text-sm font-medium text-gray-800 line-clamp-2 mb-2">{product.name}</h3>
               </div>
-              <h3 className="text-sm font-medium text-gray-800 line-clamp-2 mb-2">{product.name}</h3>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

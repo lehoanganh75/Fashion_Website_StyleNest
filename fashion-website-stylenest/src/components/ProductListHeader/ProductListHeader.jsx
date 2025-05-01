@@ -21,12 +21,11 @@ const ProductListHeader = ({ totalProducts, onViewChange, onSortChange }) => {
         { value: "relevance", label: "Có liên quan" },
         { value: "price-low", label: "Giá: Từ thấp đến cao" },
         { value: "price-high", label: "Giá: Từ cao đến thấp" },
-        { value: "newest", label: "Sản phẩm mới" },
         { value: "rating", label: "Đánh giá cao nhất" }
     ]
 
 return (
-    <div className="flex items-center justify-between py-4 border-b border-gray-200 mb-6">
+    <div className="flex items-center justify-between pb-4 border-b border-gray-200 mb-6">
         <div className="flex items-center gap-2">
         <button
             className={`p-2 rounded-md ${viewMode === "grid" ? "bg-gray-100" : "hover:bg-gray-50"}`}
@@ -60,20 +59,20 @@ return (
         </div>
 
         {isDropdownOpen && (
-            <div className="absolute right-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-10">
-            <ul className="py-1" role="listbox">
-                {sortOptions.map((option) => (
-                <li
-                    key={option.value}
-                    className={`px-3 py-2 cursor-pointer hover:bg-gray-50 ${sortOption === option.value ? "bg-gray-100" : ""}`}
-                    onClick={() => handleSortChange(option.value)}
-                    role="option"
-                    aria-selected={sortOption === option.value}
-                >
-                    {option.label}
-                </li>
-                ))}
-            </ul>
+            <div className="absolute right-0 mt-1 w-full bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                <ul className="py-1" role="listbox">
+                    {sortOptions.map((option) => (
+                    <li
+                        key={option.value}
+                        className={`px-3 py-2 cursor-pointer hover:bg-gray-50 ${sortOption === option.value ? "bg-gray-100" : ""}`}
+                        onClick={() => handleSortChange(option.value)}
+                        role="option"
+                        aria-selected={sortOption === option.value}
+                    >
+                        {option.label}
+                    </li>
+                    ))}
+                </ul>
             </div>
         )}
         </div>
