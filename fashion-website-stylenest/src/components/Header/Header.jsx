@@ -7,11 +7,13 @@ import IconButton from "@mui/material/IconButton";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoIosGitCompare } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
-import Tooltip from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 import Navigation from "../Navigation/Navigation";
 import LoginForm from "../Login/LoginForm";
 import RegisterForm from "../Login/RegisterForm";
-import { useCart } from "../../contexts/CartContext"
+import { useCart } from "../../contexts/CartContext";
+import Snackbar from "@mui/material/Snackbar"; // Import Snackbar
+import Alert from "@mui/material/Alert"; // Import Alert
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -25,39 +27,59 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isLoginOpen, setIsLoginOpen] = useState(false)
-  const [authFormView, setAuthFormView] = useState("login") // "login" or "register"
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [authFormView, setAuthFormView] = useState("login"); // "login" or "register"
   const { cart } = useCart();
+  const [loggedInAccount, setLoggedInAccount] = useState(null); // State quản lý tài khoản đã đăng nhập
+  const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] =
+    useState(false); // State cho Snackbar
 
   // Function to track scroll event
   const handleScroll = () => {
     // Get header height
-    const headerElement = document.querySelector("header")
+    const headerElement = document.querySelector("header");
     if (headerElement) {
-      const headerHeight = headerElement.offsetHeight
+      const headerHeight = headerElement.offsetHeight;
 
       if (window.scrollY > headerHeight) {
-        setIsScrolled(true) // When scrolled past header, fix Navigation
+        setIsScrolled(true); // When scrolled past header, fix Navigation
       } else {
-        setIsScrolled(false) // If not scrolled past header, unfix
+        setIsScrolled(false); // If not scrolled past header, unfix
       }
     }
-  }
+  };
 
   const handleOpenLogin = () => {
-    setAuthFormView("login")
-    setIsLoginOpen(true)
-  }
+    setAuthFormView("login");
+    setIsLoginOpen(true);
+  };
 
   const handleOpenRegister = () => {
-    setAuthFormView("register")
-    setIsLoginOpen(true)
-  }
+    setAuthFormView("register");
+    setIsLoginOpen(true);
+  };
 
   const handleCloseAuthForm = () => {
-    setIsLoginOpen(false)
-  }
+    setIsLoginOpen(false);
+  };
+
+  const handleLoginSuccess = (account) => {
+    setLoggedInAccount(account); // Cập nhật thông tin tài khoản đã đăng nhập
+    setIsLoginOpen(false); // Đóng form đăng nhập
+    setLoginSuccessSnackbarOpen(true); // Mở Snackbar thông báo thành công
+  };
+
+  const handleCloseLoginSuccessSnackbar = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setLoginSuccessSnackbarOpen(false);
+  };
+
+  const handleLogout = () => {
+    setLoggedInAccount(null); // Xóa thông tin tài khoản đã đăng nhập
+  };
 
   const selectedCount = cart
     .filter((item) => item.selected)
@@ -65,12 +87,12 @@ const Header = () => {
 
   // Use useEffect to add and remove scroll event
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up event when component unmounts
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -80,12 +102,13 @@ const Header = () => {
         <div className="py-2 border-t border-b border-gray-100">
           <div className="container mx-auto flex justify-between items-center">
             <p className="text-sm font-normal text-gray-600 pl-4">
-              Giảm giá tới 50% cho các kiểu dáng mùa mới, chỉ trong thời gian có hạn
+              Giảm giá tới 50% cho các kiểu dáng mùa mới, chỉ trong thời gian có
+              hạn
             </p>
             <ul className="flex space-x-3">
               <li>
                 <Link
-                    to="#"
+                  to="/support"
                   className="text-sm font-medium text-gray-800 hover:text-orange-500"
                 >
                   Trung tâm trợ giúp
@@ -121,21 +144,32 @@ const Header = () => {
             {/* User Account and Cart */}
             <div className="w-1/4 flex items-center justify-end space-x-4">
               <ul className="flex items-center space-x-4 pr-2">
-                <li className="text-sm font-medium text-gray-800">
-                  <button
-                    onClick={handleOpenLogin}
-                    className="hover:text-orange-500"
-                  >
-                    Đăng nhập
-                  </button>
-                  <span className="p-2">|</span>
-                  <button
-                    onClick={handleOpenRegister}
-                    className="hover:text-orange-500"
-                  >
-                    Đăng ký
-                  </button>
-                </li>
+                {loggedInAccount ? (
+                  <>
+                    <li className="text-sm font-medium text-gray-800">
+                      Xin chào{" "}
+                      <span style={{ color: "orange" }}>
+                        {loggedInAccount.taiKhoan}
+                      </span>
+                    </li>
+                  </>
+                ) : (
+                  <li className="text-sm font-medium text-gray-800">
+                    <button
+                      onClick={handleOpenLogin}
+                      className="hover:text-orange-500"
+                    >
+                      Đăng nhập
+                    </button>
+                    <span className="p-2">|</span>
+                    <button
+                      onClick={handleOpenRegister}
+                      className="hover:text-orange-500"
+                    >
+                      Đăng ký
+                    </button>
+                  </li>
+                )}
                 <li>
                   <Tooltip title="Liên kết">
                     <IconButton aria-label="io">
@@ -158,7 +192,10 @@ const Header = () => {
                   <Tooltip title="Giỏ hàng">
                     <Link to="/cart" aria-label="cart">
                       <IconButton aria-label="cart">
-                        <StyledBadge badgeContent={selectedCount} color="secondary">
+                        <StyledBadge
+                          badgeContent={selectedCount}
+                          color="secondary"
+                        >
                           <MdOutlineShoppingCart className="text-xl text-gray-800 hover:text-orange-500" />
                         </StyledBadge>
                       </IconButton>
@@ -180,7 +217,30 @@ const Header = () => {
         </div>
       </header>
 
-      {isLoginOpen && <LoginForm isOpen={isLoginOpen} onClose={handleCloseAuthForm} initialView={authFormView} />}
+      {isLoginOpen && (
+        <LoginForm
+          isOpen={isLoginOpen}
+          onClose={handleCloseAuthForm}
+          initialView={authFormView}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
+
+      {/* Snackbar thông báo đăng nhập thành công */}
+      <Snackbar
+        open={loginSuccessSnackbarOpen}
+        autoHideDuration={3000}
+        onClose={handleCloseLoginSuccessSnackbar}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        <Alert
+          onClose={handleCloseLoginSuccessSnackbar}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          Đăng nhập thành công!
+        </Alert>
+      </Snackbar>
     </div>
   );
 };

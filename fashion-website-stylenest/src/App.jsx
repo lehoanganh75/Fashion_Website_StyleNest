@@ -9,7 +9,11 @@ import Footer from './components/Footer/Footer';
 import Blogs from './pages/BlogPage';
 import BlogPost from './components/FromTheBlog/BlogPost';
 import { CartProvider } from './contexts/CartContext';
-
+import OrderTracking from "./components/FollowOrder/orderTracking";
+import OrderTrackingDetail from "./components/FollowOrder/orderTrackingDetail";
+import NotificationsPage from "./components/FollowOrder/OrderThongBao"
+import Profile from "./components/FollowOrder/Profile"
+import Support from "./components/Support"
 function App() {
   return (
     <CartProvider>
@@ -18,6 +22,11 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/order-tracking" element={<OrderTracking />}/>
+            <Route path="/order-tracking/:orderId" element={<OrderTrackingDetail />} />
+            <Route path="/support" element={<Support />}/>
+            <Route path="/notifications" element={<NotificationsPage />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/product" element={<ProductPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/blog" element={<Blogs />} />

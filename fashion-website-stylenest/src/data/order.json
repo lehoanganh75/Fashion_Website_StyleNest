@@ -1,143 +1,310 @@
 [
-    {
-      "maDonHang": "DH001",
-      "emailKhachHang": "nam01@gmail.com",
-      "ngayDatHang": "2025-04-15",
-      "tongTien": 1200000,
-      "trangThai": "Đã giao"
+  {
+    "id": 1,
+    "date": "13/10/2021",
+    "status": "completed",
+    "statusText": "HOÀN THÀNH",
+    "deliveryStatus": "Giao hàng thành công",
+    "shop": {
+      "name": "Style Nest",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
     },
-    {
-      "maDonHang": "DH002",
-      "emailKhachHang": "hoa02@gmail.com",
-      "ngayDatHang": "2025-03-12",
-      "tongTien": 850000,
-      "trangThai": "Đang xử lý"
+    "product": {
+      "name": "Áo thun nam trơn BassicJusttee",
+      "type": "Áo thun",
+      "image": "/imgs/aothunamtronbasicjusttee1.jpg",
+      "quantity": 1,
+      "originalPrice": 29000,
+      "id": 1,
+      "price": 19000
     },
-    {
-      "maDonHang": "DH003",
-      "emailKhachHang": "an03@gmail.com",
-      "ngayDatHang": "2025-02-21",
-      "tongTien": 450000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH004",
-      "emailKhachHang": "mai04@gmail.com",
-      "ngayDatHang": "2025-04-01",
-      "tongTien": 999000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH005",
-      "emailKhachHang": "tuan05@gmail.com",
-      "ngayDatHang": "2025-04-29",
-      "tongTien": 2000000,
-      "trangThai": "Đang xử lý"
-    },
-    {
-      "maDonHang": "DH006",
-      "emailKhachHang": "huong06@gmail.com",
-      "ngayDatHang": "2025-01-05",
-      "tongTien": 1300000,
-      "trangThai": "Đã hủy"
-    },
-    {
-      "maDonHang": "DH007",
-      "emailKhachHang": "binh07@gmail.com",
-      "ngayDatHang": "2025-03-10",
-      "tongTien": 780000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH008",
-      "emailKhachHang": "lan08@gmail.com",
-      "ngayDatHang": "2025-04-20",
-      "tongTien": 1650000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH009",
-      "emailKhachHang": "dung09@gmail.com",
-      "ngayDatHang": "2025-04-23",
-      "tongTien": 540000,
-      "trangThai": "Đang xử lý"
-    },
-    {
-      "maDonHang": "DH010",
-      "emailKhachHang": "le10@gmail.com",
-      "ngayDatHang": "2025-02-18",
-      "tongTien": 1120000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH011",
-      "emailKhachHang": "tam11@gmail.com",
-      "ngayDatHang": "2025-03-30",
-      "tongTien": 710000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH012",
-      "emailKhachHang": "thao12@gmail.com",
-      "ngayDatHang": "2025-01-14",
-      "tongTien": 900000,
-      "trangThai": "Đã hủy"
-    },
-    {
-      "maDonHang": "DH013",
-      "emailKhachHang": "cuong13@gmail.com",
-      "ngayDatHang": "2025-04-08",
-      "tongTien": 1240000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH014",
-      "emailKhachHang": "yen14@gmail.com",
-      "ngayDatHang": "2025-03-01",
-      "tongTien": 300000,
-      "trangThai": "Đang xử lý"
-    },
-    {
-      "maDonHang": "DH015",
-      "emailKhachHang": "hai15@gmail.com",
-      "ngayDatHang": "2025-03-26",
-      "tongTien": 1500000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH016",
-      "emailKhachHang": "van16@gmail.com",
-      "ngayDatHang": "2025-04-05",
-      "tongTien": 660000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH017",
-      "emailKhachHang": "loi17@gmail.com",
-      "ngayDatHang": "2025-02-11",
-      "tongTien": 870000,
-      "trangThai": "Đang xử lý"
-    },
-    {
-      "maDonHang": "DH018",
-      "emailKhachHang": "ngoc18@gmail.com",
-      "ngayDatHang": "2025-04-17",
-      "tongTien": 1050000,
-      "trangThai": "Đã giao"
-    },
-    {
-      "maDonHang": "DH019",
-      "emailKhachHang": "son19@gmail.com",
-      "ngayDatHang": "2025-03-05",
-      "tongTien": 950000,
-      "trangThai": "Đã hủy"
-    },
-    {
-      "maDonHang": "DH020",
-      "emailKhachHang": "diem20@gmail.com",
-      "ngayDatHang": "2025-04-25",
-      "tongTien": 1250000,
-      "trangThai": "Đang xử lý"
+    "payment": {
+      "subtotal": 19000,
+      "shipping": 42500,
+      "discount": -40000,
+      "total": 21500
     }
-  ]
-  
+  },
+  {
+    "id": 2,
+    "date": "15/10/2021",
+    "status": "shipping",
+    "statusText": "VẬN CHUYỂN",
+    "deliveryStatus": "Đang giao hàng",
+    "shop": {
+      "name": "Style Nest",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo thun nam trơn BasucJusttee",
+      "type": "Áo thun",
+      "image": "/imgs/aothunamtronbasicjusttee2.jpg",
+      "quantity": 2,
+      "id": 2,
+      "originalPrice": 45000,
+      "price": 35000
+    },
+    "payment": {
+      "subtotal": 70000,
+      "shipping": 15000,
+      "discount": -10000,
+      "total": 75000
+    }
+  },
+  {
+    "id": 3,
+    "date": "18/10/2021",
+    "status": "completed",
+    "statusText": "HOÀN THÀNH",
+    "deliveryStatus": "Giao hàng thành công",
+    "shop": {
+      "name": "Trendy Tees",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": false,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Nam Graphic Tee Cool",
+      "type": "Áo thun",
+      "image": "/imgs/aothunnamgraphic1.jpg",
+      "quantity": 1,
+      "originalPrice": 220000,
+      "id": 6,
+      "price": 176000
+    },
+    "payment": {
+      "subtotal": 176000,
+      "shipping": 35000,
+      "discount": -20000,
+      "total": 191000
+    }
+  },
+  {
+    "id": 4,
+    "date": "20/10/2021",
+    "status": "shipping",
+    "statusText": "VẬN CHUYỂN",
+    "deliveryStatus": "Đang giao hàng",
+    "shop": {
+      "name": "Polo House",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Polo Nam Basic Cotton",
+      "type": "Áo thun",
+      "image": "/imgs/aothunpolonambasic2.jpg",
+      "quantity": 1,
+      "originalPrice": 250000,
+      "id": 4,
+      "price": 200000
+    },
+    "payment": {
+      "subtotal": 200000,
+      "shipping": 25000,
+      "discount": -15000,
+      "total": 210000
+    }
+  },
+  {
+    "id": 5,
+    "date": "22/10/2021",
+    "status": "pending",
+    "statusText": "CHỜ XỬ LÝ",
+    "deliveryStatus": "Đang chuẩn bị hàng",
+    "shop": {
+      "name": "Summer Vibes",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": false,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Short Kaki Nam Basic",
+      "type": "Áo thun",
+      "image": "/imgs/aothunshortkakinam1.jpg",
+      "quantity": 2,
+      "originalPrice": 180000,
+      "id": 5,
+      "price": 135000
+    },
+    "payment": {
+      "subtotal": 270000,
+      "shipping": 30000,
+      "discount": -30000,
+      "total": 270000
+    }
+  },
+  {
+    "id": 6,
+    "date": "25/10/2021",
+    "status": "completed",
+    "statusText": "HOÀN THÀNH",
+    "deliveryStatus": "Giao hàng thành công",
+    "shop": {
+      "name": "Viet Tailor",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Nam Oxford Dài Tay",
+      "type": "Áo thun",
+      "image": "/imgs/aothunnamoxford2.jpg",
+      "quantity": 1,
+      "originalPrice": 280000,
+      "id": 3,
+      "price": 238000
+    },
+    "payment": {
+      "subtotal": 238000,
+      "shipping": 40000,
+      "discount": -25000,
+      "total": 253000
+    }
+  },
+  {
+    "id": 7,
+    "date": "28/10/2021",
+    "status": "shipping",
+    "statusText": "VẬN CHUYỂN",
+    "deliveryStatus": "Đang giao hàng",
+    "shop": {
+      "name": "Maverick",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Nam Slim Fit Basic",
+      "type": "Áo thun",
+      "image": "/imgs/aothunnamslimfitbasic3.jpg",
+      "quantity": 3,
+      "originalPrice": 350000,
+      "id": 2,
+      "price": 315000
+    },
+    "payment": {
+      "subtotal": 945000,
+      "shipping": 20000,
+      "discount": -50000,
+      "total": 915000
+    }
+  },
+  {
+    "id": 8,
+    "date": "30/10/2021",
+    "status": "completed",
+    "statusText": "HOÀN THÀNH",
+    "deliveryStatus": "Giao hàng thành công",
+    "shop": {
+      "name": "Icon Denim",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Nam Trơn Basic Just Tee Form Regular",
+      "type": "Áo thun",
+      "image": "/imgs/aothunamtronbasicjusttee2.jpg",
+      "quantity": 1,
+      "originalPrice": 199000,
+      "id": 1,
+      "price": 189050
+    },
+    "payment": {
+      "subtotal": 189050,
+      "shipping": 38000,
+      "discount": -10000,
+      "total": 217050
+    }
+  },
+  {
+    "id": 9,
+    "date": "02/11/2021",
+    "status": "pending",
+    "statusText": "CHỜ XỬ LÝ",
+    "deliveryStatus": "Đang chuẩn bị hàng",
+    "shop": {
+      "name": "Trendy Tees",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": false,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Nam Graphic Tee Cool",
+      "type": "Áo thun",
+      "image": "/imgs/aothunnamgraphic3.jpg",
+      "quantity": 2,
+      "originalPrice": 220000,
+      "id": 6,
+      "price": 176000
+    },
+    "payment": {
+      "subtotal": 352000,
+      "shipping": 32000,
+      "discount": -40000,
+      "total": 344000
+    }
+  },
+  {
+    "id": 10,
+    "date": "05/11/2021",
+    "status": "completed",
+    "statusText": "HOÀN THÀNH",
+    "deliveryStatus": "Giao hàng thành công",
+    "shop": {
+      "name": "Polo House",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": true,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Polo Nam Basic Cotton",
+      "type": "Áo thun",
+      "image": "/imgs/aothunpolonambasic4.jpg",
+      "quantity": 1,
+      "originalPrice": 250000,
+      "id": 4,
+      "price": 200000
+    },
+    "payment": {
+      "subtotal": 200000,
+      "shipping": 28000,
+      "discount": -20000,
+      "total": 208000
+    }
+  },
+  {
+    "id": 11,
+    "date": "08/11/2021",
+    "status": "shipping",
+    "statusText": "VẬN CHUYỂN",
+    "deliveryStatus": "Đang giao hàng",
+    "shop": {
+      "name": "Summer Vibes",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "chat": false,
+      "viewShop": true
+    },
+    "product": {
+      "name": "Áo Thun Short Kaki Nam Basic",
+      "type": "Áo thun",
+      "image": "/imgs/aothunshortkakinam3.jpg",
+      "quantity": 1,
+      "originalPrice": 180000,
+      "id": 5,
+      "price": 135000
+    },
+    "payment": {
+      "subtotal": 135000,
+      "shipping": 33000,
+      "discount": -15000,
+      "total": 153000
+    }
+  }
+]
