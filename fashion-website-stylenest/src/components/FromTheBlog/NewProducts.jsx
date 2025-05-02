@@ -54,7 +54,7 @@ const NewProducts = () => {
         ))}
       </div>
       <Link
-        to="/products"
+        to="/product"
         className="block text-center mt-4 font-medium text-red-500 hover:underline transition-colors"
       >
         Xem tất cả sản phẩm mới

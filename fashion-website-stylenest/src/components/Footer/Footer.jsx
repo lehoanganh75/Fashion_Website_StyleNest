@@ -1,10 +1,60 @@
 import { Facebook, Twitter, Youtube, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
+import { Transition } from "@headlessui/react";
 
 const Footer = () => {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const emailRef = useRef(null);
+  const checkboxRef = useRef(null);
+
+  const handleSubscribe = () => {
+    const agreed = checkboxRef.current?.checked;
+    if (!agreed) {
+      alert("Bạn phải đồng ý với điều khoản và chính sách.");
+      return;
+    }
+
+    setShowSuccess(true);
+
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 3000);
+
+    if (emailRef.current) emailRef.current.value = "";
+    if (checkboxRef.current) checkboxRef.current.checked = false;
+  };
+
   return (
     <footer className="bg-gradient-to-t from-gray-800 via-gray-900 to-black text-white mt-auto font-['Roboto']">
-      {/* Nội dung chính của Footer */}
+      {/* Thông báo thành công */}
+      <Transition
+        show={showSuccess}
+        enter="transition-opacity duration-300 ease-out"
+        enterFrom="opacity-0 translate-y-2"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition-opacity duration-200 ease-in"
+        leaveFrom="opacity-100 translate-y-0"
+        leaveTo="opacity-0 translate-y-2"
+      >
+        <div className="fixed top-5 right-5 z-50 bg-green-400 text-white px-4 py-3 rounded shadow-lg flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" // Biểu tượng dấu kiểm
+            />
+          </svg>
+          <span className="font-medium">Đăng ký thành công!</span>
+        </div>
+      </Transition>
       <div className="container mx-auto px-16 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Liên hệ */}
         <div>
@@ -85,17 +135,28 @@ const Footer = () => {
         {/* Đăng ký nhận tin */}
         <div>
           <h3 className="text-3xl font-semibold mb-4">Đăng Ký Nhận Bản Tin</h3>
-          <p className="text-sm mb-4">Đăng ký để nhận tin tức về khuyến mãi & ưu đãi đặc biệt.</p>
+          <p className="text-sm mb-4">
+            Đăng ký để nhận tin tức về khuyến mãi & ưu đãi đặc biệt.
+          </p>
           <input
+            ref={emailRef}
             type="email"
             placeholder="Nhập địa chỉ email của bạn"
             className="w-full px-4 py-2 border border-gray-300 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-orange-500 bg-gray-800 text-white"
           />
-          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md uppercase text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
+          <button
+            onClick={handleSubscribe}
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md uppercase text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+          >
             Đăng Ký
           </button>
           <div className="flex items-start mt-3">
-            <input type="checkbox" id="terms" className="mt-1 mr-2" />
+            <input
+              ref={checkboxRef}
+              type="checkbox"
+              id="terms"
+              className="mt-1 mr-2"
+            />
             <label htmlFor="terms" className="text-sm text-gray-400">
               Tôi đồng ý với các điều khoản và chính sách bảo mật
             </label>
