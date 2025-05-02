@@ -24,7 +24,7 @@ const NewProducts = () => {
                 className="block w-full h-full rounded-lg overflow-hidden"
               >
                 <img
-                  src={product.image?.[0] || "/placeholder.svg"}
+                  src={product.thumbnails?.[0] || "/placeholder.svg"}
                   alt={product.productName}
                   width={80}
                   height={80}

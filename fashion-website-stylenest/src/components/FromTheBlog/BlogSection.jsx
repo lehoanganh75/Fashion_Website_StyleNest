@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import blogData from "../../data/fromTheBlog.json";
 import "boxicons/css/boxicons.min.css";
 
@@ -21,7 +21,8 @@ const BlogSection = () => {
   return (
     <div className="px-4 lg:px-0">
       <h2 className="text-3xl font-medium text-gray-800 mb-8 flex items-center gap-3">
-        <i className='bx bxs-news text-orange-600 text-4xl'></i> Tin tức mới nhất
+        <i className="bx bxs-news text-orange-600 text-4xl"></i> Tin tức mới
+        nhất
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -30,13 +31,14 @@ const BlogSection = () => {
             key={post.id}
             className="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow bg-white"
           >
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
+            <Link to={`/blog/${post.id}`}>
               <img
                 src={post.imageSrc || "/placeholder.svg"}
                 alt={post.title}
                 className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
               />
-            </a>
+            </Link>
+
             <div className="p-5">
               <div className="text-orange-600 text-xs mb-3 flex items-center">
                 <svg
@@ -62,8 +64,11 @@ const BlogSection = () => {
                 {post.shortInfo}
               </p>
               {/* Thay thế <a> thành <Link> với to */}
-              <Link to={`/blog/${post.id}`} className="text-orange-500 text-sm font-semibold hover:underline">
-                Đọc thêm <i class='bx bx-right-arrow-alt' ></i>
+              <Link
+                to={`/blog/${post.id}`}
+                className="text-orange-500 text-sm font-semibold hover:underline"
+              >
+                Đọc thêm <i class="bx bx-right-arrow-alt"></i>
               </Link>
             </div>
           </div>
@@ -77,7 +82,7 @@ const BlogSection = () => {
           disabled={currentPage === 1}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 disabled:opacity-50 transition duration-300"
         >
-          <i class='bx bx-left-arrow-alt' ></i>
+          <i class="bx bx-left-arrow-alt"></i>
         </button>
         {Array.from({ length: totalPages }, (_, i) => (
           <button
@@ -97,11 +102,11 @@ const BlogSection = () => {
           disabled={currentPage === totalPages}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 disabled:opacity-50 transition duration-300"
         >
-          <i className='bx bx-right-arrow-alt'></i>
+          <i className="bx bx-right-arrow-alt"></i>
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default BlogSection;

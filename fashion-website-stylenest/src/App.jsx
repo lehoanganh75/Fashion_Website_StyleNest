@@ -7,6 +7,7 @@ import ShoppingCartPage from './pages/ShoppingCartPage';
 import BrandPage from "./pages/BrandPage";
 import Footer from './components/Footer/Footer';
 import Blogs from './pages/BlogPage';
+import BlogPost from './components/FromTheBlog/BlogPost';
 import { CartProvider } from './contexts/CartContext';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/product" element={<ProductPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/blog" element={<Blogs />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/brands" element={<BrandPage />} />
             <Route path="/cart" element={<ShoppingCartPage />} />
           </Routes>
