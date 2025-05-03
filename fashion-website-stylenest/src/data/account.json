@@ -1,102 +1,142 @@
 [
   {
-    "taiKhoan": "nam01",
-    "matKhau": "123456",
-    "email": "nam01@gmail.com"
+    "id": "1",
+    "userName": "nam01",
+    "password": "123456",
+    "email": "nam01@gmail.com",
+    "role": "admin"
   },
   {
-    "taiKhoan": "hoa02",
-    "matKhau": "123456",
-    "email": "hoa02@gmail.com"
+    "id": "2",
+    "userName": "hoa02",
+    "password": "123456",
+    "email": "hoa02@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "an03",
-    "matKhau": "123456",
-    "email": "an03@gmail.com"
+    "id": "3",
+    "userName": "an03",
+    "password": "123456",
+    "email": "an03@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "mai04",
-    "matKhau": "123456",
-    "email": "mai04@gmail.com"
+    "id": "4",
+    "userName": "mai04",
+    "password": "123456",
+    "email": "mai04@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "tuan05",
-    "matKhau": "123456",
-    "email": "tuan05@gmail.com"
+    "id": "5",
+    "userName": "tuan05",
+    "password": "123456",
+    "email": "tuan05@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "huong06",
-    "matKhau": "123456",
-    "email": "huong06@gmail.com"
+    "id": "6",
+    "userName": "huong06",
+    "password": "123456",
+    "email": "huong06@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "binh07",
-    "matKhau": "123456",
-    "email": "binh07@gmail.com"
+    "id": "7",
+    "userName": "binh07",
+    "password": "123456",
+    "email": "binh07@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "lan08",
-    "matKhau": "123456",
-    "email": "lan08@gmail.com"
+    "id": "8",
+    "userName": "lan08",
+    "password": "123456",
+    "email": "lan08@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "dung09",
-    "matKhau": "123456",
-    "email": "dung09@gmail.com"
+    "id": "9",
+    "userName": "dung09",
+    "password": "123456",
+    "email": "dung09@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "le10",
-    "matKhau": "123456",
-    "email": "le10@gmail.com"
+    "id": "10",
+    "userName": "le10",
+    "password": "123456",
+    "email": "le10@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "tam11",
-    "matKhau": "123456",
-    "email": "tam11@gmail.com"
+    "id": "11",
+    "userName": "tam11",
+    "password": "123456",
+    "email": "tam11@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "thao12",
-    "matKhau": "123456",
-    "email": "thao12@gmail.com"
+    "id": "12",
+    "userName": "thao12",
+    "password": "123456",
+    "email": "thao12@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "cuong13",
-    "matKhau": "123456",
-    "email": "cuong13@gmail.com"
+    "id": "13",
+    "userName": "cuong13",
+    "password": "123456",
+    "email": "cuong13@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "yen14",
-    "matKhau": "123456",
-    "email": "yen14@gmail.com"
+    "id": "14",
+    "userName": "yen14",
+    "password": "123456",
+    "email": "yen14@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "hai15",
-    "matKhau": "123456",
-    "email": "hai15@gmail.com"
+    "id": "15",
+    "userName": "hai15",
+    "password": "123456",
+    "email": "hai15@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "van16",
-    "matKhau": "123456",
-    "email": "van16@gmail.com"
+    "id": "16",
+    "userName": "van16",
+    "password": "123456",
+    "email": "van16@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "loi17",
-    "matKhau": "123456",
-    "email": "loi17@gmail.com"
+    "id": "17",
+    "userName": "loi17",
+    "password": "123456",
+    "email": "loi17@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "ngoc18",
-    "matKhau": "123456",
-    "email": "ngoc18@gmail.com"
+    "id": "18",
+    "userName": "ngoc18",
+    "password": "123456",
+    "email": "ngoc18@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "son19",
-    "matKhau": "123456",
-    "email": "son19@gmail.com"
+    "id": "19",
+    "userName": "son19",
+    "password": "123456",
+    "email": "son19@gmail.com",
+    "role": "customer"
   },
   {
-    "taiKhoan": "diem20",
-    "matKhau": "123456",
-    "email": "diem20@gmail.com"
+    "id": "20",
+    "userName": "admin",
+    "password": "123456",
+    "email": "admin@gmail.com",
+    "role": "admin"
   }
 ]

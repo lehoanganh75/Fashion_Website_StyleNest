@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "name": "Hồ Văn Lợi",
+        "gender": "Nam",
+        "date": "1988-08-08",
+        "phone": "0911888777",
+        "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+        "account": {
+            "accountId": "1",
+            "userName": "nam01",
+            "password": "123456",
+            "email": "nam01@gmail.com",
+            "role": "admin"
+        }
+    }
+]
