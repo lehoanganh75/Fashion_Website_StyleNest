@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Eye, EyeOff, Facebook } from "lucide-react";
 import RegisterForm from "./RegisterForm";
-import account from '../../data/account.json'; // Dữ liệu đã được import
+import data from '../../data/account.json'; 
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" , onLoginSuccess }) => {
+  const navigate = useNavigate();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
-  const [currentView, setCurrentView] = useState(initialView); // "login", "register", or "forgot"
+  const [currentView, setCurrentView] = useState(initialView); 
   const [loginError, setLoginError] = useState("");
-  const accounts = account; // Sử dụng trực tiếp dữ liệu đã import
+  const [accounts, setAccounts] = useState([]); 
+
+  useEffect(() => {
+    setAccounts(data); 
+  }, [])
 
   if (!isOpen) return null;
 
@@ -42,17 +48,19 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
     e.preventDefault();
 
     const foundAccount = accounts.find(
-      (acc) => acc.taiKhoan === user && acc.matKhau === password
+      (acc) => acc.userName === user && acc.password === password
     );
 
     if (foundAccount) {
       console.log("Đăng nhập thành công!", foundAccount);
       setLoginError("");
       onClose();
-      // Gọi một hàm callback để thông báo cho component cha và truyền thông tin tài khoản
       if (onLoginSuccess) {
-        onLoginSuccess(foundAccount); // Truyền toàn bộ đối tượng tài khoản
-        // Hoặc chỉ truyền tên: onLoginSuccess(foundAccount.taiKhoan);
+        onLoginSuccess(foundAccount); 
+      }
+
+      if (foundAccount.role === "admin") {
+        navigate("/admin");
       }
     } else {
       setLoginError("Tài khoản hoặc mật khẩu không đúng.");
@@ -88,10 +96,6 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
             </div>
 
             <form className="space-y-4" onSubmit={handleLogin}>
-              {loginError && <p className="text-red-500 text-sm">{loginError}</p>}
-
-              {/* Đã loại bỏ các đoạn code loading và error */}
-
               <>
                 <div className="space-y-2">
                   <label htmlFor="username" className="block text-gray-700 font-medium">
@@ -129,6 +133,8 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
                     </button>
                   </div>
                 </div>
+
+                {loginError && <p className="text-red-500 text-sm">{loginError}</p>}
 
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-2">

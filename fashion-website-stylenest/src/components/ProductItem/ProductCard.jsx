@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Heart, Maximize, ShoppingCart, Share2 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import RatingStars from "../RatingStars/RatingStars";
 import ProductBadge from "../ProductBadge/ProductBadge";
 import { useCart } from "../../contexts/CartContext"
@@ -10,6 +10,7 @@ const ProductCard = ({ product, listView = false }) => {
   const [favoriteActive, setFavoriteActive] = useState(false);
   const { addToCart } = useCart();
   const navigate = useNavigate();
+  const { category }  = useParams();
   const formatCurrency = (value) => {
     const formatted = new Intl.NumberFormat("vi-VN", {
       style: "decimal",
@@ -17,7 +18,7 @@ const ProductCard = ({ product, listView = false }) => {
     }).format(value || 0);
     return `${formatted} VNĐ`;
   };
-  const productLink = `/product/${product.id}`;
+  const productLink = `/product/${category}/${product.id}`;
 
   const handleMaximize = (e) => {
     e.preventDefault();
@@ -26,7 +27,7 @@ const ProductCard = ({ product, listView = false }) => {
 
   const handleAddToCart = (e) => {
     e.preventDefault();
-    addToCart(product);
+    addToCart({ ...product, quantity: 1 });
   };
 
   // 👉 List View
@@ -88,7 +89,7 @@ const ProductCard = ({ product, listView = false }) => {
         <div className="flex flex-col flex-grow">
           <div className="text-gray-500 text-sm mb-1">{product.brand || "Không rõ thương hiệu"}</div>
           <Link to={productLink}>
-            <h3 className="font-medium text-gray-900 mb-2 hover:underline">{product.name}</h3>
+            <h3 className="font-medium text-gray-900 mb-2 hover:text-orange-600">{product.name}</h3>
           </Link>
 
           <div className="mb-2">
@@ -108,7 +109,7 @@ const ProductCard = ({ product, listView = false }) => {
             </div>
           </div>
 
-          <p className="text-gray-600 mb-4 line-1.5">{product.description[0].content || "Không có mô tả cho sản phẩm này."}</p>
+          <p className="text-gray-600 mb-4 line-1.5">{product.slogan || "Không có mô tả cho sản phẩm này."}</p>
 
           <div className="flex gap-2">
           {product.instock > 0 ? (

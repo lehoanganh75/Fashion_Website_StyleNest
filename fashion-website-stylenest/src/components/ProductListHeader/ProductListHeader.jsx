@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Grid, List, ChevronDown } from "lucide-react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate, useParams } from "react-router-dom";
 
 const ProductListHeader = ({ totalProducts, onViewChange, onSortChange }) => {
   const [viewMode, setViewMode] = useState("grid");
@@ -8,6 +8,7 @@ const ProductListHeader = ({ totalProducts, onViewChange, onSortChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const { category } = useParams();
 
   const handleViewChange = (mode) => {
     setViewMode(mode);
@@ -26,7 +27,7 @@ const ProductListHeader = ({ totalProducts, onViewChange, onSortChange }) => {
       newSearchParams.set('name', currentSearchTerm);
     }
     newSearchParams.set('sortBy', option);
-    navigate(`/product?${newSearchParams.toString()}`);
+    navigate(`/product/${category}?${newSearchParams.toString()}`);
   };
 
   const sortOptions = [
