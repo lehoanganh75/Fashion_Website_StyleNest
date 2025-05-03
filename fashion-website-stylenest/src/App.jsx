@@ -8,12 +8,16 @@ import BrandPage from "./pages/BrandPage";
 import Footer from './components/Footer/Footer';
 import Blogs from './pages/BlogPage';
 import BlogPost from './components/FromTheBlog/BlogPost';
+import AdminPage from './pages/AdminPage'; 
 import { CartProvider } from './contexts/CartContext';
 
 function App() {
   return (
     <CartProvider>
-      <div className="min-h-screen flex flex-col">
+      <Routes>
+        <Route path="*" element={<AdminPage />} />
+      </Routes>
+      {/* <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -27,7 +31,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-      </div>
+      </div> */}
     </CartProvider>
   );
 }
