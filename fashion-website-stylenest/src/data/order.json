@@ -1,310 +1,286 @@
 [
   {
-    "id": 1,
-    "date": "13/10/2021",
-    "status": "completed",
-    "statusText": "HOÀN THÀNH",
-    "deliveryStatus": "Giao hàng thành công",
-    "shop": {
-      "name": "Style Nest",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo thun nam trơn BassicJusttee",
-      "type": "Áo thun",
-      "image": "/imgs/aothunamtronbasicjusttee1.jpg",
-      "quantity": 1,
-      "originalPrice": 29000,
-      "id": 1,
-      "price": 19000
-    },
-    "payment": {
-      "subtotal": 19000,
-      "shipping": 42500,
-      "discount": -40000,
-      "total": 21500
-    }
+    "id": "1",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "nam01@gmail.com",
+    "customerName": "Nam",
+    "orderDate": "2025-04-15",
+    "total": 1200000,
+    "status": "Đã giao",
+    "address": "Số 1, Đường ABC, Quận 1, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "34",
+        "productName": "Sản phẩm X",
+        "quantity": 2,
+        "price": 150000,
+        "total": 300000,
+        "img": "url_to_image_X.jpg"
+      },
+      {
+        "productId": "89",
+        "productName": "Sản phẩm Y",
+        "quantity": 2,
+        "price": 200000,
+        "total": 400000,
+        "img": "url_to_image_Y.jpg"
+      }
+    ]
   },
   {
-    "id": 2,
-    "date": "15/10/2021",
-    "status": "shipping",
-    "statusText": "VẬN CHUYỂN",
-    "deliveryStatus": "Đang giao hàng",
-    "shop": {
-      "name": "Style Nest",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo thun nam trơn BasucJusttee",
-      "type": "Áo thun",
-      "image": "/imgs/aothunamtronbasicjusttee2.jpg",
-      "quantity": 2,
-      "id": 2,
-      "originalPrice": 45000,
-      "price": 35000
-    },
-    "payment": {
-      "subtotal": 70000,
-      "shipping": 15000,
-      "discount": -10000,
-      "total": 75000
-    }
+    "id": "2",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "hoa02@gmail.com",
+    "customerName": "Hoa",
+    "orderDate": "2025-03-12",
+    "total": 850000,
+    "status": "Đang xử lý",
+    "address": "Số 10, Đường XYZ, Quận 3, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "56",
+        "productName": "Sản phẩm A",
+        "quantity": 1,
+        "price": 300000,
+        "total": 300000,
+        "img": "url_to_image_A.jpg"
+      },
+      {
+        "productId": "72",
+        "productName": "Sản phẩm B",
+        "quantity": 1,
+        "price": 200000,
+        "total": 200000,
+        "img": "url_to_image_B.jpg"
+      }
+    ]
   },
   {
-    "id": 3,
-    "date": "18/10/2021",
-    "status": "completed",
-    "statusText": "HOÀN THÀNH",
-    "deliveryStatus": "Giao hàng thành công",
-    "shop": {
-      "name": "Trendy Tees",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": false,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Nam Graphic Tee Cool",
-      "type": "Áo thun",
-      "image": "/imgs/aothunnamgraphic1.jpg",
-      "quantity": 1,
-      "originalPrice": 220000,
-      "id": 6,
-      "price": 176000
-    },
-    "payment": {
-      "subtotal": 176000,
-      "shipping": 35000,
-      "discount": -20000,
-      "total": 191000
-    }
+    "id": "3",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "an03@gmail.com",
+    "customerName": "An",
+    "orderDate": "2025-02-21",
+    "total": 450000,
+    "status": "Đã giao",
+    "address": "Số 25, Đường MNP, Quận 5, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "14",
+        "productName": "Sản phẩm Z",
+        "quantity": 3,
+        "price": 150000,
+        "total": 450000,
+        "img": "url_to_image_Z.jpg"
+      }
+    ]
   },
   {
-    "id": 4,
-    "date": "20/10/2021",
-    "status": "shipping",
-    "statusText": "VẬN CHUYỂN",
-    "deliveryStatus": "Đang giao hàng",
-    "shop": {
-      "name": "Polo House",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Polo Nam Basic Cotton",
-      "type": "Áo thun",
-      "image": "/imgs/aothunpolonambasic2.jpg",
-      "quantity": 1,
-      "originalPrice": 250000,
-      "id": 4,
-      "price": 200000
-    },
-    "payment": {
-      "subtotal": 200000,
-      "shipping": 25000,
-      "discount": -15000,
-      "total": 210000
-    }
+    "id": "4",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "mai04@gmail.com",
+    "customerName": "Mai",
+    "orderDate": "2025-04-01",
+    "total": 999000,
+    "status": "Đã giao",
+    "address": "Số 15, Đường QWE, Quận 2, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "65",
+        "productName": "Sản phẩm M",
+        "quantity": 2,
+        "price": 300000,
+        "total": 600000,
+        "img": "url_to_image_M.jpg"
+      },
+      {
+        "productId": "87",
+        "productName": "Sản phẩm N",
+        "quantity": 1,
+        "price": 399000,
+        "total": 399000,
+        "img": "url_to_image_N.jpg"
+      }
+    ]
   },
   {
-    "id": 5,
-    "date": "22/10/2021",
-    "status": "pending",
-    "statusText": "CHỜ XỬ LÝ",
-    "deliveryStatus": "Đang chuẩn bị hàng",
-    "shop": {
-      "name": "Summer Vibes",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": false,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Short Kaki Nam Basic",
-      "type": "Áo thun",
-      "image": "/imgs/aothunshortkakinam1.jpg",
-      "quantity": 2,
-      "originalPrice": 180000,
-      "id": 5,
-      "price": 135000
-    },
-    "payment": {
-      "subtotal": 270000,
-      "shipping": 30000,
-      "discount": -30000,
-      "total": 270000
-    }
+    "id": "5",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "tuan05@gmail.com",
+    "customerName": "Tuan",
+    "orderDate": "2025-04-29",
+    "total": 2000000,
+    "status": "Đang xử lý",
+    "address": "Số 30, Đường KLM, Quận 4, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "99",
+        "productName": "Sản phẩm C",
+        "quantity": 3,
+        "price": 400000,
+        "total": 1200000,
+        "img": "url_to_image_C.jpg"
+      },
+      {
+        "productId": "23",
+        "productName": "Sản phẩm D",
+        "quantity": 2,
+        "price": 400000,
+        "total": 800000,
+        "img": "url_to_image_D.jpg"
+      }
+    ]
   },
   {
-    "id": 6,
-    "date": "25/10/2021",
-    "status": "completed",
-    "statusText": "HOÀN THÀNH",
-    "deliveryStatus": "Giao hàng thành công",
-    "shop": {
-      "name": "Viet Tailor",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Nam Oxford Dài Tay",
-      "type": "Áo thun",
-      "image": "/imgs/aothunnamoxford2.jpg",
-      "quantity": 1,
-      "originalPrice": 280000,
-      "id": 3,
-      "price": 238000
-    },
-    "payment": {
-      "subtotal": 238000,
-      "shipping": 40000,
-      "discount": -25000,
-      "total": 253000
-    }
+    "id": "6",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "huong06@gmail.com",
+    "customerName": "Hương",
+    "orderDate": "2025-01-05",
+    "total": 1300000,
+    "status": "Đã hủy",
+    "address": "Số 8, Đường OPQ, Quận 7, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "45",
+        "productName": "Sản phẩm E",
+        "quantity": 2,
+        "price": 400000,
+        "total": 800000,
+        "img": "url_to_image_E.jpg"
+      },
+      {
+        "productId": "55",
+        "productName": "Sản phẩm F",
+        "quantity": 1,
+        "price": 500000,
+        "total": 500000,
+        "img": "url_to_image_F.jpg"
+      }
+    ]
   },
   {
-    "id": 7,
-    "date": "28/10/2021",
-    "status": "shipping",
-    "statusText": "VẬN CHUYỂN",
-    "deliveryStatus": "Đang giao hàng",
-    "shop": {
-      "name": "Maverick",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Nam Slim Fit Basic",
-      "type": "Áo thun",
-      "image": "/imgs/aothunnamslimfitbasic3.jpg",
-      "quantity": 3,
-      "originalPrice": 350000,
-      "id": 2,
-      "price": 315000
-    },
-    "payment": {
-      "subtotal": 945000,
-      "shipping": 20000,
-      "discount": -50000,
-      "total": 915000
-    }
+    "id": "7",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "binh07@gmail.com",
+    "customerName": "Bình",
+    "orderDate": "2025-03-10",
+    "total": 780000,
+    "status": "Đã giao",
+    "address": "Số 18, Đường UVW, Quận 9, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "61",
+        "productName": "Sản phẩm G",
+        "quantity": 1,
+        "price": 380000,
+        "total": 380000,
+        "img": "url_to_image_G.jpg"
+      },
+      {
+        "productId": "33",
+        "productName": "Sản phẩm H",
+        "quantity": 1,
+        "price": 400000,
+        "total": 400000,
+        "img": "url_to_image_H.jpg"
+      }
+    ]
   },
   {
-    "id": 8,
-    "date": "30/10/2021",
-    "status": "completed",
-    "statusText": "HOÀN THÀNH",
-    "deliveryStatus": "Giao hàng thành công",
-    "shop": {
-      "name": "Icon Denim",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Nam Trơn Basic Just Tee Form Regular",
-      "type": "Áo thun",
-      "image": "/imgs/aothunamtronbasicjusttee2.jpg",
-      "quantity": 1,
-      "originalPrice": 199000,
-      "id": 1,
-      "price": 189050
-    },
-    "payment": {
-      "subtotal": 189050,
-      "shipping": 38000,
-      "discount": -10000,
-      "total": 217050
-    }
+    "id": "8",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "lan08@gmail.com",
+    "customerName": "Lan",
+    "orderDate": "2025-04-20",
+    "total": 1650000,
+    "status": "Đã giao",
+    "address": "Số 40, Đường RST, Quận 3, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "98",
+        "productName": "Sản phẩm I",
+        "quantity": 2,
+        "price": 500000,
+        "total": 1000000,
+        "img": "url_to_image_I.jpg"
+      },
+      {
+        "productId": "13",
+        "productName": "Sản phẩm J",
+        "quantity": 1,
+        "price": 650000,
+        "total": 650000,
+        "img": "url_to_image_J.jpg"
+      }
+    ]
   },
   {
-    "id": 9,
-    "date": "02/11/2021",
-    "status": "pending",
-    "statusText": "CHỜ XỬ LÝ",
-    "deliveryStatus": "Đang chuẩn bị hàng",
-    "shop": {
-      "name": "Trendy Tees",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": false,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Nam Graphic Tee Cool",
-      "type": "Áo thun",
-      "image": "/imgs/aothunnamgraphic3.jpg",
-      "quantity": 2,
-      "originalPrice": 220000,
-      "id": 6,
-      "price": 176000
-    },
-    "payment": {
-      "subtotal": 352000,
-      "shipping": 32000,
-      "discount": -40000,
-      "total": 344000
-    }
+    "id": "9",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "dung09@gmail.com",
+    "customerName": "Dũng",
+    "orderDate": "2025-04-23",
+    "total": 540000,
+    "status": "Đang xử lý",
+    "address": "Số 50, Đường XYZ, Quận 5, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "43",
+        "productName": "Sản phẩm K",
+        "quantity": 1,
+        "price": 540000,
+        "total": 540000,
+        "img": "url_to_image_K.jpg"
+      }
+    ]
   },
   {
-    "id": 10,
-    "date": "05/11/2021",
-    "status": "completed",
-    "statusText": "HOÀN THÀNH",
-    "deliveryStatus": "Giao hàng thành công",
-    "shop": {
-      "name": "Polo House",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": true,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Polo Nam Basic Cotton",
-      "type": "Áo thun",
-      "image": "/imgs/aothunpolonambasic4.jpg",
-      "quantity": 1,
-      "originalPrice": 250000,
-      "id": 4,
-      "price": 200000
-    },
-    "payment": {
-      "subtotal": 200000,
-      "shipping": 28000,
-      "discount": -20000,
-      "total": 208000
-    }
+    "id": "10",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "le10@gmail.com",
+    "customerName": "Lê",
+    "orderDate": "2025-02-18",
+    "total": 1120000,
+    "status": "Đã giao",
+    "address": "Số 60, Đường JKL, Quận 10, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "36",
+        "productName": "Sản phẩm L",
+        "quantity": 2,
+        "price": 550000,
+        "total": 1100000,
+        "img": "url_to_image_L.jpg"
+      }
+    ]
   },
   {
-    "id": 11,
-    "date": "08/11/2021",
-    "status": "shipping",
-    "statusText": "VẬN CHUYỂN",
-    "deliveryStatus": "Đang giao hàng",
-    "shop": {
-      "name": "Summer Vibes",
-      "avatar": "/placeholder.svg?height=40&width=40",
-      "chat": false,
-      "viewShop": true
-    },
-    "product": {
-      "name": "Áo Thun Short Kaki Nam Basic",
-      "type": "Áo thun",
-      "image": "/imgs/aothunshortkakinam3.jpg",
-      "quantity": 1,
-      "originalPrice": 180000,
-      "id": 5,
-      "price": 135000
-    },
-    "payment": {
-      "subtotal": 135000,
-      "shipping": 33000,
-      "discount": -15000,
-      "total": 153000
-    }
+    "id": "11",
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "email": "tam11@gmail.com",
+    "customerName": "Tâm",
+    "orderDate": "2025-03-30",
+    "total": 760000,
+    "status": "Đã hủy",
+    "address": "Số 70, Đường MNO, Quận 6, TP.HCM",
+    "orderDetails": [
+      {
+        "productId": "27",
+        "productName": "Sản phẩm O",
+        "quantity": 2,
+        "price": 350000,
+        "total": 700000,
+        "img": "url_to_image_O.jpg"
+      },
+      {
+        "productId": "71",
+        "productName": "Sản phẩm P",
+        "quantity": 1,
+        "price": 60000,
+        "total": 60000,
+        "img": "url_to_image_P.jpg"
+      }
+    ]
   }
 ]
