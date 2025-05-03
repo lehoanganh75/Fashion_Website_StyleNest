@@ -10,6 +10,27 @@ const LoginModal = ({ isOpen, onClose }) => {
   const switchToLogin = () => setIsLoginView(true)
   const switchToRegister = () => setIsLoginView(false)
 
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [loggedInAccount, setLoggedInAccount] = useState(null);
+
+  const handleOpenLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const handleCloseLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
+  const handleLoginSuccess = (accountInfo) => {
+    setLoggedInAccount(accountInfo);
+    setIsLoginModalOpen(false); // Đóng modal sau khi đăng nhập thành công
+  };
+
+  const handleLogout = () => {
+    setLoggedInAccount(null);
+    // Thêm logic đăng xuất khác nếu cần
+  };
+
   if (!isOpen) return null
 
   return (

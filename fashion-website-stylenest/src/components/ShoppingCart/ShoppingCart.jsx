@@ -1,10 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import 'boxicons/css/boxicons.min.css';
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../../contexts/CartContext"; // Assuming CartContext.js is in the contexts folder
 
 const ShoppingCart = () => {
-  const { cart, setCart } = useCart(); 
-
+  const { cart, setCart, moveToOrders } = useCart(); // Get moveToOrders function
   const [allSelected, setAllSelected] = useState(true);
 
   const toggleSelectAll = () => {
@@ -34,7 +33,7 @@ const ShoppingCart = () => {
   };
 
   const removeItem = (id) => {
-    setCart(cart.filter((item) => String(item.id) !== String(id)));
+    setCart(cart.filter((item) => item.id !== id)); // Use strict equality
   };
 
   const calculateSubtotal = () =>
@@ -44,9 +43,17 @@ const ShoppingCart = () => {
 
   const calculateTotal = () => calculateSubtotal() + calculateTax();
 
-  const selectedCount = cart
-    .filter((item) => item.selected)
-    .reduce((sum, item) => sum + item.quantity, 0);
+  const selectedItems = cart.filter((item) => item.selected);
+  const selectedCount = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
+
+  const handleCheckout = () => {
+    if (selectedItems.length > 0) {
+      moveToOrders(selectedItems);
+    } else {
+      // Optionally show a message that no items are selected
+      alert("Vui lòng chọn sản phẩm để thanh toán.");
+    }
+  };
 
   return (
     <div className="container mx-auto p-4 max-w-5xl font-['Roboto']">
@@ -144,6 +151,7 @@ const ShoppingCart = () => {
 
               <button
                 disabled={selectedCount === 0}
+                onClick={handleCheckout} // Call handleCheckout on button click
                 className={`mt-6 w-full py-3 text-lg font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out ${selectedCount === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-gray-500 to-gray-500 hover:opacity-90"}`}
               >
                 Thanh toán
