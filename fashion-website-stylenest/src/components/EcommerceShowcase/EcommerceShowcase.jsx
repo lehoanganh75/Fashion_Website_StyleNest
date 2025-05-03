@@ -88,7 +88,7 @@ const EcommerceShowcase = () => {
                   to="#"
                   className="text-sm text-gray-600 font-medium hover:underline transition-all"
                 >
-                  View All New Products <i class='bx bx-right-arrow-alt'></i>
+                  View All New Products <i className='bx bx-right-arrow-alt'></i>
                 </Link>
               </div>
             </div>

@@ -68,7 +68,7 @@ const BlogSection = () => {
                 to={`/blog/${post.id}`}
                 className="text-orange-500 text-sm font-semibold hover:underline"
               >
-                Đọc thêm <i class="bx bx-right-arrow-alt"></i>
+                Đọc thêm <i className="bx bx-right-arrow-alt"></i>
               </Link>
             </div>
           </div>
@@ -82,7 +82,7 @@ const BlogSection = () => {
           disabled={currentPage === 1}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 disabled:opacity-50 transition duration-300"
         >
-          <i class="bx bx-left-arrow-alt"></i>
+          <i className="bx bx-left-arrow-alt"></i>
         </button>
         {Array.from({ length: totalPages }, (_, i) => (
           <button

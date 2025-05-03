@@ -6,19 +6,19 @@ const Sidebar = () => {
     {
       section: "MENU",
       items: [
-        { name: "Dashboard", icon: "bx-grid-alt", link: "/"},
-        { name: "Biểu đồ", icon: "bx-pie-chart-alt", link: "/chart"},
-        { name: "Hồ sơ người dùng", icon: "bx-user", link: "/profile"},
-        { name: "Sản phẩm", icon: "bx-cube", link: "/product"},
-        { name: "Tài khoản", icon: "bx-credit-card", link: "/account"},
-        { name: "Khách hàng", icon: "bx-group", link: "/customer"},
-        { name: "Hóa đơn", icon: "bx-receipt", link: "/order"},
+        { name: "Dashboard", icon: "bx-grid-alt", link: "/admin/dashboard" }, // Admin dashboard
+        { name: "Biểu đồ", icon: "bx-pie-chart-alt", link: "/admin/chart" },  // Admin charts
+        { name: "Hồ sơ người dùng", icon: "bx-user", link: "/admin/profile" }, // User profile
+        { name: "Sản phẩm", icon: "bx-cube", link: "/admin/product" }, // Admin products
+        { name: "Tài khoản", icon: "bx-credit-card", link: "/admin/account" }, // Admin account
+        { name: "Khách hàng", icon: "bx-group", link: "/admin/customer" }, // Admin customers
+        { name: "Hóa đơn", icon: "bx-receipt", link: "/admin/order" }, // Admin orders
       ],
     },
     {
       section: "OTHERS",
       items: [
-        { name: "Logout", icon: "bx-log-out", link: "/logout"},
+        { name: "Logout", icon: "bx-log-out", link: "/" }, // User logout
       ],
     },
   ];

@@ -2,19 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom'; // Import hook to get URL parameters
 import ProductCard from '../ProductItem/ProductCard';
 import ProductListHeader from '../ProductListHeader/ProductListHeader';
-import data from '../../data/data.json';
 
-const ProductGrid = ({ filters }) => {
+const ProductGrid = ({ filters, products }) => {
   const [viewMode, setViewMode] = useState('grid');
   const [sortBy, setSortBy] = useState('relevance');
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [products, setProducts] = useState([]);
   const [searchParams] = useSearchParams(); // Get URL parameters
   const searchTerm = searchParams.get('name'); // Extract the 'name' parameter
-
-  useEffect(() => {
-    setProducts(data);
-  }, []);
 
   useEffect(() => {
     let result = [...products];

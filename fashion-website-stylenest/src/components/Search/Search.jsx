@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { IoSearch } from 'react-icons/io5';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import data from "../../data/data.json"; // Import dữ liệu sản phẩm
 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const { category } = useParams();
     const navigate = useNavigate();
 
     const handleSearchInputChange = (event) => {
@@ -31,12 +32,12 @@ const Search = () => {
         setSearchTerm(productName);
         setSearchResults([]);
         setIsDropdownOpen(false);
-        navigate(`/product?name=${productName}`);
+        navigate(`/product/${category}?name=${productName}`);
     };
 
     const handleSearchSubmit = () => {
         if (searchTerm.trim()) {
-            navigate(`/product?name=${searchTerm}`);
+            navigate(`/product/${category}?name=${searchTerm}`);
         }
     };
 

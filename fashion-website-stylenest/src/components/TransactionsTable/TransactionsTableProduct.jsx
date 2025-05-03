@@ -22,6 +22,8 @@ const TransactionsTableProduct = ({ products }) => {
         console.log(`Navigating to page ${page}`)
       }
     }
+
+    console.log(paginatedProducts[0].thumbnails[0])
   
     const toggleDropdown = (products, event) => {
       event.preventDefault()

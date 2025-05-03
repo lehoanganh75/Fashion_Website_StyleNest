@@ -12,8 +12,8 @@ import Navigation from "../Navigation/Navigation";
 import LoginForm from "../Login/LoginForm";
 import RegisterForm from "../Login/RegisterForm";
 import { useCart } from "../../contexts/CartContext";
-import Snackbar from "@mui/material/Snackbar"; // Import Snackbar
-import Alert from "@mui/material/Alert"; // Import Alert
+import Snackbar from "@mui/material/Snackbar"; 
+import Alert from "@mui/material/Alert"; 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -21,31 +21,28 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: 13,
     border: `2px solid ${(theme.vars ?? theme).palette.background.paper}`,
     padding: "0 4px",
-    backgroundColor: "oklch(70.5% 0.213 47.604)", // màu cam
-    color: "white", // màu chữ trên nền cam
+    backgroundColor: "oklch(70.5% 0.213 47.604)", 
+    color: "white",
   },
 }));
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [authFormView, setAuthFormView] = useState("login"); // "login" or "register"
+  const [authFormView, setAuthFormView] = useState("login"); 
   const { cart } = useCart();
-  const [loggedInAccount, setLoggedInAccount] = useState(null); // State quản lý tài khoản đã đăng nhập
-  const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] =
-    useState(false); // State cho Snackbar
+  const [loggedInAccount, setLoggedInAccount] = useState(null); 
+  const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] = useState(false);
 
-  // Function to track scroll event
   const handleScroll = () => {
-    // Get header height
     const headerElement = document.querySelector("header");
     if (headerElement) {
       const headerHeight = headerElement.offsetHeight;
 
       if (window.scrollY > headerHeight) {
-        setIsScrolled(true); // When scrolled past header, fix Navigation
+        setIsScrolled(true); 
       } else {
-        setIsScrolled(false); // If not scrolled past header, unfix
+        setIsScrolled(false); 
       }
     }
   };
@@ -65,9 +62,9 @@ const Header = () => {
   };
 
   const handleLoginSuccess = (account) => {
-    setLoggedInAccount(account); // Cập nhật thông tin tài khoản đã đăng nhập
-    setIsLoginOpen(false); // Đóng form đăng nhập
-    setLoginSuccessSnackbarOpen(true); // Mở Snackbar thông báo thành công
+    setLoggedInAccount(account); 
+    setIsLoginOpen(false); 
+    setLoginSuccessSnackbarOpen(true);
   };
 
   const handleCloseLoginSuccessSnackbar = (event, reason) => {
@@ -77,18 +74,25 @@ const Header = () => {
     setLoginSuccessSnackbarOpen(false);
   };
 
-  const handleLogout = () => {
-    setLoggedInAccount(null); // Xóa thông tin tài khoản đã đăng nhập
-  };
+  const handleLogut = () => {
+    setLoggedInAccount(null); 
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const selectedCount = cart
   .filter((item) => {
-    console.log("Filtering item:", item); // Log each item being filtered
+    console.log("Filtering item:", item);  
     return item.selected;
   })
   .reduce((sum, item) => {
-    console.log("Reducing item:", item, "sum:", sum, "quantity:", item.quantity, typeof item.quantity); // Log each item in reduce
-    const quantity = Number(item.quantity); // Try to force conversion
+    console.log("Reducing item:", item, "sum:", sum, "quantity:", item.quantity, typeof item.quantity);
+    const quantity = Number(item.quantity); 
     if (isNaN(quantity)) {
       console.error("NaN detected in quantity!", item);
     }
@@ -152,6 +156,13 @@ console.log("Final selectedCount:", selectedCount);
                       <span style={{ color: "orange" }}>
                         {loggedInAccount.userName}
                       </span>
+                      <span className="p-2">|</span>
+                      <button
+                        onClick={handleLogut}
+                        className="hover:text-orange-500"
+                      >
+                        Đăng xuất
+                      </button>
                     </li>
                   </>
                 ) : (
@@ -233,11 +244,32 @@ console.log("Final selectedCount:", selectedCount);
         autoHideDuration={3000}
         onClose={handleCloseLoginSuccessSnackbar}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        sx={{
+          mt: 2,
+          '& .MuiPaper-root': {
+            background: 'linear-gradient(135deg, #FFA726, #FB8C00)',
+            color: '#fff',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+            fontSize: '0.95rem',
+            borderRadius: '8px',
+          },
+        }}
       >
         <Alert
           onClose={handleCloseLoginSuccessSnackbar}
           severity="success"
-          sx={{ width: "100%" }}
+          icon={false}
+          sx={{
+            width: '100%',
+            background: 'transparent',
+            color: '#fff',
+            fontWeight: 500,
+            padding: '8px 10px',
+            '& .MuiAlert-message': {
+              display: 'flex',
+              alignItems: 'center',
+            },
+          }}
         >
           Đăng nhập thành công!
         </Alert>

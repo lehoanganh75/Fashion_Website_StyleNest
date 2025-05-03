@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bell, Package, Edit, User, Gift, CoinsIcon as Coin, Tag } from 'lucide-react';
 
 export default function ProfilePage() {
-  const [activeTab, setActiveTab] = useState('profile');
-
   return (
     <div className="bg-gray-100 min-h-screen font-sans p-4">
       {/* Header with profile */}

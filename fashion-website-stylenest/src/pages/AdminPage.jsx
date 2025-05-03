@@ -8,7 +8,7 @@ import Account from '../components/Account/Account';
 import Customer from '../components/Customer/Customer';
 import Order from '../components/Order/Order';
 import Sidebar from '../components/Sidebar/Sidebar';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 const AdminPage = () => {
     return (
@@ -28,13 +28,14 @@ const AdminPage = () => {
           {/* Scrollable content */}
           <div className="mt-[70px] overflow-y-auto h-[calc(100vh-64px)]">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/chart" element={<ReportChart />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/product" element={<ProductTable />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/customer" element={<Customer />} />
-              <Route path="/order" element={<Order />} />
+              <Route index element={<Navigate to="dashboard" replace />} />
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="chart" element={<ReportChart />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="product" element={<ProductTable />} />
+              <Route path="account" element={<Account />} />
+              <Route path="customer" element={<Customer />} />
+              <Route path="order" element={<Order />} />
             </Routes>
           </div>
         </div>

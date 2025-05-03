@@ -32,10 +32,10 @@ const Navigation = () => {
             <ul className="flex justify-start gap-6">
               {[
                 { label: "Trang chủ", link: "/" },
-                { label: "Thời trang", link: "/product" },
-                { label: "Hàng mới về", link: "/product" },
+                { label: "Thời trang", link: "/product/fashion" },
+                { label: "Hàng mới về", link: "/product/new" },
                 { label: "Tất cả thương hiệu", link: "/brands" },
-                { label: "Ưu đãi tốt", link: "/product" },
+                { label: "Ưu đãi tốt", link: "/product/deal" },
                 { label: "Blog", link: "/blog" },
               ].map((item, index) => (
                 <li key={index}>
