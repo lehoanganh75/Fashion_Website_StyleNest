@@ -82,19 +82,20 @@ const Header = () => {
   };
 
   const selectedCount = cart
-    .filter((item) => item.selected)
-    .reduce((sum, item) => sum + item.quantity, 0);
+  .filter((item) => {
+    console.log("Filtering item:", item); // Log each item being filtered
+    return item.selected;
+  })
+  .reduce((sum, item) => {
+    console.log("Reducing item:", item, "sum:", sum, "quantity:", item.quantity, typeof item.quantity); // Log each item in reduce
+    const quantity = Number(item.quantity); // Try to force conversion
+    if (isNaN(quantity)) {
+      console.error("NaN detected in quantity!", item);
+    }
+    return sum + quantity;
+  }, 0);
 
-  // Use useEffect to add and remove scroll event
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up event when component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+console.log("Final selectedCount:", selectedCount);
   return (
     <div>
       <header className="bg-white">
@@ -149,7 +150,7 @@ const Header = () => {
                     <li className="text-sm font-medium text-gray-800">
                       Xin chào{" "}
                       <span style={{ color: "orange" }}>
-                        {loggedInAccount.taiKhoan}
+                        {loggedInAccount.userName}
                       </span>
                     </li>
                   </>

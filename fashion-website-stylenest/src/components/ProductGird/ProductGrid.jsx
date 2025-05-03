@@ -1,51 +1,61 @@
-import React, { useState, useEffect } from 'react'
-import ProductCard from '../ProductItem/ProductCard'
-import ProductListHeader from '../ProductListHeader/ProductListHeader'
-import data from '../../data/data.json'
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom'; // Import hook to get URL parameters
+import ProductCard from '../ProductItem/ProductCard';
+import ProductListHeader from '../ProductListHeader/ProductListHeader';
+import data from '../../data/data.json';
 
 const ProductGrid = ({ filters }) => {
-  const [viewMode, setViewMode] = useState('grid')
-  const [sortBy, setSortBy] = useState('relevance')
-  const [filteredProducts, setFilteredProducts] = useState([])
-  const [products, setProducts] = useState([])
+  const [viewMode, setViewMode] = useState('grid');
+  const [sortBy, setSortBy] = useState('relevance');
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [searchParams] = useSearchParams(); // Get URL parameters
+  const searchTerm = searchParams.get('name'); // Extract the 'name' parameter
 
   useEffect(() => {
-    setProducts(data)
-  }, [])
+    setProducts(data);
+  }, []);
 
   useEffect(() => {
-    let result = [...products]
+    let result = [...products];
+
+    // Lọc theo tên (search term)
+    if (searchTerm) {
+      result = result.filter(product =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
 
     // Lọc theo danh mục (category)
     if (filters?.category) {
-      result = result.filter(product => product.category === filters.category)
+      result = result.filter(product => product.category === filters.category);
     }
 
     // Lọc theo khoảng giá
     if (filters?.priceRange) {
-      const [min, max] = filters.priceRange
+      const [min, max] = filters.priceRange;
       result = result.filter(product => {
-        const price = product.price * (1 - product.discount / 100) || product.price
-        return price >= min && price <= max
-      })
+        const price = product.price * (1 - product.discount / 100) || product.price;
+        return price >= min && price <= max;
+      });
     }
 
     // Sắp xếp theo tùy chọn
     result.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return (a.price * (1 - a.discount / 100) || a.price) - (b.price * (1 - b.discount / 100) || b.price)
+          return (a.price * (1 - a.discount / 100) || a.price) - (b.price * (1 - b.discount / 100) || b.price);
         case 'price-high':
-          return (b.price * (1 - b.discount / 100) || b.price) - (a.price * (1 - a.discount / 100) || a.price)
+          return (b.price * (1 - b.discount / 100) || b.price) - (a.price * (1 - a.discount / 100) || a.price);
         case 'rating':
-          return b.rating - a.rating
+          return b.rating - a.rating;
         default:
-          return 0
+          return 0;
       }
-    })
+    });
 
-    setFilteredProducts(result)
-  }, [filters, sortBy, products])
+    setFilteredProducts(result);
+  }, [filters, sortBy, products, searchTerm]); // Add searchTerm to the dependency array
 
   return (
     <div className="font-['Roboto']">
@@ -67,7 +77,7 @@ const ProductGrid = ({ filters }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProductGrid;

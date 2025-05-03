@@ -19,9 +19,9 @@ function App() {
   return (
     <CartProvider>
       <Routes>
-        <Route path="*" element={<AdminPage />} />
+        {/* <Route path="*" element={<AdminPage />} /> */}
       </Routes>
-      {/* <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>
@@ -40,7 +40,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-      </div> */}
+      </div>
     </CartProvider>
   );
 }

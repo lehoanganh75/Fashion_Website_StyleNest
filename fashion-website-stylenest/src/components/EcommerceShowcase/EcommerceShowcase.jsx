@@ -23,7 +23,7 @@ const EcommerceShowcase = () => {
                     -8%
                   </div>
                   <img
-                    src="/placeholder.svg?height=80&width=80"
+                    src="./imgs/thuonghieuwear.jpg"
                     alt="Dustpan"
                     className="w-20 h-20 object-cover rounded-lg border border-gray-300"
                   />
@@ -45,7 +45,7 @@ const EcommerceShowcase = () => {
               {/* Product 2 */}
               <div className="p-5 flex gap-4">
                 <img
-                  src="/placeholder.svg?height=80&width=80"
+                  src="./imgs/thuonghieuluves.jpg"
                   alt="Nike Air Max"
                   className="w-20 h-20 object-cover rounded-lg border border-gray-300"
                 />
@@ -64,7 +64,7 @@ const EcommerceShowcase = () => {
               {/* Product 3 */}
               <div className="p-5 flex gap-4">
                 <img
-                  src="/placeholder.svg?height=80&width=80"
+                  src="./imgs/thuonghieuelise.jpg"
                   alt="Smart Speaker"
                   className="w-20 h-20 object-cover rounded-lg border border-gray-300"
                 />
@@ -132,7 +132,7 @@ const EcommerceShowcase = () => {
                   <div className="w-full md:w-1/4 flex justify-center items-center">
                     <div className="border border-gray-300 rounded-sm p-4 w-40 h-28 min-h-[112px] flex items-center justify-center bg-gray-50">
                       <img
-                        src="/placeholder.svg?height=60&width=120"
+                        src="./imgs/thuonghieuvelisa.jpg"
                         alt={titles[i]}
                         className="max-w-full max-h-full"
                       />

@@ -33,9 +33,9 @@ const Navigation = () => {
               {[
                 { label: "Trang chủ", link: "/" },
                 { label: "Thời trang", link: "/product" },
-                { label: "Hàng mới về", link: "/newProduct" },
+                { label: "Hàng mới về", link: "/product" },
                 { label: "Tất cả thương hiệu", link: "/brands" },
-                { label: "Ưu đãi tốt", link: "/deals" },
+                { label: "Ưu đãi tốt", link: "/product" },
                 { label: "Blog", link: "/blog" },
               ].map((item, index) => (
                 <li key={index}>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "boxicons/css/boxicons.min.css";
 import { Link, useNavigate } from "react-router-dom";
-import orderData from "../../data/order.json"; // Đảm bảo đường dẫn này đúng với vị trí file order.json của bạn
+import orderData from "../../data/orderDetail.json"; // Đảm bảo đường dẫn này đúng với vị trí file order.json của bạn
 
 const OrderList = () => {
   const [activeTab, setActiveTab] = useState("all");
