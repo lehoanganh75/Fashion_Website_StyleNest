@@ -25,7 +25,24 @@ import ProfileAdmin from './components/Profile/Profile';
 import Customer from './components/Customer/Customer';
 import Order from './components/Order/Order';
 
+import axios from 'axios';
+import { useEffect, useState } from "react";
+
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/products')
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error('Lỗi khi lấy dữ liệu:', error);
+      });
+  }, []);
+
+  console.log(products); 
+
   return (
     <Routes>
       {/* USER LAYOUT */}
