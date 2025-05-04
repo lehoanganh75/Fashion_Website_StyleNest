@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation, Autoplay } from "swiper/modules"
-import data from "../../data/data.json"
 import { Link } from "react-router-dom"
 
 // Import Swiper styles
@@ -9,17 +8,28 @@ import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 
-export default function ProductSlider() {
-  const [slidesPerView, setSlidesPerView] = useState(5)
-  const [products, setProducts] = useState([])
+const shuffleArray = (array) => {
+  const copy = [...array];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+};
 
-  // Update slides per view based on screen size
+const ProductSlider = ({ products }) => {
+  const [slidesPerView, setSlidesPerView] = useState(5);
+  const [randomProducts, setRandomProducts] = useState([]);
+
   useEffect(() => {
-    // Shuffle and slice 20 products
-    const shuffled = [...data].sort(() => 0.5 - Math.random())
-    const selected = shuffled.slice(0, 20)
-    setProducts(selected)
-  
+    // Shuffle chỉ khi products có dữ liệu
+    if (products && products.length > 0) {
+      const shuffled = shuffleArray(products).slice(0, 10);
+      setRandomProducts(shuffled);
+    }
+  }, [products]);
+
+  useEffect(() => {  
     const handleResize = () => {
       if (window.innerWidth < 640) {
         setSlidesPerView(1)
@@ -37,7 +47,8 @@ export default function ProductSlider() {
     handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  }, []);
+
 
   return (
     <div className="w-full pt-4">
@@ -64,7 +75,8 @@ export default function ProductSlider() {
         .swiper-button-prev:hover {
           background: rgba(0, 0, 0, 0.8);
           transform: scale(1.1);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          box-shadow:
+           0 4px 12px rgba(0, 0, 0, 0.3);
         }
         
         .swiper-button-next:after, 
@@ -111,18 +123,21 @@ export default function ProductSlider() {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        {products.map((product) => (
+        {randomProducts.map((product) => (
           <SwiperSlide key={product.id}>
-            <Link to={`/product/${product.id}`} key={product.id}>
-              <div className="item h-[320px] p-4 pt-6 bg-white rounded-lg shadow-xl text-center flex flex-col items-center justify-between transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
-                <div className="relative w-full h-56 mb-4 overflow-hidden rounded-lg"> {/* Increased height here */}
+            <Link to={`/product/fashion/${product.id}`} key={product.id}>
+              <div className="item h-[360px] p-4 pt-6 bg-white rounded-lg shadow-sm text-center flex flex-col items-center justify-between transition-all duration-300 transform hover:scale-105 hover:shadow-lg font-['Roboto']">
+                {/* Chiều cao cố định và layout nhất quán */}
+                <div className="relative w-full h-[320px] mb-4 overflow-hidden rounded-lg">
                   <img
                     src={product.thumbnails[0] || "/placeholder.svg"}
                     alt={product.name}
-                    className="object-cover w-full h-full transition-transform duration-300 rounded-lg"
+                    className="object-contain w-full h-full transition-transform duration-300 rounded-lg"
                   />
                 </div>
-                <h3 className="text-sm font-medium text-gray-800 line-clamp-2 mb-2">{product.name}</h3>
+                <h3 className="text-base font-bold text-gray-800 h-auto mb-2">
+                  {product.name}
+                </h3>
               </div>
             </Link>
           </SwiperSlide>
@@ -131,3 +146,5 @@ export default function ProductSlider() {
     </div>
   )
 }
+
+export default ProductSlider

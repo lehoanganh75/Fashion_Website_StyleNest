@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useMemo } from "react";
 import ProductGrid from "../components/ProductGird/ProductGrid";
 import FilterSidebar from "../components/FilterSidebar/FilterSidebar";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
-import data from '../data/data.json';
 import { useParams } from "react-router-dom";
+import { useData } from "../contexts/DataContext";
 
 const categoryLabels = {
   fashion: "Thời trang",
@@ -13,39 +13,36 @@ const categoryLabels = {
 
 const ProductPage = () => {
   const { category } = useParams();
-  const [products, setProducts] = useState([]);
+  const { products } = useData();
 
   const currentLabel = categoryLabels[category] || "Sản phẩm";
-  
+
   const breadcrumbItems = [
     { label: "Trang chủ", href: "/" },
     { label: currentLabel, href: `/product/${category}` },
   ];
 
-  useEffect(() => {
-    let filteredProducts = data;
+  const filteredProducts = useMemo(() => {
+    let result = products;
   
     if (category === "new") {
       const now = new Date();
       const oneMonthAgo = new Date();
       oneMonthAgo.setMonth(now.getMonth() - 1);
-
-      console.log("Current date:", now);
-      console.log("One month ago:", oneMonthAgo);
   
-      filteredProducts = data.filter((product) => {
+      result = products.filter((product) => {
         const importDate = new Date(product.dateAdded);
         return importDate >= oneMonthAgo && importDate <= now;
       });
     } else if (category === "deal") {
-      filteredProducts = data.filter((product) => {
+      result = products.filter((product) => {
         const discount = product.discount || 0;
         return discount >= 15 && discount <= 40;
       });
     }
   
-    setProducts(filteredProducts);
-  }, [category]);  
+    return [...result].sort(() => Math.random() - 0.5);
+  }, [category, products]);
 
   return (
     <div>
@@ -56,7 +53,7 @@ const ProductPage = () => {
             <FilterSidebar />
           </div>
           <div className="flex-grow">
-            <ProductGrid products={products}/>
+            <ProductGrid products={filteredProducts} />
           </div>
         </div>
       </div>

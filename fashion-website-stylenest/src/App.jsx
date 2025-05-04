@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import UserLayout from "./layouts/UserLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
@@ -25,54 +25,44 @@ import ProfileAdmin from './components/Profile/Profile';
 import Customer from './components/Customer/Customer';
 import Order from './components/Order/Order';
 
-import axios from 'axios';
-import { useEffect, useState } from "react";
+import { AuthProvider } from './contexts/AuthContext'
+import { DataProvider } from './contexts/DataContext'
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
-      .then(response => {
-        setProducts(response.data);
-      })
-      .catch(error => {
-        console.error('Lỗi khi lấy dữ liệu:', error);
-      });
-  }, []);
-
-  console.log(products); 
-
   return (
-    <Routes>
-      {/* USER LAYOUT */}
-      <Route path="/" element={<UserLayout />}>
-        <Route index element={<HomePage />} />
-        <Route path="order-tracking" element={<OrderTracking />} />
-        <Route path="order-tracking/:orderId" element={<OrderTrackingDetail />} />
-        <Route path="support" element={<Support />} />
-        <Route path="notifications" element={<NotificationsPage />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="product/:category" element={<ProductPage />} />
-        <Route path="product/:category/:id" element={<ProductDetailPage />} />
-        <Route path="blog" element={<Blogs />} />
-        <Route path="blog/:id" element={<BlogPost />} />
-        <Route path="brands" element={<BrandPage />} />
-        <Route path="cart" element={<ShoppingCartPage />} />
-      </Route>
+    <DataProvider>
+      <AuthProvider>
+        <Routes>
+          {/* USER LAYOUT */}
+          <Route path="/" element={<UserLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="order-tracking" element={<OrderTracking />} />
+            <Route path="order-tracking/:orderId" element={<OrderTrackingDetail />} />
+            <Route path="support" element={<Support />} />
+            <Route path="notifications" element={<NotificationsPage />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="product/:category" element={<ProductPage />} />
+            <Route path="product/:category/:id" element={<ProductDetailPage />} />
+            <Route path="blog" element={<Blogs />} />
+            <Route path="blog/:id" element={<BlogPost />} />
+            <Route path="brands" element={<BrandPage />} />
+            <Route path="cart" element={<ShoppingCartPage />} />
+          </Route>
 
-      {/* ADMIN LAYOUT */}
-      <Route path="/admin" element={<AdminLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="chart" element={<ReportChart />} />
-        <Route path="profile" element={<ProfileAdmin />} />
-        <Route path="product" element={<ProductTable />} />
-        <Route path="account" element={<Account />} />
-        <Route path="customer" element={<Customer />} />
-        <Route path="order" element={<Order />} />
-      </Route>
-    </Routes>
+          {/* ADMIN LAYOUT */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<Navigate to="/admin/dashboard" replace />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="chart" element={<ReportChart />} />
+            <Route path="profile" element={<ProfileAdmin />} />
+            <Route path="product" element={<ProductTable />} />
+            <Route path="account" element={<Account />} />
+            <Route path="customer" element={<Customer />} />
+            <Route path="order" element={<Order />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </DataProvider>
   );
 }
 

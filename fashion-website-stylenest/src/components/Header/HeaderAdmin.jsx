@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeaderAdmin = () => {
+const HeaderAdmin = ({ user }) => {
   return (
     <header className="flex items-center justify-between px-6 py-3 border-b border-gray-300">
         {/* Menu button */}
@@ -40,12 +40,14 @@ const HeaderAdmin = () => {
             <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-300">
                     <img
-                    src="/placeholder.svg?height=40&width=40"
+                    src={`${user?.img}?height=40&width=40`}
                     alt="User avatar"
                     className="w-full h-full object-cover"
                     />
                 </div>
-                <span className="font-medium text-gray-800">Admin</span>
+                <span className="font-medium text-gray-800">
+                    {user?.name || "Đang tải..."}
+                </span>
                 <i className="bx bxs-chevron-down text-gray-600 text-xl"></i>
             </div>
         </div>

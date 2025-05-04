@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import TransactionsTableAccount from "../TransactionsTable/TransactionsTableAccount"
-import data from '../../data/account.json';
+import { useData } from '../../contexts/DataContext';
 
 const Account = () => {
-  const [accounts, setAccounts] = useState([])
-
-  useEffect(() => {
-    setAccounts(data);
-  })
+  const { accounts } = useData();
 
   return (
     <div className="p-4 w-full">

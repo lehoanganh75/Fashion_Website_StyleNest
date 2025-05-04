@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import 'boxicons/css/boxicons.min.css';
-import { useCart } from "../../contexts/CartContext"; // Assuming CartContext.js is in the contexts folder
+import { useCart } from "../../contexts/CartContext"; 
 
 const ShoppingCart = () => {
-  const { cart, setCart, moveToOrders } = useCart(); // Get moveToOrders function
+  const { cart, setCart, moveToOrders } = useCart(); 
   const [allSelected, setAllSelected] = useState(true);
 
   const toggleSelectAll = () => {
@@ -33,11 +33,11 @@ const ShoppingCart = () => {
   };
 
   const removeItem = (id) => {
-    setCart(cart.filter((item) => item.id !== id)); // Use strict equality
+    setCart(cart.filter((item) => item.id !== id));
   };
 
   const calculateSubtotal = () =>
-    cart.filter((item) => item.selected).reduce((total, item) => total + item.price * item.quantity, 0);
+    cart.filter((item) => item.selected).reduce((total, item) => total + item.price * (1 - item.discount / 100) * item.quantity, 0);
 
   const calculateTax = () => calculateSubtotal() * 0.08;
 
@@ -50,7 +50,6 @@ const ShoppingCart = () => {
     if (selectedItems.length > 0) {
       moveToOrders(selectedItems);
     } else {
-      // Optionally show a message that no items are selected
       alert("Vui lòng chọn sản phẩm để thanh toán.");
     }
   };
@@ -120,7 +119,7 @@ const ShoppingCart = () => {
                           </button>
                         </div>
                         <div className="text-[18px] font-semibold text-gray-600 mt-1 text-center">
-                          {(item.price * item.quantity).toLocaleString("vi-VN")} VND
+                          {(item.price * (1 - item.discount / 100) * item.quantity).toLocaleString("vi-VN")} VND
                         </div>
                       </div>
                     </div>
@@ -151,7 +150,7 @@ const ShoppingCart = () => {
 
               <button
                 disabled={selectedCount === 0}
-                onClick={handleCheckout} // Call handleCheckout on button click
+                onClick={handleCheckout} 
                 className={`mt-6 w-full py-3 text-lg font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out ${selectedCount === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-gray-500 to-gray-500 hover:opacity-90"}`}
               >
                 Thanh toán

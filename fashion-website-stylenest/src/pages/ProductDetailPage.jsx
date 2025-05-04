@@ -2,7 +2,7 @@ import React from 'react';
 import ProductDetail from '../Components/ProductDetail/ProductDetail';
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { useParams } from 'react-router-dom';
-import data from "../data/data.json";
+import { useData } from '../contexts/DataContext';
 
 const categoryLabels = {
   fashion: "Thời trang",
@@ -12,7 +12,8 @@ const categoryLabels = {
 
 const ProductDetailPage = () => {
   const { id, category } = useParams();
-  const product = data.find((item) => item.id === id);
+  const { products } = useData(); 
+  const product = products.find((item) => item.id === id);
 
   if (!product) {
     return <div className="p-10">Sản phẩm không tồn tại</div>;

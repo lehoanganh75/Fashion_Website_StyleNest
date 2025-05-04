@@ -10,10 +10,10 @@ import { FaRegHeart } from "react-icons/fa";
 import Tooltip from "@mui/material/Tooltip";
 import Navigation from "../Navigation/Navigation";
 import LoginForm from "../Login/LoginForm";
-import RegisterForm from "../Login/RegisterForm";
 import { useCart } from "../../contexts/CartContext";
 import Snackbar from "@mui/material/Snackbar"; 
 import Alert from "@mui/material/Alert"; 
+import { useAuth } from "../../contexts/AuthContext";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -31,7 +31,7 @@ const Header = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [authFormView, setAuthFormView] = useState("login"); 
   const { cart } = useCart();
-  const [loggedInAccount, setLoggedInAccount] = useState(null); 
+  const { loggedInAccount, setLoggedInAccount } = useAuth(); 
   const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] = useState(false);
 
   const handleScroll = () => {
@@ -85,21 +85,15 @@ const Header = () => {
     };
   }, []);
 
-  const selectedCount = cart
-  .filter((item) => {
-    console.log("Filtering item:", item);  
-    return item.selected;
-  })
-  .reduce((sum, item) => {
-    console.log("Reducing item:", item, "sum:", sum, "quantity:", item.quantity, typeof item.quantity);
-    const quantity = Number(item.quantity); 
-    if (isNaN(quantity)) {
-      console.error("NaN detected in quantity!", item);
-    }
-    return sum + quantity;
-  }, 0);
+  const getSelectedCartItemCount = (cart) => {
+    return cart.reduce((sum, item) => {
+      const quantity = Number(item.quantity);
+      return sum + (item.selected && !isNaN(quantity) ? quantity : 0);
+    }, 0);
+  };
+  
+  const selectedCount = getSelectedCartItemCount(cart);
 
-console.log("Final selectedCount:", selectedCount);
   return (
     <div>
       <header className="bg-white">

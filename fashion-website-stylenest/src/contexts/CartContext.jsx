@@ -1,10 +1,14 @@
 import React, { createContext, useContext, useState } from 'react';
+import { useData } from './DataContext';
+import { useAuth } from './AuthContext';
+import { Email } from '@mui/icons-material';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [orders, setOrders] = useState([]);
+  const { orders, customers } = useData();
+  const { loggedInAccount } = useAuth();
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -22,37 +26,52 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const moveToOrders = (itemsToOrder) => {
-    if (itemsToOrder && itemsToOrder.length > 0) {
-        const newOrder = {
-            id: `ORDER-${Date.now().toString().slice(0, 8)}`, // Create simple order ID
-            date: new Date().toLocaleDateString('vi-VN'),
-            status: "pending",
-            statusText: "CHỜ XỬ LÝ",
-            deliveryStatus: "Đang chuẩn bị",
-            items: itemsToOrder.map(item => {
-                const { selected, ...itemWithoutSelected } = item;
-                return itemWithoutSelected;
-            }),
-            payment: {
-                subtotal: itemsToOrder.reduce((total, item) => total + item.price * item.quantity, 0),
-                shipping: 0,
-                discount: 0,
-                total: itemsToOrder.reduce((total, item) => total + item.price * item.quantity, 0),
-            },
-        };
-        setOrders([newOrder, ...orders]);
-        const remainingCart = cart.filter(item => !itemsToOrder.some(orderedItem => orderedItem.id === item.id));
-        setCart(remainingCart);
+  const moveToOrders = (items) => {
+    if (items && items.length > 0 && loggedInAccount) {
+      const id = orders.length + 1;
+  
+      const total = items.reduce(
+        (sum, item) => sum + item.price * item.quantity * (1 - item.discount / 100),
+        0
+      );
+      const subtotal = total * 1.08; // đã bao gồm 8% thuế
+      
+      const foundCustomer = customers.find(
+        (cus) => cus.email === loggedInAccount.email
+      );
+
+      console.log("Khách hàng: ", foundCustomer)
+
+      const newOrder = {
+        id,
+        img: foundCustomer.img,
+        email: loggedInAccount.email,
+        customerName: foundCustomer.customerName,
+        total: parseFloat(subtotal.toFixed(2)),
+        status: "Đang xử lý",
+        address: "Số 10, Đường XYZ, Quận 3, TP.HCM",
+        items: items.map((item) => ({
+          productId: item.id,
+          productName: item.name,
+          quantity: item.quantity,
+          price: item.price * (1 - item.discount / 100),
+          total: item.price * (1 - item.discount / 100) * item.quantity,
+          img: item.thumbnails[0],
+        })),
+      };
+      console.log("Đơn hàng mới:", newOrder);
+
+      setCart((prevCart) =>
+        prevCart.filter((item) => !items.some((i) => i.id === item.id))
+      );
     }
-};
+  };  
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addToCart, moveToOrders, orders, setOrders }}>
+    <CartContext.Provider value={{ cart, setCart, addToCart, moveToOrders }}>
       {children}
     </CartContext.Provider>
   );
 };
 
-// Hook sử dụng để truy cập CartContext
 export const useCart = () => useContext(CartContext);

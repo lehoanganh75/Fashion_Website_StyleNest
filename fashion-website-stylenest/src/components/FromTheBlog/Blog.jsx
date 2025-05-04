@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import blogPosts from "../../data/fromTheBlog.json";
 import { Link } from "react-router-dom";
 import "./Blog.css";
 
@@ -9,7 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-const Blog = () => {
+const Blog = ({ blogs }) => {
   return (
     <section className="py-4">
       <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-400 mb-4 leading-[1.3]">
@@ -28,7 +27,7 @@ const Blog = () => {
         modules={[FreeMode, Pagination, Autoplay]}
         className="w-full"
       >
-        {blogPosts.map((post) => (
+        {blogs.map((post) => (
           <SwiperSlide key={post.id}>
             <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col h-[28rem]">
               <div className="relative group">

@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import blogData from "../../data/fromTheBlog.json";
 import "boxicons/css/boxicons.min.css";
+import { useData } from "../../contexts/DataContext";
+
 
 const BlogSection = () => {
+  const { blogs } = useData();
   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(blogData.length / itemsPerPage);
+  const totalPages = Math.ceil(blogs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentBlogs = blogData.slice(startIndex, startIndex + itemsPerPage);
+  const currentBlogs = blogs.slice(startIndex, startIndex + itemsPerPage);
 
   const goToPage = (page) => {
     if (page >= 1 && page <= totalPages) {

@@ -7,8 +7,6 @@ import {
   HeadphonesIcon,
 } from "lucide-react";
 
-import featuresData from "../../data/features.json";
-
 // Map icon strings to actual Lucide icon components
 const iconMap = {
   TruckIcon,
@@ -18,7 +16,7 @@ const iconMap = {
   HeadphonesIcon,
 };
 
-const FeaturesSection = () => {
+const FeaturesSection = ({ features }) => {
   return (
     <section className="w-full py-4">
       <div className="container mx-auto">
@@ -26,7 +24,7 @@ const FeaturesSection = () => {
           Tại sao chọn chúng tôi?
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8">
-          {featuresData.map((feature) => {
+          {features.map((feature) => {
             const Icon = iconMap[feature.icon];
             return (
               <div

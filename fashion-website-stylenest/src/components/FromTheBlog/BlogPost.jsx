@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import blogData from "../../data/fromTheBlog.json";
+import blogData from "../../data/blogs.json";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import NewProducts from "../FromTheBlog/NewProducts"; // Import NewProducts
 import BlogCategories from "../FromTheBlog/BlogCategories"; // Import BlogCategories

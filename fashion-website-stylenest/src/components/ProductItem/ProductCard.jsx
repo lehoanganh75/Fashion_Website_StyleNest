@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import RatingStars from "../RatingStars/RatingStars";
 import ProductBadge from "../ProductBadge/ProductBadge";
 import { useCart } from "../../contexts/CartContext"
+import { useAuth } from "../../contexts/AuthContext";
+import Modal from "../Modal/Modal";
 
 const ProductCard = ({ product, listView = false }) => {
   const [isHovering, setIsHovering] = useState(false);
@@ -11,6 +13,8 @@ const ProductCard = ({ product, listView = false }) => {
   const { addToCart } = useCart();
   const navigate = useNavigate();
   const { category }  = useParams();
+  const { loggedInAccount } = useAuth();
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const formatCurrency = (value) => {
     const formatted = new Intl.NumberFormat("vi-VN", {
       style: "decimal",
@@ -18,7 +22,9 @@ const ProductCard = ({ product, listView = false }) => {
     }).format(value || 0);
     return `${formatted} VNĐ`;
   };
-  const productLink = `/product/${category}/${product.id}`;
+  const categorySlug = category || "fashion";
+  
+  const productLink = `/product/${categorySlug}/${product.id}`;
 
   const handleMaximize = (e) => {
     e.preventDefault();
@@ -27,7 +33,11 @@ const ProductCard = ({ product, listView = false }) => {
 
   const handleAddToCart = (e) => {
     e.preventDefault();
-    addToCart({ ...product, quantity: 1 });
+    if (loggedInAccount) {
+      addToCart({ ...product, quantity: 1 });
+    }else {
+      setShowLoginModal(true);
+    }
   };
 
   // 👉 List View
@@ -83,6 +93,7 @@ const ProductCard = ({ product, listView = false }) => {
             src={product.thumbnails[0] || "/placeholder.svg"}
             alt={product.name}
             className="h-full object-contain transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
         </Link>
 
@@ -131,87 +142,94 @@ const ProductCard = ({ product, listView = false }) => {
 
   // 👉 Grid View
   return (
-    <Link
-      to={productLink}
-      className="relative bg-white border border-gray-200 p-3 rounded-sm shadow-md hover:shadow-2xl text-center flex flex-col items-center justify-between h-full transition-all duration-300 transform hover:scale-105"
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
-    >
-      <div className="absolute top-4 left-4 z-10 flex flex-col gap-1">
-        {product.discount && <ProductBadge type="discount" value={product.discount} />}
-        {isHovering && product.condition && <ProductBadge type="new" />}
-      </div>
-
-      {isHovering && (
-        <div className="absolute right-3 top-3 flex flex-col gap-2 z-20">
-          <button
-            type="button"
-            className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
-            onClick={(e) => {
-              e.preventDefault();
-              setFavoriteActive(!favoriteActive);
-            }}
-          >
-            <Heart
-              size={18}
-              className={`${favoriteActive ? "fill-red-500 text-red-500" : "text-gray-600 group-hover:text-white"} transition-colors`}
-            />
-          </button>
-
-          <button
-            type="button"
-            className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
-            onClick={handleAddToCart}
-          >
-            <ShoppingCart size={18} className="text-gray-600 group-hover:text-white" />
-          </button>
-
-          <button
-            type="button"
-            className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
-            onClick={handleMaximize}
-          >
-            <Maximize size={18} className="text-gray-600 group-hover:text-white" />
-          </button>
-
-          <button
-            type="button"
-            className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
-            onClick={(e) => e.preventDefault()}
-          >
-            <Share2 size={18} className="text-gray-600 group-hover:text-white" />
-          </button>
+    <div>
+      <Link
+        to={productLink}
+        className="relative bg-white border border-gray-200 p-3 rounded-sm shadow-md hover:shadow-2xl text-center flex flex-col items-center justify-between h-full transition-all duration-300 transform hover:scale-105"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <div className="absolute top-4 left-4 z-10 flex flex-col gap-1">
+          {product.discount && <ProductBadge type="discount" value={product.discount} />}
+          {isHovering && product.condition && <ProductBadge type="new" />}
         </div>
+
+        {isHovering && (
+          <div className="absolute right-3 top-3 flex flex-col gap-2 z-20">
+            <button
+              type="button"
+              className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                setFavoriteActive(!favoriteActive);
+              }}
+            >
+              <Heart
+                size={18}
+                className={`${favoriteActive ? "fill-red-500 text-red-500" : "text-gray-600 group-hover:text-white"} transition-colors`}
+              />
+            </button>
+
+            <button
+              type="button"
+              className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
+              onClick={handleAddToCart}
+            >
+              <ShoppingCart size={18} className="text-gray-600 group-hover:text-white" />
+            </button>
+
+            <button
+              type="button"
+              className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
+              onClick={handleMaximize}
+            >
+              <Maximize size={18} className="text-gray-600 group-hover:text-white" />
+            </button>
+
+            <button
+              type="button"
+              className="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow hover:bg-red-500 group transition-colors"
+              onClick={(e) => e.preventDefault()}
+            >
+              <Share2 size={18} className="text-gray-600 group-hover:text-white" />
+            </button>
+          </div>
+        )}
+
+        <div className="relative mb-4 flex-1 flex items-center justify-center overflow-hidden group w-full">
+          <img
+            src={(product.thumbnails && product.thumbnails[0]) || "/placeholder.svg"}
+            alt={product.name}
+            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="w-full mt-auto">
+          <p className="text-left text-sm text-gray-500 mb-1">
+            {product.brand || "Không rõ thương hiệu"}
+          </p>
+          <h3 className="text-left font-semibold text-gray-800 text-base mb-2 leading-[1.5] h-min-12">
+            {product.name}
+          </h3>
+          <RatingStars rating={product.rating || 0} />
+          <div className="mt-2 flex items-center gap-2">
+            {product.discount ? (
+              <>
+                <span className="text-gray-400 line-through text-sm">{formatCurrency(product.price)}</span>
+                <span className="text-red-600 font-semibold">{formatCurrency(product.price * (1 - product.discount / 100))}</span>
+              </>
+            ) : (
+              <span className="text-gray-900 font-semibold">{formatCurrency(product.price)}</span>
+            )}
+          </div>
+        </div>      
+      </Link>
+
+      {showLoginModal && (  
+        <Modal handleShowModal={() => setShowLoginModal(false)}/>
       )}
-
-      <div className="relative mb-4 flex-1 flex items-center justify-center overflow-hidden group w-full">
-        <img
-          src={(product.thumbnails && product.thumbnails[0]) || "/placeholder.svg"}
-          alt={product.name}
-          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      </div>
-
-      <div className="w-full mt-auto">
-        <p className="text-left text-sm text-gray-500 mb-1">
-          {product.brand || "Không rõ thương hiệu"}
-        </p>
-        <h3 className="text-left font-semibold text-gray-800 text-base mb-2 leading-[1.5] h-min-12">
-          {product.name}
-        </h3>
-        <RatingStars rating={product.rating || 0} />
-        <div className="mt-2 flex items-center gap-2">
-          {product.discount ? (
-            <>
-              <span className="text-gray-400 line-through text-sm">{formatCurrency(product.price)}</span>
-              <span className="text-red-600 font-semibold">{formatCurrency(product.price * (1 - product.discount / 100))}</span>
-            </>
-          ) : (
-            <span className="text-gray-900 font-semibold">{formatCurrency(product.price)}</span>
-          )}
-        </div>
-      </div>
-    </Link>
+    </div>
   );
 };
 

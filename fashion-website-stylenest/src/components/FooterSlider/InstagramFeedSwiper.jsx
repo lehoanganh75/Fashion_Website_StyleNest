@@ -5,9 +5,8 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import instagramPosts from "../../data/instagramPosts.json";
 
-const InstagramFeedSwiper = () => {
+const InstagramFeedSwiper = ({ instagramPosts }) => {
   return (
     <section className="w-full py-4">
       <div className="container mx-auto">
@@ -33,7 +32,7 @@ const InstagramFeedSwiper = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          loop={true}
+          loop={instagramPosts.length > 2}  // Chỉ bật loop khi có đủ ít nhất 3 slide
           freeMode={true}
           pagination={{ clickable: true }}
           modules={[FreeMode, Pagination, Autoplay]}

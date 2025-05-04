@@ -1,50 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Banner = () => {
-  const banners = [
-    {
-      img: "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-4.jpg",
-      alt: "Sofa Ba Chỗ Santa Lucia",
-      title: "Sofa Ba Chỗ",
-      subtitle: "Santa Lucia",
-      label: "Tiết Kiệm Lên Đến 20%"
-    },
-    {
-      img: "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-5.jpg",
-      alt: "Áo Thun Cổ Tròn Đỏ Nữ",
-      title: "Áo Thun Cổ Tròn",
-      subtitle: "Đỏ Nữ",
-      label: "Giảm Giá Trực Tuyến Tốt Nhất"
-    },
-    {
-      img: "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-4.jpg",
-      alt: "Sofa Ba Chỗ Santa Lucia",
-      title: "Sofa Ba Chỗ",
-      subtitle: "Santa Lucia",
-      label: "Tiết Kiệm Lên Đến 20%"
-    },
-    {
-      img: "https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-4.jpg",
-      alt: "Sofa Ba Chỗ Santa Lucia",
-      title: "Sofa Ba Chỗ",
-      subtitle: "Santa Lucia",
-      label: "Tiết Kiệm Lên Đến 20%"
-    },
-  ];
-
+const Banner = ({ banners }) => {
   const [startIndex, setStartIndex] = useState(0);
 
+  // Chỉ thực hiện khi banners có dữ liệu
   useEffect(() => {
-    const interval = setInterval(() => {
-      setStartIndex((prevIndex) => (prevIndex + 2) % banners.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [banners.length]);
+    if (banners.length > 0) {
+      const interval = setInterval(() => {
+        setStartIndex((prevIndex) => (prevIndex + 2) % banners.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [banners]);
+
+  // Kiểm tra nếu banners có dữ liệu
+  if (!banners || banners.length === 0) {
+    return null; // Hoặc có thể hiển thị một phần tử nào đó nếu cần
+  }
 
   const visibleBanners = [
     banners[startIndex],
-    banners[(startIndex + 1) % banners.length]
+    banners[(startIndex + 1) % banners.length],
   ];
 
   return (

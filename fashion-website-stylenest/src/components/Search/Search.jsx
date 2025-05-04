@@ -29,15 +29,17 @@ const Search = () => {
     };
 
     const handleSelectSearchResult = (productName) => {
+        const safeCategory = category || "fashion";
         setSearchTerm(productName);
         setSearchResults([]);
         setIsDropdownOpen(false);
-        navigate(`/product/${category}?name=${productName}`);
+        navigate(`/product/${safeCategory}?name=${productName}`);
     };
 
     const handleSearchSubmit = () => {
+        const safeCategory = category || "fashion";
         if (searchTerm.trim()) {
-            navigate(`/product/${category}?name=${searchTerm}`);
+            navigate(`/product/${safeCategory}?name=${searchTerm}`);
         }
     };
 

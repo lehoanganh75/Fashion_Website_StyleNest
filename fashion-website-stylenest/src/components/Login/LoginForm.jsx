@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Eye, EyeOff, Facebook } from "lucide-react";
 import RegisterForm from "./RegisterForm";
-import data from '../../data/account.json'; 
 import { useNavigate } from "react-router-dom";
+import { useData } from "../../contexts/DataContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" , onLoginSuccess }) => {
   const navigate = useNavigate();
@@ -12,11 +13,8 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
   const [email, setEmail] = useState("");
   const [currentView, setCurrentView] = useState(initialView); 
   const [loginError, setLoginError] = useState("");
-  const [accounts, setAccounts] = useState([]); 
-
-  useEffect(() => {
-    setAccounts(data); 
-  }, [])
+  const { accounts } = useData();
+  const { setLoggedInAccount } = useAuth();
 
   if (!isOpen) return null;
 
@@ -46,27 +44,25 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    const foundAccount = accounts.find(
+  
+    const matchedAccount = accounts.find(
       (acc) => acc.userName === user && acc.password === password
     );
-
-    if (foundAccount) {
-      console.log("Đăng nhập thành công!", foundAccount);
+  
+    if (matchedAccount) {
+      setLoggedInAccount(matchedAccount);
+      console.log("Đăng nhập thành công!", matchedAccount);
       setLoginError("");
+      onLoginSuccess?.(matchedAccount);
       onClose();
-      if (onLoginSuccess) {
-        onLoginSuccess(foundAccount); 
-      }
-
-      if (foundAccount.role === "admin") {
+  
+      if (matchedAccount.role === "admin") {
         navigate("/admin");
       }
     } else {
-      setLoginError("Tài khoản hoặc mật khẩu không đúng.");
+      setLoginError("Tài khoản hoặc mật khẩu không đúng");
     }
   };
-
 
   const handleForgotPassword = (e) => {
     e.preventDefault();
