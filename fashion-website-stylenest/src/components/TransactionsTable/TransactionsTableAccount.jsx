@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, MoreVertical } from "lucide-react"
 
-const TransactionsTableAccount = ({ accounts }) => {
+const TransactionsTableAccount = ({ accounts, updateAccount }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedorders, setSelectedorders] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -46,6 +46,16 @@ const TransactionsTableAccount = ({ accounts }) => {
     }
 
     const handleSaveChanges = () => {
+      const updatedAccount = {
+        id: selectedorders.id,
+        userName: userName,
+        password,
+        email,
+        role
+      };
+
+      updateAccount(updatedAccount);
+
       setIsModalOpen(false);
     };
 
@@ -53,6 +63,15 @@ const TransactionsTableAccount = ({ accounts }) => {
       setDropdownOpen(false)
       setSelectedorders(null)
     }
+
+    useEffect(() => {
+      if (selectedorders) {
+        setUserName(selectedorders.userName)
+        setPassword(selectedorders.password)
+        setEmail(selectedorders.email)
+        setRole(selectedorders.role)
+      }
+    }, [selectedorders])
   
     useEffect(() => {
       if (dropdownOpen) {
@@ -97,12 +116,12 @@ const TransactionsTableAccount = ({ accounts }) => {
               </tr>
             </thead>
             <tbody>
-              {paginatedorderss.map((accounts) => (
-                <tr key={accounts.id} className="border-b border-gray-200 h-16">
+              {paginatedorderss.map((accounts, index) => (
+                <tr key={index} className="border-b border-gray-200 h-16">
                   <td className="pl-4 text-gray-500">{accounts.userName}</td>
                   <td className="text-gray-500">{accounts.password}</td>
                   <td className="font-medium">{accounts.email}</td>
-                  <td className="text-gray-500">{accounts.role == "customer" ? "Khách hàng" : "admin"}</td>
+                  <td className="text-gray-500">{accounts.role == "customer" ? "Khách hàng" : "Admin"}</td>
                   <td>
                     <button
                       className="p-2 hover:bg-gray-100 rounded-full"
@@ -206,7 +225,7 @@ const TransactionsTableAccount = ({ accounts }) => {
                   <label className="block text-base font-medium text-gray-600 mb-2">Tên tài khoản</label>
                   <input
                     type="text"
-                    value={selectedorders.userName}
+                    value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -217,7 +236,7 @@ const TransactionsTableAccount = ({ accounts }) => {
                   <label className="block text-base font-medium text-gray-600 mb-2">Mật khẩu</label>
                   <input
                     type="password"
-                    value={selectedorders.password}
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
@@ -228,7 +247,7 @@ const TransactionsTableAccount = ({ accounts }) => {
                   <label className="block text-base font-medium text-gray-600 mb-2">Email</label>
                   <input
                     type="email"
-                    value={selectedorders.email}
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />

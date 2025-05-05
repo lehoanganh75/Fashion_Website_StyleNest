@@ -59,9 +59,32 @@ export const DataProvider = ({ children }) => {
         fetchData();
     }, []);
 
+    const saveAccount = async (newAccount) => {
+        try {
+            const response = await axios.post('http://localhost:5000/api/accounts', newAccount);
+            setAccounts((prevAccounts) => [...prevAccounts, response.data]);
+        } catch (error) {
+            console.error('Lỗi khi lưu tài khoản:', error);
+        }
+    }
+
+    const updateAccount = async (updatedAccount) => {
+        try {
+            const response = await axios.put(`http://localhost:5000/api/accounts/${updatedAccount.id}`, updatedAccount);
+            setAccounts((prevAccounts) =>
+                prevAccounts.map(account => account.id === updatedAccount.id ? response.data.updatedAccount : account)
+            );
+        } catch (error) {
+            console.error('Lỗi khi cập nhật tài khoản:', error);
+        }
+    };
+
     return (
         <DataContext.Provider value={{
             accounts,
+            setAccounts,
+            saveAccount,
+            updateAccount,
             banners,
             blogs,
             customers,
@@ -69,7 +92,9 @@ export const DataProvider = ({ children }) => {
             instagramPosts,
             orderDetails,
             orders,
+            setOrders,
             products,
+            setProducts,
             users,
         }}>
             {children}

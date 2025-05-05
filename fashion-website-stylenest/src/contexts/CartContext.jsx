@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useData } from './DataContext';
 import { useAuth } from './AuthContext';
-import { Email } from '@mui/icons-material';
+import axios from 'axios';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const { orders, customers } = useData();
+  const { orders, setOrders, customers } = useData();
   const { loggedInAccount } = useAuth();
 
   const addToCart = (product) => {
@@ -26,7 +26,7 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const moveToOrders = (items) => {
+  const moveToOrders = async (items) => {
     if (items && items.length > 0 && loggedInAccount) {
       const id = orders.length + 1;
   
@@ -34,7 +34,7 @@ export const CartProvider = ({ children }) => {
         (sum, item) => sum + item.price * item.quantity * (1 - item.discount / 100),
         0
       );
-      const subtotal = total * 1.08; // đã bao gồm 8% thuế
+      const subtotal = total * 1.08; 
       
       const foundCustomer = customers.find(
         (cus) => cus.email === loggedInAccount.email
@@ -47,10 +47,11 @@ export const CartProvider = ({ children }) => {
         img: foundCustomer.img,
         email: loggedInAccount.email,
         customerName: foundCustomer.customerName,
+        orderDate: new Date().toISOString(),
         total: parseFloat(subtotal.toFixed(2)),
         status: "Đang xử lý",
         address: "Số 10, Đường XYZ, Quận 3, TP.HCM",
-        items: items.map((item) => ({
+        orderDetails: items.map((item) => ({
           productId: item.id,
           productName: item.name,
           quantity: item.quantity,
@@ -61,9 +62,20 @@ export const CartProvider = ({ children }) => {
       };
       console.log("Đơn hàng mới:", newOrder);
 
-      setCart((prevCart) =>
-        prevCart.filter((item) => !items.some((i) => i.id === item.id))
-      );
+      try {
+        const response = await axios.post("http://localhost:5000/api/orders", newOrder);
+        console.log("Lưu đơn hàng thành công:", response.data);
+  
+        const updatedOrdersResponse = await axios.get("http://localhost:5000/api/orders");
+        setOrders(updatedOrdersResponse.data);
+
+        // Xoá khỏi giỏ hàng
+        setCart((prevCart) =>
+          prevCart.filter((item) => !items.some((i) => i.id === item.id))
+        );
+      } catch (error) {
+        console.error("Lỗi khi lưu đơn hàng:", error);
+      }
     }
   };  
 

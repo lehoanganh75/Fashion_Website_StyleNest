@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Định nghĩa schema cho Order
 const OrderSchema = new mongoose.Schema({
-  id: { type: String, required: true },
+  id: { type: String, required: true, unique: true },
   img: { type: String, required: true },
   email: { type: String, required: true },
   customerName: { type: String, required: true },
@@ -20,7 +20,7 @@ const OrderSchema = new mongoose.Schema({
       img: { type: String, required: true }
     }
   ]
-});
+}, { versionKey: false });
 
 // Tạo và xuất model từ schema
 const Order = mongoose.model('Order', OrderSchema);
