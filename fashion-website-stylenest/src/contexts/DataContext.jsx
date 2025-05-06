@@ -14,6 +14,8 @@ export const DataProvider = ({ children }) => {
     const [orders, setOrders] = useState([]);
     const [products, setProducts] = useState([]);
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
   
     useEffect(() => {
         const fetchData = async () => {
@@ -173,6 +175,17 @@ export const DataProvider = ({ children }) => {
         }
     };
 
+    const updateUser = async (updatedUser) => {
+        try {
+            const response = await axios.put(`http://localhost:5000/api/users/${updatedUser.id}`, updatedUser);
+            setAccounts((prevAccounts) =>
+                prevAccounts.map(user => user.id === updatedUser.id ? response.data.updatedUser : user)
+            );
+        } catch (error) {
+            console.error('Lỗi khi cập nhật tài khoản:', error);
+        }
+    };
+
     const searchProducts = async (searchTerm) => {
         setLoading(true);
         setError(null);
@@ -189,26 +202,6 @@ export const DataProvider = ({ children }) => {
           throw error;
         } finally {
           setLoading(false);
-        }
-      };
-
-
-      const updateUser = async (updatedUser) => {
-        try {
-          const response = await axios.put(
-            `http://localhost:5000/api/users/${updatedUser.id}`,
-            updatedUser
-          );
-      
-          setUsers((prevUsers) =>
-            prevUsers.map((user) =>
-              user.id === updatedUser.id
-                ? response.data.updatedUser
-                : user
-            )
-          );
-        } catch (error) {
-          console.error("Lỗi khi cập nhật người dùng:", error);
         }
       };
 
@@ -251,26 +244,24 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  const searchAccounts = async (userName) => {
-    setLoading(true);
-    setError(null);
-    try {
-        const response = await axios.get(
-            `http://localhost:5000/api/accounts/search?userName=${userName}`
-        );
-        setAccounts(response.data);  // Cập nhật danh sách tài khoản
-        return response.data;
-    } catch (error) {
-        setError(error);
-        console.error("Lỗi khi tìm kiếm tài khoản:", error);
-        setAccounts([]);  // Xóa danh sách tài khoản khi có lỗi
-        throw error;
-    } finally {
-        setLoading(false);  // Tắt loading sau khi hoàn tất
-    }
-};
-
-  
+    const searchAccounts = async (userName) => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await axios.get(
+                `http://localhost:5000/api/accounts/search?userName=${userName}`
+            );
+            setAccounts(response.data);  // Cập nhật danh sách tài khoản
+            return response.data;
+        } catch (error) {
+            setError(error);
+            console.error("Lỗi khi tìm kiếm tài khoản:", error);
+            setAccounts([]);  // Xóa danh sách tài khoản khi có lỗi
+            throw error;
+        } finally {
+            setLoading(false);  // Tắt loading sau khi hoàn tất
+        }
+    };
 
     return (
         <DataContext.Provider value={{

@@ -12,19 +12,16 @@ router.get('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-    const { id } = req.params;  // id là chuỗi
+    const { id } = req.params;  
+    console.log(req.body);
     const { name, gender, date, phone } = req.body;
+
+    console.log("Dữ liệu người dùng sau khi sửa:", name, gender, date, phone);
   
     try {
-      // Tìm và cập nhật người dùng với id là chuỗi
       const updatedUser = await User.findOneAndUpdate(
-        { id: id },  // Sử dụng trường id (chuỗi)
-        {
-          name,
-          gender,
-          date,
-          phone,
-        },
+        { id: id },  
+        { name, gender, date, phone },
         { new: true }
       );
   
