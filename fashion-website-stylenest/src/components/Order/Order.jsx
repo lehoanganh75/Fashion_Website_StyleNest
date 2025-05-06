@@ -1,12 +1,14 @@
 import React from 'react'
 import TransactionsTableOrder from "../TransactionsTable/TransactionsTableOrder"
-import data from "../../data/order.json"
+import { useData } from '../../contexts/DataContext'
 
 const Order = () => {
+  const { orders } = useData();
+
   return (
     <div className="p-4 w-full">
-    <TransactionsTableOrder orders={data}/>
-  </div>
+      <TransactionsTableOrder orders={orders}/>
+    </div>
   )
 }
 

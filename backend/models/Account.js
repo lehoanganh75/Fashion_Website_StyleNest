@@ -7,7 +7,7 @@ const AccountSchema = new mongoose.Schema({
   password: { type: String, required: true },
   email: { type: String, required: true },
   role: { type: String, required: true }
-});
+}, { versionKey: false });
 
 // Tạo và xuất model từ schema
 const Account = mongoose.model('Account', AccountSchema);

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Định nghĩa schema cho Product
 const ProductSchema = new mongoose.Schema({
-  id: { type: String, required: true },
+  id: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   brand: { type: String, required: true },
   type: { type: String, required: true },
@@ -30,7 +30,7 @@ const ProductSchema = new mongoose.Schema({
   slogan: { type: String, required: true },
   dateAdded: { type: Date, required: true },
   instock: { type: Number, required: true }
-});
+}, { versionKey: false });
 
 // Tạo và xuất model từ schema
 const Product = mongoose.model('Product', ProductSchema);

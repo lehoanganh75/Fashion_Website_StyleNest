@@ -43,7 +43,7 @@
         "quantity": 1,
         "price": 300000,
         "total": 300000,
-        "img": "url_to_image_A.jpg"
+        "img": "/imgs/aothunnamslimfitbasic1.jpg"
       },
       {
         "productId": "72",
@@ -51,7 +51,7 @@
         "quantity": 1,
         "price": 200000,
         "total": 200000,
-        "img": "url_to_image_B.jpg"
+        "img": "/imgs/aothunnamslimfitbasic1.jpg"
       }
     ]
   },

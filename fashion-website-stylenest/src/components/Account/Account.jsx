@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import TransactionsTableAccount from "../TransactionsTable/TransactionsTableAccount"
 import { useData } from '../../contexts/DataContext';
 import axios from 'axios';
 
 const Account = () => {
-  const { accounts, setAccounts, updateAccount } = useData();
-  const [loading, setLoading] = React.useState(true);
+  const { accounts, setAccounts, saveAccount, updateAccount, deleteAccount } = useData();
+  const [loading, setLoading] = useState(true);
 
   const refreshAccounts = async () => {
     try {
@@ -29,7 +29,7 @@ const Account = () => {
       {loading ? (
         <p>Đang tải...</p> // Hiển thị trạng thái loading nếu đang lấy dữ liệu
       ) : (
-        <TransactionsTableAccount accounts={accounts} updateAccount={updateAccount}/>
+        <TransactionsTableAccount accounts={accounts} saveAccount={saveAccount} updateAccount={updateAccount} deleteAccount={deleteAccount}/>
       )}
     </div>
   )

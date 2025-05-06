@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, MoreVertical } from "lucide-react"
+import ModalAddProduct from '../Modal/ModalAddProduct'
+import ModalProductEdit from "../Modal/ModalProductEdit"
 
-const TransactionsTableProduct = ({ products }) => {
+const TransactionsTableProduct = ({ products, saveProduct, updateProduct, deleteProduct }) => {
     const [currentPage, setCurrentPage] = useState(1)
     const [selectedProducts, setSelectedProducts] = useState(null)
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 })
     const [isModalOpen, setIsModalOpen] = useState(false);
-  
+    const [isModalAddOpen, setIsModaAddlOpen] = useState(false);
+    const [isModalEditOpen, setIsModaEditOpen] = useState(false);
+
     const itemsPerPage = 6
     const paginatedProducts = products.slice(
         (currentPage - 1) * itemsPerPage,
@@ -22,8 +26,6 @@ const TransactionsTableProduct = ({ products }) => {
         console.log(`Navigating to page ${page}`)
       }
     }
-
-    console.log(paginatedProducts[0].thumbnails[0])
   
     const toggleDropdown = (products, event) => {
       event.preventDefault()
@@ -87,7 +89,7 @@ const TransactionsTableProduct = ({ products }) => {
     return (
       <div className="bg-white border border-gray-300 p-4.5 rounded-lg shadow-sm max-w-full font-['Roboto']">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-600">Hóa đơn mới nhất</h1>
+          <h1 className="text-2xl font-bold text-gray-600">Danh sách sản phẩm</h1>
           <div className="relative flex items-center w-full max-w-lg gap-2 mx-4">
             {/* Ô nhập tìm kiếm */}
             <div className="flex flex-grow items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2 shadow-sm">
@@ -103,7 +105,13 @@ const TransactionsTableProduct = ({ products }) => {
             <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition">
                 Tìm kiếm
             </button>
-            </div>
+
+            <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition"
+              onClick={() => setIsModaAddlOpen(true)}
+            >
+                Thêm sản phẩm
+            </button>
+          </div>
         </div>
   
         <div className="overflow-x-auto">
@@ -218,8 +226,20 @@ const TransactionsTableProduct = ({ products }) => {
             </button>
             <button
                 onClick={() => {
+                    console.log(`View more details for products: ${selectedProducts.id}`)
+                    setDropdownOpen(false)
+                    setIsModaEditOpen(true)
+                    console.log("Edit products: ", selectedProducts)
+                }}
+                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Sửa
+            </button>
+            <button
+                onClick={() => {
                     console.log(`Delete products: ${selectedProducts.id}`)
                     setDropdownOpen(false)
+                    deleteProduct(selectedProducts.id)
                 }}
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
             >
@@ -270,10 +290,10 @@ const TransactionsTableProduct = ({ products }) => {
               {/* Thông tin cơ bản */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-gray-700 text-sm sm:text-base mb-6">
                 <p><strong>Thương hiệu:</strong> {selectedProducts.brand}</p>
-                <p><strong>Ngày nhập:</strong> {selectedProducts.dateAdded}</p>
+                <p><strong>Ngày nhập:</strong> {formatDate(selectedProducts.dateAdded)}</p>
                 <p><strong>Loại:</strong> {selectedProducts.type}</p>
                 <p><strong>Giảm giá:</strong> {selectedProducts.discount}%</p>
-                <p><strong>Giá tiền:</strong> {selectedProducts.price}</p>
+                <p><strong>Giá tiền:</strong> {formatCurrency(selectedProducts.price)}</p>
                 <p><strong>Màu sắc:</strong> {selectedProducts.colors}</p>
                 <p><strong>Kích thước:</strong> {selectedProducts.size}</p>
                 <p><strong>Trạng thái:</strong> {selectedProducts.condition ? "Hàng mới" : "Hàng cũ"}</p>
@@ -321,6 +341,24 @@ const TransactionsTableProduct = ({ products }) => {
             </div>
           </div>
         )}
+
+        {isModalAddOpen &&
+          <ModalAddProduct 
+            isOpen={isModalAddOpen}
+            onClose={() => setIsModaAddlOpen(false)}
+            saveProduct={saveProduct}
+            products={products}
+          />
+        }
+
+        {isModalEditOpen && selectedProducts && 
+          <ModalProductEdit
+            isOpen={isModalEditOpen}
+            onClose={() => setIsModaEditOpen(false)}
+            product={selectedProducts}
+            updateProduct={updateProduct}
+          />
+        }
       </div>
     )
 }

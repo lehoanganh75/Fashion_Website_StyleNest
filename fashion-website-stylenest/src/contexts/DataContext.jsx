@@ -57,12 +57,18 @@ export const DataProvider = ({ children }) => {
         };
     
         fetchData();
-    }, []);
+    }, []);    
 
     const saveAccount = async (newAccount) => {
         try {
+            // Send the new account to the backend
             const response = await axios.post('http://localhost:5000/api/accounts', newAccount);
-            setAccounts((prevAccounts) => [...prevAccounts, response.data]);
+            console.log("Lưu tài khoản thành công:", response.data);
+            // Fetch the updated list of accounts after the new one is saved
+            const updatedAccounts = await axios.get('http://localhost:5000/api/accounts');
+        
+            // Update the state with the newly fetched list
+            setAccounts(updatedAccounts.data);
         } catch (error) {
             console.error('Lỗi khi lưu tài khoản:', error);
         }
@@ -79,12 +85,101 @@ export const DataProvider = ({ children }) => {
         }
     };
 
+    const deleteAccount = async (accountId) => {
+        try {
+            await axios.delete(`http://localhost:5000/api/accounts/${accountId}`);
+            setAccounts((prevAccounts) =>
+                prevAccounts.filter(account => account.id !== accountId)
+            );
+        } catch (error) {
+            console.error('Lỗi khi xóa tài khoản:', error);
+        }
+    };
+
+    const saveProduct = async (productData, imageFiles) => {
+        try {
+            const formData = new FormData();
+            formData.append("product", JSON.stringify(productData));
+            
+            imageFiles.forEach(file => {
+                formData.append("images", file); // thêm từng ảnh vào field images
+            });
+    
+            const response = await axios.post(
+                'http://localhost:5000/api/products',
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }
+            );
+    
+            console.log("Đã lưu sản phẩm:", response.data);
+    
+            const updatedProducts = await axios.get('http://localhost:5000/api/products');
+            setProducts(updatedProducts.data);
+        } catch (error) {
+            console.error('Lỗi khi lưu sản phẩm:', error);
+        }
+    };   
+    
+    const updateProduct = async (productData, newImageFiles = [], oldImageURLs = []) => {
+        try {
+            const formData = new FormData();
+    
+            // Cập nhật thumbnails (kết hợp ảnh cũ và mới)
+            const updatedThumbnails = [...oldImageURLs, ...newImageFiles.map(file => `${file.name}`)];
+            productData.thumbnails = updatedThumbnails;
+    
+            // Chuyển productData thành chuỗi JSON và append vào FormData
+            formData.append("product", JSON.stringify(productData));
+    
+            // Thêm ảnh mới vào FormData
+            newImageFiles.forEach(file => {
+                formData.append("images", file);
+            });
+    
+            console.log("Updated thumbnails:", productData.thumbnails);
+    
+            const response = await axios.put(
+                `http://localhost:5000/api/products/${productData.id}`,
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                }
+            );
+    
+            console.log("Sản phẩm đã được cập nhật:", response.data);
+    
+            // Lấy lại danh sách sản phẩm sau khi cập nhật
+            const updatedProducts = await axios.get('http://localhost:5000/api/products');
+            setProducts(updatedProducts.data);
+        } catch (error) {
+            console.error('Lỗi khi cập nhật sản phẩm:', error);
+        }
+    }    
+
+    const deleteProduct = async (productId) => {
+        try {
+            await axios.delete(`http://localhost:5000/api/products/${productId}`);
+            setProducts((prevProducts) =>
+                prevProducts.filter(product => product.id !== productId)
+            );
+        } catch (error) {
+            console.error('Lỗi khi xóa sản phẩm:', error);
+        }
+    };
+
     return (
         <DataContext.Provider value={{
             accounts,
             setAccounts,
             saveAccount,
             updateAccount,
+            deleteAccount,
             banners,
             blogs,
             customers,
@@ -95,6 +190,9 @@ export const DataProvider = ({ children }) => {
             setOrders,
             products,
             setProducts,
+            saveProduct,
+            updateProduct,
+            deleteProduct,
             users,
         }}>
             {children}

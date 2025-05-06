@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, MoreVertical } from "lucide-react"
 
-const TransactionsTableAccount = ({ accounts, updateAccount }) => {
+const TransactionsTableAccount = ({ accounts, saveAccount, updateAccount, deleteAccount }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedorders, setSelectedorders] = useState(null);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -11,6 +11,7 @@ const TransactionsTableAccount = ({ accounts, updateAccount }) => {
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const [role, setRole] = useState("customer");
+    const [checked, setChecked] = useState(true);
   
     const itemsPerPage = 6
     const paginatedorderss = accounts.slice(
@@ -47,21 +48,63 @@ const TransactionsTableAccount = ({ accounts, updateAccount }) => {
 
     const handleSaveChanges = () => {
       const updatedAccount = {
-        id: selectedorders.id,
-        userName: userName,
+        id: checked ? Math.max(...accounts.map((a) => a.id || 0), 0) + 1 : selectedorders.id,
+        userName,
         password,
         email,
-        role
+        role,
       };
+    
+      if (checked) {
+        if (!userName || !password || !email) {
+          alert("Vui lòng nhập đầy đủ thông tin tài khoản");
+          return;
+        }
+      
+        if (password.length < 6) {
+          alert("Mật khẩu phải có ít nhất 6 ký tự");
+          return;
+        }
+      
+        const isDuplicate = accounts.some(
+          (account) =>
+            (account.userName === userName || account.email === email) &&
+            (!checked || account.id !== selectedorders.id)
+        );
+      
+        if (isDuplicate) {
+          alert("Tên tài khoản hoặc email đã tồn tại");
+          return;
+        }
 
-      updateAccount(updatedAccount);
-
+        console.log("Saving new account:", updatedAccount);
+        saveAccount(updatedAccount);
+      } else {
+        console.log("Updating account:", updatedAccount);
+        updateAccount(updatedAccount);
+      }
+    
       setIsModalOpen(false);
+      setUserName("");
+      setPassword("");
+      setEmail("");
+      setRole("customer");
+      setChecked(false);
+      setSelectedorders(null);
     };
-
+    
     const handleClickOutside = () => {
       setDropdownOpen(false)
       setSelectedorders(null)
+    }
+
+    const handleOpenModal = () => {
+      setChecked(true)
+      setIsModalOpen(true)
+      setUserName("")
+      setPassword("")
+      setEmail("")
+      setRole("customer")
     }
 
     useEffect(() => {
@@ -100,6 +143,14 @@ const TransactionsTableAccount = ({ accounts, updateAccount }) => {
             {/* Nút tìm kiếm */}
             <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition">
                 Tìm kiếm
+            </button>
+
+            {/* Nút thêm mới */}
+            <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition" 
+              onClick={handleOpenModal}
+            >
+            
+                Thêm tài khoản
             </button>
             </div>
         </div>
@@ -187,20 +238,30 @@ const TransactionsTableAccount = ({ accounts, updateAccount }) => {
             className="absolute bg-white border border-gray-300 rounded-lg shadow-lg py-2 w-40 z-50"
             style={{ top: `${dropdownPosition.top}px`, left: `${dropdownPosition.left}px` }}
           >
-            <button
-                onClick={() => {
-                    console.log(`View more details for accounts: ${selectedorders.id}`)
-                    setDropdownOpen(false)
-                    setIsModalOpen(true)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-                >
-                Sửa
-            </button>
+           <button
+            onClick={() => {
+              console.log(`View more details for account: ${selectedorders?.id}`);
+              setDropdownOpen(false);
+
+              // Cập nhật state trước khi mở modal
+              if (selectedorders) {
+                setUserName(selectedorders.userName);
+                setPassword(selectedorders.password);
+                setEmail(selectedorders.email);
+                setRole(selectedorders.role);
+                setChecked(false); 
+                setIsModalOpen(true);
+              }
+            }}
+            className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
+          >
+            Sửa
+          </button>
             <button
                 onClick={() => {
                     console.log(`Delete accounts: ${selectedorders.id}`)
                     setDropdownOpen(false)
+                    deleteAccount(selectedorders.id)
                 }}
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
             >
@@ -209,7 +270,7 @@ const TransactionsTableAccount = ({ accounts, updateAccount }) => {
           </div>
         )}
 
-        {isModalOpen && selectedorders && (
+        {isModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center font-['Roboto']">
             {/* Nền mờ và hiệu ứng mờ nền */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>

@@ -5,7 +5,7 @@
     "type": "Áo Thun",
     "price": 199000,
     "discount": 5,
-    "colors": ["Đen"],
+    "colors": ["black"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATID0598-02",
@@ -16,7 +16,7 @@
       },
       {
         "title": "THIẾT KẾ BASIC, DỄ PHỐI ĐỒ",
-        "content": "Mang đậm phong cách tối giản nhưng không kém phần tinh tế, chiếc áo thun nam trơn basic Just Tee sở hữu kiểu dáng trơn màu đơn giản, tạo nên một nền tảng hoàn hảo để bạn tự do thể hiện cá tính thông qua việc kết hợp với nhiều loại trang phục khác nhau. Dù bạn muốn một vẻ ngoài năng động với quần jeans và giày sneakers, hay một phong cách lịch sự hơn khi phối cùng quần âu và giày loafers, chiếc áo này đều có thể đáp ứng một cách linh hoạt. Sự đơn giản trong thiết kế còn giúp áo dễ dàng hòa nhập vào mọi tủ đồ và trở thành một item không thể thiếu cho nhiều phong cách khác nhau, từ casual hàng ngày đến smart-casual cho những dịp đặc biệt."
+        "content": "Mang phong cách tối giản nhưng không kém phần tinh tế, chiếc áo thun nam trơn basic Just Tee sở hữu kiểu dáng trơn màu đơn giản, tạo nên một nền tảng hoàn hảo để bạn tự do thể hiện cá tính thông qua việc kết hợp với nhiều loại trang phục khác nhau. Dù bạn muốn một vẻ ngoài năng động với quần jeans và giày sneakers, hay một phong cách lịch sự hơn khi phối cùng quần âu và giày loafers, chiếc áo này đều có thể đáp ứng một cách linh hoạt. Sự đơn giản trong thiết kế còn giúp áo dễ dàng hòa nhập vào mọi tủ đồ và trở thành một item không thể thiếu cho nhiều phong cách khác nhau, từ casual hàng ngày đến smart-casual cho những dịp đặc biệt."
       },
       {
         "title": "FORM REGULAR FIT",
@@ -32,9 +32,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunamtronbasicjusttee1.jpg",
-      "/imgs/aothunamtronbasicjusttee2.jpg",
-      "/imgs/aothunamtronbasicjusttee3.jpg"
+      "http://localhost:5000/imgs/aothunamtronbasicjusttee1.jpg",
+      "http://localhost:5000/imgs/aothunamtronbasicjusttee2.jpg",
+      "http://localhost:5000/imgs/aothunamtronbasicjusttee3.jpg"
     ],
     "id": "1",
     "rating": 4,
@@ -49,8 +49,8 @@
     "type": "Áo Thun",
     "price": 350000,
     "discount": 10,
-    "colors": ["Xanh Đen", "Xanh Nhạt"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["black", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATMN1234-05",
     "descriptions": [
@@ -76,10 +76,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamslimfitbasic1.jpg",
-      "/imgs/aothunnamslimfitbasic2.jpg",
-      "/imgs/aothunnamslimfitbasic3.jpg",
-      "/imgs/aothunnamslimfitbasic4.jpg"
+      "http://localhost:5000/imgs/aothunnamslimfitbasic1.jpg",
+      "http://localhost:5000/imgs/aothunnamslimfitbasic2.jpg",
+      "http://localhost:5000/imgs/aothunnamslimfitbasic3.jpg",
+      "http://localhost:5000/imgs/aothunnamslimfitbasic4.jpg"
     ],
     "id": "2",
     "rating": 4,
@@ -94,7 +94,7 @@
     "type": "Áo Thun",
     "price": 280000,
     "discount": 15,
-    "colors": ["Trắng", "Xanh Dương", "Hồng"],
+    "colors": ["white", "blue", "pink"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDT001-01",
@@ -105,7 +105,7 @@
       },
       {
         "title": "KIỂU DÁNG CỔ ĐIỂN",
-        "content": "Chiếc áo thun này sở hữu kiểu dáng dài tay cổ điển, một thiết kế vượt thời gian và phù hợp với nhiều dịp khác nhau, từ môi trường công sở trang trọng đến những buổi gặp gỡ bạn bè thân mật hay các sự kiện đặc biệt. Phần cổ áo được thiết kế tỉ mỉ, giữ form dáng tốt, tạo nên vẻ lịch sự và nam tính cho người mặc. Tay áo dài có thể được xắn lên một cách gọn gàng để tạo nên phong cách năng động và thoải mái hơn. Đây là một item không thể thiếu trong tủ đồ của những người đàn ông theo đuổi phong cách thanh lịch và tinh tế."
+        "content": "Chiếc áo thun này sở hữu kiểu dáng dài tay cổ điển, một thiết kế vượt thời gian và phù hợp với nhiều dịp khác nhau, từ môi trường công sở trang trọng đến những buổi gặp gỡ bạn bè thân mật hay các sự kiện đặc biệt. Phần cổ áo được thiết kế tỉ mỉ, giữ form dáng tốt, tạo nên vẻ lịch sự và nam tính cho người mặc. Tay áo dài có thể được xắn lên một cách gọn gàng để tạo nên phong cách năng động và thoải mái hơn. Đây là một item không thể thiếu trong tủ đồ của những người đàn ông theo đuổi phong cáchh lịch và tinh tế."
       },
       {
         "title": "FORM REGULAR FIT",
@@ -121,9 +121,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamoxford1.jpg",
-      "/imgs/aothunnamoxford2.jpg",
-      "/imgs/aothunnamoxford3.jpg"
+      "http://localhost:5000/imgs/aothunnamoxford1.jpg",
+      "http://localhost:5000/imgs/aothunnamoxford2.jpg",
+      "http://localhost:5000/imgs/aothunnamoxford3.jpg"
     ],
     "id": "3",
     "rating": 4,
@@ -138,7 +138,7 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 20,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATPBC022-03",
@@ -149,7 +149,7 @@
       },
       {
         "title": "KIỂU DÁNG BASIC",
-        "content": "Mang trong mình vẻ đẹp đơn giản và thanh lịch, chiếc áo thun polo nam basic sở hữu kiểu dáng trơn màu cổ điển, dễ dàng phối hợp với nhiều loại trang phục khác nhau để tạo nên những phong cách đa dạng. Thiết kế basic này không bao giờ lỗi mốt và luôn là một lựa chọn an toàn cho mọi гардероб. Bạn có thể kết hợp áo với quần jeans, quần kaki hay quần short để tạo nên vẻ ngoài năng động và trẻ trung. Đây là một item đa năng, phù hợp cho nhiều hoạt động khác nhau, từ đi làm, đi chơi đến tham gia các sự kiện thường ngày."
+        "content": "Mang trong mình vẻ đẹp đơn giản vàh lịch, chiếc áo thun polo nam basic sở hữu kiểu dáng trơn màu cổ điển, dễ dàng phối hợp với nhiều loại trang phục khác nhau để tạo nên những phong cách đa dạng. Thiết kế basic này không bao giờ lỗi mốt và luôn là một lựa chọn an toàn cho mọi гардероб. Bạn có thể kết hợp áo với quần jeans, quần kaki hay quần short để tạo nên vẻ ngoài năng động và trẻ trung. Đây là một item đa năng, phù hợp cho nhiều hoạt động khác nhau, từ đi làm, đi chơi đến tham gia các sự kiện thường ngày."
       },
       {
         "title": "FORM REGULAR FIT",
@@ -165,11 +165,11 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunpolonambasic1.jpg",
-      "/imgs/aothunpolonambasic2.jpg",
-      "/imgs/aothunpolonambasic3.jpg",
-      "/imgs/aothunpolonambasic4.jpg",
-      "/imgs/aothunpolonambasic5.jpg"
+      "http://localhost:5000/imgs/aothunpolonambasic1.jpg",
+      "http://localhost:5000/imgs/aothunpolonambasic2.jpg",
+      "http://localhost:5000/imgs/aothunpolonambasic3.jpg",
+      "http://localhost:5000/imgs/aothunpolonambasic4.jpg",
+      "http://localhost:5000/imgs/aothunpolonambasic5.jpg"
     ],
     "id": "4",
     "rating": 4,
@@ -184,7 +184,7 @@
     "type": "Áo Thun",
     "price": 180000,
     "discount": 25,
-    "colors": ["Be", "Xám", "Nâu"],
+    "colors": ["be", "gray", "brown"],
     "size": ["29", "31", "33"],
     "condition": true,
     "SKU": "ATSKNB007-06",
@@ -211,9 +211,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunshortkakinam1.jpg",
-      "/imgs/aothunshortkakinam2.jpg",
-      "/imgs/aothunshortkakinam3.jpg"
+      "http://localhost:5000/imgs/aothunshortkakinam1.jpg",
+      "http://localhost:5000/imgs/aothunshortkakinam2.jpg",
+      "http://localhost:5000/imgs/aothunshortkakinam3.jpg"
     ],
     "id": "5",
     "rating": 4,
@@ -228,7 +228,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNGT015-04",
@@ -255,10 +255,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamgraphic1.jpg",
-      "/imgs/aothunnamgraphic2.jpg",
-      "/imgs/aothunnamgraphic3.jpg",
-      "/imgs/aothunnamgraphic4.jpg"
+      "http://localhost:5000/imgs/aothunnamgraphic1.jpg",
+      "http://localhost:5000/imgs/aothunnamgraphic2.jpg",
+      "http://localhost:5000/imgs/aothunnamgraphic3.jpg",
+      "http://localhost:5000/imgs/aothunnamgraphic4.jpg"
     ],
     "id": "6",
     "rating": 4,
@@ -273,7 +273,7 @@
     "type": "Áo Thun",
     "price": 290000,
     "discount": 15,
-    "colors": ["Đen", "Xám Đậm"],
+    "colors": ["black", "gray"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATJNTT003-07",
@@ -300,9 +300,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunjoggernam1.jpg",
-      "/imgs/aothunjoggernam2.jpg",
-      "/imgs/aothunjoggernam3.jpg"
+      "http://localhost:5000/imgs/aothunjoggernam1.jpg",
+      "http://localhost:5000/imgs/aothunjoggernam2.jpg",
+      "http://localhost:5000/imgs/aothunjoggernam3.jpg"
     ],
     "id": "7",
     "rating": 4,
@@ -317,7 +317,7 @@
     "type": "Áo Thun",
     "price": 380000,
     "discount": 10,
-    "colors": ["Xanh Navy", "Đen", "Xám"],
+    "colors": ["black", "gray"],
     "size": ["M", "L", "XL", "XXL"],
     "condition": true,
     "SKU": "ATKGNB009-08",
@@ -344,10 +344,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunkhoacgionam1.jpg",
-      "/imgs/aothunkhoacgionam2.jpg",
-      "/imgs/aothunkhoacgionam3.jpg",
-      "/imgs/aothunkhoacgionam4.jpg"
+      "http://localhost:5000/imgs/aothunkhoacgionam1.jpg",
+      "http://localhost:5000/imgs/aothunkhoacgionam2.jpg",
+      "http://localhost:5000/imgs/aothunkhoacgionam3.jpg",
+      "http://localhost:5000/imgs/aothunkhoacgionam4.jpg"
     ],
     "id": "8",
     "rating": 4,
@@ -362,7 +362,7 @@
     "type": "Áo Thun",
     "price": 150000,
     "discount": 5,
-    "colors": ["Trắng", "Đen", "Xanh Lá"],
+    "colors": ["white", "black", "blue"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCTT030-09",
@@ -389,9 +389,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamcotron1.jpg",
-      "/imgs/aothunnamcotron2.jpg",
-      "/imgs/aothunnamcotron3.jpg"
+      "http://localhost:5000/imgs/aothunnamcotron1.jpg",
+      "http://localhost:5000/imgs/aothunnamcotron2.jpg",
+      "http://localhost:5000/imgs/aothunnamcotron3.jpg"
     ],
     "id": "9",
     "rating": 4,
@@ -406,7 +406,7 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 15,
-    "colors": ["Đen", "Xám", "Nâu"],
+    "colors": ["black", "gray", "brown"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCB027-13",
@@ -421,7 +421,7 @@
       },
       {
         "title": "FORM SLIM FIT",
-        "content": "Áo thun nam cổ lọ basic của KNITWEAR CO. được thiết kế với form slim fit, một dáng áo ôm nhẹ cơ thể, giúp tôn lên những đường nét nam tính mà vẫn đảm bảo sự thoải mái vừa phải. Form áo này không quá bó sát, mang lại vẻ ngoài gọn gàng và стильный cho người mặc. Bạn có thể dễ dàng kết hợp áo với áo khoác ngoài như áo vest, áo blazer hay áo da để tạo nên những outfit ấm áp và thời trang trong mùa đông. Sự vừa vặn và стильный của form slim fit khiến chiếc áo thun này trở thành một lựa chọn lý tưởng cho những ai yêu thích vẻ ngoài thanh lịch và hiện đại."
+        "content": "Áo thun nam cổ lọ basic của KNITWEAR CO. được thiết kế với form slim fit, một dáng áo ôm nhẹ cơ thể, giúp tôn lên những đường nét nam tính mà vẫn đảm bảo sự thoải mái vừa phải. Form áo này không quá bó sát, mang lại vẻ ngoài gọn gàng và стильный cho người mặc. Bạn có thể dễ dàng kết hợp áo với áo khoác ngoài như áo vest, áo blazer hay áo da để tạo nên những outfit ấm áp và thời trang trong mùa đông. Sự vừa vặn và стильный của form slim fit khiến chiếc áo thun này trở thành một lựa chọn lý tưởng cho những ai yêu thích vẻ ngoàih lịch và hiện đại."
       }
     ],
     "details": 
@@ -433,9 +433,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamcolo1.jpg",
-      "/imgs/aothunnamcolo2.jpg",
-      "/imgs/aothunnamcolo3.jpg"
+      "http://localhost:5000/imgs/aothunnamcolo1.jpg",
+      "http://localhost:5000/imgs/aothunnamcolo2.jpg",
+      "http://localhost:5000/imgs/aothunnamcolo3.jpg"
     ],
     "id": "10",
     "rating": 4,
@@ -450,8 +450,8 @@
     "type": "Áo Thun",
     "price": 390000,
     "discount": 20,
-    "colors": ["Đen", "Xanh Than"],
-    "size": ["30", "32", "34", "36", "38"],
+    "colors": ["black", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATANDS021-14",
     "descriptions": [
@@ -477,10 +477,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunaundangsuong1.jpg",
-      "/imgs/aothunaundangsuong2.jpg",
-      "/imgs/aothunaundangsuong3.jpg",
-      "/imgs/aothunaundangsuong4.jpg"
+      "http://localhost:5000/imgs/aothunaundangsuong1.jpg",
+      "http://localhost:5000/imgs/aothunaundangsuong2.jpg",
+      "http://localhost:5000/imgs/aothunaundangsuong3.jpg",
+      "http://localhost:5000/imgs/aothunaundangsuong4.jpg"
     ],
     "id": 11,
     "rating": 4,
@@ -495,7 +495,7 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 25,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNTDB055-15",
@@ -522,9 +522,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamtaydai1.jpg",
-      "/imgs/aothunnamtaydai2.jpg",
-      "/imgs/aothunnamtaydai3.jpg"
+      "http://localhost:5000/imgs/aothunnamtaydai1.jpg",
+      "http://localhost:5000/imgs/aothunnamtaydai2.jpg",
+      "http://localhost:5000/imgs/aothunnamtaydai3.jpg"
     ],
     "id": "12",
     "rating": 4,
@@ -539,7 +539,7 @@
     "type": "Áo Thun",
     "price": 160000,
     "discount": 30,
-    "colors": ["Đen", "Xám"],
+    "colors": ["black", "gray"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATSTTN002-16",
@@ -566,10 +566,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunshortthethao1.jpg",
-      "/imgs/aothunshortthethao2.jpg",
-      "/imgs/aothunshortthethao3.jpg",
-      "/imgs/aothunshortthethao4.jpg"
+      "http://localhost:5000/imgs/aothunshortthethao1.jpg",
+      "http://localhost:5000/imgs/aothunshortthethao2.jpg",
+      "http://localhost:5000/imgs/aothunshortthethao3.jpg",
+      "http://localhost:5000/imgs/aothunshortthethao4.jpg"
     ],
     "id": "13",
     "rating": 4,
@@ -584,7 +584,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 25,
-    "colors": ["Trắng", "Xanh Lá", "Đen"],
+    "colors": ["white", "blue", "black"],
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNHR006-14",
@@ -595,7 +595,7 @@
       },
       {
         "title": "HỌA TIẾT RETRO ĐỘC ĐÁO",
-        "content": "Điểm nhấn của chiếc áo là những họa tiết retro được in sắc nét, mang đậm phong cách thập niên 80-90. Các họa tiết này không chỉ tạo sự khác biệt mà còn giúp bạn dễ dàng nổi bật trong đám đông. Áo phù hợp để phối với quần jeans, quần short hoặc thậm chí là quần jogger để tạo phong cách cá tính."
+        "content": "Điểm nhấn của chiếc áo là những họa tiết retro được in sắc nét, mang phong cách thập niên 80-90. Các họa tiết này không chỉ tạo sự khác biệt mà còn giúp bạn dễ dàng nổi bật trong đám đông. Áo phù hợp để phối với quần jeans, quần short hoặc thậm chí là quần jogger để tạo phong cách cá tính."
       },
       {
         "title": "FORM REGULAR FIT",
@@ -611,12 +611,12 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunngantayhoatiet1.jpg",
-      "/imgs/aothunngantayhoatiet2.jpg",
-      "/imgs/aothunngantayhoatiet3.jpg",
-      "/imgs/aothunngantayhoatiet4.jpg",
-      "/imgs/aothunngantayhoatiet5.jpg",
-      "/imgs/aothunngantayhoatiet6.jpg"
+      "http://localhost:5000/imgs/aothunngantayhoatiet1.jpg",
+      "http://localhost:5000/imgs/aothunngantayhoatiet2.jpg",
+      "http://localhost:5000/imgs/aothunngantayhoatiet3.jpg",
+      "http://localhost:5000/imgs/aothunngantayhoatiet4.jpg",
+      "http://localhost:5000/imgs/aothunngantayhoatiet5.jpg",
+      "http://localhost:5000/imgs/aothunngantayhoatiet6.jpg"
     ],
     "id": "14",
     "rating": 4,
@@ -631,7 +631,7 @@
     "type": "Áo Thun",
     "price": 190000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Xám"],
+    "colors": ["black", "white", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT007-15",
@@ -658,9 +658,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunslimfit1.jpg",
-      "/imgs/aothunslimfit2.jpg",
-      "/imgs/aothunslimfit3.jpg"
+      "http://localhost:5000/imgs/aothunslimfit1.jpg",
+      "http://localhost:5000/imgs/aothunslimfit2.jpg",
+      "http://localhost:5000/imgs/aothunslimfit3.jpg"
     ],
     "id": "15",
     "rating": 4,
@@ -675,7 +675,7 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 5,
-    "colors": ["Xám/Đen", "Trắng/Xanh Navy"],
+    "colors": ["black"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDR008-16",
@@ -702,9 +702,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamtronbasic1.jpg",
-      "/imgs/aopolonamtronbasic2.jpg",
-      "/imgs/aopolonamtronbasic3.jpg"
+      "http://localhost:5000/imgs/aopolonamtronbasic1.jpg",
+      "http://localhost:5000/imgs/aopolonamtronbasic2.jpg",
+      "http://localhost:5000/imgs/aopolonamtronbasic3.jpg"
     ],
     "id": "16",
     "rating": 4,
@@ -719,7 +719,7 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 15,
-    "colors": ["Đen", "Trắng", "Be"],
+    "colors": ["black", "white", "be"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNOB009-17",
@@ -746,10 +746,10 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunpolocaocap1.jpg",
-      "/imgs/aothunpolocaocap2.jpg",
-      "/imgs/aothunpolocaocap3.jpg",
-      "/imgs/aothunpolocaocap4.jpg"
+      "http://localhost:5000/imgs/aothunpolocaocap1.jpg",
+      "http://localhost:5000/imgs/aothunpolocaocap2.jpg",
+      "http://localhost:5000/imgs/aothunpolocaocap3.jpg",
+      "http://localhost:5000/imgs/aothunpolocaocap4.jpg"
     ],
     "id": "17",
     "rating": 4,
@@ -764,7 +764,7 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 15,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNTL010-18",
@@ -791,9 +791,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolothethaonam1.jpg",
-      "/imgs/aopolothethaonam2.jpg",
-      "/imgs/aopolothethaonam3.jpg"
+      "http://localhost:5000/imgs/aopolothethaonam1.jpg",
+      "http://localhost:5000/imgs/aopolothethaonam2.jpg",
+      "http://localhost:5000/imgs/aopolothethaonam3.jpg"
     ],
     "id": "18",
     "rating": 4,
@@ -808,7 +808,7 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 15,
-    "colors": ["Đen", "Trắng", "Xanh Đậm"],
+    "colors": ["black", "white", "blue"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPC011-19",
@@ -818,8 +818,8 @@
         "content": "Áo thun polo nam cao cấp từ ELITE POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
       },
       {
-        "title": "THIẾT KẾ THANH LỊCH",
-        "content": "Với thiết kế cổ polo cổ điển và các chi tiết may tỉ mỉ, chiếc áo mang đến vẻ ngoài thanh lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾH LỊCH",
+        "content": "Với thiết kế cổ polo cổ điển và các chi tiết may tỉ mỉ, chiếc áo mang đến vẻ ngoàih lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -835,9 +835,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamdaitay1.jpg",
-      "/imgs/aopolonamdaitay2.jpg",
-      "/imgs/aopolonamdaitay3.jpg"
+      "http://localhost:5000/imgs/aopolonamdaitay1.jpg",
+      "http://localhost:5000/imgs/aopolonamdaitay2.jpg",
+      "http://localhost:5000/imgs/aopolonamdaitay3.jpg"
     ],
     "id": "19",
     "rating": 4,
@@ -852,7 +852,7 @@
     "type": "Áo Thun",
     "price": 280000,
     "discount": 20,
-    "colors": ["Xanh Navy", "Xám", "Đen"],
+    "colors": ["gray", "black"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCN012-20",
@@ -879,9 +879,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamslimfit1.jpg",
-      "/imgs/aopolonamslimfit2.jpg",
-      "/imgs/aopolonamslimfit3.jpg"
+      "http://localhost:5000/imgs/aopolonamslimfit1.jpg",
+      "http://localhost:5000/imgs/aopolonamslimfit2.jpg",
+      "http://localhost:5000/imgs/aopolonamslimfit3.jpg"
     ],
     "id": "20",
     "rating": 4,
@@ -896,7 +896,7 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNIS013-21",
@@ -923,9 +923,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunhenleynamsngantay1.jpg",
-      "/imgs/aothunhenleynamsngantay2.jpg",
-      "/imgs/aothunhenleynamsngantay3.jpg"
+      "http://localhost:5000/imgs/aothunhenleynamsngantay1.jpg",
+      "http://localhost:5000/imgs/aothunhenleynamsngantay2.jpg",
+      "http://localhost:5000/imgs/aothunhenleynamsngantay3.jpg"
     ],
     "id": "21",
     "rating": 4,
@@ -940,7 +940,7 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 10,
-    "colors": ["Đen", "Xám", "Nâu"],
+    "colors": ["black", "gray", "brown"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDK014-22",
@@ -950,8 +950,8 @@
         "content": "Áo thun nam dệt kim từ KNIT TEE được làm từ chất liệu dệt kim cao cấp, mang lại cảm giác mềm mại, nhẹ nhàng và thoáng khí. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
       },
       {
-        "title": "THIẾT KẾ THANH LỊCH",
-        "content": "Với thiết kế dệt kim tinh tế, chiếc áo mang đến vẻ ngoài thanh lịch và hiện đại. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾH LỊCH",
+        "content": "Với thiết kế dệt kim tinh tế, chiếc áo mang đến vẻ ngoàih lịch và hiện đại. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -967,9 +967,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamcotru1.jpg",
-      "/imgs/aopolonamcotru2.jpg",
-      "/imgs/aopolonamcotru3.jpg"
+      "http://localhost:5000/imgs/aopolonamcotru1.jpg",
+      "http://localhost:5000/imgs/aopolonamcotru2.jpg",
+      "http://localhost:5000/imgs/aopolonamcotru3.jpg"
     ],
     "id": "22",
     "rating": 4,
@@ -984,7 +984,7 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 15,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white", "blue"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT015-23",
@@ -1011,9 +1011,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonammau-sactuoisang1.jpg",
-      "/imgs/aopolonammau-sactuoisang2.jpg",
-      "/imgs/aopolonammau-sactuoisang3.jpg"
+      "http://localhost:5000/imgs/aopolonammau-sactuoisang1.jpg",
+      "http://localhost:5000/imgs/aopolonammau-sactuoisang2.jpg",
+      "http://localhost:5000/imgs/aopolonammau-sactuoisang3.jpg"
     ],
     "id": "23",
     "rating": 4,
@@ -1028,7 +1028,7 @@
     "type": "Áo Thun",
     "price": 290000,
     "discount": 20,
-    "colors": ["Đen", "Xanh Navy", "Trắng"],
+    "colors": ["black", "white"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCB016-24",
@@ -1055,9 +1055,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamkengang1.jpg",
-      "/imgs/aopolonamkengang2.jpg",
-      "/imgs/aopolonamkengang3.jpg"
+      "http://localhost:5000/imgs/aopolonamkengang1.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang2.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang3.jpg"
     ],
     "id": "24",
     "rating": 4,
@@ -1072,7 +1072,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 10,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI017-25",
@@ -1099,9 +1099,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamchatlieulinen1.jpg",
-      "/imgs/aopolonamchatlieulinen2.jpg",
-      "/imgs/aopolonamchatlieulinen3.jpg"
+      "http://localhost:5000/imgs/aopolonamchatlieulinen1.jpg",
+      "http://localhost:5000/imgs/aopolonamchatlieulinen2.jpg",
+      "http://localhost:5000/imgs/aopolonamchatlieulinen3.jpg"
     ],
     "id": "25",
     "rating": 4,
@@ -1116,7 +1116,7 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHB018-26",
@@ -1143,9 +1143,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamtuinguc1.jpg",
-      "/imgs/aopolonamtuinguc2.jpg",
-      "/imgs/aopolonamtuinguc3.jpg"
+      "http://localhost:5000/imgs/aopolonamtuinguc1.jpg",
+      "http://localhost:5000/imgs/aopolonamtuinguc2.jpg",
+      "http://localhost:5000/imgs/aopolonamtuinguc3.jpg"
     ],
     "id": "26",
     "rating": 4,
@@ -1160,7 +1160,7 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Xám"],
+    "colors": ["black", "white", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT019-27",
@@ -1187,9 +1187,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamkengang1.jpg",
-      "/imgs/aopolonamkengang2.jpg",
-      "/imgs/aopolonamkengang3.jpg"
+      "http://localhost:5000/imgs/aopolonamkengang1.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang2.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang3.jpg"
     ],
     "id": "27",
     "rating": 4,
@@ -1204,7 +1204,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNIA020-28",
@@ -1231,9 +1231,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamdaitay1.jpg",
-      "/imgs/aopolonamdaitay2.jpg",
-      "/imgs/aopolonamdaitay3.jpg"
+      "http://localhost:5000/imgs/aopolonamdaitay1.jpg",
+      "http://localhost:5000/imgs/aopolonamdaitay2.jpg",
+      "http://localhost:5000/imgs/aopolonamdaitay3.jpg"
     ],
     "id": "28",
     "rating": 4,
@@ -1248,7 +1248,7 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 20,
-    "colors": ["Đen", "Xám", "Nâu"],
+    "colors": ["black", "gray", "brown"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCL021-29",
@@ -1258,8 +1258,8 @@
         "content": "Áo thun nam cổ lọ dài tay từ TURTLENECK TEE được làm từ chất liệu thun len cao cấp, mang lại cảm giác ấm áp và mềm mại. Chất liệu này phù hợp cho thời tiết lạnh, giúp giữ nhiệt tốt."
       },
       {
-        "title": "THIẾT KẾ CỔ LỌ THANH LỊCH",
-        "content": "Với thiết kế cổ lọ cổ điển, chiếc áo mang đến vẻ ngoài thanh lịch và tinh tế. Áo dễ dàng phối với áo khoác ngoài hoặc quần âu để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ CỔ LỌH LỊCH",
+        "content": "Với thiết kế cổ lọ cổ điển, chiếc áo mang đến vẻ ngoàih lịch và tinh tế. Áo dễ dàng phối với áo khoác ngoài hoặc quần âu để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -1275,9 +1275,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonammaupastel1.jpg",
-      "/imgs/aopolonammaupastel2.jpg",
-      "/imgs/aopolonammaupastel3.jpg"
+      "http://localhost:5000/imgs/aopolonammaupastel1.jpg",
+      "http://localhost:5000/imgs/aopolonammaupastel2.jpg",
+      "http://localhost:5000/imgs/aopolonammaupastel3.jpg"
     ],
     "id": "29",
     "rating": 4,
@@ -1292,7 +1292,7 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHD022-30",
@@ -1319,9 +1319,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aothunnamhoatiet1.jpg",
-      "/imgs/aothunnamhoatiet2.jpg",
-      "/imgs/aothunnamhoatiet3.jpg"
+      "http://localhost:5000/imgs/aothunnamhoatiet1.jpg",
+      "http://localhost:5000/imgs/aothunnamhoatiet2.jpg",
+      "http://localhost:5000/imgs/aothunnamhoatiet3.jpg"
     ],
     "id": "30",
     "rating": 4,
@@ -1336,7 +1336,7 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 15,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"], 
     "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCL023-31",
@@ -1363,9 +1363,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamcodien1.jpg",
-      "/imgs/aopolonamcodien2.jpg",
-      "/imgs/aopolonamcodien3.jpg"
+      "http://localhost:5000/imgs/aopolonamcodien1.jpg",
+      "http://localhost:5000/imgs/aopolonamcodien2.jpg",
+      "http://localhost:5000/imgs/aopolonamcodien3.jpg"
     ],
     "id": "31",
     "rating": 4,
@@ -1380,7 +1380,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["black", "white"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNTP024-32",
@@ -1407,9 +1407,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolothethaonamcaocap2.jpg",
-      "/imgs/aopolothethaonamcaocap3.jpg",
-      "/imgs/aopolothethaonamcaocap1.jpg"
+      "http://localhost:5000/imgs/aopolothethaonamcaocap2.jpg",
+      "http://localhost:5000/imgs/aopolothethaonamcaocap3.jpg",
+      "http://localhost:5000/imgs/aopolothethaonamcaocap1.jpg"
     ],
     "id": "32",
     "rating": 4,
@@ -1424,7 +1424,7 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 20,
-    "colors": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["black", "gray"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDP025-33",
@@ -1451,9 +1451,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamphoimau1.jpg",
-      "/imgs/aopolonamphoimau2.jpg",
-      "/imgs/aopolonamphoimau3.jpg"
+      "http://localhost:5000/imgs/aopolonamphoimau1.jpg",
+      "http://localhost:5000/imgs/aopolonamphoimau2.jpg",
+      "http://localhost:5000/imgs/aopolonamphoimau3.jpg"
     ],
     "id": "33",
     "rating": 4,
@@ -1468,7 +1468,7 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Be"],
+    "colors": ["black", "white", "be"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCO026-34",
@@ -1495,9 +1495,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamkengang1.jpg",
-      "/imgs/aopolonamkengang2.jpg",
-      "/imgs/aopolonamkengang3.jpg"
+      "http://localhost:5000/imgs/aopolonamkengang1.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang2.jpg",
+      "http://localhost:5000/imgs/aopolonamkengang3.jpg"
     ],
     "id": "34",
     "rating": 4,
@@ -1512,7 +1512,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 15,
-    "colors": ["Đen", "Trắng", "Xám"],
+    "colors": ["black", "white", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT027-35",
@@ -1539,9 +1539,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonaminlogonho1.jpg",
-      "/imgs/aopolonaminlogonho2.jpg",
-      "/imgs/aopolonaminlogonho3.jpg"
+      "http://localhost:5000/imgs/aopolonaminlogonho1.jpg",
+      "http://localhost:5000/imgs/aopolonaminlogonho2.jpg",
+      "http://localhost:5000/imgs/aopolonaminlogonho3.jpg"
     ],
     "id": "35",
     "rating": 4,
@@ -1556,7 +1556,7 @@
     "type": "Áo Thun",
     "price": 240000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHF028-36",
@@ -1583,9 +1583,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamcov1.jpg",
-      "/imgs/aopolonamcov2.jpg",
-      "/imgs/aopolonamcov3.jpg"
+      "http://localhost:5000/imgs/aopolonamcov1.jpg",
+      "http://localhost:5000/imgs/aopolonamcov2.jpg",
+      "http://localhost:5000/imgs/aopolonamcov3.jpg"
     ],
     "id": "36",
     "rating": 4,
@@ -1600,7 +1600,7 @@
     "type": "Áo Thun",
     "price": 330000,
     "discount": 25,
-    "colors": ["Đen", "Xám", "Nâu"],
+    "colors": ["black", "gray", "brown"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPD029-37",
@@ -1610,8 +1610,8 @@
         "content": "Áo thun polo dệt kim từ KNIT POLO được làm từ chất liệu dệt kim cao cấp, mang lại cảm giác mềm mại, nhẹ nhàng và thoáng khí. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
       },
       {
-        "title": "THIẾT KẾ POLO THANH LỊCH",
-        "content": "Với thiết kế cổ polo dệt kim tinh tế, chiếc áo mang đến vẻ ngoài thanh lịch và hiện đại. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ POLOH LỊCH",
+        "content": "Với thiết kế cổ polo dệt kim tinh tế, chiếc áo mang đến vẻ ngoàih lịch và hiện đại. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -1627,9 +1627,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamchatlieubamboo1.jpg",
-      "/imgs/aopolonamchatlieubamboo2.jpg",
-      "/imgs/aopolonamchatlieubamboo3.jpg"
+      "http://localhost:5000/imgs/aopolonamchatlieubamboo1.jpg",
+      "http://localhost:5000/imgs/aopolonamchatlieubamboo2.jpg",
+      "http://localhost:5000/imgs/aopolonamchatlieubamboo3.jpg"
     ],
     "id": "37",
     "rating": 4,
@@ -1644,7 +1644,7 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 30,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT030-38",
@@ -1671,9 +1671,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamdangrong1.jpg",
-      "/imgs/aopolonamdangrong2.jpg",
-      "/imgs/aopolonamdangrong3.jpg"
+      "http://localhost:5000/imgs/aopolonamdangrong1.jpg",
+      "http://localhost:5000/imgs/aopolonamdangrong2.jpg",
+      "http://localhost:5000/imgs/aopolonamdangrong3.jpg"
     ],
     "id": "38",
     "rating": 4,
@@ -1688,7 +1688,7 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 35,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCD031-39",
@@ -1698,8 +1698,8 @@
         "content": "Áo thun nam cổ bẻ dài tay từ LONG POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
       },
       {
-        "title": "THIẾT KẾ CỔ BẺ THANH LỊCH",
-        "content": "Với thiết kế cổ bẻ dài tay, chiếc áo mang đến vẻ ngoài thanh lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ CỔ BẺH LỊCH",
+        "content": "Với thiết kế cổ bẻ dài tay, chiếc áo mang đến vẻ ngoàih lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -1715,9 +1715,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonaminhinh1.jpg",
-      "/imgs/aopolonaminhinh2.jpg",
-      "/imgs/aopolonaminhinh3.jpg"
+      "http://localhost:5000/imgs/aopolonaminhinh1.jpg",
+      "http://localhost:5000/imgs/aopolonaminhinh2.jpg",
+      "http://localhost:5000/imgs/aopolonaminhinh3.jpg"
     ],
     "id": "39",
     "rating": 4,
@@ -1732,7 +1732,7 @@
     "type": "Áo Thun",
     "price": 200000,
     "discount": 10,
-    "colors": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["black", "gray"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCT032-40",
@@ -1759,9 +1759,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aopolonamcaocap1.jpg",
-      "/imgs/aopolonamcaocap2.jpg",
-      "/imgs/aopolonamcaocap3.jpg"
+      "http://localhost:5000/imgs/aopolonamcaocap1.jpg",
+      "http://localhost:5000/imgs/aopolonamcaocap2.jpg",
+      "http://localhost:5000/imgs/aopolonamcaocap3.jpg"
     ],
     "id": "40",
     "rating": 4,
@@ -1776,7 +1776,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 30,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHG033-41",
@@ -1803,9 +1803,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosominamtronbasicdaitay1.jpg",
-      "/imgs/aosominamtronbasicdaitay2.jpg",
-      "/imgs/aosominamtronbasicdaitay3.jpg"
+      "http://localhost:5000/imgs/aosominamtronbasicdaitay1.jpg",
+      "http://localhost:5000/imgs/aosominamtronbasicdaitay2.jpg",
+      "http://localhost:5000/imgs/aosominamtronbasicdaitay3.jpg"
     ],
     "id": "41",
     "rating": 4,
@@ -1820,7 +1820,7 @@
     "type": "Áo Thun",
     "price": 210000,
     "discount": 15,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP034-42",
@@ -1847,9 +1847,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomicarongantay1.jpg",
-      "/imgs/aosomicarongantay2.jpg",
-      "/imgs/aosomicarongantay3.jpg"
+      "http://localhost:5000/imgs/aosomicarongantay1.jpg",
+      "http://localhost:5000/imgs/aosomicarongantay2.jpg",
+      "http://localhost:5000/imgs/aosomicarongantay3.jpg"
     ],
     "id": "42",
     "rating": 4,
@@ -1864,7 +1864,7 @@
     "type": "Áo Thun",
     "price": 250000,
     "discount": 30,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDI035-43",
@@ -1891,9 +1891,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomidenimdaitaynam1.jpg",
-      "/imgs/aosomidenimdaitaynam2.jpg",
-      "/imgs/aosomidenimdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomidenimdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomidenimdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomidenimdaitaynam3.jpg"
     ],
     "id": "43",
     "rating": 4,
@@ -1908,7 +1908,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": null,
-    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["black", "white"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCS036-44",
@@ -1935,9 +1935,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomioxforddaitaynam1.jpg",
-      "/imgs/aosomioxforddaitaynam2.jpg",
-      "/imgs/aosomioxforddaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomioxforddaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomioxforddaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomioxforddaitaynam3.jpg"
     ],
     "id": "44",
     "rating": 4,
@@ -1952,7 +1952,7 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 10,
-    "colors": ["Xanh Navy", "Xám", "Đen"],
+    "colors": ["gray", "black"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNDC037-45",
@@ -1979,9 +1979,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomilennamngantay1.jpg",
-      "/imgs/aosomilennamngantay2.jpg",
-      "/imgs/aosomilennamngantay3.jpg"
+      "http://localhost:5000/imgs/aosomilennamngantay1.jpg",
+      "http://localhost:5000/imgs/aosomilennamngantay2.jpg",
+      "http://localhost:5000/imgs/aosomilennamngantay3.jpg"
     ],
     "id": "45",
     "rating": 4,
@@ -1996,7 +1996,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI038-46",
@@ -2023,9 +2023,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomihoatietnhodaitaynam1.jpg",
-      "/imgs/aosomihoatietnhodaitaynam2.jpg",
-      "/imgs/aosomihoatietnhodaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomihoatietnhodaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomihoatietnhodaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomihoatietnhodaitaynam3.jpg"
     ],
     "id": "46",
     "rating": 4,
@@ -2040,7 +2040,7 @@
     "type": "Áo Thun",
     "price": 300000,
     "discount": 30,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPP039-47",
@@ -2050,7 +2050,7 @@
         "content": "Áo thun polo phối bo từ RIBBED POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
       },
       {
-        "title": "THIẾT KẾ PHỐI BO THANH LỊCH",
+        "title": "THIẾT KẾ PHỐI BOH LỊCH",
         "content": "Với phần bo ở cổ và tay áo, chiếc áo mang đến vẻ ngoài gọn gàng và hiện đại. Thiết kế này dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
@@ -2067,9 +2067,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomislimfitdaitaynam1.jpg",
-      "/imgs/aosomislimfitdaitaynam2.jpg",
-      "/imgs/aosomislimfitdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomislimfitdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomislimfitdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomislimfitdaitaynam3.jpg"
     ],
     "id": "47",
     "rating": 4,
@@ -2084,7 +2084,7 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": null,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCT040-48",
@@ -2111,9 +2111,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomikesocdaitaynam1.jpg",
-      "/imgs/aosomikesocdaitaynam2.jpg",
-      "/imgs/aosomikesocdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomikesocdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomikesocdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomikesocdaitaynam3.jpg"
     ],
     "id": "48",
     "rating": 4,
@@ -2128,7 +2128,7 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCT041-49",
@@ -2138,8 +2138,8 @@
         "content": "Áo thun nam cổ bẻ thêu logo từ LOGO POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
       },
       {
-        "title": "THIẾT KẾ THÊU LOGO THANH LỊCH",
-        "content": "Với logo nhỏ được thêu tinh tế ở ngực, chiếc áo mang đến vẻ ngoài thanh lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ THÊU LOGOH LỊCH",
+        "content": "Với logo nhỏ được thêu tinh tế ở ngực, chiếc áo mang đến vẻ ngoàih lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -2155,9 +2155,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomicocubangantaynam1.jpg",
-      "/imgs/aosomicocubangantaynam2.jpg",
-      "/imgs/aosomicocubangantaynam3.jpg"
+      "http://localhost:5000/imgs/aosomicocubangantaynam1.jpg",
+      "http://localhost:5000/imgs/aosomicocubangantaynam2.jpg",
+      "http://localhost:5000/imgs/aosomicocubangantaynam3.jpg"
     ],
     "id": "49",
     "rating": 4,
@@ -2172,7 +2172,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 30,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP042-50",
@@ -2199,9 +2199,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomivaiduidaitaynam1.jpg",
-      "/imgs/aosomivaiduidaitaynam2.jpg",
-      "/imgs/aosomivaiduidaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomivaiduidaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomivaiduidaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomivaiduidaitaynam3.jpg"
     ],
     "id": "50",
     "rating": 4,
@@ -2216,7 +2216,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNHR043-51",
@@ -2243,9 +2243,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomihoatietlonngantaynam1.jpg",
-      "/imgs/aosomihoatietlonngantaynam2.jpg",
-      "/imgs/aosomihoatietlonngantaynam3.jpg"
+      "http://localhost:5000/imgs/aosomihoatietlonngantaynam1.jpg",
+      "http://localhost:5000/imgs/aosomihoatietlonngantaynam2.jpg",
+      "http://localhost:5000/imgs/aosomihoatietlonngantaynam3.jpg"
     ],
     "id": "51",
     "rating": 4,
@@ -2260,7 +2260,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 15,
-    "colors": ["Trắng", "Đen", "Xanh Navy"],
+    "colors": ["white", "black"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP044-52",
@@ -2287,9 +2287,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomitaynganformrongnam1.jpg",
-      "/imgs/aosomitaynganformrongnam2.jpg",
-      "/imgs/aosomitaynganformrongnam3.jpg"
+      "http://localhost:5000/imgs/aosomitaynganformrongnam1.jpg",
+      "http://localhost:5000/imgs/aosomitaynganformrongnam2.jpg",
+      "http://localhost:5000/imgs/aosomitaynganformrongnam3.jpg"
     ],
     "id": "52",
     "rating": 4,
@@ -2304,7 +2304,7 @@
     "type": "Áo Thun",
     "price": 270000,
     "discount": 10,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDS045-53",
@@ -2331,9 +2331,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomimau-sactuoisangdaitaynam1.jpg",
-      "/imgs/aosomimau-sactuoisangdaitaynam2.jpg",
-      "/imgs/aosomimau-sactuoisangdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomimau-sactuoisangdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomimau-sactuoisangdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomimau-sactuoisangdaitaynam3.jpg"
     ],
     "id": "53",
     "rating": 4,
@@ -2348,7 +2348,7 @@
     "type": "Áo Thun",
     "price": 220000,
     "discount": 20,
-    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["black", "white"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP046-54",
@@ -2375,9 +2375,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomidenimngantaynam1.jpg",
-      "/imgs/aosomidenimngantaynam2.jpg",
-      "/imgs/aosomidenimngantaynam3.jpg"
+      "http://localhost:5000/imgs/aosomidenimngantaynam1.jpg",
+      "http://localhost:5000/imgs/aosomidenimngantaynam2.jpg",
+      "http://localhost:5000/imgs/aosomidenimngantaynam3.jpg"
     ],
     "id": "54",
     "rating": 4,
@@ -2392,7 +2392,7 @@
     "type": "Áo Thun",
     "price": 260000,
     "discount": 20,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDP047-55",
@@ -2419,9 +2419,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomioxfordngantaynam1.jpg",
-      "/imgs/aosomioxfordngantaynam2.jpg",
-      "/imgs/aosomioxfordngantaynam3.jpg"
+      "http://localhost:5000/imgs/aosomioxfordngantaynam1.jpg",
+      "http://localhost:5000/imgs/aosomioxfordngantaynam2.jpg",
+      "http://localhost:5000/imgs/aosomioxfordngantaynam3.jpg"
     ],
     "id": "55",
     "rating": 4,
@@ -2436,7 +2436,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI048-56",
@@ -2463,9 +2463,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomilendaitaynam1.jpg",
-      "/imgs/aosomilendaitaynam2.jpg",
-      "/imgs/aosomilendaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomilendaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomilendaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomilendaitaynam3.jpg"
     ],
     "id": "56",
     "rating": 4,
@@ -2480,7 +2480,7 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 15,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPD049-57",
@@ -2490,8 +2490,8 @@
         "content": "Áo thun polo dài tay từ LONG SLEEVE POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho thời tiết se lạnh."
       },
       {
-        "title": "THIẾT KẾ POLO THANH LỊCH",
-        "content": "Với thiết kế cổ polo dài tay, chiếc áo mang đến vẻ ngoài thanh lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ POLOH LỊCH",
+        "content": "Với thiết kế cổ polo dài tay, chiếc áo mang đến vẻ ngoàih lịch và chuyên nghiệp. Áo dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -2507,9 +2507,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomihoatietlondaitaynam1.jpg",
-      "/imgs/aosomihoatietlondaitaynam2.jpg",
-      "/imgs/aosomihoatietlondaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomihoatietlondaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomihoatietlondaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomihoatietlondaitaynam3.jpg"
     ],
     "id": "57",
     "rating": 4,
@@ -2524,7 +2524,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI050-58",
@@ -2551,9 +2551,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomitayloformrongnam1.jpg",
-      "/imgs/aosomitayloformrongnam2.jpg",
-      "/imgs/aosomitayloformrongnam3.jpg"
+      "http://localhost:5000/imgs/aosomitayloformrongnam1.jpg",
+      "http://localhost:5000/imgs/aosomitayloformrongnam2.jpg",
+      "http://localhost:5000/imgs/aosomitayloformrongnam3.jpg"
     ],
     "id": "58",
     "rating": 4,
@@ -2568,7 +2568,7 @@
     "type": "Áo Thun",
     "price": 310000,
     "discount": 30,
-    "colors": ["Trắng/Đen", "Xanh Navy/Trắng"],
+    "colors": ["black", "white"],
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNCP051-59",
@@ -2578,8 +2578,8 @@
         "content": "Áo thun nam cổ bẻ phối sọc từ STRIPED POLO được làm từ vải cotton pique cao cấp, mang lại độ bền, thoáng khí và cảm giác mềm mại. Chất liệu này giúp áo giữ form tốt và phù hợp cho cả môi trường công sở lẫn casual."
       },
       {
-        "title": "THIẾT KẾ PHỐI SỌC THANH LỊCH",
-        "content": "Với các đường sọc ngang hoặc dọc được phối tinh tế, chiếc áo mang đến vẻ ngoài thanh lịch và hiện đại. Thiết kế này dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ PHỐI SỌCH LỊCH",
+        "content": "Với các đường sọc ngang hoặc dọc được phối tinh tế, chiếc áo mang đến vẻ ngoàih lịch và hiện đại. Thiết kế này dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -2595,9 +2595,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomimaupasteldaitaynam1.jpg",
-      "/imgs/aosomimaupasteldaitaynam2.jpg",
-      "/imgs/aosomimaupasteldaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomimaupasteldaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomimaupasteldaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomimaupasteldaitaynam3.jpg"
     ],
     "id": "59",
     "rating": 4,
@@ -2612,7 +2612,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 10,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI052-60",
@@ -2639,9 +2639,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomicaocapdaitaynam1.jpg",
-      "/imgs/aosomicaocapdaitaynam2.jpg",
-      "/imgs/aosomicaocapdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam3.jpg"
     ],
     "id": "60",
     "rating": 4,
@@ -2656,7 +2656,7 @@
     "type": "Áo Thun",
     "price": 230000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCI053-61",
@@ -2683,9 +2683,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansongsuongbasic1.jpg",
-      "/imgs/quanjeansongsuongbasic2.jpg",
-      "/imgs/quanjeansongsuongbasic3.jpg"
+      "http://localhost:5000/imgs/quanjeansongsuongbasic1.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongbasic2.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongbasic3.jpg"
     ],
     "id": "61",
     "rating": 4,
@@ -2700,7 +2700,7 @@
     "type": "Áo Thun",
     "price": 320000,
     "discount": 10,
-    "colors": ["Đen", "Trắng", "Xanh Navy"],
+    "colors": ["black", "white"], 
     "size": ["M", "L", "XL"],
     "condition": true,
     "SKU": "ATNPE054-62",
@@ -2711,7 +2711,7 @@
       },
       {
         "title": "THÊU HÌNH TINH TẾ",
-        "content": "Với các họa tiết thêu tinh xảo như động vật hoặc hoa lá ở ngực, chiếc áo mang đến vẻ ngoài thanh lịch và độc đáo. Thiết kế này dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
+        "content": "Với các họa tiết thêu tinh xảo như động vật hoặc hoa ở ngực, chiếc áo mang đến vẻ ngoàih lịch và độc đáo. Thiết kế này dễ dàng phối với quần âu hoặc quần jeans để tạo phong cách smart-casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -2727,9 +2727,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/aosomicaocapdaitaynam1.jpg",
-      "/imgs/aosomicaocapdaitaynam2.jpg",
-      "/imgs/aosomicaocapdaitaynam3.jpg"
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam1.jpg",
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam2.jpg",
+      "http://localhost:5000/imgs/aosomicaocapdaitaynam3.jpg"
     ],
     "id": "62",
     "rating": 4,
@@ -2744,7 +2744,7 @@
     "type": "Quần Jeans",
     "price": 240000,
     "discount": 15,
-    "colors": ["Đen", "Xám", "Xanh Navy"],
+    "colors": ["black", "gray"], 
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNCP055-63",
@@ -2771,9 +2771,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansrachgoinam1.jpg",
-      "/imgs/quanjeansrachgoinam2.jpg",
-      "/imgs/quanjeansrachgoinam3.jpg"
+      "http://localhost:5000/imgs/quanjeansrachgoinam1.jpg",
+      "http://localhost:5000/imgs/quanjeansrachgoinam2.jpg",
+      "http://localhost:5000/imgs/quanjeansrachgoinam3.jpg"
     ],
     "id": "63",
     "rating": 4,
@@ -2788,7 +2788,7 @@
     "type": "Quần Jeans",
     "price": 260000,
     "discount": 20,
-    "colors": ["Trắng", "Đen", "Xám"],
+    "colors": ["white", "black", "gray"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATNDI056-64",
@@ -2815,9 +2815,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansongconnambasic1.jpg",
-      "/imgs/quanjeansongconnambasic2.jpg",
-      "/imgs/quanjeansongconnambasic3.jpg"
+      "http://localhost:5000/imgs/quanjeansongconnambasic1.jpg",
+      "http://localhost:5000/imgs/quanjeansongconnambasic2.jpg",
+      "http://localhost:5000/imgs/quanjeansongconnambasic3.jpg"
     ],
     "id": "64",
     "rating": 4,
@@ -2832,8 +2832,8 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 5,
-    "colors": ["Xanh Đậm", "Xanh Nhạt", "Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue", "blue", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR001-65",
     "descriptions": [
@@ -2859,9 +2859,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeanscapcaonam1.jpg",
-      "/imgs/quanjeanscapcaonam2.jpg",
-      "/imgs/quanjeanscapcaonam3.jpg"
+      "http://localhost:5000/imgs/quanjeanscapcaonam1.jpg",
+      "http://localhost:5000/imgs/quanjeanscapcaonam2.jpg",
+      "http://localhost:5000/imgs/quanjeanscapcaonam3.jpg"
     ],
     "id": "65",
     "rating": 4,
@@ -2871,19 +2871,19 @@
     "instock": 85
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Xanh Vintage",
+    "name": "Quần Jeans Nam Straight Fit blue Vintage",
     "brand": "CLASSIC DENIM",
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 3,
-    "colors": ["Xanh Vintage", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue Vintage", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSV002-66",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit xanh vintage từ CLASSIC DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này tạo hiệu ứng mài tự nhiên, phù hợp cho phong cách cổ điển."
+        "content": "Quần jeans nam straight fit blue vintage từ CLASSIC DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này tạo hiệu ứng mài tự nhiên, phù hợp cho phong cách cổ điển."
       },
       {
         "title": "THIẾT KẾ MÀI VINTAGE",
@@ -2903,9 +2903,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansbaggynam1.jpg",
-      "/imgs/quanjeansbaggynam2.jpg",
-      "/imgs/quanjeansbaggynam3.jpg"
+      "http://localhost:5000/imgs/quanjeansbaggynam1.jpg",
+      "http://localhost:5000/imgs/quanjeansbaggynam2.jpg",
+      "http://localhost:5000/imgs/quanjeansbaggynam3.jpg"
     ],
     "id": "66",
     "rating": 4,
@@ -2915,19 +2915,19 @@
     "instock": 80
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Đen Rách",
+    "name": "Quần Jeans Nam Skinny Fit black Rách",
     "brand": "STREET DENIM",
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 4,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["black", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR003-67",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit đen rách từ STREET DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác thoải mái. Chất liệu này ôm sát cơ thể, tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit black rách từ STREET DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác thoải mái. Chất liệu này ôm sát cơ thể, tôn dáng hiệu quả."
       },
       {
         "title": "THIẾT KẾ RÁCH ĐÙI HIỆN ĐẠI",
@@ -2947,9 +2947,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansongloenam1.jpg",
-      "/imgs/quanjeansongloenam2.jpg",
-      "/imgs/quanjeansongloenam3.jpg"
+      "http://localhost:5000/imgs/quanjeansongloenam1.jpg",
+      "http://localhost:5000/imgs/quanjeansongloenam2.jpg",
+      "http://localhost:5000/imgs/quanjeansongloenam3.jpg"
     ],
     "id": "67",
     "rating": 4,
@@ -2959,19 +2959,19 @@
     "instock": 90
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Xanh Nhạt",
+    "name": "Quần Jeans Nam Relaxed Fit blue",
     "brand": "COMFORT DENIM",
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 2,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF004-68",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit xanh nhạt từ COMFORT DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit blue từ COMFORT DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI NHẸ",
@@ -2991,9 +2991,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeanstrangnam1.jpg",
-      "/imgs/quanjeanstrangnam2.jpg",
-      "/imgs/quanjeanstrangnam3.jpg"
+      "http://localhost:5000/imgs/quanjeanstrangnam1.jpg",
+      "http://localhost:5000/imgs/quanjeanstrangnam2.jpg",
+      "http://localhost:5000/imgs/quanjeanstrangnam3.jpg"
     ],
     "id": "68",
     "rating": 4,
@@ -3003,23 +3003,23 @@
     "instock": 88
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xanh Đá",
+    "name": "Quần Jeans Nam Slim Fit blue Đá",
     "brand": "STONE DENIM",
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 5,
-    "colors": ["Xanh Đá", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSX005-69",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CAO CẤP",
-        "content": "Quần jeans nam slim fit xanh đá từ STONE DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ màu tốt."
+        "content": "Quần jeans nam slim fit blue đá từ STONE DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ màu tốt."
       },
       {
-        "title": "THIẾT KẾ MÀI XANH ĐÁ",
-        "content": "Với hiệu ứng mài xanh đá độc đáo, chiếc quần mang đến vẻ ngoài trẻ trung và thời thượng. Thiết kế này phù hợp để phối với áo thun hoặc áo khoác denim."
+        "title": "THIẾT KẾ MÀI blue ĐÁ",
+        "content": "Với hiệu ứng mài blue đá độc đáo, chiếc quần mang đến vẻ ngoài trẻ trung và thời thượng. Thiết kế này phù hợp để phối với áo thun hoặc áo khoác denim."
       },
       {
         "title": "FORM SLIM FIT",
@@ -3035,9 +3035,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansmauxamnam1.jpg",
-      "/imgs/quanjeansmauxamnam2.jpg",
-      "/imgs/quanjeansmauxamnam3.jpg"
+      "http://localhost:5000/imgs/quanjeansmauxamnam1.jpg",
+      "http://localhost:5000/imgs/quanjeansmauxamnam2.jpg",
+      "http://localhost:5000/imgs/quanjeansmauxamnam3.jpg"
     ],
     "id": "69",
     "rating": 4,
@@ -3047,23 +3047,23 @@
     "instock": 87
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xám Đen",
+    "name": "Quần Jeans Nam Skinny Fit gray black",
     "brand": "DARK DENIM",
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 3,
-    "colors": ["Xám Đen", "Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["black", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSX006-70",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xám đen từ DARK DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit gray black từ DARK DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
-        "title": "THIẾT KẾ MÀI XÁM ĐEN HIỆN ĐẠI",
-        "content": "Với màu xám đen mài nhẹ, chiếc quần mang đến vẻ ngoài thời thượng và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da để tạo phong cách cá tính."
+        "title": "THIẾT KẾ MÀI gray black HIỆN ĐẠI",
+        "content": "Với màu gray black mài nhẹ, chiếc quần mang đến vẻ ngoài thời thượng và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da để tạo phong cách cá tính."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -3079,9 +3079,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansongsuongdungnam1.jpg",
-      "/imgs/quanjeansongsuongdungnam2.jpg",
-      "/imgs/quanjeansongsuongdungnam3.jpg"
+      "http://localhost:5000/imgs/quanjeansongsuongdungnam1.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongdungnam2.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongdungnam3.jpg"
     ],
     "id": "70",
     "rating": 4,
@@ -3091,23 +3091,23 @@
     "instock": 82
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Đen Trơn",
+    "name": "Quần Jeans Nam Straight Fit black Trơn",
     "brand": "MINIMAL DENIM",
     "type": "Quần Jeans",
     "price": 410000,
     "discount": 2,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["black", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST007-71",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit đen trơn từ MINIMAL DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
+        "content": "Quần jeans nam straight fit black trơn từ MINIMAL DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
       },
       {
         "title": "THIẾT KẾ TRƠN TỐI GIẢN",
-        "content": "Với thiết kế đen trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
+        "content": "Với thiết kế black trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
       },
       {
         "title": "FORM STRAIGHT FIT",
@@ -3123,9 +3123,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansvagonam1.jpg",
-      "/imgs/quanjeansvagonam2.jpg",
-      "/imgs/quanjeansvagonam3.jpg"
+      "http://localhost:5000/imgs/quanjeansvagonam1.jpg",
+      "http://localhost:5000/imgs/quanjeansvagonam2.jpg",
+      "http://localhost:5000/imgs/quanjeansvagonam3.jpg"
     ],
     "id": "71",
     "rating": 4,
@@ -3140,8 +3140,8 @@
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "colors": ["Xanh Đậm", "Xanh Nhạt"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM008-72",
     "descriptions": [
@@ -3167,9 +3167,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansongsuongrongnam1.jpg",
-      "/imgs/quanjeansongsuongrongnam2.jpg",
-      "/imgs/quanjeansongsuongrongnam3.jpg"
+      "http://localhost:5000/imgs/quanjeansongsuongrongnam1.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongrongnam2.jpg",
+      "http://localhost:5000/imgs/quanjeansongsuongrongnam3.jpg"
     ],
     "id": "72",
     "rating": 4,
@@ -3179,19 +3179,19 @@
     "instock": 86
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Đen Mài",
+    "name": "Quần Jeans Nam Relaxed Fit black Mài",
     "brand": "EASY DENIM",
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 3,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["black", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF009-73",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit đen mài từ EASY DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit black mài từ EASY DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI NHẸ",
@@ -3211,9 +3211,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansmaukemnam1.jpg",
-      "/imgs/quanjeansmaukemnam2.jpg",
-      "/imgs/quanjeansmaukemnam3.jpg"
+      "http://localhost:5000/imgs/quanjeansmaukemnam1.jpg",
+      "http://localhost:5000/imgs/quanjeansmaukemnam2.jpg",
+      "http://localhost:5000/imgs/quanjeansmaukemnam3.jpg"
     ],
     "id": "73",
     "rating": 4,
@@ -3223,23 +3223,23 @@
     "instock": 89
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xanh Navy",
-    "brand": "NAVY DENIM",
+    "name": "Quần Jeans Nam Skinny Fit",
+    "brand": "nAVY DENIM",
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "colors": ["Xanh Navy", "Xanh Đậm"],
-    "size": ["28", "30", "32"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSX010-74",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xanh navy từ NAVY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit blue navy từ nAVY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
-        "title": "THIẾT KẾ XANH NAVY THANH LỊCH",
-        "content": "Với màu xanh navy trơn, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi để tạo phong cách thời trang đa dạng."
+        "title": "THIẾT KẾ blue nAVYH LỊCH",
+        "content": "Với màu blue navy trơn, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi để tạo phong cách thời trang đa dạng."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -3255,9 +3255,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeansonglungnam1.jpg",
-      "/imgs/quanjeansonglungnam2.jpg",
-      "/imgs/quanjeansonglungnam3.jpg"
+      "http://localhost:5000/imgs/quanjeansonglungnam1.jpg",
+      "http://localhost:5000/imgs/quanjeansonglungnam2.jpg",
+      "http://localhost:5000/imgs/quanjeansonglungnam3.jpg"
     ],
     "id": "74",
     "rating": 4,
@@ -3267,19 +3267,19 @@
     "instock": 83
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xanh Nhạt Rách",
+    "name": "Quần Jeans Nam Slim Fit blue Rách",
     "brand": "LIGHT DENIM",
     "type": "Quần Jeans",
     "price": 455000,
     "discount": 4,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR011-75",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xanh nhạt rách từ LIGHT DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit blue rách từ LIGHT DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ RÁCH ĐÙI TƯƠI TRẺ",
@@ -3299,9 +3299,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanjeanspremiumnam1.jpg",
-      "/imgs/quanjeanspremiumnam2.jpg",
-      "/imgs/quanjeanspremiumnam3.jpg"
+      "http://localhost:5000/imgs/quanjeanspremiumnam1.jpg",
+      "http://localhost:5000/imgs/quanjeanspremiumnam2.jpg",
+      "http://localhost:5000/imgs/quanjeanspremiumnam3.jpg"
     ],
     "id": "75",
     "rating": 4,
@@ -3311,22 +3311,22 @@
     "instock": 80
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Đen Mài Nhẹ",
+    "name": "Quần Jeans Nam Straight Fit black Mài Nhẹ",
     "brand": "URBAN CLASSIC",
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["black", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM012-76",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit đen mài nhẹ từ URBAN CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
+        "content": "Quần jeans nam straight fit black mài nhẹ từ URBAN CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
       },
       {
-        "title": "THIẾT KẾ MÀI NHẸ THANH LỊCH",
+        "title": "THIẾT KẾ MÀI NHẸH LỊCH",
         "content": "Với hiệu ứng mài nhẹ ở đùi, chiếc quần mang đến vẻ ngoài hiện đại và tinh tế. Dễ dàng phối với áo sơ mi hoặc áo polo để tạo phong cách smart-casual."
       },
       {
@@ -3343,9 +3343,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortnambasiccotton1.jpg",
-      "/imgs/quanshortnambasiccotton2.jpg",
-      "/imgs/quanshortnambasiccotton3.jpg"
+      "http://localhost:5000/imgs/quanshortnambasiccotton1.jpg",
+      "http://localhost:5000/imgs/quanshortnambasiccotton2.jpg",
+      "http://localhost:5000/imgs/quanshortnambasiccotton3.jpg"
     ],
     "id": "76",
     "rating": 4,
@@ -3355,23 +3355,23 @@
     "instock": 82
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xanh Đậm Trơn",
+    "name": "Quần Jeans Nam Skinny Fit blue Trơn",
     "brand": "MODERN DENIM",
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "colors": ["Xanh Đậm", "Xanh Navy"],
-    "size": ["28", "30", "32"],
+    "colors": ["blue"], 
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST013-77",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xanh đậm trơn từ MODERN DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit blue trơn từ MODERN DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
         "title": "THIẾT KẾ TRƠN HIỆN ĐẠI",
-        "content": "Với màu xanh đậm trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
+        "content": "Với màu blue trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -3387,9 +3387,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortjeansngan1.jpg",
-      "/imgs/quanshortjeansngan2.jpg",
-      "/imgs/quanshortjeansngan3.jpg"
+      "http://localhost:5000/imgs/quanshortjeansngan1.jpg",
+      "http://localhost:5000/imgs/quanshortjeansngan2.jpg",
+      "http://localhost:5000/imgs/quanshortjeansngan3.jpg"
     ],
     "id": "77",
     "rating": 4,
@@ -3399,19 +3399,19 @@
     "instock": 85
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Xanh Vintage",
+    "name": "Quần Jeans Nam Relaxed Fit blue Vintage",
     "brand": "RETRO DENIM",
     "type": "Quần Jeans",
     "price": 435000,
     "discount": 2,
-    "colors": ["Xanh Vintage", "Xanh Nhạt"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["gray", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF014-78",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit xanh vintage từ RETRO DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit blue vintage từ RETRO DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI VINTAGE",
@@ -3431,9 +3431,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortkakituihopnam1.jpg",
-      "/imgs/quanshortkakituihopnam2.jpg",
-      "/imgs/quanshortkakituihopnam3.jpg"
+      "http://localhost:5000/imgs/quanshortkakituihopnam1.jpg",
+      "http://localhost:5000/imgs/quanshortkakituihopnam2.jpg",
+      "http://localhost:5000/imgs/quanshortkakituihopnam3.jpg"
     ],
     "id": "78",
     "rating": 4,
@@ -3443,19 +3443,19 @@
     "instock": 88
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Đen Rách Gối",
+    "name": "Quần Jeans Nam Slim Fit black Rách Gối",
     "brand": "STREET VIBE",
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["black", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR015-79",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CAO CẤP",
-        "content": "Quần jeans nam slim fit đen rách gối từ STREET VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit black rách gối từ STREET VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ RÁCH GỐI CÁ TÍNH",
@@ -3475,9 +3475,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortthethaongan1.jpg",
-      "/imgs/quanshortthethaongan2.jpg",
-      "/imgs/quanshortthethaongan3.jpg"
+      "http://localhost:5000/imgs/quanshortthethaongan1.jpg",
+      "http://localhost:5000/imgs/quanshortthethaongan2.jpg",
+      "http://localhost:5000/imgs/quanshortthethaongan3.jpg"
     ],
     "id": "79",
     "rating": 4,
@@ -3487,23 +3487,23 @@
     "instock": 83
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Xanh Đá",
+    "name": "Quần Jeans Nam Straight Fit blue Đá",
     "brand": "STONE CLASSIC",
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "colors": ["Xanh Đá", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSX016-80",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit xanh đá từ STONE CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
+        "content": "Quần jeans nam straight fit blue đá từ STONE CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
       },
       {
-        "title": "THIẾT KẾ MÀI XANH ĐÁ",
-        "content": "Với hiệu ứng mài xanh đá ở đùi, chiếc quần mang đến vẻ ngoài hiện đại và tinh tế. Dễ dàng phối với áo polo hoặc áo sơ mi để tạo phong cách smart-casual."
+        "title": "THIẾT KẾ MÀI blue ĐÁ",
+        "content": "Với hiệu ứng mài blue đá ở đùi, chiếc quần mang đến vẻ ngoài hiện đại và tinh tế. Dễ dàng phối với áo polo hoặc áo sơ mi để tạo phong cách smart-casual."
       },
       {
         "title": "FORM STRAIGHT FIT",
@@ -3519,9 +3519,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortlinenthoangmat1.jpg",
-      "/imgs/quanshortlinenthoangmat2.jpg",
-      "/imgs/quanshortlinenthoangmat3.jpg"
+      "http://localhost:5000/imgs/quanshortlinenthoangmat1.jpg",
+      "http://localhost:5000/imgs/quanshortlinenthoangmat2.jpg",
+      "http://localhost:5000/imgs/quanshortlinenthoangmat3.jpg"
     ],
     "id": "80",
     "rating": 4,
@@ -3531,23 +3531,23 @@
     "instock": 84
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xám Trơn",
+    "name": "Quần Jeans Nam Skinny Fit gray Trơn",
     "brand": "GRAY DENIM",
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 4,
-    "colors": ["Xám", "Xám Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["gray", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST017-81",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xám trơn từ GRAY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit gray trơn từ GRAY DENIM được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu xám trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu gray trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -3563,9 +3563,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortjoggerthunnam1.jpg",
-      "/imgs/quanshortjoggerthunnam2.jpg",
-      "/imgs/quanshortjoggerthunnam3.jpg"
+      "http://localhost:5000/imgs/quanshortjoggerthunnam1.jpg",
+      "http://localhost:5000/imgs/quanshortjoggerthunnam2.jpg",
+      "http://localhost:5000/imgs/quanshortjoggerthunnam3.jpg"
     ],
     "id": "81",
     "rating": 4,
@@ -3575,23 +3575,23 @@
     "instock": 82
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Đen Trơn",
+    "name": "Quần Jeans Nam Relaxed Fit black Trơn",
     "brand": "COMFORT CLASSIC",
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 2,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["black", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF018-82",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit đen trơn từ COMFORT CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit black trơn từ COMFORT CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ TRƠN TỐI GIẢN",
-        "content": "Với thiết kế đen trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi cho phong cách casual."
+        "content": "Với thiết kế black trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi cho phong cách casual."
       },
       {
         "title": "FORM RELAXED FIT",
@@ -3607,9 +3607,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortkakingannam1.jpg",
-      "/imgs/quanshortkakingannam2.jpg",
-      "/imgs/quanshortkakingannam3.jpg"
+      "http://localhost:5000/imgs/quanshortkakingannam1.jpg",
+      "http://localhost:5000/imgs/quanshortkakingannam2.jpg",
+      "http://localhost:5000/imgs/quanshortkakingannam3.jpg"
     ],
     "id": "82",
     "rating": 4,
@@ -3619,19 +3619,19 @@
     "instock": 87
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xanh Navy Mài",
-    "brand": "NAVY VIBE",
+    "name": "Quần Jeans Nam Slim Fit blue navy Mài",
+    "brand": "nAVY VIBE",
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "colors": ["Xanh Navy", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM019-83",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xanh navy mài từ NAVY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit blue navy mài từ nAVY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ MÀI HIỆN ĐẠI",
@@ -3651,9 +3651,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortjeansrachnhenam1.jpg",
-      "/imgs/quanshortjeansrachnhenam2.jpg",
-      "/imgs/quanshortjeansrachnhenam3.jpg"
+      "http://localhost:5000/imgs/quanshortjeansrachnhenam1.jpg",
+      "http://localhost:5000/imgs/quanshortjeansrachnhenam2.jpg",
+      "http://localhost:5000/imgs/quanshortjeansrachnhenam3.jpg"
     ],
     "id": "83",
     "rating": 4,
@@ -3663,19 +3663,19 @@
     "instock": 86
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Đen Mài Đùi",
+    "name": "Quần Jeans Nam Skinny Fit black Mài Đùi",
     "brand": "DARK VIBE",
     "type": "Quần Jeans",
     "price": 475000,
     "discount": 5,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["black", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM020-84",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit đen mài đùi từ DARK VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit black mài đùi từ DARK VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
         "title": "THIẾT KẾ MÀI ĐÙI CÁ TÍNH",
@@ -3695,9 +3695,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortthethaodai1.jpg",
-      "/imgs/quanshortthethaodai2.jpg",
-      "/imgs/quanshortthethaodai3.jpg"
+      "http://localhost:5000/imgs/quanshortthethaodai1.jpg",
+      "http://localhost:5000/imgs/quanshortthethaodai2.jpg",
+      "http://localhost:5000/imgs/quanshortthethaodai3.jpg"
     ],
     "id": "84",
     "rating": 4,
@@ -3707,23 +3707,23 @@
     "instock": 81
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Xanh Nhạt Trơn",
+    "name": "Quần Jeans Nam Straight Fit blue Trơn",
     "brand": "CLEAN DENIM",
     "type": "Quần Jeans",
     "price": 415000,
     "discount": 3,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue", "blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST021-85",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit xanh nhạt trơn từ CLEAN DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
+        "content": "Quần jeans nam straight fit blue trơn từ CLEAN DENIM được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu xanh nhạt trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu blue trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
       },
       {
         "title": "FORM STRAIGHT FIT",
@@ -3739,9 +3739,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortlinenkecsoc1.jpg",
-      "/imgs/quanshortlinenkecsoc2.jpg",
-      "/imgs/quanshortlinenkecsoc3.jpg"
+      "http://localhost:5000/imgs/quanshortlinenkecsoc1.jpg",
+      "http://localhost:5000/imgs/quanshortlinenkecsoc2.jpg",
+      "http://localhost:5000/imgs/quanshortlinenkecsoc3.jpg"
     ],
     "id": "85",
     "rating": 4,
@@ -3751,19 +3751,19 @@
     "instock": 88
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xám Mài Nhẹ",
+    "name": "Quần Jeans Nam Slim Fit gray Mài Nhẹ",
     "brand": "GRAY VIBE",
     "type": "Quần Jeans",
     "price": 445000,
     "discount": 4,
-    "colors": ["Xám", "Xám Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["gray", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM022-86",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xám mài nhẹ từ GRAY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit gray mài nhẹ từ GRAY VIBE được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ MÀI NHẸ HIỆN ĐẠI",
@@ -3783,9 +3783,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortjoggerkakinam1.jpg",
-      "/imgs/quanshortjoggerkakinam2.jpg",
-      "/imgs/quanshortjoggerkakinam3.jpg"
+      "http://localhost:5000/imgs/quanshortjoggerkakinam1.jpg",
+      "http://localhost:5000/imgs/quanshortjoggerkakinam2.jpg",
+      "http://localhost:5000/imgs/quanshortjoggerkakinam3.jpg"
     ],
     "id": "86",
     "rating": 4,
@@ -3795,19 +3795,19 @@
     "instock": 84
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Xanh Đậm Mài",
+    "name": "Quần Jeans Nam Relaxed Fit blue Mài",
     "brand": "EASY VIBE",
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "colors": ["Xanh Đậm", "Xanh Navy"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue"], 
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF023-87",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit xanh đậm mài từ EASY VIBE được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit blue mài từ EASY VIBE được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI HIỆN ĐẠI",
@@ -3827,9 +3827,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortjeansongrongnam1.jpg",
-      "/imgs/quanshortjeansongrongnam2.jpg",
-      "/imgs/quanshortjeansongrongnam3.jpg"
+      "http://localhost:5000/imgs/quanshortjeansongrongnam1.jpg",
+      "http://localhost:5000/imgs/quanshortjeansongrongnam2.jpg",
+      "http://localhost:5000/imgs/quanshortjeansongrongnam3.jpg"
     ],
     "id": "87",
     "rating": 4,
@@ -3839,19 +3839,19 @@
     "instock": 89
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xanh Nhạt Rách",
+    "name": "Quần Jeans Nam Skinny Fit blue Rách",
     "brand": "LIGHT VIBE",
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR024-88",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xanh nhạt rách từ LIGHT VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit blue rách từ LIGHT VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
         "title": "THIẾT KẾ RÁCH ĐÙI CÁ TÍNH",
@@ -3871,9 +3871,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortthethaoinlogonam1.jpg",
-      "/imgs/quanshortthethaoinlogonam2.jpg",
-      "/imgs/quanshortthethaoinlogonam3.jpg"
+      "http://localhost:5000/imgs/quanshortthethaoinlogonam1.jpg",
+      "http://localhost:5000/imgs/quanshortthethaoinlogonam2.jpg",
+      "http://localhost:5000/imgs/quanshortthethaoinlogonam3.jpg"
     ],
     "id": "88",
     "rating": 4,
@@ -3883,19 +3883,19 @@
     "instock": 83
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Đen Mài Đùi",
+    "name": "Quần Jeans Nam Straight Fit black Mài Đùi",
     "brand": "URBAN VIBE",
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM025-89",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit đen mài đùi từ URBAN VIBE được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
+        "content": "Quần jeans nam straight fit black mài đùi từ URBAN VIBE được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách cổ điển."
       },
       {
         "title": "THIẾT KẾ MÀI ĐÙI HIỆN ĐẠI",
@@ -3915,9 +3915,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortkakidangngannam1.jpg",
-      "/imgs/quanshortkakidangngannam2.jpg",
-      "/imgs/quanshortkakidangngannam3.jpg"
+      "http://localhost:5000/imgs/quanshortkakidangngannam1.jpg",
+      "http://localhost:5000/imgs/quanshortkakidangngannam2.jpg",
+      "http://localhost:5000/imgs/quanshortkakidangngannam3.jpg"
     ],
     "id": "89",
     "rating": 4,
@@ -3927,19 +3927,19 @@
     "instock": 85
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xanh Đậm Rách",
+    "name": "Quần Jeans Nam Slim Fit blue Rách",
     "brand": "DARK DENIM",
     "type": "Quần Jeans",
     "price": 455000,
     "discount": 4,
-    "colors": ["Xanh Đậm", "Xanh Navy"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR026-90",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xanh đậm rách từ DARK DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit blue rách từ DARK DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ RÁCH ĐÙI CÁ TÍNH",
@@ -3959,9 +3959,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quanshortpremiumchatluongcaonam1.jpg",
-      "/imgs/quanshortpremiumchatluongcaonam2.jpg",
-      "/imgs/quanshortpremiumchatluongcaonam3.jpg"
+      "http://localhost:5000/imgs/quanshortpremiumchatluongcaonam1.jpg",
+      "http://localhost:5000/imgs/quanshortpremiumchatluongcaonam2.jpg",
+      "http://localhost:5000/imgs/quanshortpremiumchatluongcaonam3.jpg"
     ],
     "id": "90",
     "rating": 4,
@@ -3971,23 +3971,23 @@
     "instock": 80
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Đen Trơn",
+    "name": "Quần Jeans Nam Skinny Fit black Trơn",
     "brand": "MINIMAL VIBE",
     "type": "Quần Jeans",
     "price": 460000,
     "discount": 5,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST027-91",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit đen trơn từ MINIMAL VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit black trơn từ MINIMAL VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu đen trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu black trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo khoác da."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -4003,9 +4003,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamongsuongbasic1.jpg",
-      "/imgs/quantaynamongsuongbasic2.jpg",
-      "/imgs/quantaynamongsuongbasic3.jpg"
+      "http://localhost:5000/imgs/quantaynamongsuongbasic1.jpg",
+      "http://localhost:5000/imgs/quantaynamongsuongbasic2.jpg",
+      "http://localhost:5000/imgs/quantaynamongsuongbasic3.jpg"
     ],
     "id": "91",
     "rating": 4,
@@ -4015,19 +4015,19 @@
     "instock": 82
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Xanh Nhạt Mài",
+    "name": "Quần Jeans Nam Relaxed Fit blue Mài",
     "brand": "CASUAL DENIM",
     "type": "Quần Jeans",
     "price": 435000,
     "discount": 3,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF028-92",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit xanh nhạt mài từ CASUAL DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit blue mài từ CASUAL DENIM được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI HIỆN ĐẠI",
@@ -4047,9 +4047,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamslimfit1.jpg",
-      "/imgs/quantaynamslimfit2.jpg",
-      "/imgs/quantaynamslimfit3.jpg"
+      "http://localhost:5000/imgs/quantaynamslimfit1.jpg",
+      "http://localhost:5000/imgs/quantaynamslimfit2.jpg",
+      "http://localhost:5000/imgs/quantaynamslimfit3.jpg"
     ],
     "id": "92",
     "rating": 4,
@@ -4059,19 +4059,19 @@
     "instock": 89
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xám Đen Rách",
+    "name": "Quần Jeans Nam Slim Fit gray black Rách",
     "brand": "STREET DENIM",
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "colors": ["Xám Đen", "Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["black", "gray"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSR029-93",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xám đen rách từ STREET DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit gray black rách từ STREET DENIM được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ RÁCH ĐÙI CÁ TÍNH",
@@ -4091,9 +4091,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamongcon1.jpg",
-      "/imgs/quantaynamongcon2.jpg",
-      "/imgs/quantaynamongcon3.jpg"
+      "http://localhost:5000/imgs/quantaynamongcon1.jpg",
+      "http://localhost:5000/imgs/quantaynamongcon2.jpg",
+      "http://localhost:5000/imgs/quantaynamongcon3.jpg"
     ],
     "id": "93",
     "rating": 4,
@@ -4103,23 +4103,23 @@
     "instock": 80
   },
   {
-    "name": "Quần Jeans Nam Straight Fit Xanh Navy Trơn",
-    "brand": "NAVY CLASSIC",
+    "name": "Quần Jeans Nam Straight Fit blue navy Trơn",
+    "brand": "nAVY CLASSIC",
     "type": "Quần Jeans",
     "price": 420000,
     "discount": 3,
-    "colors": ["Xanh Navy", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST030-94",
     "descriptions": [
       {
         "title": "VẢI DENIM CHẤT LƯỢNG CAO",
-        "content": "Quần jeans nam straight fit xanh navy trơn từ NAVY CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
+        "content": "Quần jeans nam straight fit blue navy trơn từ nAVY CLASSIC được làm từ 100% cotton denim, mang lại độ bền cao và cảm giác chắc chắn. Chất liệu này phù hợp cho phong cách tối giản."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu xanh navy trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu blue navy trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo sơ mi hoặc áo polo cho phong cách smart-casual."
       },
       {
         "title": "FORM STRAIGHT FIT",
@@ -4135,9 +4135,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamcapcao1.jpg",
-      "/imgs/quantaynamcapcao2.jpg",
-      "/imgs/quantaynamcapcao3.jpg"
+      "http://localhost:5000/imgs/quantaynamcapcao1.jpg",
+      "http://localhost:5000/imgs/quantaynamcapcao2.jpg",
+      "http://localhost:5000/imgs/quantaynamcapcao3.jpg"
     ],
     "id": "94",
     "rating": 4,
@@ -4147,23 +4147,23 @@
     "instock": 88
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xanh Đá Mài",
+    "name": "Quần Jeans Nam Skinny Fit blue Đá Mài",
     "brand": "STONE VIBE",
     "type": "Quần Jeans",
     "price": 470000,
     "discount": 5,
-    "colors": ["Xanh Đá", "Xanh Đậm"],
-    "size": ["28", "30", "32"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM031-95",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xanh đá mài từ STONE VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit blue đá mài từ STONE VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
-        "title": "THIẾT KẾ MÀI XANH ĐÁ",
-        "content": "Với hiệu ứng mài xanh đá ở đùi, chiếc quần mang đến vẻ ngoài trẻ trung và thời thượng. Phù hợp để kết hợp với áo thun hoặc áo khoác bomber."
+        "title": "THIẾT KẾ MÀI blue ĐÁ",
+        "content": "Với hiệu ứng mài blue đá ở đùi, chiếc quần mang đến vẻ ngoài trẻ trung và thời thượng. Phù hợp để kết hợp với áo thun hoặc áo khoác bomber."
       },
       {
         "title": "FORM SKINNY FIT",
@@ -4179,9 +4179,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamongrong1.jpg",
-      "/imgs/quantaynamongrong2.jpg",
-      "/imgs/quantaynamongrong3.jpg"
+      "http://localhost:5000/imgs/quantaynamongrong1.jpg",
+      "http://localhost:5000/imgs/quantaynamongrong2.jpg",
+      "http://localhost:5000/imgs/quantaynamongrong3.jpg"
     ],
     "id": "95",
     "rating": 4,
@@ -4191,19 +4191,19 @@
     "instock": 83
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Đen Mài Nhẹ",
+    "name": "Quần Jeans Nam Relaxed Fit black Mài Nhẹ",
     "brand": "EASY CLASSIC",
     "type": "Quần Jeans",
     "price": 430000,
     "discount": 3,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNRF032-96",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit đen mài nhẹ từ EASY CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit black mài nhẹ từ EASY CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
         "title": "THIẾT KẾ MÀI NHẸ",
@@ -4223,9 +4223,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynammaube1.jpg",
-      "/imgs/quantaynammaube2.jpg",
-      "/imgs/quantaynammaube3.jpg"
+      "http://localhost:5000/imgs/quantaynammaube1.jpg",
+      "http://localhost:5000/imgs/quantaynammaube2.jpg",
+      "http://localhost:5000/imgs/quantaynammaube3.jpg"
     ],
     "id": "96",
     "rating": 4,
@@ -4235,23 +4235,23 @@
     "instock": 89
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Xanh Nhạt Trơn",
+    "name": "Quần Jeans Nam Slim Fit blue Trơn",
     "brand": "LIGHT CLASSIC",
     "type": "Quần Jeans",
     "price": 440000,
     "discount": 4,
-    "colors": ["Xanh Nhạt", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST033-97",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit xanh nhạt trơn từ LIGHT CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit blue trơn từ LIGHT CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu xanh nhạt trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để phối với áo thun hoặc áo sơ mi cho phong cách casual."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu blue trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để phối với áo thun hoặc áo sơ mi cho phong cách casual."
       },
       {
         "title": "FORM SLIM FIT",
@@ -4267,9 +4267,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamkesoc1.jpg",
-      "/imgs/quantaynamkesoc2.jpg",
-      "/imgs/quantaynamkesoc3.jpg"
+      "http://localhost:5000/imgs/quantaynamkesoc1.jpg",
+      "http://localhost:5000/imgs/quantaynamkesoc2.jpg",
+      "http://localhost:5000/imgs/quantaynamkesoc3.jpg"
     ],
     "id": "97",
     "rating": 4,
@@ -4279,19 +4279,19 @@
     "instock": 84
   },
   {
-    "name": "Quần Jeans Nam Skinny Fit Xám Mài Đùi",
+    "name": "Quần Jeans Nam Skinny Fit gray Mài Đùi",
     "brand": "GRAY VIBE",
     "type": "Quần Jeans",
     "price": 465000,
     "discount": 5,
-    "colors": ["Xám", "Xám Đen"],
-    "size": ["28", "30", "32"],
+    "colors": ["gray", "black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM034-98",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam skinny fit xám mài đùi từ GRAY VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
+        "content": "Quần jeans nam skinny fit gray mài đùi từ GRAY VIBE được làm từ denim pha spandex, mang lại độ co giãn cao và cảm giác ôm sát thoải mái. Chất liệu này tôn dáng hiệu quả."
       },
       {
         "title": "THIẾT KẾ MÀI ĐÙI CÁ TÍNH",
@@ -4311,9 +4311,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamongsuonglung1.jpg",
-      "/imgs/quantaynamongsuonglung2.jpg",
-      "/imgs/quantaynamongsuonglung3.jpg"
+      "http://localhost:5000/imgs/quantaynamongsuonglung1.jpg",
+      "http://localhost:5000/imgs/quantaynamongsuonglung2.jpg",
+      "http://localhost:5000/imgs/quantaynamongsuonglung3.jpg"
     ],
     "id": "98",
     "rating": 4,
@@ -4323,23 +4323,23 @@
     "instock": 83
   },
   {
-    "name": "Quần Jeans Nam Relaxed Fit Xanh Đá Trơn",
+    "name": "Quần Jeans Nam Relaxed Fit blue Đá Trơn",
     "brand": "STONE CLASSIC",
     "type": "Quần Jeans",
     "price": 425000,
     "discount": 3,
-    "colors": ["Xanh Đá", "Xanh Đậm"],
-    "size": ["28", "30", "32", "34", "36"],
+    "colors": ["blue"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNST035-99",
     "descriptions": [
       {
         "title": "VẢI DENIM MỀM MẠI",
-        "content": "Quần jeans nam relaxed fit xanh đá trơn từ STONE CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
+        "content": "Quần jeans nam relaxed fit blue đá trơn từ STONE CLASSIC được làm từ 100% cotton denim, mang lại cảm giác mềm mại và thoáng khí. Chất liệu này phù hợp cho các hoạt động hàng ngày."
       },
       {
-        "title": "THIẾT KẾ TRƠN THANH LỊCH",
-        "content": "Với màu xanh đá trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoài thanh lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi cho phong cách casual."
+        "title": "THIẾT KẾ TRƠNH LỊCH",
+        "content": "Với màu blue đá trơn không chi tiết thừa, chiếc quần mang đến vẻ ngoàih lịch và dễ phối đồ. Phù hợp để kết hợp với áo thun hoặc áo sơ mi cho phong cách casual."
       },
       {
         "title": "FORM RELAXED FIT",
@@ -4355,9 +4355,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynamxanhnavy1.jpg",
-      "/imgs/quantaynamxanhnavy2.jpg",
-      "/imgs/quantaynamxanhnavy3.jpg"
+      "http://localhost:5000/imgs/quantaynambluenavy1.jpg",
+      "http://localhost:5000/imgs/quantaynambluenavy2.jpg",
+      "http://localhost:5000/imgs/quantaynambluenavy3.jpg"
     ],
     "id": "99",
     "rating": 4,
@@ -4367,19 +4367,19 @@
     "instock": 88
   },
   {
-    "name": "Quần Jeans Nam Slim Fit Đen Mài Nhẹ",
+    "name": "Quần Jeans Nam Slim Fit black Mài Nhẹ",
     "brand": "DARK CLASSIC",
     "type": "Quần Jeans",
     "price": 450000,
     "discount": 4,
-    "colors": ["Đen", "Xám Đen"],
-    "size": ["28", "30", "32", "34"],
+    "colors": ["black"],
+    "size": ["S", "M", "L", "XL"],
     "condition": true,
     "SKU": "QJNSM036-100",
     "descriptions": [
       {
         "title": "CHẤT LIỆU DENIM CO GIÃN",
-        "content": "Quần jeans nam slim fit đen mài nhẹ từ DARK CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
+        "content": "Quần jeans nam slim fit black mài nhẹ từ DARK CLASSIC được làm từ denim cotton pha spandex, mang lại độ co giãn nhẹ và cảm giác thoải mái. Chất liệu này bền bỉ và giữ form tốt."
       },
       {
         "title": "THIẾT KẾ MÀI NHẸ HIỆN ĐẠI",
@@ -4399,9 +4399,9 @@
       }
     ,
     "thumbnails": [
-      "/imgs/quantaynampremiumcaocap1.jpg",
-      "/imgs/quantaynampremiumcaocap2.jpg",
-      "/imgs/quantaynampremiumcaocap3.jpg"
+      "http://localhost:5000/imgs/quantaynampremiumcaocap1.jpg",
+      "http://localhost:5000/imgs/quantaynampremiumcaocap2.jpg",
+      "http://localhost:5000/imgs/quantaynampremiumcaocap3.jpg"
     ],
     "id": "100",
     "rating": 4,

@@ -4,7 +4,7 @@ import { useData } from '../../contexts/DataContext';
 import axios from 'axios';
 
 const ProductTable = () => {
-  const { products, setProducts } = useData(); // Đảm bảo bạn có setProducts để cập nhật lại dữ liệu
+  const { products, setProducts, saveProduct, updateProduct, deleteProduct } = useData(); // Đảm bảo bạn có setProducts để cập nhật lại dữ liệu
   const [loading, setLoading] = useState(true);
 
   // Lấy lại dữ liệu từ API sau khi thực hiện thao tác
@@ -30,7 +30,12 @@ const ProductTable = () => {
       {loading ? (
         <p>Đang tải...</p> // Hiển thị trạng thái loading nếu đang lấy dữ liệu
       ) : (
-        <TransactionsTableProduct products={products} />
+        <TransactionsTableProduct 
+          products={products} 
+          saveProduct={saveProduct} 
+          deleteProduct={deleteProduct}
+          updateProduct={updateProduct}
+        />
       )}
     </div>
   );

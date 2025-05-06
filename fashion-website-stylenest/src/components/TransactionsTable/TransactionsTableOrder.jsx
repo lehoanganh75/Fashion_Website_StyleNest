@@ -220,25 +220,6 @@ const TransactionsTableOrder = ({ orders }) => {
                 >
                 Xem thêm chi tiết
             </button>
-            <button
-                onClick={() => {
-                    console.log(`View more details for orders: ${selectedOrders.id}`)
-                    setDropdownOpen(false)
-                    setIsModalOpen(true)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-                >
-                Sửa thông tin
-            </button>
-            <button
-                onClick={() => {
-                    console.log(`Delete orders: ${selectedOrders.id}`)
-                    setDropdownOpen(false)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-            >
-                Xóa
-            </button>
           </div>
         )}
 

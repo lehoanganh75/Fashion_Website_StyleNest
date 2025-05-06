@@ -15,6 +15,8 @@ const PieChartCard = ({ data }) => {
 
   return (
     <div className="flex justify-center items-center border border-gray-300 bg-white rounded-lg p-4 shadow-sm" style={{ width: '100%', height: '400px' }}>
+      
+      
       <PieChart width={380} height={380}>
         <Pie
           data={data}
