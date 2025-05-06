@@ -11,4 +11,32 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.put('/:id', async (req, res) => {
+    const { id } = req.params;  // id là chuỗi
+    const { name, gender, date, phone } = req.body;
+  
+    try {
+      // Tìm và cập nhật người dùng với id là chuỗi
+      const updatedUser = await User.findOneAndUpdate(
+        { id: id },  // Sử dụng trường id (chuỗi)
+        {
+          name,
+          gender,
+          date,
+          phone,
+        },
+        { new: true }
+      );
+  
+      if (!updatedUser) {
+        return res.status(404).json({ message: 'User not found' });
+      }
+  
+      res.status(200).json({ message: 'User updated successfully', updatedUser });
+    } catch (error) {
+      console.error("Lỗi khi cập nhật người dùng:", error);
+      res.status(500).json({ message: "Lỗi khi cập nhật người dùng", error });
+    }
+  });
+  
 module.exports = router;

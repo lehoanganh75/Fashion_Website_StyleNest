@@ -173,6 +173,105 @@ export const DataProvider = ({ children }) => {
         }
     };
 
+    const searchProducts = async (searchTerm) => {
+        setLoading(true);
+        setError(null);
+        try {
+          const response = await axios.get(
+            `http://localhost:5000/api/products/search?name=${searchTerm}`
+          );
+          setProducts(response.data);
+          return response.data;
+        } catch (error) {
+          setError(error);
+          console.error("Lỗi khi tìm kiếm sản phẩm:", error);
+          setProducts([]);
+          throw error;
+        } finally {
+          setLoading(false);
+        }
+      };
+
+
+      const updateUser = async (updatedUser) => {
+        try {
+          const response = await axios.put(
+            `http://localhost:5000/api/users/${updatedUser.id}`,
+            updatedUser
+          );
+      
+          setUsers((prevUsers) =>
+            prevUsers.map((user) =>
+              user.id === updatedUser.id
+                ? response.data.updatedUser
+                : user
+            )
+          );
+        } catch (error) {
+          console.error("Lỗi khi cập nhật người dùng:", error);
+        }
+      };
+
+      
+  const searchCustomers = async (phone) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/api/customers/search?phone=${phone}`
+      );
+      setCustomers(response.data);
+      return response.data;
+    } catch (error) {
+      setError(error);
+      console.error("Lỗi khi tìm kiếm khách hàng:", error);
+      setCustomers([]);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const searchOrders = async (customerName) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/api/orders/search?customerName=${customerName}`
+      );
+      setOrders(response.data);  // Cập nhật danh sách đơn hàng
+      return response.data;
+    } catch (error) {
+      setError(error);
+      console.error("Lỗi khi tìm kiếm đơn hàng:", error);
+      setOrders([]);  // Xóa danh sách đơn hàng khi có lỗi
+      throw error;
+    } finally {
+      setLoading(false);  // Tắt loading sau khi hoàn tất
+    }
+  };
+
+  const searchAccounts = async (userName) => {
+    setLoading(true);
+    setError(null);
+    try {
+        const response = await axios.get(
+            `http://localhost:5000/api/accounts/search?userName=${userName}`
+        );
+        setAccounts(response.data);  // Cập nhật danh sách tài khoản
+        return response.data;
+    } catch (error) {
+        setError(error);
+        console.error("Lỗi khi tìm kiếm tài khoản:", error);
+        setAccounts([]);  // Xóa danh sách tài khoản khi có lỗi
+        throw error;
+    } finally {
+        setLoading(false);  // Tắt loading sau khi hoàn tất
+    }
+};
+
+  
+
     return (
         <DataContext.Provider value={{
             accounts,
@@ -194,6 +293,12 @@ export const DataProvider = ({ children }) => {
             updateProduct,
             deleteProduct,
             users,
+            searchCustomers,
+            updateUser,
+            setUsers,
+            searchProducts,
+            searchOrders,
+            searchAccounts,
         }}>
             {children}
         </DataContext.Provider>

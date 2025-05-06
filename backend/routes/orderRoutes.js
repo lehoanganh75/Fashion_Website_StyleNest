@@ -23,4 +23,20 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.get('/search', async (req, res) => {
+  const { customerName } = req.query; // Lấy customerName từ query params
+  try {
+      if (customerName) {
+          // Tìm kiếm đơn hàng theo tên khách hàng, không phân biệt hoa thường
+          const results = await Order.find({ customerName: { $regex: customerName, $options: 'i' } });
+          return res.json(results);
+      }
+      const allOrders = await Order.find({});
+      res.json(allOrders);
+  } catch (error) {
+      res.status(500).send({ message: 'Error searching orders', error });
+  }
+});
+
+
 module.exports = router;

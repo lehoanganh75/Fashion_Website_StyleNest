@@ -77,4 +77,20 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+
+router.get('/search', async (req, res) => {
+  const { userName } = req.query;
+  try {
+      if (userName) {
+          const results = await Customer.find({ userName: { $regex: userName, $options: 'i' } }); 
+          return res.json(results);
+      }
+      const allCustomers = await Customer.find({});
+      res.json(allCustomers);
+  } catch (error) {
+      res.status(500).send({ message: 'Error searching customers', error });
+  }
+});
+
+
 module.exports = router;

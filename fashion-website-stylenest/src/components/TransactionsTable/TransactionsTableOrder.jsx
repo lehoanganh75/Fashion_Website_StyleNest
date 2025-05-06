@@ -7,12 +7,10 @@ const TransactionsTableOrder = ({ orders }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const [dropdownPosition, setDropdownPosition] = useState({ top: 0, left: 0 })
     const [isModalOpen, setIsModalOpen] = useState(false);
-  
+    const [searchQuery, setSearchQuery] = useState("");
+
     const itemsPerPage = 6
-    const paginatedOrders = orders.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-    )
+
     const totalPages = Math.ceil(orders.length / itemsPerPage)
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
   
@@ -22,6 +20,15 @@ const TransactionsTableOrder = ({ orders }) => {
         console.log(`Navigating to page ${page}`)
       }
     }
+    const filteredOrders = orders.filter(order => 
+      order.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      order.email.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    const paginatedOrders = filteredOrders.slice(
+      (currentPage - 1) * itemsPerPage,
+      currentPage * itemsPerPage
+    )
+    
   
     const toggleDropdown = (orders, event) => {
       event.preventDefault()
@@ -99,14 +106,16 @@ const TransactionsTableOrder = ({ orders }) => {
             <div className="flex flex-grow items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2 shadow-sm">
                 <i className="bx bx-search-alt text-gray-500 text-xl mr-2"></i>
                 <input
-                type="text"
-                placeholder="Tìm kiếm hoặc gõ lệnh..."
-                className="w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
+                  type="text"
+                  placeholder="Tìm kiếm hoặc gõ lệnh..."
+                  className="w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}  // Cập nhật state khi người dùng nhập
                 />
             </div>
 
             {/* Nút tìm kiếm */}
-            <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition">
+            <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition hover:cursor-pointer hover:scale-102">
                 Tìm kiếm
             </button>
             </div>
@@ -219,6 +228,25 @@ const TransactionsTableOrder = ({ orders }) => {
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
                 >
                 Xem thêm chi tiết
+            </button>
+            <button
+                onClick={() => {
+                    console.log(`View more details for orders: ${selectedOrders.id}`)
+                    setDropdownOpen(false)
+                    setIsModalOpen(true)
+                }}
+                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
+                >
+                Sửa thông tin
+            </button>
+            <button
+                onClick={() => {
+                    console.log(`Delete orders: ${selectedOrders.id}`)
+                    setDropdownOpen(false)
+                }}
+                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
+            >
+                Xóa
             </button>
           </div>
         )}

@@ -163,4 +163,27 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.get('/search', async (req, res) => {
+  try {
+      const { name } = req.query; 
+      
+      if (!name) {
+          return res.status(400).json({ message: 'Tên sản phẩm không được bỏ trống' });
+      }
+
+      const products = await Product.find({
+          name: { $regex: name, $options: 'i' }
+      });
+
+      if (products.length === 0) {
+          return res.status(404).json({ message: 'Không tìm thấy sản phẩm nào' });
+      }
+      res.status(200).json(products);
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Đã xảy ra lỗi khi tìm kiếm sản phẩm' });
+  }
+});
+
+
 module.exports = router;
