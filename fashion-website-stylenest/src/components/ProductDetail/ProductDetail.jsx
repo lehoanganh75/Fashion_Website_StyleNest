@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { FaFacebookF, FaTwitter, FaPinterestP, FaHeart, FaExchangeAlt } from "react-icons/fa"
 import { FiMinus, FiPlus } from "react-icons/fi";
 import CountdownTimer from "../CountdownTimer/CountdownTimer";
 import ProductCarousel from "../ProductCarousel/ProductCarousel"
 import ProductDataSheet from "../ProductDataSheet/ProductDataSheet";
 import { useParams } from "react-router-dom";
-import data from "../../data/data.json";
 import { useCart } from "../../contexts/CartContext";
+import { useData } from "../../contexts/DataContext";
+import { useAuth } from "../../contexts/AuthContext";
+import Modal from "../Modal/Modal";
 
 const ProductDetail = () => {
     const [activeTab, setActiveTab] = useState("description")
     const [quantity, setQuantity] = useState(1)
     const [selectedColor, setSelectedColor] = useState("grey")
     const [activeImage, setActiveImage] = useState(0)
-    const [products, setProducts] = useState([])  
+    const { products } = useData()  
     const { id } = useParams();
     const { addToCart } = useCart();
+    const { loggedInAccount } = useAuth();
+    const [ showLoginModal, setShowLoginModal ] = useState(false);
     const formatCurrency = (value) => {
         const formatted = new Intl.NumberFormat("vi-VN", {
           style: "decimal",
@@ -24,9 +28,6 @@ const ProductDetail = () => {
         return `${formatted} VNĐ`;
     };
 
-    useEffect(() => {
-        setProducts(data);
-    }, [])
 
     const product = products.find((p) => p.id === id);
 
@@ -36,6 +37,14 @@ const ProductDetail = () => {
 
     const decrementQuantity = () => {
         if (quantity > 1) setQuantity(quantity - 1)
+    }
+
+    const handleAddToCart = () => {
+        if (loggedInAccount) {
+            addToCart({ ...product, quantity })
+        } else {
+            setShowLoginModal(true)
+        }
     }
 
     const renderStars = (rating) => {
@@ -168,7 +177,7 @@ const ProductDetail = () => {
                                     </button>
                                 </div>
 
-                                <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition duration-200" onClick={() => addToCart({ ...product, quantity })}>Thêm vào giỏ hàng</button>
+                                <button className="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600 transition duration-200" onClick={handleAddToCart}>Thêm vào giỏ hàng</button>
                             </div>
 
                             {/* In Stock Badge */}
@@ -292,6 +301,10 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
+
+            {showLoginModal && (  
+                <Modal handleShowModal={() => setShowLoginModal(false)}/>
+            )}
         </div>
     )
 }

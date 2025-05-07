@@ -1,13 +1,25 @@
 import { useState } from "react"
 import { Eye, EyeOff } from "lucide-react"
 
-const RegisterForm = ({ onSwitchToLogin }) => {
+const RegisterForm = ({ onSwitchToLogin, accounts, saveAccount }) => {
     const [user, setUser] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [email, setEmail] = useState("")
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+
+    const handleRegister = () => {
+      const newAccount = {
+        id:  Math.max(...accounts.map((a) => a.id || 0), 0) + 1,
+        userName: user,
+        password: password,
+        email: email,
+        role: "customer",
+      }
+      console.log("Đăng ký thành công!", newAccount)
+      saveAccount(newAccount)
+    }
   
     return (
       <>
@@ -105,6 +117,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
   
           <button
             type="submit"
+            onClick={handleRegister}
             className="w-full bg-gray-800 text-white py-3 rounded-xl hover:bg-gray-700 text-lg font-medium shadow-md"
           >
             Đăng ký

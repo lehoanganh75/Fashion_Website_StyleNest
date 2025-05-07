@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import 'boxicons/css/boxicons.min.css';
 import { useCart } from "../../contexts/CartContext"; 
+import Modal from "../Modal/Modal"; 
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { useData } from "../../contexts/DataContext";
 
 const ShoppingCart = () => {
-  const { cart, setCart, moveToOrders } = useCart(); 
+  const { cart, setCart , cartItemSelected, setCartItemSelected, total, setTotal, tax, setTax, subtotal, setSubtotal } = useCart(); 
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const { loggedInAccount } = useAuth();
+  const { customers } = useData();
   const [allSelected, setAllSelected] = useState(true);
+  const navigate = useNavigate();
 
   const toggleSelectAll = () => {
     const newSelected = !allSelected;
@@ -46,13 +54,63 @@ const ShoppingCart = () => {
   const selectedItems = cart.filter((item) => item.selected);
   const selectedCount = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
 
+  // Hàm xử lý thay đổi màu sắc
+  const handleColorChange = (id, newColor) => {
+    setCart(cart.map((item) =>
+      item.id === id
+        ? { ...item, selectedColor: newColor } // Chỉ cập nhật giá trị selectedColor để hiển thị trong dropdown
+        : item
+    ));
+  };
+
+  // Hàm xử lý thay đổi kích thước
+  const handleSizeChange = (id, newSize) => {
+    setCart(cart.map((item) =>
+      item.id === id
+        ? { ...item, selectedSize: newSize } // Chỉ cập nhật giá trị selectedSize để hiển thị trong dropdown
+        : item
+    ));
+  };
+
   const handleCheckout = () => {
-    if (selectedItems.length > 0) {
-      moveToOrders(selectedItems);
-    } else {
-      alert("Vui lòng chọn sản phẩm để thanh toán.");
+    const updatedCart = cart.map(item => ({
+      ...item,
+      selectedColor: item.selectedColor || item.colors[0], // Nếu chưa chọn màu thì chọn màu đầu tiên trong mảng colors
+      selectedSize: item.selectedSize || item.size[0], // Nếu chưa chọn kích cỡ thì chọn kích cỡ đầu tiên trong mảng size
+    }));
+
+    const selectedItems = updatedCart.filter(item => item.selected); // Lọc các sản phẩm đã được chọn
+    setCartItemSelected(selectedItems);
+
+    if (!loggedInAccount) {
+      setShowLoginModal(true)
+      return;
+    }
+
+    const checkedCustomer = customers.filter(
+      (customer) => customer.email === loggedInAccount.email
+    );
+
+    if (checkedCustomer.length == 0) {
+      navigate("/info");
+      return;
+    }
+
+    console.log(loggedInAccount)
+
+    console.log(checkedCustomer)
+
+    if (selectedCount > 0) {
+      navigate("/checkout");
+      return;
     }
   };
+
+  useEffect(() => {
+    setTotal(calculateTotal());
+    setTax(calculateTax());
+    setSubtotal(calculateSubtotal());
+  }, [cartItemSelected]);
 
   return (
     <div className="container mx-auto p-4 max-w-5xl font-['Roboto']">
@@ -96,11 +154,37 @@ const ShoppingCart = () => {
                           <i className="bx bx-x text-2xl"></i>
                         </button>
                       </div>
-                      <div className="space-y-1">
-                        <p className="text-sm text-gray-500">Màu: {item.color}</p>
-                        <p className="text-sm py-2 text-gray-500">Kích cỡ: {item.size}</p>
-                        {item.description && <p className="text-sm text-gray-500">Mô tả: {item.description}</p>}
+
+                      <div className="space-y-2">
+                        {/* Màu - Select */}
+                        <div className="flex items-center gap-2">
+                          <label className="text-sm text-gray-500">Màu:</label>
+                          <select
+                            value={item.selectedColor || item.colors[0]} // Giá trị được chọn sẽ là selectedColor, nếu không có sẽ lấy màu đầu tiên trong mảng colors
+                            onChange={(e) => handleColorChange(item.id, e.target.value)} // Sử dụng id để xác định sản phẩm
+                            className="text-sm border-gray-300 rounded px-2 py-1"
+                          >
+                            {item.colors.map((color, i) => (
+                              <option key={i} value={color}>{color}</option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* Kích cỡ - Select */}
+                        <div className="flex items-center gap-2">
+                          <label className="text-sm text-gray-500">Kích cỡ:</label>
+                          <select
+                            value={item.selectedSize || item.size[0]} // Giá trị được chọn sẽ là selectedSize, nếu không có sẽ lấy kích cỡ đầu tiên trong mảng size
+                            onChange={(e) => handleSizeChange(item.id, e.target.value)} // Sử dụng id để xác định sản phẩm
+                            className="text-sm border-gray-300 rounded px-2 py-1"
+                          >
+                            {item.size.map((size, i) => (
+                              <option key={i} value={size}>{size}</option>
+                            ))}
+                          </select>
+                        </div>
                       </div>
+
                       <div className="flex justify-between items-center mt-4">
                         <div className="flex items-center justify-center border border-gray-300 rounded-md overflow-hidden shadow-sm">
                           <button
@@ -119,7 +203,7 @@ const ShoppingCart = () => {
                           </button>
                         </div>
                         <div className="text-[18px] font-semibold text-gray-600 mt-1 text-center">
-                          {(item.price * (1 - item.discount / 100) * item.quantity).toLocaleString("vi-VN")} VND
+                          {(item.price * (1 - item.discount / 100) * item.quantity).toLocaleString("vi-VN")} đ
                         </div>
                       </div>
                     </div>
@@ -132,33 +216,39 @@ const ShoppingCart = () => {
               <div className="text-sm text-gray-600 space-y-4">
                 <div className="flex justify-between items-center pb-3">
                   <span className="text-[18px] font-medium">Tạm tính ({selectedCount} sản phẩm)</span>
-                  <span className="text-[18px] font-semibold text-gray-800">{calculateSubtotal().toLocaleString("vi-VN")} VND</span>
+                  <span className="text-[18px] font-semibold text-gray-800">{total} đ</span>
                 </div>
 
                 <div className="flex justify-between items-center pb-3">
                   <span className="text-[18px] font-medium">Thuế GTGT (8%)</span>
-                  <span className="text-[18px] font-semibold text-gray-800">{calculateTax().toLocaleString("vi-VN")} VND</span>
+                  <span className="text-[18px] font-semibold text-gray-800">{tax} đ</span>
                 </div>
               </div>
 
               <div className="border-t mt-4 pt-4">
                 <div className="flex justify-between text-xl font-semibold text-gray-600">
                   <span className="text-lg">Tổng thanh toán</span>
-                  <span className="text-lg text-gray-600 font-bold">{calculateTotal().toLocaleString("vi-VN")} VND</span>
+                  <span className="text-lg text-gray-600 font-bold">
+                    {subtotal} đ
+                  </span>
                 </div>
               </div>
 
               <button
                 disabled={selectedCount === 0}
                 onClick={handleCheckout} 
-                className={`mt-6 w-full py-3 text-lg font-semibold rounded-xl shadow-md transition-all duration-300 ease-in-out ${selectedCount === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-gray-500 to-gray-500 hover:opacity-90"}`}
+                className={`mt-6 w-full py-3 text-lg font-semibold rounded-xl shadow-md transition-all duration-300 text-white ease-in-out ${selectedCount === 0 ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-r from-gray-500 to-gray-500 hover:opacity-90"}`}
               >
-                Thanh toán
+                Tiếp tục
               </button>
             </>
           )}
         </div>
       </div>
+
+      {showLoginModal && (  
+        <Modal handleShowModal={() => setShowLoginModal(false)}/>
+      )}
     </div>
   );
 };

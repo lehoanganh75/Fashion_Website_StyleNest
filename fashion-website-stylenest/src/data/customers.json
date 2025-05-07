@@ -6,177 +6,24 @@
     "date": "1995-01-15",
     "phone": "0901234567",
     "email": "nam01@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "2",
-    "customerName": "Trần Thị Hoa",
-    "gender": "Nữ",
-    "date": "1996-03-22",
-    "phone": "0912345678",
-    "email": "hoa02@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "3",
-    "customerName": "Lê Văn An",
-    "gender": "Nam",
-    "date": "1992-07-10",
-    "phone": "0901122334",
-    "email": "an03@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "4",
-    "customerName": "Phạm Thị Mai",
-    "gender": "Nữ",
-    "date": "1994-05-05",
-    "phone": "0933445566",
-    "email": "mai04@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "5",
-    "customerName": "Đặng Minh Tuấn",
-    "gender": "Nam",
-    "date": "1991-09-09",
-    "phone": "0977888999",
-    "email": "tuan05@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "6",
-    "customerName": "Ngô Thị Hương",
-    "gender": "Nữ",
-    "date": "1993-12-12",
-    "phone": "0988776655",
-    "email": "huong06@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "7",
-    "customerName": "Vũ Văn Bình",
-    "gender": "Nam",
-    "date": "1990-08-18",
-    "phone": "0909887766",
-    "email": "binh07@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "8",
-    "customerName": "Trịnh Thị Lan",
-    "gender": "Nữ",
-    "date": "1995-06-25",
-    "phone": "0933449988",
-    "email": "lan08@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "9",
-    "customerName": "Bùi Quốc Dũng",
-    "gender": "Nam",
-    "date": "1989-11-30",
-    "phone": "0922334455",
-    "email": "dung09@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "10",
-    "customerName": "Cao Thị Lệ",
-    "gender": "Nữ",
-    "date": "1992-02-14",
-    "phone": "0966889900",
-    "email": "le10@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "11",
-    "customerName": "Lý Minh Tâm",
-    "gender": "Nam",
-    "date": "1996-04-20",
-    "phone": "0911223344",
-    "email": "tam11@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "12",
-    "customerName": "Đoàn Thị Thảo",
-    "gender": "Nữ",
-    "date": "1994-07-07",
-    "phone": "0955667788",
-    "email": "thao12@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "13",
-    "customerName": "Nguyễn Văn Cường",
-    "gender": "Nam",
-    "date": "1991-01-01",
-    "phone": "0933001122",
-    "email": "cuong13@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "14",
-    "customerName": "Tăng Thị Yến",
-    "gender": "Nữ",
-    "date": "1997-03-03",
-    "phone": "0922003311",
-    "email": "yen14@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "15",
-    "customerName": "Dương Văn Hải",
-    "gender": "Nam",
-    "date": "1990-10-10",
-    "phone": "0901222333",
-    "email": "hai15@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "16",
-    "customerName": "Phan Thị Vân",
-    "gender": "Nữ",
-    "date": "1992-06-06",
-    "phone": "0944556677",
-    "email": "van16@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "17",
-    "customerName": "Hồ Văn Lợi",
-    "gender": "Nam",
-    "date": "1988-08-08",
-    "phone": "0911888777",
-    "email": "loi17@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "18",
-    "customerName": "Trần Thị Ngọc",
-    "gender": "Nữ",
-    "date": "1993-09-09",
-    "phone": "0922113344",
-    "email": "ngoc18@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "19",
-    "customerName": "Lê Hoàng Sơn",
-    "gender": "Nam",
-    "date": "1987-12-12",
-    "phone": "0933112299",
-    "email": "son19@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
-  },
-  {
-    "id": "20",
-    "customerName": "Nguyễn Thị Diễm",
-    "gender": "Nữ",
-    "date": "1995-11-11",
-    "phone": "0909112233",
-    "email": "diem20@gmail.com",
-    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg"
+    "img": "https://i.pinimg.com/736x/8d/2a/7a/8d2a7a0b367026459708a05d8e3ae3d4.jpg",
+    "address": [
+      {
+        "id": "1",
+        "name": "Chu văn bùi",
+        "phone": "0901234567",
+        "address": "Số 1, Đường ABC, Quận 1, TP.HCM",
+        "addressType": "home", 
+        "isDefault": false
+      },
+      {
+        "id": "2",
+        "name": "Nguyễn Văn Tèo",
+        "phone": "0901234567",
+        "address": "Số 1, Đường ABC, Quận 1, TP.HCM",
+        "addressType": "home", 
+        "isDefault": true
+      }
+    ]
   }
 ]

@@ -63,6 +63,25 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Product.findOne({ id: id });
+
+    console.log("Product ID:", id); // Log ID để kiểm tra
+    console.log("Product:", product); // Log sản phẩm để kiểm tra
+
+    if (!product) {
+      return res.status(404).json({ error: "Không tìm thấy sản phẩm" });
+    }
+
+    res.status(200).json(product);
+  } catch (error) {
+    console.error("Lỗi khi lấy sản phẩm:", error);
+    res.status(500).json({ error: "Lỗi máy chủ" });
+  }
+});
+
 // Lưu sản phẩm
 router.post("/", upload.array("images", 10), async (req, res) => {
   try {
@@ -123,6 +142,28 @@ router.put("/:id", upload.array("images", 10), async (req, res) => {
   } catch (err) {
       console.error("Lỗi cập nhật sản phẩm:", err);
       res.status(500).json({ error: `Không thể cập nhật sản phẩm. Chi tiết lỗi: ${err.message}` });
+  }
+});
+
+router.put("/update-stock/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { instock } = req.body;
+
+    const product = await Product.findOneAndUpdate(
+      { id: id },
+      { instock: instock },
+      { new: true }
+    );
+
+    if (!product) {
+      return res.status(404).json({ error: "Sản phẩm không tồn tại" });
+    }
+
+    res.status(200).json(product);
+  } catch (err) {
+    console.error("Lỗi cập nhật sản phẩm:", err);
+    res.status(500).json({ error: `Không thể cập nhật sản phẩm. Chi tiết lỗi: ${err.message}` });
   }
 });
 

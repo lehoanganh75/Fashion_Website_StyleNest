@@ -1,14 +1,17 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useData } from './DataContext';
-import { useAuth } from './AuthContext';
 import axios from 'axios';
+import { useAuth } from './AuthContext';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const { orders, setOrders, customers } = useData();
-  const { loggedInAccount } = useAuth();
+  const [cartItemSelected, setCartItemSelected] = useState([]);
+  const [total, setTotal] = useState("");
+  const [tax, setTax] = useState("");
+  const [subtotal, setSubtotal] = useState("");
+  const { setOrders } = useData();
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -26,61 +29,48 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  const moveToOrders = async (items) => {
-    if (items && items.length > 0 && loggedInAccount) {
-      const id = orders.length + 1;
+  const saveOrders = async (newOrder) => {
+    try {
+      // 1. Gửi đơn hàng
+      const response = await axios.post("http://localhost:5000/api/orders", newOrder);
+      console.log("Lưu đơn hàng thành công:", response.data);
   
-      const total = items.reduce(
-        (sum, item) => sum + item.price * item.quantity * (1 - item.discount / 100),
-        0
-      );
-      const subtotal = total * 1.08; 
-      
-      const foundCustomer = customers.find(
-        (cus) => cus.email === loggedInAccount.email
-      );
-
-      console.log("Khách hàng: ", foundCustomer)
-
-      const newOrder = {
-        id,
-        img: foundCustomer.img,
-        email: loggedInAccount.email,
-        customerName: foundCustomer.customerName,
-        orderDate: new Date().toISOString(),
-        total: parseFloat(subtotal.toFixed(2)),
-        status: "Đang xử lý",
-        address: "Số 10, Đường XYZ, Quận 3, TP.HCM",
-        orderDetails: items.map((item) => ({
-          productId: item.id,
-          productName: item.name,
-          quantity: item.quantity,
-          price: item.price * (1 - item.discount / 100),
-          total: item.price * (1 - item.discount / 100) * item.quantity,
-          img: item.thumbnails[0],
-        })),
-      };
-      console.log("Đơn hàng mới:", newOrder);
-
-      try {
-        const response = await axios.post("http://localhost:5000/api/orders", newOrder);
-        console.log("Lưu đơn hàng thành công:", response.data);
+      // 2. Cập nhật danh sách đơn hàng
+      const updatedOrdersResponse = await axios.get("http://localhost:5000/api/orders");
+      setOrders(updatedOrdersResponse.data);
   
-        const updatedOrdersResponse = await axios.get("http://localhost:5000/api/orders");
-        setOrders(updatedOrdersResponse.data);
-
-        // Xoá khỏi giỏ hàng
-        setCart((prevCart) =>
-          prevCart.filter((item) => !items.some((i) => i.id === item.id))
-        );
-      } catch (error) {
-        console.error("Lỗi khi lưu đơn hàng:", error);
+      // 3. Xóa khỏi giỏ hàng các item đã đặt mua
+      setCart((prevCart) =>
+        prevCart.filter((item) =>
+          !newOrder.orderDetails.some((i) => i.productId === item.id)
+        )
+      );
+  
+      // 4. Cập nhật số lượng tồn kho từng sản phẩm
+      for (const product of newOrder.orderDetails) {
+        const productId = product.productId;
+        const quantityPurchased = product.quantity;
+  
+        // Lấy thông tin sản phẩm hiện tại
+        const productResponse = await axios.get(`http://localhost:5000/api/products/${productId}`);
+        const currentProduct = productResponse.data;
+        console.log("Sản phẩm hiện tại:", currentProduct);
+  
+        // Trừ đi số lượng đã mua
+        const updatedQuantity = currentProduct.instock - quantityPurchased;
+  
+        // Gửi yêu cầu cập nhật số lượng tồn
+        await axios.put(`http://localhost:5000/api/products/update-stock/${productId}`, {
+          instock: updatedQuantity
+        });        
       }
+    } catch (error) {
+      console.error("Lỗi khi lưu đơn hàng:", error);
     }
   };  
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addToCart, moveToOrders }}>
+    <CartContext.Provider value={{ cart, setCart, addToCart, saveOrders, cartItemSelected, setCartItemSelected, total, setTotal, tax, setTax, subtotal, setSubtotal }}>
       {children}
     </CartContext.Provider>
   );

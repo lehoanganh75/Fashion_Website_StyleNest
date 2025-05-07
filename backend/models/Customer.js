@@ -8,7 +8,17 @@ const CustomerSchema = new mongoose.Schema({
   date: { type: String, required: true },
   phone: { type: String, required: true },
   email: { type: String, required: true },
-  img: { type: String, required: true }
+  img: { type: String, required: true },
+  address: [
+    {
+      id: { type: String, required: true },
+      name: { type: String, required: true },
+      phone: { type: String, required: true },
+      address: { type: String, required: true },
+      addressType: { type: String, required: true },
+      isDefault: { type: Boolean, default: false }
+    }
+  ]
 });
 
 // Tạo và xuất model từ schema

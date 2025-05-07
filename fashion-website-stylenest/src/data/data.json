@@ -5,7 +5,7 @@
     "type": "Áo Thun",
     "price": 199000,
     "discount": 5,
-    "colors": ["black"],
+    "colors": ["black", "blue"],
     "size": ["S", "M", "L"],
     "condition": true,
     "SKU": "ATID0598-02",

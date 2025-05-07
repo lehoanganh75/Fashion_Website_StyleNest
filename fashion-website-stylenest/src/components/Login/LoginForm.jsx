@@ -13,7 +13,7 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
   const [email, setEmail] = useState("");
   const [currentView, setCurrentView] = useState(initialView); 
   const [loginError, setLoginError] = useState("");
-  const { accounts } = useData();
+  const { accounts, saveAccount } = useData();
   const { setLoggedInAccount } = useAuth();
 
   if (!isOpen) return null;
@@ -82,7 +82,7 @@ const LoginForm = ({ isOpen, onClose, onSwitchToRegister, initialView = "login" 
         </button>
 
         {currentView === "register" ? (
-          <RegisterForm onSwitchToLogin={handleSwitchToLogin} />
+          <RegisterForm onSwitchToLogin={handleSwitchToLogin} accounts={accounts} saveAccount={saveAccount}/>
         ) : currentView === "login" ? (
           <>
             {/* ... phần render form đăng nhập (giữ nguyên) ... */}

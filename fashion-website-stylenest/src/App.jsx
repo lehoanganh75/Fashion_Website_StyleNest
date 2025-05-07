@@ -15,6 +15,8 @@ import Blogs from './pages/BlogPage';
 import BlogPost from './components/FromTheBlog/BlogPost';
 import BrandPage from "./pages/BrandPage";
 import ShoppingCartPage from './pages/ShoppingCartPage';
+import CheckoutPage from './pages/CheckoutPage';
+import CustomerRegistrationForm from './components/CustomerRegistrationForm/CustomerRegistrationForm';
 
 // Pages (Admin)
 import Dashboard from './components/Dashboard/Dashboard';
@@ -47,6 +49,8 @@ function App() {
             <Route path="blog/:id" element={<BlogPost />} />
             <Route path="brands" element={<BrandPage />} />
             <Route path="cart" element={<ShoppingCartPage />} />
+            <Route path="checkout" element={<CheckoutPage />} />
+            <Route path="info" element={<CustomerRegistrationForm />} />
           </Route>
 
           {/* ADMIN LAYOUT */}

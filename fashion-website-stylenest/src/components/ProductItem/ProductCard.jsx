@@ -14,7 +14,7 @@ const ProductCard = ({ product, listView = false }) => {
   const navigate = useNavigate();
   const { category }  = useParams();
   const { loggedInAccount } = useAuth();
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [ showLoginModal, setShowLoginModal ] = useState(false);
   const formatCurrency = (value) => {
     const formatted = new Intl.NumberFormat("vi-VN", {
       style: "decimal",
