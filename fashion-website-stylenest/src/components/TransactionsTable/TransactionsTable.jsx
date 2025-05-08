@@ -242,15 +242,6 @@ const TransactionsTable = ({ orders }) => {
                 >
                 Xem thêm chi tiết
             </button>
-            <button
-                onClick={() => {
-                    console.log(`Delete orders: ${selectedorders.id}`)
-                    setDropdownOpen(false)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-            >
-                Xóa
-            </button>
           </div>
         )}
 

@@ -5,53 +5,7 @@ const path = require("path");
 const fs = require('fs');
 const crypto = require('crypto');
 const Product = require('../models/Product');
-
-// Cấu hình Multer để lưu ảnh
-// const storage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, path.join(__dirname, "../public/imgs"));
-//   },
-//   filename: (req, file, cb) => {
-//     const uniqueName = Date.now() + "_" + file.originalname;
-//     cb(null, uniqueName);
-//   }
-// });
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../public/imgs"));
-  },
-  filename: async (req, file, cb) => {
-    try {
-      // Bước 1: Kiểm tra nhanh bằng tên file
-      const originalPath = path.join(__dirname, "../public/imgs", file.originalname);
-      if (fs.existsSync(originalPath)) {
-        return cb(null, file.originalname);
-      }
-
-      // Bước 2: Nếu không trùng tên, kiểm tra bằng hash
-      const fileBuffer = await fs.readFile(file.path);
-      const hash = crypto.createHash('md5').update(fileBuffer).digest('hex');
-      const files = await fs.readdir(path.join(__dirname, "../public/imgs"));
-      
-      for (const f of files) {
-        const existingFileBuffer = await fs.readFile(path.join(__dirname, "../public/imgs", f));
-        const existingHash = crypto.createHash('md5').update(existingFileBuffer).digest('hex');
-        if (existingHash === hash) {
-          return cb(null, f);
-        }
-      }
-
-      // Nếu không tìm thấy file trùng
-      const uniqueName = hash + path.extname(file.originalname);
-      cb(null, uniqueName);
-    } catch (err) {
-      cb(err);
-    }
-  }
-});
-
-const upload = multer({ storage });
+const upload = require('../config/multer-config');
 
 // Lấy danh sản phẩm
 router.get('/', async (req, res) => {
@@ -85,14 +39,41 @@ router.get('/:id', async (req, res) => {
 // Lưu sản phẩm
 router.post("/", upload.array("images", 10), async (req, res) => {
   try {
-    const productData = JSON.parse(req.body.product); // Nhận dữ liệu JSON
+    const productData = JSON.parse(req.body.product);
+    const serverURL = req.protocol + "://" + req.get("host");
+    const uploadDir = path.join(__dirname, "../public/imgs");
 
-    const serverURL = req.protocol + "://" + req.get("host"); // => http://localhost:5000
+    const imagePaths = [];
 
-    const imagePaths = req.files.map(file => `${serverURL}/imgs/${file.filename}`);
+    for (const file of req.files) {
+      const filePath = path.join(uploadDir, file.filename);
+      const fileBuffer = fs.readFileSync(filePath);
+      const fileHash = crypto.createHash("md5").update(fileBuffer).digest("hex");
+
+      const existingFiles = fs.readdirSync(uploadDir);
+      let isDuplicate = false;
+
+      for (const f of existingFiles) {
+        const existingPath = path.join(uploadDir, f);
+        if (existingPath === filePath) continue; // bỏ qua chính nó
+        const existingBuffer = fs.readFileSync(existingPath);
+        const existingHash = crypto.createHash("md5").update(existingBuffer).digest("hex");
+
+        if (fileHash === existingHash) {
+          // Trùng ảnh, xóa ảnh mới và dùng ảnh cũ
+          fs.unlinkSync(filePath);
+          imagePaths.push(`${serverURL}/imgs/${f}`);
+          isDuplicate = true;
+          break;
+        }
+      }
+
+      if (!isDuplicate) {
+        imagePaths.push(`${serverURL}/imgs/${file.filename}`);
+      }
+    }
 
     productData.thumbnails = imagePaths;
-
     const product = new Product(productData);
     await product.save();
 
@@ -112,19 +93,20 @@ router.put("/:id", upload.array("images", 10), async (req, res) => {
       // Kiểm tra và log thông tin thumbnails
       console.log("Thumbnails:", productData.thumbnails);
 
-      // Kiểm tra ảnh và gửi thông báo lỗi nếu có vấn đề
+      // Nếu có file ảnh mới được upload
       if (req.files && req.files.length > 0) {
-          // Tạo đường dẫn đầy đủ cho các ảnh mới
-          const imagePaths = req.files.map(file => `${req.protocol}://${req.get("host")}/imgs/${file.filename}`);
-
-          // Nếu productData.thumbnails đã có, kết hợp với ảnh mới
-          if (Array.isArray(productData.thumbnails)) {
-              productData.thumbnails = [...productData.thumbnails, ...imagePaths];
-          } else {
-              productData.thumbnails = imagePaths;  // Nếu không có ảnh cũ, chỉ lấy ảnh mới
-          }
-
-          console.log("Update Thumbnails:", productData.thumbnails);
+        // Tạo đường dẫn đầy đủ cho các ảnh mới
+        const imagePaths = req.files.map(file => `${req.protocol}://${req.get("host")}/imgs/${file.filename}`);
+    
+        // Lọc các ảnh cũ hợp lệ (URL bắt đầu bằng http)
+        const oldValidImages = Array.isArray(productData.thumbnails)
+            ? productData.thumbnails.filter(img => typeof img === "string" && img.startsWith("http"))
+            : [];
+    
+        // Gộp ảnh cũ hợp lệ với ảnh mới upload
+        productData.thumbnails = [...oldValidImages, ...imagePaths];
+    
+        console.log("Update Thumbnails:", productData.thumbnails);
       }
 
       // Cập nhật sản phẩm

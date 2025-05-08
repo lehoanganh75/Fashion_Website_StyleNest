@@ -115,15 +115,18 @@ export default function CustomerRegistrationForm() {
 
     if (validateForm()) {
       setIsSubmitting(true);
+      const newId = String(Math.max(...customers.map((a) => Number(a.id) || 0), 0) + 1);
+
       const newCustomer = {
-        id: String(Math.max(...customers.map((a) => Number(a.id) || 0), 0) + 1), // Chuyển id thành số nếu chưa có id
+        id: newId, // Sử dụng id đã tính toán
         customerName: formData.customerName,
         gender: formData.gender,
         date: formData.date,
         phone: formData.phone,
         email: loggedInAccount?.email || "none",
-        img: formData.img,
+        img: formData?.photo || null  // Đảm bảo img là null nếu không có photo
       };
+
       console.log("Form data:", newCustomer)
 
       try {

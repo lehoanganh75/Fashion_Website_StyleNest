@@ -41,8 +41,6 @@ const DividendChartCard = ({ orders }) => {
   orders.forEach((order) => {
     // Tách phần giờ và ngày
     const [time, date] = order.timeline[0].orderDate.split(' ');
-    
-    console.log(date)
 
     // Tách ngày, tháng, năm
     const [day, month, year] = date.split('/');

@@ -266,28 +266,30 @@ export const DataProvider = ({ children }) => {
     const saveCustomer = async (customerData, imageFiles) => {
         try {
             const formData = new FormData();
-            formData.append("customer", JSON.stringify(customerData));
-            
-            if (imageFiles && imageFiles.length > 0) {
-                imageFiles.forEach(file => {
-                  formData.append("images", file);
-                });
-            }
+            formData.append("image", imageFiles); // chỉ 1 ảnh
+            formData.append('image', customerData.img); // 👈 phải đúng là 'image'
+                formData.append('customer', JSON.stringify({
+                id: customerData.id,
+                customerName: customerData.customerName,
+                gender: customerData.gender,
+                date: customerData.date,
+                phone: customerData.phone,
+                email: customerData.email
+            }));
     
             const response = await axios.post(
-                'http://localhost:5000/api/customers',  // Đảm bảo đúng đường dẫn này
-                formData,
+                'http://localhost:5000/api/customers', 
+                formData, 
                 {
-                  headers: {
-                    'Content-Type': 'multipart/form-data',
-                  },
-                }
-            );
+                headers: {
+                  'Content-Type': 'multipart/form-data',
+                },
+              });
     
             console.log("Đã lưu khách hàng:", response.data);
     
             const updatedCustomers = await axios.get('http://localhost:5000/api/customers');
-            setProducts(updatedCustomers.data);
+            setCustomers(updatedCustomers.data);
         } catch (error) {
             console.error('Lỗi khi lưu khách hàng:', error);
         }
@@ -312,9 +314,9 @@ export const DataProvider = ({ children }) => {
           );
       
           // Nếu cần cập nhật sản phẩm, giữ lại đoạn này
-          const updatedProducts = await axios.get('http://localhost:5000/api/customers');
+          const updated = await axios.get('http://localhost:5000/api/customers');
           
-          setProducts(updatedProducts.data);
+          setCustomers(updated.data);
         } catch (error) {
           console.error('Lỗi khi cập nhật địa chỉ khách hàng:', error);
           alert('Không thể cập nhật địa chỉ. Vui lòng thử lại.');

@@ -20,7 +20,7 @@ const NewProducts = () => {
           >
             <div className="relative w-[80px] h-[80px]">
               <Link
-                to={`/product/${product.id}`}
+                to={`/product/fashion/${product.id}`}
                 className="block w-full h-full rounded-lg overflow-hidden"
               >
                 <img
@@ -38,7 +38,7 @@ const NewProducts = () => {
             </div>
             <div className="flex-1">
               <Link
-                to={`/product/${product.id}`}
+                to={`/product/fashion/${product.id}`}
                 className="text-base font-sm text-gray-800 hover:text-red-600 transition-colors block line-clamp-2"
               >
                 {product.productName}

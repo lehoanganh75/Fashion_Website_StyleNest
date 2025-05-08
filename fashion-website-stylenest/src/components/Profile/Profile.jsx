@@ -27,7 +27,7 @@ const Profile = () => {
       console.log("No users data available");
       return undefined;
     }
-    return users.find((user) => user.account.accountId === loggedInAccount?.id);
+    return users.find((user) => user.account.email === loggedInAccount?.email);
   }; 
 
   // Dùng useEffect để cập nhật khi có thay đổi dữ liệu (nếu có)

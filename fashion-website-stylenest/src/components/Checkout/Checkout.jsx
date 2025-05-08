@@ -189,7 +189,9 @@ export default function Checkout() {
       return;
     }
 
-    if (!customer?.id || !selectedAddress) {
+    console.log("Địa chỉ đã chọn: ", selectedAddress);
+
+    if (!selectedAddress) {
       console.error("Không tìm thấy thông tin khách hàng hoặc địa chỉ.");
       return;
     }

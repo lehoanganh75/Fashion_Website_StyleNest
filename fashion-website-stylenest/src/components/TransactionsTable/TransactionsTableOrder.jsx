@@ -121,6 +121,8 @@ const TransactionsTableOrder = ({ orders }) => {
           return "bg-red-100 text-red-600"
         case "Đã giao":
           return "bg-green-100 text-green-600"
+        case "Đang kiểm tra":
+          return "bg-green-100 text-green-600"
         default:
           return ""
       }
@@ -188,8 +190,8 @@ const TransactionsTableOrder = ({ orders }) => {
                   <td className="font-medium">{formatCurrency(orders.total)}</td>
                   <td className="text-gray-500">{orders.email}</td>
                   <td>
-                    <span className={`px-4 py-2 rounded-full text-sm ${changeColor(orders.status)}`}>
-                      {orders.status}
+                    <span className={`px-4 py-2 rounded-full text-sm ${changeColor(orders.timeline[0].status)}`}>
+                      {orders.timeline[0].status}
                     </span>
                   </td>
                   <td>
@@ -267,25 +269,6 @@ const TransactionsTableOrder = ({ orders }) => {
                 >
                 Xem thêm chi tiết
             </button>
-            <button
-                onClick={() => {
-                    console.log(`View more details for orders: ${selectedOrders.id}`)
-                    setDropdownOpen(false)
-                    setIsModalOpen(true)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-                >
-                Sửa thông tin
-            </button>
-            <button
-                onClick={() => {
-                    console.log(`Delete orders: ${selectedOrders.id}`)
-                    setDropdownOpen(false)
-                }}
-                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-gray-700"
-            >
-                Xóa
-            </button>
           </div>
         )}
 
@@ -308,8 +291,8 @@ const TransactionsTableOrder = ({ orders }) => {
 
               <div className="space-y-2 text-sm md:text-base text-gray-700 leading-relaxed border border-gray-300 rounded-lg p-4 bg-white shadow-sm">
                 <p><strong>Địa chỉ:</strong> {selectedOrders.address}</p>
-                <p><strong>Ngày đặt hàng:</strong> {formatDate(selectedOrders.orderDate)}</p>
-                <p><strong>Trạng thái:</strong> {selectedOrders.status}</p>
+                <p><strong>Ngày đặt hàng:</strong> {formatDate(selectedOrders.timeline[0].orderDate)}</p>
+                <p><strong>Trạng thái:</strong> {selectedOrders.timeline[0].status}</p>
                 <p><strong>Tổng tiền:</strong> {selectedOrders.total.toLocaleString()}₫</p>
               </div>
 

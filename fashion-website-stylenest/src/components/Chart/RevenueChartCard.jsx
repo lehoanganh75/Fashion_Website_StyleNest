@@ -14,7 +14,6 @@ const RevenueChartCard = ({ orders }) => {
 
   // Hàm chuyển ngày từ định dạng chuỗi
   const parseDate = (str) => {
-    console.log(str)
     const [time, date] = str.split(" "); // Tách giờ và ngày
     const [day, month, year] = date.split("/"); // Tách ngày, tháng, năm
     const [hour, minute, second] = time.split(":"); // Tách giờ, phút, giây

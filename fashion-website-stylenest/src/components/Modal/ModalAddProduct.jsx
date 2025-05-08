@@ -122,6 +122,8 @@ const ModalAddProduct = ({ isOpen, onClose, saveProduct, products }) => {
         const imageFiles = images.map(i => i.file); // cần đảm bảo `file` là File object đã chọn từ input
     
         saveProduct(productToSave, imageFiles);
+
+        onClose();
     };
     
     if(!isOpen) return null;

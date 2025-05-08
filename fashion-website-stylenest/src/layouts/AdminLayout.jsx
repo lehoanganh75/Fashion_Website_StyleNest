@@ -16,7 +16,7 @@ const AdminPage = () => {
       console.log("No users data available");
       return undefined;
     }
-    return users.find((user) => user.account.accountId === loggedInAccount?.id);
+    return users.find((user) => user.account.email === loggedInAccount?.email);
   };  
 
   console.log("Logged in account:", foundUser());

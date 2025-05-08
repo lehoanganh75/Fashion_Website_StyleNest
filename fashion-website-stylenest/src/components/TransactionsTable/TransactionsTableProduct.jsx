@@ -19,9 +19,14 @@ const TransactionsTableProduct = ({
   const [searchQuery, setSearchQuery] = useState("");
 
   const itemsPerPage = 6;
-  const filteredProducts = products.filter((product) =>
+
+  
+  const sortedProducts = [...products].sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+
+  const filteredProducts = sortedProducts.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  
   const paginatedProducts = filteredProducts.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
