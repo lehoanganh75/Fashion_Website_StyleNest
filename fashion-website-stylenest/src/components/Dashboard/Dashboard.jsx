@@ -5,9 +5,30 @@ import DividendChartCard from "../Chart/DividendChartCard";
 import StockCard from "../StockCard/StockCard";
 import WatchlistItem from "../WatchlistItem/WatchlistItem";
 import { useData } from "../../contexts/DataContext";
+import { useMemo } from "react";
 
 const Dashboard = () => {
-  const { orders } = useData();
+  const { orders, products } = useData();
+
+  const totalOrders = orders.length;
+
+  const totalRevenue = orders.reduce(
+    (sum, order) => sum + (order.total || 0),
+    0
+  );
+  const totalSoldProducts = orders.reduce((sum, order) => {
+    const orderTotal = order.orderDetails?.reduce(
+      (subSum, item) => subSum + (item.quantity || 0),
+      0
+    );
+    return sum + orderTotal;
+  }, 0);
+  
+
+  const formattedRevenue = new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(totalRevenue);
 
   return (
     <div className="w-full bg-gray-50 font-['Roboto']">
@@ -15,24 +36,26 @@ const Dashboard = () => {
         {/* Stock Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           <StockCard
-            symbol="Doanh thu"
-            name="Trong 7 ngày qua"
-            price="1,781,000 VNĐ"
-            change={11.01}
+            symbol="Đơn hàng"
+            name="Tổng số"
+            price={totalOrders.toString()}
+            change={100} // hoặc để trống nếu không cần
             logo="/imgs/phatrien.png"
           />
+
           <StockCard
-            symbol="Sản phẩm"
+            symbol="Sản phẩm bán ra"
             name="Tổng số"
-            price="1,250" // Example total product count
-            change={-2.5} // Example percentage change
+            price={totalSoldProducts.toString()}
+            change={100} // hoặc tạm thời bỏ qua
             logo="/imgs/product.png"
           />
+
           <StockCard
-            symbol="Đơn hàng"
-            name="Trong 7 ngày qua"
-            price="345" // Example order count
-            change={5.3} // Example percentage change
+            symbol="Doanh thu"
+            name="Tổng cộng"
+            price={formattedRevenue}
+            change={100} // nếu không cần % thay đổi
             logo="/imgs/phatrien.png"
           />
         </div>
@@ -58,15 +81,15 @@ const Dashboard = () => {
                 <WatchlistItem
                   symbol="Đơn hàng"
                   name="Trong 24 giờ qua"
-                  price="155"
-                  change={8.2}
+                  price={totalOrders.toString()}
+                  change={100} // hoặc để trống nếu không cần
                   logo="/imgs/phatrien.png"
                 />
                 <WatchlistItem
                   symbol="Lợi nhuận"
                   name="Tháng này"
-                  price="560,000 VNĐ"
-                  change={15.5}
+                  price={formattedRevenue}
+                  change={100} // nếu không cần % thay đổi
                   logo="/imgs/phatrien.png"
                 />
               </div>

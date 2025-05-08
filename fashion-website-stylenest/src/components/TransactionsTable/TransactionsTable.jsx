@@ -116,22 +116,6 @@ const TransactionsTable = ({ orders }) => {
       <div className="bg-white border border-gray-300 p-4.5 rounded-lg shadow-sm max-w-full font-['Roboto']">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-600">Hóa đơn mới nhất</h1>
-          <div className="relative flex items-center w-full max-w-lg gap-2 mx-4">
-            {/* Ô nhập tìm kiếm */}
-            <div className="flex flex-grow items-center border border-gray-300 rounded-lg bg-gray-50 px-3 py-2 shadow-sm">
-                <i className="bx bx-search-alt text-gray-500 text-xl mr-2"></i>
-                <input
-                type="text"
-                placeholder="Tìm kiếm hoặc gõ lệnh..."
-                className="w-full bg-transparent outline-none text-sm text-gray-700 placeholder-gray-400"
-                />
-            </div>
-
-            {/* Nút tìm kiếm */}
-            <button className="px-4 py-2 bg-white text-gray-600 text-sm border border-gray-300 rounded-lg shadow-sm transition">
-                Tìm kiếm
-            </button>
-            </div>
         </div>
   
         <div className="overflow-x-auto">
