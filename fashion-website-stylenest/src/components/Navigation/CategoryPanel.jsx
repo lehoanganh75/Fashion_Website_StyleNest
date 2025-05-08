@@ -9,7 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
   Collapse,
-  Typography
+  Typography,
 } from "@mui/material";
 import {
   ExpandLess,
@@ -17,12 +17,19 @@ import {
   Checkroom as CheckroomIcon,
   Wc as WcIcon,
   LocalMall as LocalMallIcon,
-  Diamond as DiamondIcon
+  Diamond as DiamondIcon,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom"; // Import Link
 
 const CategoryPanel = (props) => {
   const [openMen, setOpenMen] = React.useState(false);
   const [openWomen, setOpenWomen] = React.useState(false);
+
+  // Hàm tạo slug từ tên sản phẩm
+  const createSlug = (name) => {
+    const firstWord = name.split(' ')[0];
+    return firstWord ? firstWord.charAt(0).toLowerCase() : '';
+  };
 
   const DrawerList = (
     <Box
@@ -41,10 +48,12 @@ const CategoryPanel = (props) => {
       <List>
         {/* Thời trang nam - có dropdown */}
         <ListItem disablePadding>
-          <ListItemButton onClick={(e) => {
-            e.stopPropagation(); // không đóng drawer
-            setOpenMen(!openMen);
-          }}>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenMen(!openMen);
+            }}
+          >
             <ListItemIcon>
               <WcIcon />
             </ListItemIcon>
@@ -55,7 +64,12 @@ const CategoryPanel = (props) => {
         <Collapse in={openMen} timeout="auto" unmountOnExit>
           <List component="div" disablePadding sx={{ pl: 4 }}>
             {["Áo sơ mi", "Quần jeans", "Áo khoác"].map((item) => (
-              <ListItemButton key={item}>
+              <ListItemButton
+                key={item}
+                component={Link}
+                to={`/product/fashion?name=${createSlug(item)}`} // Đường dẫn đã cập nhật
+                onClick={() => props.setIsOpenCatPanel(false)}
+              >
                 <ListItemText primary={item} />
               </ListItemButton>
             ))}
@@ -64,10 +78,12 @@ const CategoryPanel = (props) => {
 
         {/* Thời trang nữ - có dropdown */}
         <ListItem disablePadding>
-          <ListItemButton onClick={(e) => {
-            e.stopPropagation();
-            setOpenWomen(!openWomen);
-          }}>
+          <ListItemButton
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpenWomen(!openWomen);
+            }}
+          >
             <ListItemIcon>
               <CheckroomIcon />
             </ListItemIcon>
@@ -78,44 +94,33 @@ const CategoryPanel = (props) => {
         <Collapse in={openWomen} timeout="auto" unmountOnExit>
           <List component="div" disablePadding sx={{ pl: 4 }}>
             {["Đầm", "Áo kiểu", "Chân váy"].map((item) => (
-              <ListItemButton key={item}>
+              <ListItemButton
+                key={item}
+                component={Link}
+                to={`/product/fashion?name=áo`} // Đường dẫn cho từng mục con
+                onClick={() => props.setIsOpenCatPanel(false)}
+              >
                 <ListItemText primary={item} />
               </ListItemButton>
             ))}
           </List>
         </Collapse>
-
-        {/* Giày dép */}
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <LocalMallIcon />
-            </ListItemIcon>
-            <ListItemText primary="Giày dép" />
-          </ListItemButton>
-        </ListItem>
-
-        {/* Phụ kiện */}
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <DiamondIcon />
-            </ListItemIcon>
-            <ListItemText primary="Phụ kiện" />
-          </ListItemButton>
-        </ListItem>
       </List>
 
       <Divider />
 
       <List>
-        {[ 
-          { text: "Hàng mới về", icon: <LocalMallIcon /> }, 
-          { text: "Khuyến mãi", icon: <DiamondIcon /> }, 
-          { text: "Bán chạy", icon: <CheckroomIcon /> }
-        ].map(({ text, icon }) => (
+        {[
+          { text: "Hàng mới về", icon: <LocalMallIcon />, path: "/product/fashion" },
+          { text: "Khuyến mãi", icon: <DiamondIcon />, path: "/product/deal" },
+          { text: "Bán chạy", icon: <CheckroomIcon />, path: "/product/deal" },
+        ].map(({ text, icon, path }) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton
+              component={Link}
+              to={path}
+              onClick={() => props.setIsOpenCatPanel(false)}
+            >
               <ListItemIcon>{icon}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>

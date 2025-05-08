@@ -11,8 +11,8 @@ import Tooltip from "@mui/material/Tooltip";
 import Navigation from "../Navigation/Navigation";
 import LoginForm from "../Login/LoginForm";
 import { useCart } from "../../contexts/CartContext";
-import Snackbar from "@mui/material/Snackbar"; 
-import Alert from "@mui/material/Alert"; 
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import { useAuth } from "../../contexts/AuthContext";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -21,7 +21,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: 13,
     border: `2px solid ${(theme.vars ?? theme).palette.background.paper}`,
     padding: "0 4px",
-    backgroundColor: "oklch(70.5% 0.213 47.604)", 
+    backgroundColor: "oklch(70.5% 0.213 47.604)",
     color: "white",
   },
 }));
@@ -29,10 +29,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [authFormView, setAuthFormView] = useState("login"); 
+  const [authFormView, setAuthFormView] = useState("login");
   const { cart } = useCart();
-  const { loggedInAccount, setLoggedInAccount } = useAuth(); 
-  const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] = useState(false);
+  const { loggedInAccount, setLoggedInAccount } = useAuth();
+  const [loginSuccessSnackbarOpen, setLoginSuccessSnackbarOpen] =
+    useState(false);
 
   const handleScroll = () => {
     const headerElement = document.querySelector("header");
@@ -40,9 +41,9 @@ const Header = () => {
       const headerHeight = headerElement.offsetHeight;
 
       if (window.scrollY > headerHeight) {
-        setIsScrolled(true); 
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false); 
+        setIsScrolled(false);
       }
     }
   };
@@ -62,8 +63,8 @@ const Header = () => {
   };
 
   const handleLoginSuccess = (account) => {
-    setLoggedInAccount(account); 
-    setIsLoginOpen(false); 
+    setLoggedInAccount(account);
+    setIsLoginOpen(false);
     setLoginSuccessSnackbarOpen(true);
   };
 
@@ -75,8 +76,8 @@ const Header = () => {
   };
 
   const handleLogut = () => {
-    setLoggedInAccount(null); 
-  }
+    setLoggedInAccount(null);
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -91,7 +92,7 @@ const Header = () => {
       return sum + (item.selected && !isNaN(quantity) ? quantity : 0);
     }, 0);
   };
-  
+
   const selectedCount = getSelectedCartItemCount(cart);
 
   return (
@@ -178,20 +179,24 @@ const Header = () => {
                 )}
                 <li>
                   <Tooltip title="Liên kết">
-                    <IconButton aria-label="io">
-                      <StyledBadge badgeContent={0} color="secondary">
-                        <IoIosGitCompare className="text-xl text-gray-800 hover:text-orange-500" />
-                      </StyledBadge>
-                    </IconButton>
+                    <Link to="/brands" aria-label="link">
+                      <IconButton aria-label="io">
+                        <StyledBadge badgeContent={0} color="secondary">
+                          <IoIosGitCompare className="text-xl text-gray-800 hover:text-orange-500" />
+                        </StyledBadge>
+                      </IconButton>
+                    </Link>
                   </Tooltip>
                 </li>
                 <li>
                   <Tooltip title="Yêu thích">
-                    <IconButton aria-label="heart">
-                      <StyledBadge badgeContent={0} color="secondary">
-                        <FaRegHeart className="text-xl text-gray-800 hover:text-orange-500" />
-                      </StyledBadge>
-                    </IconButton>
+                    <Link to="/product/fashion" aria-label="like">
+                      <IconButton aria-label="heart">
+                        <StyledBadge badgeContent={0} color="secondary">
+                          <FaRegHeart className="text-xl text-gray-800 hover:text-orange-500" />
+                        </StyledBadge>
+                      </IconButton>
+                    </Link>
                   </Tooltip>
                 </li>
                 <li>
@@ -240,12 +245,12 @@ const Header = () => {
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         sx={{
           mt: 2,
-          '& .MuiPaper-root': {
-            background: 'linear-gradient(135deg, #FFA726, #FB8C00)',
-            color: '#fff',
-            boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-            fontSize: '0.95rem',
-            borderRadius: '8px',
+          "& .MuiPaper-root": {
+            background: "linear-gradient(135deg, #FFA726, #FB8C00)",
+            color: "#fff",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+            fontSize: "0.95rem",
+            borderRadius: "8px",
           },
         }}
       >
@@ -254,14 +259,14 @@ const Header = () => {
           severity="success"
           icon={false}
           sx={{
-            width: '100%',
-            background: 'transparent',
-            color: '#fff',
+            width: "100%",
+            background: "transparent",
+            color: "#fff",
             fontWeight: 500,
-            padding: '8px 10px',
-            '& .MuiAlert-message': {
-              display: 'flex',
-              alignItems: 'center',
+            padding: "8px 10px",
+            "& .MuiAlert-message": {
+              display: "flex",
+              alignItems: "center",
             },
           }}
         >

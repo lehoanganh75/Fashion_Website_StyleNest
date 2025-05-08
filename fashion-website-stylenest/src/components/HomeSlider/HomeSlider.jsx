@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom"; // Import Link
 
 const HomeSlider = () => {
   const progressCircle = useRef(null);
@@ -93,9 +94,12 @@ const HomeSlider = () => {
             </div>
           </div>
           <div className="flex items-end justify-between mt-4">
-            <button className="px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded-md transition-colors duration-200">
+            <Link
+              to="/product/fashion/3"
+              className="px-4 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded-md transition-colors duration-200"
+            >
               Mua ngay
-            </button>
+            </Link>
             <img
               src="/imgs/aopolonamchatlieulinen1.jpg"
               alt="Áo PoLo"
@@ -116,9 +120,12 @@ const HomeSlider = () => {
             </div>
           </div>
           <div className="flex items-end justify-between mt-4">
-            <button className="px-4 py-3 bg-teal-600 hover:bg-teal-700 text-white text-xs font-medium rounded-md transition-colors duration-200">
+            <Link
+              to="/product/fashion/6"
+              className="px-4 py-3 bg-teal-600 hover:bg-teal-700 text-white text-xs font-medium rounded-md transition-colors duration-200"
+            >
               Mua ngay
-            </button>
+            </Link>
             <img
               src="/imgs/aothunnamcolo1.jpg"
               alt="Áo Thun"

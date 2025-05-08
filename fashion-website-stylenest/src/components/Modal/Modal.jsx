@@ -44,7 +44,7 @@ const Modal = ({ handleShowModal }) => {
                             <p className="text-gray-600">Bạn cần đăng nhập hoặc đăng ký để thêm sản phẩm vào giỏ hàng.</p>
 
                             <img
-                                src="https://intphcm.com/data/upload/logo-the-thao-dep.jpg"
+                                src="/imgs/logo.png"
                                 alt="Logo"
                                 className="w-28 h-28 object-contain rounded-full shadow-sm"
                             />

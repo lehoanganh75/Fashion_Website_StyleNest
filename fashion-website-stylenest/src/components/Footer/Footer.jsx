@@ -84,24 +84,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Sản phẩm */}
         <div>
           <h3 className="text-3xl font-semibold mb-4">Sản Phẩm</h3>
           <ul className="space-y-3 text-sm">
             {[
-              "Giảm Giá",
-              "Sản Phẩm Mới",
-              "Bán Chạy",
-              "Liên Hệ",
-              "Sơ Đồ Website",
-              "Cửa Hàng",
+              { label: "Giảm Giá", path: "/fashion/deal" },
+              { label: "Sản Phẩm Mới", path: "/fashion/new" },
+              { label: "Bán Chạy", path: "/fashion/deal" },
+              { label: "Liên Hệ", path: "https://www.facebook.com/stylenestbangla" },
+              { label: "Cửa Hàng", path: "/" },
             ].map((item) => (
-              <li key={item}>
+              <li key={item.label}>
                 <Link
-                  to="#"
+                  to={item.path}
                   className="hover:text-orange-500 transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
-                  {item}
+                  {item.label}
                 </Link>
               </li>
             ))}
@@ -109,24 +107,27 @@ const Footer = () => {
         </div>
 
         {/* Công ty của chúng tôi */}
+
         <div>
           <h3 className="text-3xl font-semibold mb-4">Công Ty</h3>
           <ul className="space-y-3 text-sm">
             {[
-              "Giao Hàng",
-              "Thông Báo Pháp Lý",
-              "Điều Khoản Sử Dụng",
-              "Về Chúng Tôi",
-              "Thanh Toán An Toàn",
-              "Đăng Nhập",
+              { label: "Giao Hàng", path: "/order-tracking" },
+              { label: "Thông Báo Pháp Lý", path: "/blog" },
+              { label: "Điều Khoản Sử Dụng", path: "/blog" },
+              {
+                label: "Về Chúng Tôi",
+                path: "https://www.facebook.com/stylenestbangla",
+              },
+              { label: "Thanh Toán An Toàn", path: "/cart" },
             ].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
+              <li key={item.label}>
+                <Link
+                  to={item.path}
                   className="hover:text-orange-500 transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -169,15 +170,30 @@ const Footer = () => {
         <div className="container mx-auto px-16 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Mạng xã hội */}
           <div className="flex space-x-6">
-            {[Facebook, Twitter, Youtube, Instagram].map((Icon, index) => (
-              <a
-                key={index}
-                href="#"
-                className="p-4 rounded-full border border-gray-300 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
-              >
-                <Icon size={22} />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/stylenestbangla"
+              className="p-4 rounded-full border border-gray-300 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook size={22} />
+            </a>
+            <a
+              href="https://www.youtube.com/@sylenest" // Added Youtube link
+              className="p-4 rounded-full border border-gray-300 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Youtube size={22} />
+            </a>
+            <a
+              href="https://www.instagram.com/stylenest.official/" // Added Instagram link
+              className="p-4 rounded-full border border-gray-300 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram size={22} />
+            </a>
           </div>
 
           {/* Bản quyền */}

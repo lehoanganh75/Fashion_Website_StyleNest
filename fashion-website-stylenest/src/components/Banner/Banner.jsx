@@ -50,7 +50,7 @@ const Banner = ({ banners }) => {
                 </h3>
                 <div className="mt-4">
                   <Link
-                    to="/product"
+                    to="/product/fashion"
                     className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold text-sm sm:text-base px-4 py-3 rounded-lg tracking-wide transition duration-300 shadow-md hover:shadow-lg"
                   >
                     Mua ngay

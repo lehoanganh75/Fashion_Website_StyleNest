@@ -7,15 +7,15 @@ const categories = [
     name: "Xu hướng thương mại điện tử",
     subcategories: [
       { id: 1, name: "Mua sắm" },
-      { id: 2, name: "Thị trường số" },
+      { id: 2, name: "Hàng mới" },
     ],
   },
   {
     id: 2,
     name: "Danh mục bài viết",
     subcategories: [
-      { id: 1, name: "Công nghệ" },
-      { id: 2, name: "Giới thiệu sản phẩm" },
+      { id: 1, name: "Sản phẩm là gì?" },
+      { id: 2, name: "Giới thiệu sản phẩm tốt nhất" },
       { id: 3, name: "Kinh nghiệm mua sắm" },
     ],
   },
@@ -33,7 +33,7 @@ const BlogCategories = () => {
         {categories.map((category) => (
           <div key={category.id}>
             <Link
-              to="/product/"
+              to="/product/fashion"
               className="text-lg md:text-xl font-semibold text-gray-900 hover:text-orange-600 transition-colors duration-300"
             >
               {category.name}
@@ -43,7 +43,7 @@ const BlogCategories = () => {
               {category.subcategories.map((subcategory) => (
                 <li key={subcategory.id}>
                   <Link
-                    to="/product/"
+                    to="/blog/3"
                     className="hover:text-orange-500 hover:underline transition-colors duration-150"
                   >
                     {subcategory.name}
