@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { useData } from './DataContext';
 import axios from 'axios';
-import { useAuth } from './AuthContext';
 
 const CartContext = createContext();
 
@@ -11,7 +10,7 @@ export const CartProvider = ({ children }) => {
   const [total, setTotal] = useState("");
   const [tax, setTax] = useState("");
   const [subtotal, setSubtotal] = useState("");
-  const { setOrders } = useData();
+  const { setOrders, setProducts } = useData();
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -62,7 +61,10 @@ export const CartProvider = ({ children }) => {
         // Gửi yêu cầu cập nhật số lượng tồn
         await axios.put(`http://localhost:5000/api/products/update-stock/${productId}`, {
           instock: updatedQuantity
-        });        
+        });      
+        
+        const updatedProductsResponse = await axios.get("http://localhost:5000/api/products");
+        setProducts(updatedProductsResponse.data);
       }
     } catch (error) {
       console.error("Lỗi khi lưu đơn hàng:", error);

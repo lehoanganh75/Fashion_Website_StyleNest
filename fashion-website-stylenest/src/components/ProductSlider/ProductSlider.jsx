@@ -20,7 +20,7 @@ const shuffleArray = (array) => {
 const ProductSlider = ({ products }) => {
   const [slidesPerView, setSlidesPerView] = useState(5);
   const [randomProducts, setRandomProducts] = useState([]);
-
+  
   useEffect(() => {
     // Shuffle chỉ khi products có dữ liệu
     if (products && products.length > 0) {
@@ -48,6 +48,10 @@ const ProductSlider = ({ products }) => {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, []);
+
+  if (!randomProducts || randomProducts.length === 0) {
+    return <div>Đang tải sản phẩm...</div>;  // Thông báo khi dữ liệu chưa được tải
+  }
 
 
   return (

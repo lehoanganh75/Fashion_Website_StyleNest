@@ -12,38 +12,56 @@ import {
 const RevenueChartCard = ({ orders }) => {
   const [timePeriod, setTimePeriod] = useState("monthly");
 
-  // Hàm chuyển ngày
-  const parseDate = (str) => new Date(str);
+  // Hàm chuyển ngày từ định dạng chuỗi
+  const parseDate = (str) => {
+    console.log(str)
+    const [time, date] = str.split(" "); // Tách giờ và ngày
+    const [day, month, year] = date.split("/"); // Tách ngày, tháng, năm
+    const [hour, minute, second] = time.split(":"); // Tách giờ, phút, giây
 
-  // Hàm tổng hợp theo một khóa (ngày, tháng, năm)
-  const aggregateBy = (orders, getKey) => {
-      const map = {};
-      orders.forEach(order => {
-          const key = getKey(parseDate(order.orderDate));
-          map[key] = (map[key] || 0) + order.total;
-      });
-
-      return Object.entries(map).map(([date, value]) => ({ date, value }));
+    // Trả về đối tượng Date
+    return new Date(year, month - 1, day, hour, minute, second);
   };
 
-  const monthlyData = aggregateBy(orders, (date) => `${date.getDate()} ${date.toLocaleString('en-US', { month: 'short' })} ${date.getFullYear()}`);
-  const quarterlyData = aggregateBy(orders, (date) => {
-      const month = date.getMonth(); // 0 - 11
-      const quarter = Math.floor(month / 3) + 1; // 1 - 4
-      const year = date.getFullYear();
-      return `Q${quarter} ${year}`;
-  });
-  const annualData = aggregateBy(orders, (date) => String(date.getFullYear()));
+  // Hàm tổng hợp theo ngày/tháng/quý/năm
+  const aggregateBy = (orders, getKey) => {
+    const map = {};
+    orders.forEach(order => {
+      const date = parseDate(order.timeline[0].orderDate);
+      const key = getKey(date);
+      map[key] = (map[key] || 0) + order.total;
+    });
 
+    return Object.entries(map).map(([date, value]) => ({ date, value }));
+  };
+
+  // Dữ liệu theo tháng
+  const monthlyData = aggregateBy(orders, (date) => {
+    return `${date.getDate()} ${date.toLocaleString('en-US', { month: 'short' })} ${date.getFullYear()}`;
+  });
+
+  // Dữ liệu theo quý
+  const quarterlyData = aggregateBy(orders, (date) => {
+    const month = date.getMonth();
+    const quarter = Math.floor(month / 3) + 1; // Quý 1-4
+    return `Q${quarter} ${date.getFullYear()}`;
+  });
+
+  // Dữ liệu theo năm
+  const annualData = aggregateBy(orders, (date) => `${date.getFullYear()}`);
+
+  // Chọn dữ liệu theo thời gian
   const getChartData = () => {
-    const data = timePeriod === "quarterly" ? quarterlyData : timePeriod === "annually" ? annualData : monthlyData;
-    
-    // Lọc ra 6 tháng gần nhất nếu là thời gian hàng tháng
+    const data =
+      timePeriod === "quarterly" ? quarterlyData :
+      timePeriod === "annually" ? annualData : monthlyData;
+
+    // Lọc 6 tháng gần nhất nếu là thời gian hàng tháng
     if (timePeriod === "monthly") {
-      return data.slice(-6); // Lấy 6 tháng gần nhất từ dữ liệu
+      return data.slice(-6); // Lấy 6 tháng gần nhất
     }
     
-    return data; // Giữ nguyên dữ liệu nếu là hàng quý hoặc hàng năm
+    return data; // Giữ nguyên dữ liệu nếu là quý hoặc năm
   }
 
   return (
@@ -64,7 +82,7 @@ const RevenueChartCard = ({ orders }) => {
           className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${timePeriod === "quarterly" ? "bg-white rounded-lg shadow-sm" : "text-gray-600 hover:text-gray-800"}`}
           onClick={() => setTimePeriod("quarterly")}
           >
-          Hàng qúy
+          Hàng quý
           </button>
           <button
           className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${timePeriod === "annually" ? "bg-white rounded-lg shadow-sm" : "text-gray-600 hover:text-gray-800"}`}
@@ -87,73 +105,73 @@ const RevenueChartCard = ({ orders }) => {
                 <stop offset="100%" stopColor="#4f46e5" stopOpacity={0} />
               </linearGradient>
             </defs>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#c0c0c0" />
-                <XAxis
-                  dataKey="date"
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fill: "#6b7280", fontSize: 12 }}
-                  ticks={getChartData()
-                    .filter((_, i, arr) => i % Math.floor(arr.length / 5) === 0)
-                    .map(d => d.date)}
-                  tickFormatter={(value) => {
-                    if (timePeriod === "monthly") {
-                      const date = new Date(value);
-                      return date.toLocaleDateString("vi-VN", { day: "numeric", month: "short" }); // VD: 5 Thg 5
-                    }
-                    return value; // Giữ nguyên "Q1 2025", "2025", v.v.
-                  }}
-                />
-                <YAxis
-                  domain={[0, (dataMax) => dataMax * 1.1]}
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fill: "#6b7280", fontSize: 12 }}
-                  tickFormatter={(value) =>
-                    value.toLocaleString("vi-VN", {
-                      style: "currency",
-                      currency: "VND",
-                      maximumFractionDigits: 0,
-                    })
-                  }
-                />
-                <Tooltip
-                  contentStyle={{
-                    backgroundColor: "white",
-                    borderRadius: "8px",
-                    boxShadow:
-                      "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-                    border: "none",
-                  }}
-                  itemStyle={{ color: "#4f46e5" }}
-                  formatter={(value) => [
-                    value.toLocaleString("vi-VN", { style: "currency", currency: "VND" }),
-                    "Doanh thu",
-                  ]}
-                  labelFormatter={(label) => {
-                    if (timePeriod === "monthly") {
-                      const date = new Date(label);
-                      return date.toLocaleDateString("vi-VN", {
-                        weekday: "long",
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      });
-                    }
-                    return label; // với quarterly và annually
-                  }}
-                  labelStyle={{ color: "#374151", fontWeight: "bold" }}
-                />
-                <Area
-                    type="monotone"
-                    dataKey="value"
-                    stroke="#4f46e5"
-                    fill="url(#colorValue)"
-                    fillOpacity={0.2}
-                    activeDot={{ r: 6, fill: "#4f46e5", stroke: "white", strokeWidth: 2 }}
-                    animationDuration={1500}
-                    animationEasing="ease-in-out"
-                />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#c0c0c0" />
+            <XAxis
+              dataKey="date"
+              axisLine={false}
+              tickLine={false}
+              tick={{ fill: "#6b7280", fontSize: 12 }}
+              ticks={getChartData()
+                .filter((_, i, arr) => i % Math.floor(arr.length / 5) === 0)
+                .map(d => d.date)}
+              tickFormatter={(value) => {
+                if (timePeriod === "monthly") {
+                  const date = new Date(value);
+                  return date.toLocaleDateString("vi-VN", { day: "numeric", month: "short" }); // VD: 5 Thg 5
+                }
+                return value; // Giữ nguyên "Q1 2025", "2025", v.v.
+              }}
+            />
+            <YAxis
+              domain={[0, (dataMax) => dataMax * 1.1]}
+              axisLine={false}
+              tickLine={false}
+              tick={{ fill: "#6b7280", fontSize: 12 }}
+              tickFormatter={(value) =>
+                value.toLocaleString("vi-VN", {
+                  style: "currency",
+                  currency: "VND",
+                  maximumFractionDigits: 0,
+                })
+              }
+            />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow:
+                  "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                border: "none",
+              }}
+              itemStyle={{ color: "#4f46e5" }}
+              formatter={(value) => [
+                value.toLocaleString("vi-VN", { style: "currency", currency: "VND" }),
+                "Doanh thu",
+              ]}
+              labelFormatter={(label) => {
+                if (timePeriod === "monthly") {
+                  const date = new Date(label);
+                  return date.toLocaleDateString("vi-VN", {
+                    weekday: "long",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  });
+                }
+                return label; // với quarterly và annually
+              }}
+              labelStyle={{ color: "#374151", fontWeight: "bold" }}
+            />
+            <Area
+                type="monotone"
+                dataKey="value"
+                stroke="#4f46e5"
+                fill="url(#colorValue)"
+                fillOpacity={0.2}
+                activeDot={{ r: 6, fill: "#4f46e5", stroke: "white", strokeWidth: 2 }}
+                animationDuration={1500}
+                animationEasing="ease-in-out"
+            />
           </AreaChart>
         </ResponsiveContainer>
       </div>

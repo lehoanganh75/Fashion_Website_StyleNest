@@ -43,12 +43,34 @@ const TransactionsTable = ({ orders }) => {
 
     // Format ngày
     const formatDate = (dateString) => {
-      const date = new Date(dateString)
+      // Tách phần ngày và giờ
+      const [time, date] = dateString.split(' ');
+
+      // Tách ngày, tháng, năm
+      const [day, month, year] = date.split('/');
+
+      // Kiểm tra nếu dữ liệu ngày tháng năm hợp lệ
+      if (!day || !month || !year) {
+        console.error('Invalid date format:', dateString);
+        return dateString;
+      }
+
+      // Tạo lại chuỗi ngày theo định dạng yyyy-mm-dd để có thể chuyển thành đối tượng Date
+      const formattedDateString = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+
+      const formattedDate = new Date(formattedDateString);
+
+      // Đảm bảo rằng đối tượng Date hợp lệ
+      if (isNaN(formattedDate)) {
+        console.error('Invalid date:', dateString);
+        return dateString;
+      }
+
       return new Intl.DateTimeFormat("vi-VN", {
         day: "2-digit",
         month: "2-digit",
         year: "numeric",
-      }).format(date)
+      }).format(formattedDate)
     }
 
     // Format tiền VNĐ
@@ -137,7 +159,7 @@ const TransactionsTable = ({ orders }) => {
                       <span className="font-medium text-center">{orders.customerName}</span>
                     </div>
                   </td>
-                  <td className="text-gray-500">{formatDate(orders.orderDate)}</td>
+                  <td className="text-gray-500">{formatDate(orders.timeline[0].orderDate)}</td>
                   <td className="font-medium">{formatCurrency(orders.total)}</td>
                   <td className="text-gray-500">{orders.email}</td>
                   <td>
@@ -251,7 +273,7 @@ const TransactionsTable = ({ orders }) => {
 
               <div className="space-y-2 text-sm md:text-base text-gray-700 leading-relaxed border border-gray-300 rounded-lg p-4 bg-white shadow-sm">
                 <p><strong>Địa chỉ:</strong> {selectedorders.address}</p>
-                <p><strong>Ngày đặt hàng:</strong> {formatDate(selectedorders.orderDate)}</p>
+                <p><strong>Ngày đặt hàng:</strong> {formatDate(selectedorders.timeline[0].orderDate)}</p>
                 <p><strong>Trạng thái:</strong> {selectedorders.status}</p>
                 <p><strong>Tổng tiền:</strong> {selectedorders.total.toLocaleString()}₫</p>
               </div>

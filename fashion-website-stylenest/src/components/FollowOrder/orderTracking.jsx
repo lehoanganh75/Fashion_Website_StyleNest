@@ -6,6 +6,7 @@ import { useAuth } from "../../contexts/AuthContext";
 
 const OrderList = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [sortOrder, setSortOrder] = useState("desc"); // "asc" for oldest first, "desc" for newest first
   const navigate = useNavigate();
   const { orders, setOrders } = useData();
   const { loggedInAccount } = useAuth();
@@ -23,10 +24,16 @@ const OrderList = () => {
     }
   }, [orders, loggedInAccount]);
 
-  console.log(userOrders);
+  // Sorting orders by date
+  const sortedOrders = [...userOrders].sort((a, b) => {
+    const orderDateA = new Date(a.timeline[0]?.orderDate || 0);
+    const orderDateB = new Date(b.timeline[0]?.orderDate || 0);
+    return sortOrder === "desc" ? orderDateB - orderDateA : orderDateA - orderDateB;
+  });
 
   const tabs = [
     { id: "all", label: "Tất cả" },
+    { id: "checking", label: "Đang kiểm tra" },
     { id: "pending", label: "Chờ thanh toán" },
     { id: "shipping", label: "Vận chuyển" },
     { id: "completed", label: "Hoàn thành" },
@@ -36,8 +43,8 @@ const OrderList = () => {
 
   const filteredOrders =
     activeTab === "all"
-      ? userOrders
-      : userOrders.filter((order) => order.status === activeTab);
+      ? sortedOrders
+      : sortedOrders.filter((order) => order.timeline[0].status === activeTab);
 
   const handlePayment = (orderId) => {
     const orderToPay = orders.find(
@@ -75,6 +82,19 @@ const OrderList = () => {
     } else {
       console.log("Không tìm thấy đơn hàng hoặc đơn hàng không ở trạng thái chờ thanh toán.");
     }
+  };
+
+  const formatCurrency = (value) => {
+    return new Intl.NumberFormat('vi-VN').format(value) + ' đ';
+  };
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat('vi-VN', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date);
   };
 
   if (!loggedInAccount) {
@@ -155,58 +175,56 @@ const OrderList = () => {
           </div>
 
           {filteredOrders.map((order) => (
-  <div key={order.id} className="bg-white rounded-sm shadow-sm mb-6 border border-gray-200">
-    {/* Header */}
-    <div className="flex justify-between items-center p-4 border-b bg-gray-50">
-      <div className="font-semibold text-gray-700">Mã đơn hàng: #{order.id}</div>
-    </div>
+            <div key={order.id} className="bg-white rounded-sm shadow-sm mb-6 border border-gray-200">
+              {/* Header */}
+              <div className="flex justify-between items-center p-4 border-b bg-gray-50">
+                <div className="font-semibold text-gray-700">Mã đơn hàng: #{order.id}</div>
+              </div>
 
-    {/* Product list */}
-    {order.orderDetails?.map((product) => (
-      <div
-        key={`${order.id}-${product.productId}`}
-        className="p-4 flex gap-4 border-b last:border-b-0"
-      >
-        <div className="w-20 h-20 flex-shrink-0">
-          <img
-            src={product.img || "/placeholder.svg"}
-            alt={product.productName}
-            className="w-full h-full object-cover border border-gray-200 rounded-sm"
-          />
-        </div>
-        <div className="flex-grow">
-          <h3 className="text-sm font-medium text-gray-800">{product.productName}</h3>
-          <p className="text-xs text-gray-500">x{product.quantity}</p>
-        </div>
-        <div className="text-right">
-          <div className="text-xs line-through text-gray-400">{product.price}</div>
-          <div className="text-sm text-orange-500 font-medium">{product.total}</div>
-        </div>
-      </div>
-    ))}
+              {/* Product list */}
+              {order.orderDetails?.map((product) => (
+                <div
+                  key={`${order.id}-${product.productId}`}
+                  className="p-4 flex gap-4 border-b last:border-b-0"
+                >
+                  <div className="w-20 h-20 flex-shrink-0">
+                    <img
+                      src={product.img || "/placeholder.svg"}
+                      alt={product.productName}
+                      className="w-full h-full object-cover border border-gray-200 rounded-sm"
+                    />
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="text-sm font-medium text-gray-800">{product.productName}</h3>
+                    <p className="text-xs text-gray-500">x{product.quantity}</p>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs line-through text-gray-400">{formatCurrency(product.price)}</div>
+                    <div className="text-sm text-orange-500 font-medium">{formatCurrency(product.total)}</div>
+                  </div>
+                </div>
+              ))}
 
-    {/* Payment method */}
-    <div className="p-4 border-t bg-gray-50 flex justify-between items-center">
-      <span className="text-sm text-gray-600">Phương thức thanh toán:</span>
-      <span className="text-sm font-medium text-gray-700">{order.paymentMethod || "Không rõ"}</span>
-    </div>
+              {/* Payment method */}
+              <div className="p-4 border-t bg-gray-50 flex justify-between items-center">
+                <span className="text-sm text-gray-600">Phương thức thanh toán:</span>
+                <span className="text-sm font-medium text-gray-700">{order.paymentMethod || "Không rõ"}</span>
+              </div>
 
-    {/* Timeline */}
-    {order.timeline?.length > 0 && (
-      <div className="px-4 pt-2 pb-4 text-sm text-gray-600 space-y-1">
-        <div className="font-semibold text-gray-700">Trạng thái đơn hàng:</div>
-        {order.timeline.map((timelineItem, index) => (
-          <div key={index} className="flex items-center justify-between">
-            <span>{timelineItem.status}</span>
-            <span className="text-xs text-gray-500">{timelineItem.orderDate}</span>
-          </div>
-        ))}
-      </div>
-    )}
-  </div>
-))}
-
-
+              {/* Timeline */}
+              {order.timeline?.length > 0 && (
+                <div className="px-4 pt-2 pb-4 text-sm text-gray-600 space-y-1">
+                  <div className="font-semibold text-gray-700">Trạng thái đơn hàng:</div>
+                  {order.timeline.map((timelineItem, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                      <span>{timelineItem.status}</span>
+                      <span className="text-xs text-gray-500">{formatDate(timelineItem.orderDate)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
           {filteredOrders.length === 0 && (
             <div className="text-center text-gray-500 mt-10">
               Không có đơn hàng nào trong mục này.

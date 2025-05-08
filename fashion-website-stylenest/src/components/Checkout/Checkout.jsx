@@ -3,6 +3,7 @@ import { MapPin, Ticket, CheckCircle, ChevronRight, Info, X, Plus } from "lucide
 import { useCart } from "../../contexts/CartContext"
 import { useData } from "../../contexts/DataContext"
 import { useAuth } from "../../contexts/AuthContext"
+import { useNavigate } from "react-router-dom"
 
 export default function Checkout() {
   const [note, setNote] = useState("")
@@ -12,31 +13,47 @@ export default function Checkout() {
   const [editingAddressId, setEditingAddressId] = useState(null);
   const [editForm, setEditForm] = useState({ name: '', phone: '', address: '' });
   const { saveOrders, cartItemSelected } = useCart();
-  const { customers, orders } = useData();
+  const { customers, orders, updateCustomer } = useData();
   const { loggedInAccount } = useAuth();
 
   const [addresses, setAddresses] = useState([]);
   const [selectedAddress, setSelectedAddress] = useState(null);
+  const [customer , setCustomer] = useState(null);
+  const [isLoading, setIsLoading] = useState(true); 
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (customers && loggedInAccount?.email) {
-      const matchedCustomer = customers.find(customer => customer.email === loggedInAccount.email);
-  
-      if (matchedCustomer) {
-        const addrList = matchedCustomer.address || [];
-        setAddresses(addrList);
-  
-        const defaultAddr = addrList.find(addr => addr.isDefault);
-        setSelectedAddress(defaultAddr || addrList[0] || null);
-      } else {
-        setAddresses([]);
-        setSelectedAddress(null);
-      }
-    }
-  }, [customers, loggedInAccount]);
+    const loadCustomerData = async () => {
+      // Kiểm tra dữ liệu có hợp lệ không
+      if (!loggedInAccount?.email || !Array.isArray(customers)) return;
 
-  console.log(addresses);
-  console.log(selectedAddress);
+      setIsLoading(true); // Đánh dấu bắt đầu tải dữ liệu
+
+      try {
+        // Tìm khách hàng từ danh sách customers
+        const matchedCustomer = customers.find(customer => customer.email === loggedInAccount.email);
+        setCustomer(matchedCustomer);
+
+        if (matchedCustomer) {
+          const addrList = matchedCustomer.address || [];
+          setAddresses(addrList);
+
+          // Chọn địa chỉ mặc định nếu có
+          const defaultAddr = addrList.find(addr => addr.isDefault);
+          setSelectedAddress(defaultAddr || addrList[0] || null);
+        } else {
+          setAddresses([]);
+          setSelectedAddress(null);
+        }
+      } catch (error) {
+        console.error("Lỗi khi tải dữ liệu khách hàng:", error);
+      } finally {
+        setIsLoading(false); // Đánh dấu kết thúc tải dữ liệu
+      }
+    };
+
+    loadCustomerData();
+  }, [customers, loggedInAccount]); 
 
   const [tempSelectedAddress, setTempSelectedAddress] = useState(null)
 
@@ -58,10 +75,11 @@ export default function Checkout() {
 
   const handleAddNewAddress = () => {
     const newAddress = {
-      id: addresses.length + 1,
+      id: String(addresses.length + 1),
       name: newAddressForm.name,
       phone: newAddressForm.phone,
       address: newAddressForm.detailAddress,
+      addressType: newAddressForm.addressType,
       isDefault: newAddressForm.isDefault,
     }
 
@@ -162,42 +180,73 @@ export default function Checkout() {
   const calculateTax = () => calculateSubtotal() * 0.08;
 
   const calculateTotal = () => calculateSubtotal() + calculateTax();
-
+ 
   const handleCheckout = () => {
+    // Kiểm tra xem đã có thông tin khách hàng và địa chỉ chưa
+    if (isLoading) {
+      console.log("Dữ liệu đang được tải, vui lòng đợi...");
+      return;
+    }
+
+    if (!customer?.id || !selectedAddress) {
+      console.error("Không tìm thấy thông tin khách hàng hoặc địa chỉ.");
+      return;
+    }
+
     const now = new Date();
     const formattedDate = now.toLocaleString("vi-VN", {
       timeZone: "Asia/Ho_Chi_Minh",
-      hour12: false
+      hour12: false,
     });
 
-    const newOrder = {
-      id: String(Math.max(...orders.map((a) => parseInt(a.id) || 0), 0) + 1),
-      email: loggedInAccount.email,
-      phone: selectedAddress.phone,
-      customerName: selectedAddress.name, 
-      total: calculateTotal(),
-      address: selectedAddress.address,
-      orderDetails: cartItemSelected.map((item) => ({
-        productId: item.id,
-        productName: item.name,
-        size: item.selectedSize,
-        color: item.selectedColor,
-        quantity: item.quantity,
-        price: item.price  * (1 - item.discount / 100),
-        total: item.price * item.quantity * (1 - item.discount / 100),
-        img: item.thumbnails[0]
-      })),
-      paymentMethod: "Thanh toán khi nhận hàng",
-      timeline: [
-        {
-          status: "Đang kiểm tra",
-          orderDate: formattedDate
-        }
-      ]
-    };    
+    console.log("Khách hàng đã cập nhật: ", customer);
+    console.log("Khách hàng địa chỉ: ", addresses);
 
-    console.log("Sản phẩm mới: ", newOrder);
-    saveOrders(newOrder);
+    try {
+      // Cập nhật khách hàng
+      updateCustomer(String(customer.id), addresses);
+
+      const newOrder = {
+        id: String(Math.max(...orders.map((a) => parseInt(a.id) || 0), 0) + 1),
+        email: loggedInAccount.email,
+        phone: selectedAddress.phone,
+        customerName: selectedAddress.name,
+        total: calculateTotal(),
+        address: selectedAddress.address,
+        orderDetails: cartItemSelected.map((item) => ({
+          productId: item.id,
+          productName: item.name,
+          size: item.selectedSize,
+          color: item.selectedColor,
+          quantity: item.quantity,
+          price: item.price * (1 - item.discount / 100),
+          total: item.price * item.quantity * (1 - item.discount / 100),
+          img: item.thumbnails[0]
+        })),
+        paymentMethod: "Thanh toán khi nhận hàng",
+        timeline: [
+          {
+            status: "Đang kiểm tra",
+            orderDate: formattedDate
+          }
+        ]
+      };
+
+      console.log("Sản phẩm mới: ", newOrder);
+      // Lưu đơn hàng
+      saveOrders(newOrder);
+
+      cartItemSelected.length = 0; // Xóa giỏ hàng
+
+      navigate("/order-tracking");
+    } catch (error) {
+      console.error("Lỗi khi xử lý thanh toán:", error);
+    }
+  };
+
+  // Hiển thị thông báo khi dữ liệu chưa tải xong
+  if (isLoading) {
+    return <div>Đang tải dữ liệu khách hàng...</div>;
   }
 
   return (
@@ -327,13 +376,21 @@ export default function Checkout() {
           </div>
 
           <div className="space-y-2 border-t border-b py-4">
-            <div className="flex justify-between"><span className="text-gray-600">Tổng tiền hàng</span><span>{calculateSubtotal()}</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Phí vận chuyển</span><span>{calculateTax()}</span></div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Tổng tiền hàng</span>
+              <span>{new Intl.NumberFormat('vi-VN').format(calculateSubtotal())} đ</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Phí vận chuyển</span>
+              <span>{new Intl.NumberFormat('vi-VN').format(calculateTax())} đ</span>
+            </div>
           </div>
 
           <div className="flex justify-between items-center">
             <span className="text-gray-600">Tổng thanh toán</span>
-            <span className="text-2xl font-bold text-red-500">{calculateTotal()}</span>
+            <span className="text-2xl font-bold text-red-500">
+              {new Intl.NumberFormat('vi-VN').format(calculateTotal())} đ
+            </span>
           </div>
         </div>
 

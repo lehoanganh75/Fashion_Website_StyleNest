@@ -29,27 +29,39 @@ const ShoppingCart = () => {
   };
 
   const incrementQuantity = (id) => {
-    setCart(cart.map((item) => (item.id === id ? { ...item, quantity: item.quantity + 1 } : item)));
+    setCart(cart.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    }));
   };
 
   const decrementQuantity = (id) => {
-    setCart(cart.map((item) =>
-      item.id === id && item.quantity > 1
-        ? { ...item, quantity: item.quantity - 1 }
-        : item
-    ));
+    setCart(cart.map((item) => {
+      if (item.id === id && item.quantity > 1) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    }));
   };
 
   const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
 
-  const calculateSubtotal = () =>
-    cart.filter((item) => item.selected).reduce((total, item) => total + item.price * (1 - item.discount / 100) * item.quantity, 0);
-
-  const calculateTax = () => calculateSubtotal() * 0.08;
-
-  const calculateTotal = () => calculateSubtotal() + calculateTax();
+  const calculateSubtotal = () => {
+    return cart.filter((item) => item.selected)
+      .reduce((total, item) => total + item.price * (1 - item.discount / 100) * item.quantity, 0);
+  };
+  
+  const calculateTax = (subtotal) => {
+    return subtotal < 100 ? 20000 : 0; // Nếu subtotal < 100, tính phí ship 20.000, ngược lại miễn phí
+  };
+  
+  const calculateTotal = (subtotal, shippingFee) => {
+    return subtotal + shippingFee;
+  };
 
   const selectedItems = cart.filter((item) => item.selected);
   const selectedCount = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -107,10 +119,14 @@ const ShoppingCart = () => {
   };
 
   useEffect(() => {
-    setTotal(calculateTotal());
-    setTax(calculateTax());
-    setSubtotal(calculateSubtotal());
-  }, [cartItemSelected]);
+    const subtotalValue = calculateSubtotal();
+    const shippingFee = calculateTax(subtotalValue); // Tính phí ship
+    const totalValue = calculateTotal(subtotalValue, shippingFee);
+  
+    setSubtotal(subtotalValue);
+    setTax(shippingFee); // Cập nhật phí ship
+    setTotal(totalValue); // Cập nhật tổng số tiền
+  }, [cart]);
 
   return (
     <div className="container mx-auto p-4 max-w-5xl font-['Roboto']">
@@ -216,12 +232,16 @@ const ShoppingCart = () => {
               <div className="text-sm text-gray-600 space-y-4">
                 <div className="flex justify-between items-center pb-3">
                   <span className="text-[18px] font-medium">Tạm tính ({selectedCount} sản phẩm)</span>
-                  <span className="text-[18px] font-semibold text-gray-800">{total} đ</span>
+                  <span className="text-[18px] font-semibold text-gray-800">
+                    {new Intl.NumberFormat('vi-VN').format(total)} đ
+                  </span>
                 </div>
 
                 <div className="flex justify-between items-center pb-3">
-                  <span className="text-[18px] font-medium">Thuế GTGT (8%)</span>
-                  <span className="text-[18px] font-semibold text-gray-800">{tax} đ</span>
+                  <span className="text-[18px] font-medium">Tiền ship</span>
+                  <span className="text-[18px] font-semibold text-gray-800">
+                    {new Intl.NumberFormat('vi-VN').format(tax)} đ
+                  </span>
                 </div>
               </div>
 
@@ -229,7 +249,7 @@ const ShoppingCart = () => {
                 <div className="flex justify-between text-xl font-semibold text-gray-600">
                   <span className="text-lg">Tổng thanh toán</span>
                   <span className="text-lg text-gray-600 font-bold">
-                    {subtotal} đ
+                    {new Intl.NumberFormat('vi-VN').format(subtotal)} đ
                   </span>
                 </div>
               </div>

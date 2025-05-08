@@ -263,6 +263,64 @@ export const DataProvider = ({ children }) => {
         }
     };
 
+    const saveCustomer = async (customerData, imageFiles) => {
+        try {
+            const formData = new FormData();
+            formData.append("customer", JSON.stringify(customerData));
+            
+            if (imageFiles && imageFiles.length > 0) {
+                imageFiles.forEach(file => {
+                  formData.append("images", file);
+                });
+            }
+    
+            const response = await axios.post(
+                'http://localhost:5000/api/customers',  // Đảm bảo đúng đường dẫn này
+                formData,
+                {
+                  headers: {
+                    'Content-Type': 'multipart/form-data',
+                  },
+                }
+            );
+    
+            console.log("Đã lưu khách hàng:", response.data);
+    
+            const updatedCustomers = await axios.get('http://localhost:5000/api/customers');
+            setProducts(updatedCustomers.data);
+        } catch (error) {
+            console.error('Lỗi khi lưu khách hàng:', error);
+        }
+    };   
+    
+    const updateCustomer = async (id, updatedAddressList) => {
+        console.log("Cập nhật địa chỉ cho khách hàng với ID:", id);
+        console.log("Danh sách địa chỉ mới:", updatedAddressList);
+
+        try {
+          const response = await axios.put(`http://localhost:5000/api/customers/${id}`, {
+            addressList: updatedAddressList
+          });
+      
+          const updatedCustomer = response?.data;
+            if (!updatedCustomer) {
+                throw new Error('Dữ liệu khách hàng trả về không hợp lệ');
+            }
+      
+          setCustomers((prev) =>
+            prev.map(user => user.id === id ? updatedCustomer : user)
+          );
+      
+          // Nếu cần cập nhật sản phẩm, giữ lại đoạn này
+          const updatedProducts = await axios.get('http://localhost:5000/api/customers');
+          
+          setProducts(updatedProducts.data);
+        } catch (error) {
+          console.error('Lỗi khi cập nhật địa chỉ khách hàng:', error);
+          alert('Không thể cập nhật địa chỉ. Vui lòng thử lại.');
+        }
+    };
+
     return (
         <DataContext.Provider value={{
             accounts,
@@ -273,6 +331,8 @@ export const DataProvider = ({ children }) => {
             banners,
             blogs,
             customers,
+            saveCustomer,
+            updateCustomer,
             features,
             instagramPosts,
             orderDetails,

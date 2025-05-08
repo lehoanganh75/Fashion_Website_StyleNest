@@ -50,13 +50,51 @@ const TransactionsTableOrder = ({ orders }) => {
 
     // Format ngày
     const formatDate = (dateString) => {
-      const date = new Date(dateString)
+      if (!dateString) {
+        console.error('Invalid date string:', dateString);
+        return dateString;
+      }
+    
+      // Tách phần giờ và ngày
+      const [time, date] = dateString.split(' ');
+    
+      if (!date) {
+        console.error('Invalid date format:', dateString);
+        return dateString;
+      }
+    
+      // Tách ngày, tháng, năm từ chuỗi ngày
+      const [day, month, year] = date.split('/');
+    
+      // Kiểm tra nếu day, month, hoặc year bị thiếu hoặc không hợp lệ
+      if (!day || !month || !year) {
+        console.error('Invalid day/month/year format:', dateString);
+        return dateString;
+      }
+    
+      // Đảm bảo rằng day và month là số có 2 chữ số
+      const paddedDay = day.padStart(2, '0');
+      const paddedMonth = month.padStart(2, '0');
+    
+      // Chuyển đổi ngày thành định dạng yyyy-mm-dd
+      const formattedDate = `${year}-${paddedMonth}-${paddedDay}T${time}`;
+    
+      // Tạo đối tượng Date
+      const dateObject = new Date(formattedDate);
+    
+      if (isNaN(dateObject)) {
+        console.error('Invalid date object:', dateString);
+        return dateString;
+      }
+    
+      // Định dạng lại ngày theo "vi-VN"
       return new Intl.DateTimeFormat("vi-VN", {
         day: "2-digit",
         month: "2-digit",
         year: "numeric",
-      }).format(date)
+      }).format(dateObject);
     }
+    
 
     // Format tiền VNĐ
     const formatCurrency = (amount) => {
@@ -146,7 +184,7 @@ const TransactionsTableOrder = ({ orders }) => {
                       <span className="font-medium text-center">{orders.customerName}</span>
                     </div>
                   </td>
-                  <td className="text-gray-500">{formatDate(orders.orderDate)}</td>
+                  <td className="text-gray-500">{formatDate(orders.timeline[0].orderDate)}</td>
                   <td className="font-medium">{formatCurrency(orders.total)}</td>
                   <td className="text-gray-500">{orders.email}</td>
                   <td>

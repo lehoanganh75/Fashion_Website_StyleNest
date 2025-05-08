@@ -39,26 +39,46 @@ const DividendChartCard = ({ orders }) => {
 
   // Bước 2: Duyệt qua từng đơn hàng và cộng doanh thu vào tháng tương ứng
   orders.forEach((order) => {
-      const orderMonth = new Date(order.orderDate).toLocaleString("en-US", { month: "short" });
-      const totalRevenue = order.orderDetails.reduce((sum, item) => sum + item.total, 0);
+    // Tách phần giờ và ngày
+    const [time, date] = order.timeline[0].orderDate.split(' ');
+    
+    console.log(date)
 
-      // Nếu tháng đã có trong đối tượng monthlyRevenue, cộng thêm doanh thu
-      if (monthlyRevenue[orderMonth]) {
-          monthlyRevenue[orderMonth] += totalRevenue;
-      } else {
-          // Nếu tháng chưa có trong đối tượng, khởi tạo giá trị
-          monthlyRevenue[orderMonth] = totalRevenue;
-      }
-      });
+    // Tách ngày, tháng, năm
+    const [day, month, year] = date.split('/');
+    
+    // Kiểm tra nếu dữ liệu ngày tháng năm hợp lệ
+    if (!day || !month || !year) {
+      console.error('Invalid date format:', order.orderDate);
+      return;
+    }
 
-      // Bước 3: Chuyển đổi đối tượng monthlyRevenue thành mảng dividendData
-      const dividendData = Object.keys(monthlyRevenue).map(month => ({
-      month,
-      value: monthlyRevenue[month]
-    }));
+    // Tạo chuỗi ngày theo định dạng yyyy-mm-dd
+    const formattedDateString = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+    
+    // Lấy tháng từ chuỗi đã chuyển đổi
+    const orderMonth = new Date(formattedDateString).toLocaleString("en-US", { month: "short" });
 
-    // Sắp xếp mảng dividendData theo thứ tự tháng
-    const sortedDividendData = dividendData.sort((a, b) => {
+    // Tính tổng doanh thu từ orderDetails
+    const totalRevenue = order.orderDetails.reduce((sum, item) => sum + item.total, 0);
+
+    // Nếu tháng đã có trong đối tượng monthlyRevenue, cộng thêm doanh thu
+    if (monthlyRevenue[orderMonth]) {
+      monthlyRevenue[orderMonth] += totalRevenue;
+    } else {
+      // Nếu tháng chưa có trong đối tượng, khởi tạo giá trị
+      monthlyRevenue[orderMonth] = totalRevenue;
+    }
+  });
+
+  // Bước 3: Chuyển đổi đối tượng monthlyRevenue thành mảng dividendData
+  const dividendData = Object.keys(monthlyRevenue).map(month => ({
+    month,
+    value: monthlyRevenue[month]
+  }));
+
+  // Sắp xếp mảng dividendData theo thứ tự tháng
+  const sortedDividendData = dividendData.sort((a, b) => {
     const monthsOrder = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return monthsOrder.indexOf(a.month) - monthsOrder.indexOf(b.month);
   });
@@ -68,12 +88,12 @@ const DividendChartCard = ({ orders }) => {
   return (
     <div className="bg-white border border-gray-300 rounded-lg p-4.5 shadow-sm h-auto">
       <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold text-gray-800">Lợi nhuận</h2>
+        <h2 className="text-xl font-semibold text-gray-800">Lợi nhuận</h2>
       </div>
 
       <div className="h-50">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={dividendData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+          <BarChart data={sortedDividendData} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
             <defs>
               <linearGradient id="colorBar" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#4f46e5" stopOpacity={0.8} />
@@ -85,7 +105,7 @@ const DividendChartCard = ({ orders }) => {
               dataKey="month"
               axisLine={false}
               tickLine={false}
-              tickMargin={10} 
+              tickMargin={10}
               tick={({ x, y, payload }) => {
                 const monthInVietnamese = monthsInVietnamese[payload.value] || payload.value;  // Ánh xạ tháng sang tiếng Việt
                 return (
@@ -132,7 +152,7 @@ const DividendChartCard = ({ orders }) => {
         </ResponsiveContainer>
       </div>
     </div>
-  )
+  );
 }
 
 export default DividendChartCard

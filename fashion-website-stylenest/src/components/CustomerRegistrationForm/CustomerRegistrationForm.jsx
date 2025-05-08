@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { User, Phone, Calendar, Upload, Check, ChevronLeft, ChevronRight, X, ImageIcon, AlertCircle, ArrowRight, Loader2, TrendingUp, FileImage } from 'lucide-react'
+import { useData } from "../../contexts/DataContext";
+import { useAuth } from "../../contexts/AuthContext"
 
 export default function CustomerRegistrationForm() {
   const [formData, setFormData] = useState({
-    name: "",
-    dateOfBirth: "",
+    id: "",
+    customerName: "",
     gender: "",
-    phoneNumber: "",
-    photo: null,
+    date: "",
+    phone: "",
+    img: null,
   })
   const [errors, setErrors] = useState({})
   const [photoPreview, setPhotoPreview] = useState(null)
@@ -16,7 +19,9 @@ export default function CustomerRegistrationForm() {
   const [showCalendar, setShowCalendar] = useState(false)
   const [currentDate, setCurrentDate] = useState(new Date())
   const [formSubmitted, setFormSubmitted] = useState(false)
-  const navigate = useNavigate();
+  const { customers, saveCustomer } = useData();
+  const { loggedInAccount } = useAuth();
+  const [imageFiles, setImageFiles] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -62,6 +67,8 @@ export default function CustomerRegistrationForm() {
       photo: file,
     })
 
+    setImageFiles([file]);
+
     // Create a preview
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -81,41 +88,54 @@ export default function CustomerRegistrationForm() {
   const validateForm = () => {
     const newErrors = {}
 
-    if (!formData.name || formData.name.length < 2) {
-      newErrors.name = "Tên phải có ít nhất 2 ký tự"
+    if (!formData.customerName || formData.customerName.length < 2) {
+      newErrors.customerName = "Tên phải có ít nhất 2 ký tự"
     }
 
-    if (!formData.dateOfBirth) {
-      newErrors.dateOfBirth = "Ngày sinh là bắt buộc"
+    if (!formData.date) {
+      newErrors.date = "Ngày sinh là bắt buộc"
     }
 
     if (!formData.gender) {
       newErrors.gender = "Vui lòng chọn giới tính"
     }
 
-    if (!formData.phoneNumber || formData.phoneNumber.length < 10) {
-      newErrors.phoneNumber = "Số điện thoại phải có ít nhất 10 chữ số"
-    } else if (!/^\d+$/.test(formData.phoneNumber)) {
-      newErrors.phoneNumber = "Số điện thoại chỉ được chứa chữ số"
+    if (!formData.phone || formData.phone.length < 10) {
+      newErrors.phone = "Số điện thoại phải có ít nhất 10 chữ số"
+    } else if (!/^\d+$/.test(formData.phone)) {
+      newErrors.phone = "Số điện thoại chỉ được chứa chữ số"
     }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     if (validateForm()) {
-      setIsSubmitting(true)
-      console.log("Form data:", formData)
+      setIsSubmitting(true);
+      const newCustomer = {
+        id: String(Math.max(...customers.map((a) => Number(a.id) || 0), 0) + 1), // Chuyển id thành số nếu chưa có id
+        customerName: formData.customerName,
+        gender: formData.gender,
+        date: formData.date,
+        phone: formData.phone,
+        email: loggedInAccount?.email || "none",
+        img: formData.img,
+      };
+      console.log("Form data:", newCustomer)
 
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false)
-        setFormSubmitted(true)
-        // We're not resetting the form now to keep the success message
-      }, 1500)
+      try {
+        await saveCustomer(newCustomer, imageFiles); // Đợi lưu xong
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setFormSubmitted(true);
+        }, 1500);
+      } catch (error) {
+        console.error("Lỗi khi lưu khách hàng:", error);
+        setIsSubmitting(false);
+      }
     }
   }
 
@@ -154,7 +174,7 @@ export default function CustomerRegistrationForm() {
           key={i}
           type="button"
           className={`h-9 w-9 rounded-full flex items-center justify-center text-sm transition-all duration-200 ${
-            formData.dateOfBirth === dateString
+            formData.date === dateString
               ? "bg-gray-700 text-white shadow-md"
               : isToday
               ? "bg-gray-200 text-gray-700"
@@ -163,13 +183,13 @@ export default function CustomerRegistrationForm() {
           onClick={() => {
             setFormData({
               ...formData,
-              dateOfBirth: dateString,
+              date: dateString,
             })
             setShowCalendar(false)
-            if (errors.dateOfBirth) {
+            if (errors.date) {
               setErrors({
                 ...errors,
-                dateOfBirth: "",
+                date: "",
               })
             }
           }}
@@ -253,8 +273,8 @@ export default function CustomerRegistrationForm() {
                     <input
                       type="text"
                       id="name"
-                      name="name"
-                      value={formData.name}
+                      name="customerName"
+                      value={formData.customerName}
                       onChange={handleInputChange}
                       className={`pl-10 block w-full rounded-lg border ${
                         errors.name ? "border-red-300 ring-red-100" : "border-gray-300 group-hover:border-gray-400"
@@ -272,7 +292,7 @@ export default function CustomerRegistrationForm() {
 
                 {/* Phone Number Field */}
                 <div className="space-y-2">
-                  <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                     Số Điện Thoại <span className="text-red-500">*</span>
                   </label>
                   <div className="relative group">
@@ -281,20 +301,20 @@ export default function CustomerRegistrationForm() {
                     </div>
                     <input
                       type="text"
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
                       onChange={handleInputChange}
                       className={`pl-10 block w-full rounded-lg border ${
-                        errors.phoneNumber ? "border-red-300 ring-red-100" : "border-gray-300 group-hover:border-gray-400"
+                        errors.phone ? "border-red-300 ring-red-100" : "border-gray-300 group-hover:border-gray-400"
                       } shadow-sm py-3 px-4 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-500 transition-all duration-200`}
                       placeholder="Nhập số điện thoại của bạn"
                     />
                   </div>
-                  {errors.phoneNumber && (
+                  {errors.phone && (
                     <p className="mt-1 text-sm text-red-600 flex items-center">
                       <AlertCircle className="h-4 w-4 mr-1" />
-                      {errors.phoneNumber}
+                      {errors.phone}
                     </p>
                   )}
                 </div>
@@ -303,7 +323,7 @@ export default function CustomerRegistrationForm() {
               <div className="grid gap-8 md:grid-cols-2">
                 {/* Date of Birth Field */}
                 <div className="space-y-2">
-                  <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="date" className="block text-sm font-medium text-gray-700">
                     Ngày Sinh <span className="text-red-500">*</span>
                   </label>
                   <div className="relative group">
@@ -312,13 +332,13 @@ export default function CustomerRegistrationForm() {
                     </div>
                     <input
                       type="text"
-                      id="dateOfBirth"
-                      name="dateOfBirth"
-                      value={formatDate(formData.dateOfBirth)}
+                      id="date"
+                      name="date"
+                      value={formatDate(formData.date)}
                       readOnly
                       onClick={() => setShowCalendar(!showCalendar)}
                       className={`pl-10 block w-full rounded-lg border ${
-                        errors.dateOfBirth ? "border-red-300 ring-red-100" : "border-gray-300 group-hover:border-gray-400"
+                        errors.date ? "border-red-300 ring-red-100" : "border-gray-300 group-hover:border-gray-400"
                       } shadow-sm py-3 px-4 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:border-gray-500 transition-all duration-200 cursor-pointer`}
                       placeholder="Chọn ngày sinh"
                     />
@@ -370,13 +390,13 @@ export default function CustomerRegistrationForm() {
                               const today = new Date().toISOString().split("T")[0]
                               setFormData({
                                 ...formData,
-                                dateOfBirth: today,
+                                date: today,
                               })
                               setShowCalendar(false)
-                              if (errors.dateOfBirth) {
+                              if (errors.date) {
                                 setErrors({
                                   ...errors,
-                                  dateOfBirth: "",
+                                  date: "",
                                 })
                               }
                             }}
@@ -388,10 +408,10 @@ export default function CustomerRegistrationForm() {
                       </div>
                     )}
                   </div>
-                  {errors.dateOfBirth && (
+                  {errors.date && (
                     <p className="mt-1 text-sm text-red-600 flex items-center">
                       <AlertCircle className="h-4 w-4 mr-1" />
-                      {errors.dateOfBirth}
+                      {errors.date}
                     </p>
                   )}
                 </div>
