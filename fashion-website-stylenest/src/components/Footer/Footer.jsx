@@ -88,9 +88,9 @@ const Footer = () => {
           <h3 className="text-3xl font-semibold mb-4">Sản Phẩm</h3>
           <ul className="space-y-3 text-sm">
             {[
-              { label: "Giảm Giá", path: "/fashion/deal" },
-              { label: "Sản Phẩm Mới", path: "/fashion/new" },
-              { label: "Bán Chạy", path: "/fashion/deal" },
+              { label: "Giảm Giá", path: "/product/deal" },
+              { label: "Sản Phẩm Mới", path: "/product/new" },
+              { label: "Bán Chạy", path: "/product/deal" },
               { label: "Liên Hệ", path: "https://www.facebook.com/stylenestbangla" },
               { label: "Cửa Hàng", path: "/" },
             ].map((item) => (
@@ -113,7 +113,6 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             {[
               { label: "Giao Hàng", path: "/order-tracking" },
-              { label: "Thông Báo Pháp Lý", path: "/blog" },
               { label: "Điều Khoản Sử Dụng", path: "/blog" },
               {
                 label: "Về Chúng Tôi",
