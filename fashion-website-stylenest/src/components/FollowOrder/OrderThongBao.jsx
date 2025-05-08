@@ -89,21 +89,6 @@ export default function OrderThongBao() {
                 <span className="text-gray-700">Đơn Mua</span>
               </div>
             </Link>
-            <div className="flex items-center gap-3 py-2 hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2">
-              <Gift className="h-5 w-5" />
-              <span className="text-gray-700">Kho Voucher</span>
-            </div>
-            <div className="flex items-center gap-3 py-2 hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2">
-              <Coin className="h-5 w-5" />
-              <span className="text-gray-700">Shopee Xu</span>
-            </div>
-            <div className="flex items-center gap-3 py-2 hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2">
-              <Tag className="h-5 w-5" />
-              <div className="flex items-center">
-                <span className="text-gray-700 mr-2">5.5 Siêu Sale Hàng Hiệu</span>
-                <span className="bg-red-500 text-white text-xs px-1 rounded">New</span>
-              </div>
-            </div>
           </div>
         </div>
 

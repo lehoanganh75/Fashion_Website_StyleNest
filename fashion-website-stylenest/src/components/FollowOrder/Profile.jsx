@@ -40,21 +40,7 @@ export default function ProfilePage() {
               <Package className="h-5 w-5" />
               <span className="text-gray-700">Đơn Mua</span>
             </Link>
-            <div className="hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2 py-2 flex items-center gap-3">
-              <Gift className="h-5 w-5" />
-              <span className="text-gray-700">Kho Voucher</span>
-            </div>
-            <div className="hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2 py-2 flex items-center gap-3">
-              <Coin className="h-5 w-5" />
-              <span className="text-gray-700">Shopee Xu</span>
-            </div>
-            <div className="hover:bg-orange-50 hover:text-orange-500 cursor-pointer transition duration-200 rounded-sm px-2 py-2 flex items-center gap-3">
-              <Tag className="h-5 w-5" />
-              <div className="flex items-center">
-                <span className="text-gray-700 mr-2">5.5 Siêu Sale Hàng Hiệu</span>
-                <span className="bg-red-500 text-white text-xs px-1 rounded">New</span>
-              </div>
-            </div>
+
           </div>
         </aside>
 
@@ -77,7 +63,7 @@ export default function ProfilePage() {
                   Tên
                 </label>
                 <div className="md:col-span-2">
-                  <input id="name" defaultValue="Nguyễn Văn A" className="max-w-md border border-gray-300 rounded-sm p-2" />
+                  <input id="name" defaultValue="Nguyễn Văn Tèo" className="max-w-md border border-gray-300 rounded-sm p-2" />
                 </div>
 
                 <label htmlFor="email" className="text-gray-500 text-right md:pr-4 flex items-center">

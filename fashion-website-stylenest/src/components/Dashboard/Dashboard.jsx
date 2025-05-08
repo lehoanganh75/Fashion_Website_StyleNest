@@ -1,90 +1,85 @@
-import "boxicons/css/boxicons.min.css"
-import TransactionsTable from "../TransactionsTable/TransactionsTable"
-import RevenueChartCard from '../Chart/RevenueChartCard'
-import DividendChartCard from '../Chart/DividendChartCard'
-import StockCard from '../StockCard/StockCard'
-import WatchlistItem from '../WatchlistItem/WatchlistItem'
-import { useData } from "../../contexts/DataContext"
+import "boxicons/css/boxicons.min.css";
+import TransactionsTable from "../TransactionsTable/TransactionsTable";
+import RevenueChartCard from "../Chart/RevenueChartCard";
+import DividendChartCard from "../Chart/DividendChartCard";
+import StockCard from "../StockCard/StockCard";
+import WatchlistItem from "../WatchlistItem/WatchlistItem";
+import { useData } from "../../contexts/DataContext";
 
 const Dashboard = () => {
-    const { orders } = useData();
+  const { orders } = useData();
 
-    return (
-        <div className="w-full bg-gray-50 font-['Roboto']">    
-            <div className="p-4">
-                {/* Stock Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-                    <StockCard
-                        symbol="AAPL"
-                        name="Apple, Inc"
-                        price="$1,232.00"
-                        change={11.01}
-                        logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23000000' d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'/%3E%3C/svg%3E"
-                    />
-                    <StockCard
-                        symbol="PYPL"
-                        name="Paypal, Inc"
-                        price="$965.00"
-                        change={-9.05}
-                        logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%230070BA' d='M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z'/%3E%3C/svg%3E"
-                    />
-                    <StockCard
-                        symbol="TSLA"
-                        name="Tesla, Inc"
-                        price="$1,232.00"
-                        change={11.01}
-                        logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23E82127' d='M96 96c0-35.3 28.7-64 64-64H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H160c-35.3 0-64-28.7-64-64V96zM240 256c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H256c-8.8 0-16 7.2-16 16zm-16-80c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H240c-8.8 0-16 7.2-16 16zm16 160c-8.8 0-16 7.2-16 16s7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H240z'/%3E%3C/svg%3E"
-                    />
-                    <StockCard
-                        symbol="AMZN"
-                        name="Amazone.com, Inc"
-                        price="$2,567.99"
-                        change={11.01}
-                        logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23FF9900' d='M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 6.5 33.5 34.5 33.5 34.5V162.7H257.2zm-30.7 300.5c-77 0-148.7-37.2-197.3-102.8 57-60.7 150.3-99.3 248.4-100.5 43.3 7.2 49.3 48.2 49.3 48.2 0 27.7-34 36.3-34 36.3-47.7-20.7-45.7 0-45.7 0 2.5 40.5 60.3 40.5 60.3 40.5 70.5 3 63.7-60.2 63.7-60.2-3.5-57.5-50.7-54.5-50.7-54.5-40.5 0-35.5 101.8-35.5 101.8l-97.5 49.3s3.7-184.3-51-184.3c0 0-30.7 20.1-30.7 30.7 0 30.7 30.7 30.7 30.7 30.7 0-20.1 5.3-20.1 5.3-20.1 10.9 0 10.9 107.8 10.9 107.8 0 20.1 5.3 20.1 5.3 20.1 0-10.9 10.9-10.9 10.9-10.9 0 50.9-23.2 112.4-92.3 112.4-71.6 0-82.5-81.8-82.5-81.8 0-40.5 30.7-30.7 30.7-30.7 0-20.1-10.9-10.9-10.9-10.9 0-10.9 10.9-10.9 10.9-10.9-10.9 0-30.7 10.9-30.7 30.7 0 0-30.7 10.9-30.7-10.9 0-30.7 30.7-30.7 30.7-30.7 0-10.9 10.9-10.9 10.9-10.9 0-10.9-10.9 0-10.9 0 0-10.9 10.9-10.9 10.9-10.9 0 0-10.9-10.9-10.9 0 0 0-30.7 0-30.7-20.1s10.9-20.1 10.9-20.1c0-10.9-10.9-10.9-10.9-10.9 0 0-20.1 0-20.1-10.9 0 0-10.9 10.9-10.9 0 0-30.7 30.7-20.1 30.7-20.1 0-10.9-10.9-10.9-10.9-10.9 0-30.7 30.7-30.7 30.7-30.7 0-20.1-30.7-20.1-30.7-20.1-40.5 0-40.5-40.5-40.5-40.5-10.9-92.2 40.5-153.9 132.7-153.9 30.7 0 71.6 20.1 71.6 20.1 75.6 0 168.5 46.8 168.5 168.5 0 20.1-10.9 30.7-20.1 30.7z'/%3E%3C/svg%3E"
-                    />
-                </div>
-    
-                {/* Main Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                    {/* Portfolio Performance */}
-                    <RevenueChartCard orders={orders} />
-    
-                    <div className="flex flex-col gap-4 w-full">    
-                        {/* Dividend */}
-                        <DividendChartCard orders={orders} />
+  return (
+    <div className="w-full bg-gray-50 font-['Roboto']">
+      <div className="p-4">
+        {/* Stock Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+          <StockCard
+            symbol="Doanh thu"
+            name="Trong 7 ngày qua"
+            price="1,781,000 VNĐ"
+            change={11.01}
+            logo="/imgs/phatrien.png"
+          />
+          <StockCard
+            symbol="Sản phẩm"
+            name="Tổng số"
+            price="1,250" // Example total product count
+            change={-2.5} // Example percentage change
+            logo="/imgs/product.png"
+          />
+          <StockCard
+            symbol="Đơn hàng"
+            name="Trong 7 ngày qua"
+            price="345" // Example order count
+            change={5.3} // Example percentage change
+            logo="/imgs/phatrien.png"
+          />
+        </div>
 
-                        {/* Watchlist */}
-                        <div className="lg:col-span-3 bg-white border border-gray-300 rounded-lg p-4.5 shadow-sm">
-                            <div className="flex justify-between items-center mb-4">
-                                <h2 className="text-xl font-semibold text-gray-800">My Watchlist</h2>
-                                </div>
-                    
-                                <div className="space-y-4">
-                                <WatchlistItem
-                                    symbol="AAPL"
-                                    name="Apple, Inc"
-                                    price="$4,008.65"
-                                    change={11.01}
-                                    logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23000000' d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'/%3E%3C/svg%3E"
-                                />
-                                <WatchlistItem
-                                    symbol="SPOT"
-                                    name="Spotify.com"
-                                    price="$11,689.00"
-                                    change={9.48}
-                                    logo="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath fill='%231DB954' d='M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z'/%3E%3C/svg%3E"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Portfolio Performance */}
+          <RevenueChartCard orders={orders} />
 
-                <div className="mt-4 w-full">
-                    <TransactionsTable orders={orders}/>
-                </div>
+          <div className="flex flex-col gap-4 w-full">
+            {/* Dividend */}
+            <DividendChartCard orders={orders} />
+
+            {/* Watchlist */}
+            <div className="lg:col-span-3 bg-white border border-gray-300 rounded-lg p-4.5 shadow-sm">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  My Watchlist
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                <WatchlistItem
+                  symbol="Đơn hàng"
+                  name="Trong 24 giờ qua"
+                  price="155"
+                  change={8.2}
+                  logo="/imgs/phatrien.png"
+                />
+                <WatchlistItem
+                  symbol="Lợi nhuận"
+                  name="Tháng này"
+                  price="560,000 VNĐ"
+                  change={15.5}
+                  logo="/imgs/phatrien.png"
+                />
+              </div>
             </div>
-      </div>
-    )
-}
+          </div>
+        </div>
 
-export default Dashboard
+        <div className="mt-4 w-full">
+          <TransactionsTable orders={orders} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;

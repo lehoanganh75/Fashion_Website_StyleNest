@@ -107,6 +107,7 @@ export default function Checkout() {
       addressType: "home",
       isDefault: false,
     })
+    setShowNewAddressModal(false);
   }
 
   const openNewAddressModal = () => {
@@ -358,14 +359,13 @@ export default function Checkout() {
           <div>
             <h3 className="text-lg font-medium mb-4">Phương thức thanh toán</h3>
             <div className="flex space-x-4">
-              {["shopeepay","credit","googlepay","cod"].map((method) => (
+              {["credit","googlepay","cod"].map((method) => (
                 <button
                   key={method}
                   className={`border rounded px-4 py-2 text-sm ${selectedPaymentMethod===method ? "border-red-500 text-red-500" : "hover:border-blue-500"}`}
                   onClick={() => setSelectedPaymentMethod(method)}
                 >
                   {{
-                    shopeepay: "Ví ShopeePay",
                     credit: "Thẻ Tín dụng",
                     googlepay: "Google Pay",
                     cod: "Thanh toán khi nhận"
@@ -398,7 +398,7 @@ export default function Checkout() {
         <div className="px-6 py-4 flex justify-between items-center text-sm text-gray-600">
           <p>
             Khi nhấn <span className="font-medium">'Đặt hàng'</span>, bạn đồng ý
-            với <a href="#" className="text-blue-500">Điều khoản Shopee</a>.
+            với <a href="#" className="text-blue-500">Điều khoản StyleNest</a>.
           </p>
           <button className="bg-red-500 hover:bg-red-600 text-white font-medium py-3 px-4 rounded"
             onClick={handleCheckout}
