@@ -25,14 +25,24 @@ const RevenueChartCard = ({ orders }) => {
   // Hàm tổng hợp theo ngày/tháng/quý/năm
   const aggregateBy = (orders, getKey) => {
     const map = {};
+    const timestamps = {};
+  
     orders.forEach(order => {
       const date = parseDate(order.timeline[0].orderDate);
       const key = getKey(date);
       map[key] = (map[key] || 0) + order.total;
+      timestamps[key] = date.getTime(); // lưu timestamp để sắp xếp sau
     });
-
-    return Object.entries(map).map(([date, value]) => ({ date, value }));
+  
+    return Object.entries(map)
+      .map(([date, value]) => ({
+        date,
+        value,
+        timestamp: timestamps[date]
+      }))
+      .sort((a, b) => a.timestamp - b.timestamp); // sắp xếp theo thời gian thực
   };
+  
 
   // Dữ liệu theo tháng
   const monthlyData = aggregateBy(orders, (date) => {
@@ -54,14 +64,14 @@ const RevenueChartCard = ({ orders }) => {
     const data =
       timePeriod === "quarterly" ? quarterlyData :
       timePeriod === "annually" ? annualData : monthlyData;
-
-    // Lọc 6 tháng gần nhất nếu là thời gian hàng tháng
+  
     if (timePeriod === "monthly") {
-      return data.slice(-6); // Lấy 6 tháng gần nhất
+      return data.slice(-6); // Giờ đã đúng vì đã sắp xếp theo thời gian
     }
-    
-    return data; // Giữ nguyên dữ liệu nếu là quý hoặc năm
+  
+    return data;
   }
+  
 
   return (
     <div className="lg:col-span-2 border border-gray-300 bg-white rounded-lg p-4.5 shadow-sm">
