@@ -5,7 +5,6 @@ import AdminLayout from "./layouts/AdminLayout";
 // Pages (User)
 import HomePage from './pages/HomePage';
 import OrderTracking from "./components/FollowOrder/orderTracking";
-import OrderTrackingDetail from "./components/FollowOrder/orderTrackingDetail";
 import Support from "./components/Support";
 import NotificationsPage from "./components/FollowOrder/OrderThongBao";
 import Profile from "./components/FollowOrder/Profile";
@@ -39,7 +38,6 @@ function App() {
           <Route path="/" element={<UserLayout />}>
             <Route index element={<HomePage />} />
             <Route path="order-tracking" element={<OrderTracking />} />
-            <Route path="order-tracking/:orderId" element={<OrderTrackingDetail />} />
             <Route path="support" element={<Support />} />
             <Route path="notifications" element={<NotificationsPage />} />
             <Route path="profile" element={<Profile />} />
