@@ -4,6 +4,8 @@ import axios from 'axios';
 
 const CartContext = createContext();
 
+const API = import.meta.env.VITE_API_URL;
+
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [cartItemSelected, setCartItemSelected] = useState([]);
@@ -31,11 +33,11 @@ export const CartProvider = ({ children }) => {
   const saveOrders = async (newOrder) => {
     try {
       // 1. Gửi đơn hàng
-      const response = await axios.post("http://localhost:5000/api/orders", newOrder);
+      const response = await axios.post(`${API}/api/orders`, newOrder);
       console.log("Lưu đơn hàng thành công:", response.data);
   
       // 2. Cập nhật danh sách đơn hàng
-      const updatedOrdersResponse = await axios.get("http://localhost:5000/api/orders");
+      const updatedOrdersResponse = await axios.get(`${API}/api/orders`);
       setOrders(updatedOrdersResponse.data);
   
       // 3. Xóa khỏi giỏ hàng các item đã đặt mua
@@ -51,7 +53,7 @@ export const CartProvider = ({ children }) => {
         const quantityPurchased = product.quantity;
   
         // Lấy thông tin sản phẩm hiện tại
-        const productResponse = await axios.get(`http://localhost:5000/api/products/${productId}`);
+        const productResponse = await axios.get(`${API}/api/products/${productId}`);
         const currentProduct = productResponse.data;
         console.log("Sản phẩm hiện tại:", currentProduct);
   
@@ -59,11 +61,11 @@ export const CartProvider = ({ children }) => {
         const updatedQuantity = currentProduct.instock - quantityPurchased;
   
         // Gửi yêu cầu cập nhật số lượng tồn
-        await axios.put(`http://localhost:5000/api/products/update-stock/${productId}`, {
+        await axios.put(`${API}/api/products/update-stock/${productId}`, {
           instock: updatedQuantity
         });      
         
-        const updatedProductsResponse = await axios.get("http://localhost:5000/api/products");
+        const updatedProductsResponse = await axios.get(`${API}/api/products`);
         setProducts(updatedProductsResponse.data);
       }
     } catch (error) {

@@ -15,14 +15,14 @@
         "quantity": 2,
         "price": 150000,
         "total": 300000,
-        "img": "http://localhost:5000/imgs/aothunamtronbasicjusttee1.jpg"
+        "img": "https://fashion-website-stylenest.onrender.com/imgs/aothunamtronbasicjusttee1.jpg"
       }
     ],
     "paymentMethod": "Thanh toán khi nhận hàng",
     "timeline": [
       {
         "status": "Đang kiểm tra",
-        "orderDate": "07/05/2025, 21:35:12"
+        "orderDate": "08:52 13-10-2025"
       }
     ]
   }

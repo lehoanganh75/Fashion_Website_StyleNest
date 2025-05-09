@@ -11,7 +11,7 @@ const ProductTable = () => {
   const refreshProducts = async () => {
     try {
       setLoading(true); // Set trạng thái loading
-      const response = await axios.get("http://localhost:5000/api/products");
+      const response = await axios.get("https://fashion-website-stylenest.onrender.com/api/products");
       setProducts(response.data); // Cập nhật lại dữ liệu sản phẩm
     } catch (error) {
       console.error("Lỗi khi tải lại dữ liệu sản phẩm", error);

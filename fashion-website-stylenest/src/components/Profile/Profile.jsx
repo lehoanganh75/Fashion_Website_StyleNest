@@ -13,7 +13,7 @@ const Profile = () => {
   const refreshUsers = async () => {
     try {
       setLoading(true); // Set trạng thái loading
-      const response = await axios.get("http://localhost:5000/api/users"); // Đường dẫn API để lấy dữ liệu người dùng
+      const response = await axios.get("https://fashion-website-stylenest.onrender.com/api/users"); // Đường dẫn API để lấy dữ liệu người dùng
       setUsers(response.data); // Cập nhật lại dữ liệu sản phẩm
     } catch (error) {
       console.error("Lỗi khi tải lại dữ liệu sản phẩm", error);
