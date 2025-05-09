@@ -14,11 +14,16 @@ const RevenueChartCard = ({ orders }) => {
 
   // Hàm chuyển ngày từ định dạng chuỗi
   const parseDate = (str) => {
-    const [time, date] = str.split(" "); // Tách giờ và ngày
-    const [day, month, year] = date.split("/"); // Tách ngày, tháng, năm
-    const [hour, minute, second] = time.split(":"); // Tách giờ, phút, giây
+    if (!str || typeof str !== "string") return new Date(NaN);
 
-    // Trả về đối tượng Date
+    const [time, date] = str.split(" ");
+    if (!time || !date) return new Date(NaN);
+
+    const [day, month, year] = date.split("/").map(Number);
+    const [hour, minute, second] = time.split(":").map(Number);
+
+    if ([day, month, year, hour, minute, second].some(isNaN)) return new Date(NaN);
+
     return new Date(year, month - 1, day, hour, minute, second);
   };
 
@@ -28,10 +33,15 @@ const RevenueChartCard = ({ orders }) => {
     const timestamps = {};
   
     orders.forEach(order => {
-      const date = parseDate(order.timeline[0].orderDate);
+      const rawDate = order.timeline?.[0]?.orderDate;
+      if (!rawDate) return; // Bỏ qua nếu không có ngày
+
+      const date = parseDate(rawDate);
+      if (isNaN(date.getTime())) return; // Bỏ qua nếu không phải ngày hợp lệ
+
       const key = getKey(date);
       map[key] = (map[key] || 0) + order.total;
-      timestamps[key] = date.getTime(); // lưu timestamp để sắp xếp sau
+      timestamps[key] = date.getTime();
     });
   
     return Object.entries(map)
@@ -71,7 +81,12 @@ const RevenueChartCard = ({ orders }) => {
   
     return data;
   }
-  
+
+    const now = new Date();
+  const chartData = getChartData().filter(d => {
+    const date = new Date(d.date);
+    return !isNaN(date) && date <= now;
+  });
 
   return (
     <div className="lg:col-span-2 border border-gray-300 bg-white rounded-lg p-4.5 shadow-sm">
@@ -120,8 +135,8 @@ const RevenueChartCard = ({ orders }) => {
               axisLine={false}
               tickLine={false}
               tick={{ fill: "#6b7280", fontSize: 12 }}
-              ticks={getChartData()
-                .filter((_, i, arr) => i % Math.floor(arr.length / 5) === 0)
+              ticks={chartData
+                .filter((_, i, arr) => i % Math.floor(arr.length / 5 || 1) === 0)
                 .map(d => d.date)}
               tickFormatter={(value) => {
                 if (timePeriod === "monthly") {

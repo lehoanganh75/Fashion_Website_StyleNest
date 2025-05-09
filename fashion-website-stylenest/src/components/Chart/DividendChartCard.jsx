@@ -34,48 +34,34 @@ const formatCurrency = (value) => {
 };
 
 const DividendChartCard = ({ orders }) => {
-  // Bước 1: Khởi tạo một đối tượng để chứa doanh thu của mỗi tháng
   const monthlyRevenue = {};
+  const currentYear = new Date().getFullYear();
 
-  // Bước 2: Duyệt qua từng đơn hàng và cộng doanh thu vào tháng tương ứng
   orders.forEach((order) => {
-    // Tách phần giờ và ngày
     const [time, date] = order.timeline[0].orderDate.split(' ');
-
-    // Tách ngày, tháng, năm
     const [day, month, year] = date.split('/');
-    
-    // Kiểm tra nếu dữ liệu ngày tháng năm hợp lệ
+
     if (!day || !month || !year) {
-      console.error('Invalid date format:', order.orderDate);
+      console.error('Invalid date format:', order.timeline[0].orderDate, order.id);
       return;
     }
 
-    // Tạo chuỗi ngày theo định dạng yyyy-mm-dd
+    // Chỉ xử lý nếu là đơn hàng của năm hiện tại
+    if (parseInt(year) !== currentYear) return;
+
     const formattedDateString = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
-    
-    // Lấy tháng từ chuỗi đã chuyển đổi
     const orderMonth = new Date(formattedDateString).toLocaleString("en-US", { month: "short" });
 
-    // Tính tổng doanh thu từ orderDetails
     const totalRevenue = order.orderDetails.reduce((sum, item) => sum + item.total, 0);
 
-    // Nếu tháng đã có trong đối tượng monthlyRevenue, cộng thêm doanh thu
-    if (monthlyRevenue[orderMonth]) {
-      monthlyRevenue[orderMonth] += totalRevenue;
-    } else {
-      // Nếu tháng chưa có trong đối tượng, khởi tạo giá trị
-      monthlyRevenue[orderMonth] = totalRevenue;
-    }
+    monthlyRevenue[orderMonth] = (monthlyRevenue[orderMonth] || 0) + totalRevenue;
   });
 
-  // Bước 3: Chuyển đổi đối tượng monthlyRevenue thành mảng dividendData
   const dividendData = Object.keys(monthlyRevenue).map(month => ({
     month,
     value: monthlyRevenue[month]
   }));
 
-  // Sắp xếp mảng dividendData theo thứ tự tháng
   const sortedDividendData = dividendData.sort((a, b) => {
     const monthsOrder = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return monthsOrder.indexOf(a.month) - monthsOrder.indexOf(b.month);
