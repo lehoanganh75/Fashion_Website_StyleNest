@@ -1,6 +1,6 @@
-import BlogSection from "../Components/FromTheBlog/BlogSection";
-import NewProducts from "../Components/FromTheBlog/NewProducts";
-import BlogCategories from "../Components/FromTheBlog/BlogCategories";
+import BlogSection from "../components/FromTheBlog/BlogSection";
+import NewProducts from "../components/FromTheBlog/NewProducts";
+import BlogCategories from "../components/FromTheBlog/BlogCategories";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
 const BlogPage = () => {
