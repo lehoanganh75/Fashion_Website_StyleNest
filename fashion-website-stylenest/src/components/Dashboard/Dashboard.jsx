@@ -5,10 +5,9 @@ import DividendChartCard from "../Chart/DividendChartCard";
 import StockCard from "../StockCard/StockCard";
 import WatchlistItem from "../WatchlistItem/WatchlistItem";
 import { useData } from "../../contexts/DataContext";
-import { useMemo } from "react";
 
 const Dashboard = () => {
-  const { orders, products } = useData();
+  const { orders } = useData();
 
   const totalOrders = orders.length;
 
@@ -40,7 +39,7 @@ const Dashboard = () => {
             name="Tổng số"
             price={totalOrders.toString()}
             change={100} // hoặc để trống nếu không cần
-            logo="/imgs/phatrien.png"
+            logo="https://fashion-website-stylenest.onrender.com/imgs/phatrien.png"
           />
 
           <StockCard
@@ -48,7 +47,7 @@ const Dashboard = () => {
             name="Tổng số"
             price={totalSoldProducts.toString()}
             change={100} // hoặc tạm thời bỏ qua
-            logo="/imgs/product.png"
+            logo="https://fashion-website-stylenest.onrender.com/imgs/product.png"
           />
 
           <StockCard
@@ -56,7 +55,7 @@ const Dashboard = () => {
             name="Tổng cộng"
             price={formattedRevenue}
             change={100} // nếu không cần % thay đổi
-            logo="/imgs/phatrien.png"
+            logo="https://fashion-website-stylenest.onrender.com/imgs/phatrien.png"
           />
         </div>
 
@@ -73,7 +72,7 @@ const Dashboard = () => {
             <div className="lg:col-span-3 bg-white border border-gray-300 rounded-lg p-4.5 shadow-sm">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold text-gray-800">
-                  My Watchlist
+                  Theo dõi đơn hàng
                 </h2>
               </div>
 
@@ -83,14 +82,14 @@ const Dashboard = () => {
                   name="Trong 24 giờ qua"
                   price={totalOrders.toString()}
                   change={100} // hoặc để trống nếu không cần
-                  logo="/imgs/phatrien.png"
+                  logo="https://fashion-website-stylenest.onrender.com/imgs/phatrien.png"
                 />
                 <WatchlistItem
                   symbol="Lợi nhuận"
                   name="Tháng này"
                   price={formattedRevenue}
                   change={100} // nếu không cần % thay đổi
-                  logo="/imgs/phatrien.png"
+                  logo="https://fashion-website-stylenest.onrender.com/imgs/phatrien.png"
                 />
               </div>
             </div>
