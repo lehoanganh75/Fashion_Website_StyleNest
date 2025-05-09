@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const db = require('./db');
 const app = express();
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
@@ -33,7 +34,7 @@ app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 
 // Khởi động server
-const PORT = 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

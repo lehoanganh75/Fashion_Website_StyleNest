@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const DataContext = createContext();
 
-const API = 'http://localhost:5000/api';
+const API = ;
 
 export const DataProvider = ({ children }) => {
     const [accounts, setAccounts] = useState([]);
