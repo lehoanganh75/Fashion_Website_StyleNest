@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const DataContext = createContext();
 
+const API = 'http://localhost:5000/api';
+
 export const DataProvider = ({ children }) => {
     const [accounts, setAccounts] = useState([]);
     const [banners, setBanners] = useState([]);
@@ -32,16 +34,16 @@ export const DataProvider = ({ children }) => {
                     productsRes,
                     usersRes
                 ] = await Promise.all([
-                    axios.get('http://localhost:5000/api/accounts'),
-                    axios.get('http://localhost:5000/api/banners'),
-                    axios.get('http://localhost:5000/api/blogs'),
-                    axios.get('http://localhost:5000/api/customers'),
-                    axios.get('http://localhost:5000/api/features'),
-                    axios.get('http://localhost:5000/api/instagramPosts'),
-                    axios.get('http://localhost:5000/api/orderDetails'),
-                    axios.get('http://localhost:5000/api/orders'),
-                    axios.get('http://localhost:5000/api/products'),
-                    axios.get('http://localhost:5000/api/users'),
+                    axios.get(`${API}/accounts`),
+                    axios.get(`${API}/banners`),
+                    axios.get(`${API}/blogs`),
+                    axios.get(`${API}/customers`),
+                    axios.get(`${API}/features`),
+                    axios.get(`${API}/instagramPosts`),
+                    axios.get(`${API}/orderDetails`),
+                    axios.get(`${API}/orders`),
+                    axios.get(`${API}/products`),
+                    axios.get(`${API}/users`),
                 ]);              
                 setAccounts(accountsRes.data);
                 setBanners(bannersRes.data);
