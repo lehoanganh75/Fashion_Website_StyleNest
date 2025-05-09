@@ -89,12 +89,23 @@ const OrderList = () => {
   };
 
   const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return new Intl.DateTimeFormat('vi-VN', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }).format(date);
+      try {
+      const [timePart, datePart] = dateString.split(' ');
+      const [hour, minute, second] = timePart.split(':');
+      const [day, month, year] = datePart.split('/');
+
+      // Chuyển sang ISO: yyyy-mm-ddThh:mm:ss
+      const isoString = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}T${hour}:${minute}:${second}`;
+      const date = new Date(isoString);
+
+      if (isNaN(date.getTime())) {
+        return 'Ngày không hợp lệ';
+      }
+
+      return date.toLocaleString('vi-VN'); // hoặc bạn có thể định dạng lại theo ý muốn
+    } catch {
+      return 'Lỗi định dạng';
+    }
   };
 
   if (!loggedInAccount) {
