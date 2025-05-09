@@ -1,7 +1,7 @@
 import React from "react";
 import BlogPost from "../components/FromTheBlog/BlogPost";
-import NewProducts from "../Components/FromTheBlog/NewProducts";
-import BlogCategories from "../Components/FromTheBlog/BlogCategories";
+import NewProducts from "../components/FromTheBlog/NewProducts";
+import BlogCategories from "../components/FromTheBlog/BlogCategories";
 
 const BlogDetail = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductDetail from '../Components/ProductDetail/ProductDetail';
+import ProductDetail from '../components/ProductDetail/ProductDetail';
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import { useParams } from 'react-router-dom';
 import { useData } from '../contexts/DataContext';

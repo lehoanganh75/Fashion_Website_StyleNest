@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoginModal from '../Components/Login/LoginModal';
+import LoginModal from '../components/Login/LoginModal';
 
 const LoginFormPage = () => {
   const [isOpen, setIsOpen] = useState(true);
