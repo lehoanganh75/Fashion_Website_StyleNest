@@ -1,4 +1,3 @@
-import React from "react";
 import BlogSection from "../Components/FromTheBlog/BlogSection";
 import NewProducts from "../Components/FromTheBlog/NewProducts";
 import BlogCategories from "../Components/FromTheBlog/BlogCategories";
