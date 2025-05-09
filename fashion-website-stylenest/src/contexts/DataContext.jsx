@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const DataContext = createContext();
 
-const API = ;
+const API = import.meta.env.VITE_API_URL;
 
 export const DataProvider = ({ children }) => {
     const [accounts, setAccounts] = useState([]);
@@ -34,16 +34,16 @@ export const DataProvider = ({ children }) => {
                     productsRes,
                     usersRes
                 ] = await Promise.all([
-                    axios.get(`${API}/accounts`),
-                    axios.get(`${API}/banners`),
-                    axios.get(`${API}/blogs`),
-                    axios.get(`${API}/customers`),
-                    axios.get(`${API}/features`),
-                    axios.get(`${API}/instagramPosts`),
-                    axios.get(`${API}/orderDetails`),
-                    axios.get(`${API}/orders`),
-                    axios.get(`${API}/products`),
-                    axios.get(`${API}/users`),
+                    axios.get(`${API}/api/accounts`),
+                    axios.get(`${API}/api/banners`),
+                    axios.get(`${API}/api/blogs`),
+                    axios.get(`${API}/api/customers`),
+                    axios.get(`${API}/api/features`),
+                    axios.get(`${API}/api/instagramPosts`),
+                    axios.get(`${API}/api/orderDetails`),
+                    axios.get(`${API}/api/orders`),
+                    axios.get(`${API}/api/products`),
+                    axios.get(`${API}/api/users`),
                 ]);              
                 setAccounts(accountsRes.data);
                 setBanners(bannersRes.data);
@@ -66,10 +66,10 @@ export const DataProvider = ({ children }) => {
     const saveAccount = async (newAccount) => {
         try {
             // Send the new account to the backend
-            const response = await axios.post('http://localhost:5000/api/accounts', newAccount);
+            const response = await axios.post(`${API}/api/accounts`, newAccount);
             console.log("Lưu tài khoản thành công:", response.data);
             // Fetch the updated list of accounts after the new one is saved
-            const updatedAccounts = await axios.get('http://localhost:5000/api/accounts');
+            const updatedAccounts = await axios.get(`${API}/api/accounts`);
         
             // Update the state with the newly fetched list
             setAccounts(updatedAccounts.data);
@@ -78,9 +78,9 @@ export const DataProvider = ({ children }) => {
         }
     }
 
-    const updateAccount = async (updatedAccount) => {
+   const updateAccount = async (updatedAccount) => {
         try {
-            const response = await axios.put(`http://localhost:5000/api/accounts/${updatedAccount.id}`, updatedAccount);
+            const response = await axios.put(`${API}/api/accounts/${updatedAccount.id}`, updatedAccount);
             setAccounts((prevAccounts) =>
                 prevAccounts.map(account => account.id === updatedAccount.id ? response.data.updatedAccount : account)
             );
@@ -91,7 +91,7 @@ export const DataProvider = ({ children }) => {
 
     const deleteAccount = async (accountId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/accounts/${accountId}`);
+            await axios.delete(`${API}/api/accounts/${accountId}`);
             setAccounts((prevAccounts) =>
                 prevAccounts.filter(account => account.id !== accountId)
             );
@@ -110,7 +110,7 @@ export const DataProvider = ({ children }) => {
             });
     
             const response = await axios.post(
-                'http://localhost:5000/api/products',
+                `${API}/api/products`,
                 formData,
                 {
                     headers: {
@@ -121,7 +121,7 @@ export const DataProvider = ({ children }) => {
     
             console.log("Đã lưu sản phẩm:", response.data);
     
-            const updatedProducts = await axios.get('http://localhost:5000/api/products');
+            const updatedProducts = await axios.get(`${API}/api/products`);
             setProducts(updatedProducts.data);
         } catch (error) {
             console.error('Lỗi khi lưu sản phẩm:', error);
@@ -147,7 +147,7 @@ export const DataProvider = ({ children }) => {
             console.log("Updated thumbnails:", productData.thumbnails);
     
             const response = await axios.put(
-                `http://localhost:5000/api/products/${productData.id}`,
+                `${API}/api/products/${productData.id}`,
                 formData,
                 {
                     headers: {
@@ -159,7 +159,7 @@ export const DataProvider = ({ children }) => {
             console.log("Sản phẩm đã được cập nhật:", response.data);
     
             // Lấy lại danh sách sản phẩm sau khi cập nhật
-            const updatedProducts = await axios.get('http://localhost:5000/api/products');
+            const updatedProducts = await axios.get(`${API}/api/products`);
             setProducts(updatedProducts.data);
         } catch (error) {
             console.error('Lỗi khi cập nhật sản phẩm:', error);
@@ -168,7 +168,7 @@ export const DataProvider = ({ children }) => {
 
     const deleteProduct = async (productId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/${productId}`);
+            await axios.delete(`${API}/api/products${productId}`);
             setProducts((prevProducts) =>
                 prevProducts.filter(product => product.id !== productId)
             );
@@ -179,7 +179,7 @@ export const DataProvider = ({ children }) => {
 
     const updateUser = async (updatedUser) => {
         try {
-            const response = await axios.put(`http://localhost:5000/api/users/${updatedUser.id}`, updatedUser);
+            const response = await axios.put(`${API}/api/users/${updatedUser.id}`, updatedUser);
             setAccounts((prevAccounts) =>
                 prevAccounts.map(user => user.id === updatedUser.id ? response.data.updatedUser : user)
             );
@@ -193,7 +193,7 @@ export const DataProvider = ({ children }) => {
         setError(null);
         try {
           const response = await axios.get(
-            `http://localhost:5000/api/products/search?name=${searchTerm}`
+            `${API}/api/products/search?name=${searchTerm}`
           );
           setProducts(response.data);
           return response.data;
@@ -213,7 +213,7 @@ export const DataProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/customers/search?phone=${phone}`
+        `${API}/api/customers/search?phone=${phone}`
       );
       setCustomers(response.data);
       return response.data;
@@ -232,7 +232,7 @@ export const DataProvider = ({ children }) => {
     setError(null);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/orders/search?customerName=${customerName}`
+        `${API}/api/orders/search?customerName=${customerName}`
       );
       setOrders(response.data);  // Cập nhật danh sách đơn hàng
       return response.data;
@@ -251,7 +251,7 @@ export const DataProvider = ({ children }) => {
         setError(null);
         try {
             const response = await axios.get(
-                `http://localhost:5000/api/accounts/search?userName=${userName}`
+                `${API}/api/accounts/search?userName=${userName}`
             );
             setAccounts(response.data);  // Cập nhật danh sách tài khoản
             return response.data;
@@ -280,7 +280,7 @@ export const DataProvider = ({ children }) => {
             }));
     
             const response = await axios.post(
-                'http://localhost:5000/api/customers', 
+                `${API}/api/customers`, 
                 formData, 
                 {
                 headers: {
@@ -290,7 +290,7 @@ export const DataProvider = ({ children }) => {
     
             console.log("Đã lưu khách hàng:", response.data);
     
-            const updatedCustomers = await axios.get('http://localhost:5000/api/customers');
+            const updatedCustomers = await axios.get(`${API}/api/customers`);
             setCustomers(updatedCustomers.data);
         } catch (error) {
             console.error('Lỗi khi lưu khách hàng:', error);
@@ -302,7 +302,7 @@ export const DataProvider = ({ children }) => {
         console.log("Danh sách địa chỉ mới:", updatedAddressList);
 
         try {
-          const response = await axios.put(`http://localhost:5000/api/customers/${id}`, {
+          const response = await axios.put(`${API}/api/customers/${id}`, {
             addressList: updatedAddressList
           });
       
@@ -316,7 +316,7 @@ export const DataProvider = ({ children }) => {
           );
       
           // Nếu cần cập nhật sản phẩm, giữ lại đoạn này
-          const updated = await axios.get('http://localhost:5000/api/customers');
+          const updated = await axios.get(`${API}/api/customers`);
           
           setCustomers(updated.data);
         } catch (error) {

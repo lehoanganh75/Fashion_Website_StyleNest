@@ -30,7 +30,7 @@ router.post("/", upload.single('image'), async (req, res) => {
       customerData.img = imagePath;
     } else {
       // Gán ảnh mặc định
-      customerData.img = 'http://localhost:5000/imgs/aothunnamslimfitbasic1.jpg';
+      customerData.img = 'https://fashion-website-stylenest.onrender.com/imgs/1746767636145-99007487.png';
     }
 
     const customer = new Customer(customerData);
